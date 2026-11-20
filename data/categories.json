@@ -1,0 +1,164 @@
+{
+  "categories": {
+    "استودیو": {
+      "color": "#C084FC",
+      "emoji": "🏢",
+      "keywords": [
+        "studio",
+        "mappa",
+        "ufotable",
+        "kyoto animation",
+        "aniplex",
+        "toho animation",
+        "production i.g",
+        "wit studio",
+        "bones",
+        "merger",
+        "acquired",
+        "partnership",
+        "collaboration",
+        "licensing",
+        "licenses",
+        "streaming",
+        "crunchyroll",
+        "netflix",
+        "leak",
+        "reports"
+      ]
+    },
+    "تریلر": {
+      "color": "#4ADE80",
+      "emoji": "▶️",
+      "keywords": [
+        "trailer",
+        "teaser",
+        "pv",
+        "key visual",
+        "main visual",
+        "trailer released",
+        "teaser trailer",
+        "character pv",
+        "official trailer",
+        "preview video",
+        "new visual",
+        "promo video",
+        "main trailer"
+      ]
+    },
+    "رویداد": {
+      "color": "#F472B6",
+      "emoji": "🎪",
+      "keywords": [
+        "event",
+        "jump festa",
+        "anime expo",
+        "animejapan",
+        "comiket",
+        "exhibition",
+        "concert",
+        "stage play",
+        "festival",
+        "award",
+        "anniversary",
+        "collaboration event",
+        "pop-up"
+      ]
+    },
+    "فصل جدید": {
+      "color": "#60A5FA",
+      "emoji": "🎬",
+      "keywords": [
+        "season 2",
+        "season 3",
+        "season 4",
+        "second season",
+        "third season",
+        "new season",
+        "season announced",
+        "sequel",
+        "continues with",
+        "renewed for",
+        "returns for",
+        "next season",
+        "cour 2",
+        "part 2",
+        "new anime series",
+        "tv anime",
+        "anime series",
+        "premiere date",
+        "new anime",
+        "anime in production",
+        "cast",
+        "casts",
+        "voice cast",
+        "theme song",
+        "opening song",
+        "staff",
+        "gets tv anime",
+        "announced"
+      ]
+    },
+    "فیلم": {
+      "color": "#F87171",
+      "emoji": "🎥",
+      "keywords": [
+        "film",
+        "movie",
+        "theatrical",
+        "box office",
+        "in theaters",
+        "cinema",
+        "feature film",
+        "anime film",
+        "film announced",
+        "screening",
+        "opening weekend",
+        "highest-grossing",
+        "film opens",
+        "film festival",
+        "wins at",
+        "opens at"
+      ]
+    },
+    "مانگا و اقتباس": {
+      "color": "#FB923C",
+      "emoji": "📖",
+      "keywords": [
+        "manga",
+        "light novel",
+        "adaptation",
+        "manga ends",
+        "manga launches",
+        "new manga",
+        "novel gets anime",
+        "manga gets anime",
+        "spinoff",
+        "spin-off",
+        "one-shot",
+        "serializ",
+        "licenses",
+        "ends serialization",
+        "live-action",
+        "live action",
+        "final chapter"
+      ]
+    }
+  },
+  "confidence_threshold": 3,
+  "daily_category": {
+    "color": "#FACC15",
+    "emoji": "⭐",
+    "name": "خبر روز",
+    "note": "«خبر روز» دسته مستقلی برای طبقه‌بندی نیست؛ publisher آن را به مهم‌ترین خبر صف (بالاترین امتیاز اولویت) می‌دهد."
+  },
+  "note": "بانک کلیدواژه دسته‌ها (ARCHITECTURE.md §۳). قوانین تقدم: اگر دو دسته هم‌امتیاز شدند، اولین دسته در precedence برنده است. اصلاح انسانی در category-corrections.json بر همه مقدم است. کالیبره‌شده با dry-run ۲۱ نوامبر ۲۰۲۶: خبرهای کست/عوامل/آهنگ تیتراژ زیر «فصل جدید» می‌روند (دسته مستقلی برای کست در معماری نیست)؛ «new anime» و «promo video» اضافه شدند.",
+  "precedence": [
+    "تریلر",
+    "فیلم",
+    "فصل جدید",
+    "مانگا و اقتباس",
+    "استودیو",
+    "رویداد"
+  ],
+  "version": 1
+}

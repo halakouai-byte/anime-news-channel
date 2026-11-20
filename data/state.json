@@ -1,0 +1,27 @@
+{
+  "circuit_breaker": {
+    "activated_at": null,
+    "active": false,
+    "posts_today": 0,
+    "queue_size": 0
+  },
+  "counters": {
+    "duplicates_total": 0,
+    "hold_total": 0,
+    "posts_today": 0,
+    "posts_today_date": "2026-11-21",
+    "posts_total": 0,
+    "rejected_total": 0
+  },
+  "last_fetch_utc": null,
+  "last_publish_utc": null,
+  "posted_hashes": {},
+  "posted_message_ids": [],
+  "queue_version": 1,
+  "recent_titles": [],
+  "seen_at": {},
+  "seen_guids": [],
+  "story_keys": {},
+  "template_usage_7d": {},
+  "version": 2
+}

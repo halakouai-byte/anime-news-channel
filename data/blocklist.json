@@ -1,0 +1,282 @@
+{
+  "digest_codes": [
+    "R2",
+    "R3",
+    "R17"
+  ],
+  "hold_codes": [
+    "R6",
+    "R7"
+  ],
+  "note": "فهرست حذف ۱۷ دسته (filter-v2 §۲). بررسی حذف پیش از dedupe و پیش از امتیازدهی انجام می‌شود. هر ردشده با کد دلیل در archive.jsonl ثبت می‌شود. action ها: reject (دور ریخته می‌شود)، hold (HOLD انسانی)، digest (نامزد خلاصه جمعه).",
+  "rules": [
+    {
+      "action": "reject",
+      "code": "R1",
+      "name": "مرور قسمت (episode review)",
+      "patterns": [
+        "episode review",
+        "episode \\d+ review",
+        "review: episode",
+        "impressions: episode",
+        "anime review",
+        "episode impressions",
+        "manga review",
+        "review: ",
+        "manga review:"
+      ]
+    },
+    {
+      "action": "digest",
+      "code": "R2",
+      "name": "رتبه‌بندی هفتگی",
+      "patterns": [
+        "weekly ranking",
+        "weekly rankings",
+        "top 10 anime of the week",
+        "anime rankings",
+        "power rankings",
+        "fall 2026 rankings",
+        "rankings for the week"
+      ]
+    },
+    {
+      "action": "digest",
+      "code": "R3",
+      "exception": "اگر همراه با محتوای تازه باشد (قسمت اضافه، مصاحبه، نسخه کارگردان) خبر محسوب می‌شود.",
+      "name": "تاریخ انتشار Blu-ray به‌تنهایی",
+      "patterns": [
+        "blu-ray release date",
+        "blu-ray/dvd",
+        "blu-ray box set",
+        "dvd release date"
+      ]
+    },
+    {
+      "action": "reject",
+      "code": "R4",
+      "name": "نظرسنجی (poll)",
+      "patterns": [
+        "poll:",
+        "vote for",
+        "readers vote",
+        "survey results",
+        "poll results"
+      ]
+    },
+    {
+      "action": "reject",
+      "code": "R5",
+      "exception": "فقط وقتی با یک خبر اصلی همراه باشد یا خودش یک رویداد خبری باشد (همکاری بزرگ).",
+      "name": "مرچ/کالا",
+      "patterns": [
+        "figure",
+        "nendoroid",
+        "acrylic stand",
+        "plush",
+        "merchandise",
+        "pre-order",
+        "preorder",
+        "goods",
+        "keychain",
+        "tapestr"
+      ]
+    },
+    {
+      "action": "hold",
+      "code": "R6",
+      "name": "خبر حساس",
+      "patterns": [
+        "dies",
+        "dead",
+        "passed away",
+        "death of",
+        "suicide",
+        "arrested",
+        "arrest",
+        "lawsuit",
+        "sues",
+        "scandal",
+        "sexual assault",
+        "harassment",
+        "abuse allegation",
+        "indicted",
+        "charged with",
+        "controversy",
+        "apologizes for"
+      ]
+    },
+    {
+      "action": "reject",
+      "code": "R7",
+      "hold_exception": "اگر فرنچایز در franchises.json باشد و شایعه در دو منبع مستقل Tier 1/2 آمده باشد → HOLD انسانی.",
+      "name": "شایعه تاییدنشده",
+      "patterns": [
+        "rumor",
+        "rumour",
+        "reportedly",
+        "allegedly",
+        "sources say",
+        "supposed leak",
+        "leak suggests",
+        "unconfirmed report"
+      ]
+    },
+    {
+      "action": "reject",
+      "code": "R8",
+      "name": "تیتر کلیک‌بیت بدون محتوای تازه",
+      "patterns": [
+        "you won't believe",
+        "shocking",
+        "fans are furious",
+        "internet is losing it",
+        "breaking the internet"
+      ]
+    },
+    {
+      "action": "reject",
+      "code": "R9",
+      "name": "تکراری / بازنشر",
+      "note": "این کد را dedupe سه‌لایه در fetch.py صادر می‌کند، نه الگوی کلیدواژه."
+    },
+    {
+      "action": "reject",
+      "code": "R10",
+      "name": "لیست/رتبه‌بندی سرگرمی (listicle)",
+      "patterns": [
+        "top 10",
+        "top 5",
+        "best anime",
+        "10 best",
+        "5 moments",
+        "best moments",
+        "underrated anime",
+        "anime like",
+        "you should watch",
+        "top 20",
+        "top 25",
+        "top 30"
+      ]
+    },
+    {
+      "action": "reject",
+      "code": "R11",
+      "name": "کوییز / مسابقه / جایزه",
+      "patterns": [
+        "quiz",
+        "giveaway",
+        "contest",
+        "win a",
+        "lottery",
+        "raffle",
+        "enter to win"
+      ]
+    },
+    {
+      "action": "reject",
+      "code": "R12",
+      "name": "محتوای اسپانسری / PR",
+      "patterns": [
+        "sponsored",
+        "sponsored content",
+        "advertisement",
+        "in partnership with",
+        "paid promotion",
+        "pr news"
+      ]
+    },
+    {
+      "action": "reject",
+      "code": "R13",
+      "name": "خبر داخلی خود منبع",
+      "patterns": [
+        "our site",
+        "our podcast",
+        "we are hiring",
+        "site update",
+        "our youtube channel",
+        "newsletter"
+      ]
+    },
+    {
+      "action": "reject",
+      "code": "R14",
+      "name": "شایعه شبکه‌های اجتماعی بدون منبع",
+      "patterns": [
+        "user on x",
+        "on reddit",
+        "twitter user",
+        "fans on social media",
+        "viral post",
+        "social media reacts"
+      ]
+    },
+    {
+      "action": "reject",
+      "code": "R15",
+      "name": "خبر غیرانیمه",
+      "note": "برای Siliconera: آیتم بدون هیچ کلیدواژه انیمه/مانگا/استودیو → R15. مرز: اقتباس انیمه‌ای، صداپیشه انیمه یا استودیوی انیمه ربط محسوب می‌شود."
+    },
+    {
+      "action": "reject",
+      "code": "R16",
+      "name": "«به‌روزرسانی» بدون تغییر",
+      "patterns": [
+        "correction:",
+        "updated:",
+        "typo fixed",
+        "updated with correct"
+      ]
+    },
+    {
+      "action": "reject",
+      "code": "R17",
+      "exception": "منتشر می‌شود اگر: عنوان در franchises.json باشد، یا اولین پخش جهانی/رسمی اثر باشد، یا قرارداد پخش تازه‌ای اعلام شده باشد. در غیر این صورت برای عنوان‌های بزرگ → نامزد Digest.",
+      "name": "کاتالوگ روتین",
+      "patterns": [
+        "now streaming on",
+        "now available on",
+        "joins the catalog",
+        "added to",
+        "now on netflix",
+        "now on crunchyroll",
+        "adds .* anime",
+        "adds .* manga"
+      ]
+    }
+  ],
+  "version": 1,
+  "sensitive_title_patterns": [
+    "passed away",
+    "has died",
+    "dies at",
+    "dead at",
+    "died at",
+    "arrested",
+    "arrest",
+    "lawsuit",
+    "sues",
+    "sued",
+    "scandal",
+    "suicide",
+    "sexual assault",
+    "indicted",
+    "charged with",
+    "apologizes for",
+    "apologised for"
+  ],
+  "sensitive_summary_phrases": [
+    "passed away",
+    "has died",
+    "was arrested",
+    "filed a lawsuit",
+    "sued for",
+    "sexual assault",
+    "committed suicide",
+    "died at the age",
+    "dies at",
+    "arrested on suspicion"
+  ],
+  "sensitive_note": "R6 فقط با عبارت‌های خبری چندکلمه‌ای یا کلمه در تیتر (word-boundary) چک می‌شود؛ کلمات تکی مثل dead/death در خلاصه چک نمی‌شوند چون عنوان اثر (The Detective Is Already Dead) یا خلاصه داستان مانگا (harassment at work) مثبت کاذب می‌سازند. مثبت کاذب مشاهده‌شده در dry-run ۲۱ نوامبر ۲۰۲۶: Already Dead / Premature Death / harassment در سیناپس."
+}
