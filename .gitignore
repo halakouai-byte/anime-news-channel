@@ -1,0 +1,8 @@
+# فایل‌های محلی/موقت — هرگز کامیت نمی‌شوند
+.venv*/
+__pycache__/
+*.pyc
+out/
+dry-run-output/tmp-state/
+worker/.wrangler/
+.DS_Store

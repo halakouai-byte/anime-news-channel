@@ -1,0 +1,9 @@
+# وابستگی‌های پایتون publisher کانال «اخبار دنیای انیمه» — نسخه‌های پین‌شده.
+# Python 3.12 (ubuntu-latest در GitHub Actions).
+feedparser==6.0.11
+requests==2.32.3
+# کاور V3 با Pillow رندر می‌شود (cover.py؛ raqm برای شکل‌دهی فارسی/RTL لازم است).
+Pillow==11.0.0
+# Playwright فقط fallback مستند (ARCHITECTURE.md §۵.۱ گزینه ۲) است؛ کاور فعلی
+# به آن نیاز ندارد، ولی پین‌شده نگه داشته می‌شود تا در صورت نیاز آماده باشد.
+playwright==1.49.1
