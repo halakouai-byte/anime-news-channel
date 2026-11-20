@@ -1,0 +1,15 @@
+2026-11-20T22:33:35.377Z poll#0 ann status=200 bytes=22611 newest_pub=Fri, 20 Nov 2026 14:57:31 -0500 guid_changed=false  retry_after=-
+2026-11-20T22:33:35.377Z poll#0 mal status=200 bytes=19777 newest_pub=Fri, 20 Nov 2026 09:44:20 -0800 guid_changed=false  retry_after=-
+2026-11-20T22:34:39.885Z poll#1 ann status=200 bytes=22611 newest_pub=Fri, 20 Nov 2026 14:57:31 -0500 guid_changed=false  retry_after=-
+2026-11-20T22:34:39.885Z poll#1 mal status=200 bytes=19777 newest_pub=Fri, 20 Nov 2026 09:44:20 -0800 guid_changed=false  retry_after=-
+2026-11-20T22:35:41.276Z poll#2 ann status=200 bytes=22611 newest_pub=Fri, 20 Nov 2026 14:57:31 -0500 guid_changed=false  retry_after=-
+2026-11-20T22:35:41.276Z poll#2 mal status=200 bytes=19777 newest_pub=Fri, 20 Nov 2026 09:44:20 -0800 guid_changed=false  retry_after=-
+2026-11-20T22:36:43.058Z poll#3 ann status=200 bytes=22611 newest_pub=Fri, 20 Nov 2026 14:57:31 -0500 guid_changed=false  retry_after=-
+2026-11-20T22:36:43.058Z poll#3 mal status=200 bytes=19777 newest_pub=Fri, 20 Nov 2026 09:44:20 -0800 guid_changed=false  retry_after=-
+2026-11-20T22:37:44.972Z poll#4 ann status=200 bytes=22880 newest_pub=Fri, 20 Nov 2026 17:00:00 -0500 guid_changed=true  retry_after=-
+2026-11-20T22:37:44.972Z poll#4 mal status=200 bytes=19777 newest_pub=Fri, 20 Nov 2026 09:44:20 -0800 guid_changed=false  retry_after=-
+2026-11-20T22:38:47.657Z poll#5 ann status=200 bytes=22880 newest_pub=Fri, 20 Nov 2026 17:00:00 -0500 guid_changed=false  retry_after=-
+2026-11-20T22:38:47.657Z poll#5 mal status=200 bytes=3009 newest_pub=? guid_changed=true  retry_after=-
+2026-11-20T22:39:49.016Z poll#6 ann status=200 bytes=22880 newest_pub=Fri, 20 Nov 2026 17:00:00 -0500 guid_changed=false  retry_after=-
+2026-11-20T22:39:49.016Z poll#6 mal status=200 bytes=19777 newest_pub=Fri, 20 Nov 2026 09:44:20 -0800 guid_changed=true  retry_after=-
+POLL DONE

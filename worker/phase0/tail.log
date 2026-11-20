@@ -1,0 +1,199 @@
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mProxy environment variables detected. We'll use your proxy for fetch requests.[0m
+
+
+{
+    "wallTime": 107,
+    "cpuTime": 0,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "2a8d7ac4-9386-4099-9a02-637daa71af5d"
+    },
+    "scriptName": "anime-news-detector",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1795214663657,
+    "event": {
+        "request": {
+            "url": "https://anime-news-detector.halakouai-byte.workers.dev/",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "cf-connecting-ip": "2606:54c1:1:15c::419:16",
+                "cf-ipcountry": "US",
+                "cf-ray": "a5dafa9fddeb066b",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "host": "anime-news-detector.halakouai-byte.workers.dev",
+                "user-agent": "curl/8.5.0",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2606:54c1:1:15c::419:16"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/1.1",
+                "requestPriority": "",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": [
+                    "Host",
+                    "User-Agent",
+                    "Accept"
+                ],
+                "clientTcpRtt": 0,
+                "clientQuicRtt": 0,
+                "colo": "EWR",
+                "asn": 13335,
+                "asOrganization": "Cloudflare, Inc.",
+                "country": "US",
+                "isEUCountry": false,
+                "city": "New York City",
+                "continent": "NA",
+                "region": "New York",
+                "regionCode": "NY",
+                "timezone": "America/New_York",
+                "longitude": "-74.00597",
+                "latitude": "40.71427",
+                "postalCode": "10004",
+                "metroCode": "501",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-AES256-GCM-SHA384",
+                "tlsClientRandom": "XwLgnTHUlHk/4+oaKThaiefDoO6DP36qdbxdIOzUKdQ=",
+                "tlsClientCiphersSha1": "WUS9+h7TjVkF9aEouGuCEMjGQGA=",
+                "tlsClientExtensionsSha1": "6yAh6It+G+4V5vng0xuqjAaRpEc=",
+                "tlsClientExtensionsSha1Le": "bG2rTAusg3JAxXlK1exPUu/eEx0=",
+                "tlsExportedAuthenticator": {
+                    "clientHandshake": "911e14242a62bc4768c7922029182537d5c6f29fe630e45ceaaf6b9abeeaa540b41916a4bedeb99abb19889fc6046173",
+                    "serverHandshake": "9676dad09d78c8c2f39b66d11545431eb1701baa22426d3f1039664647610a21193db310cbb8fe0faa51bc9e37950d71",
+                    "clientFinished": "d79a4e88886c3d7f057016c5a2ab36e07768aea29e27209896eb16fe35e013f1795069b3d26d229d87eecb5da7e5e176",
+                    "serverFinished": "4d56dfd464558d6441a96180d28b69b1692f6abc4263a96abc3c270cad108f66567737a7cc0e39ab6258a3cbb4492b8c"
+                },
+                "tlsClientHelloLength": "546",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 0
+                }
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1135,
+    "cpuTime": 4,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "tailAttributes": {
+        "cron": "* * * * *",
+        "scheduledTime": 1795214669310
+    },
+    "scriptVersion": {
+        "id": "2a8d7ac4-9386-4099-9a02-637daa71af5d"
+    },
+    "scriptName": "anime-news-detector",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "tick cron due=ann,fandompost,mal,animetv,siliconera fetched=4 fresh=0 excluded=0 dup=0 dispatch=skipped (no fresh items) errors=1"
+            ],
+            "level": "log",
+            "timestamp": 1795214671209
+        }
+    ],
+    "eventTimestamp": 1795214670062,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1795214669310
+    }
+}
+{
+    "wallTime": 558,
+    "cpuTime": 2,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "tailAttributes": {
+        "cron": "* * * * *",
+        "scheduledTime": 1795214729310
+    },
+    "scriptVersion": {
+        "id": "2a8d7ac4-9386-4099-9a02-637daa71af5d"
+    },
+    "scriptName": "anime-news-detector",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "tick cron due=ann,fandompost,animecorner fetched=2 fresh=0 excluded=0 dup=0 dispatch=skipped (no fresh items) errors=1"
+            ],
+            "level": "log",
+            "timestamp": 1795214730342
+        }
+    ],
+    "eventTimestamp": 1795214729775,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1795214729310
+    }
+}
+{
+    "wallTime": 1998,
+    "cpuTime": 5,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "tailAttributes": {
+        "cron": "* * * * *",
+        "scheduledTime": 1795214789310
+    },
+    "scriptVersion": {
+        "id": "2a8d7ac4-9386-4099-9a02-637daa71af5d"
+    },
+    "scriptName": "anime-news-detector",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "tick cron due=ann,fandompost,mal,animetv,siliconera fetched=4 fresh=0 excluded=0 dup=0 dispatch=skipped (no fresh items) errors=1"
+            ],
+            "level": "log",
+            "timestamp": 1795214791924
+        }
+    ],
+    "eventTimestamp": 1795214789900,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1795214789310
+    }
+}
