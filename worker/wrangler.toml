@@ -1,0 +1,35 @@
+# wrangler.toml — anime-news-detector (Cloudflare Worker)
+# Detector for the Persian anime news Telegram channel «اخبار دنیای انیمه».
+# Architecture: ARCHITECTURE.md v2 §6 (hybrid: Worker detector + Actions publisher).
+#
+# NO SECRETS IN THIS FILE. Ever. The dispatch PAT lives ONLY as a
+# Cloudflare Worker Secret named GITHUB_DISPATCH_PAT
+# (see worker/README.md for the exact `wrangler secret put` command).
+#
+# compatibility_date MUST stay 2026-11-20: 2026-11-21 is "in the future"
+# by Cloudflare's UTC clock and deploy is rejected with error 10021.
+
+name = "anime-news-detector"
+main = "src/index.js"
+compatibility_date = "2026-11-20"
+
+# Cron Trigger every 1 minute — 24/7, no night-silence window.
+# User decision, locked 2026-11-21: news is detected and published
+# immediately on arrival, including 02:00-07:00 Tehran.
+[triggers]
+crons = ["* * * * *"]
+
+# KV: the detector's queue + dedupe store (ARCH §6.3).
+#   item:<sha256>        one key per fresh item (append-only, TTL 30d)
+#   seen:<sha256>        layer-1 exact dedupe, TTL 30d
+#   story:<story-key>    layer-2 story dedupe, TTL 48h
+#   hw:<source>          per-source highwater pubDate (seeded on first run)
+#   meta:recent_titles   layer-3 title similarity, TTL 7d
+#   meta:last_tick       last-tick summary (written at most hourly)
+[[kv_namespaces]]
+binding = "NEWS_KV"
+id = "ffbba7902cdb416795ce2ff27be03481"
+
+[vars]
+REPO_OWNER = "halakouai-byte"
+REPO_NAME = "anime-news-channel"
