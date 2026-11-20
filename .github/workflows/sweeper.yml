@@ -1,0 +1,62 @@
+# ورک‌فلوی پشتیبان — sweeper
+# هر ۱۵ دقیقه می‌چرخد؛ اگر Worker یا dispatch خبر تازه‌ای را جا انداخت،
+# خبرهای جامانده را منتشر می‌کند. هم‌زمان keepalive است: هر انتشار state را
+# کامیت می‌کند، پس کرون بعد از ۶۰ روز غیرفعال نمی‌شود.
+# تصمیم قطعی کاربر (قفل‌شده ۲۱ نوامبر ۲۰۲۶): سکوت شبانه نیست؛ انتشار ۲۴/۷.
+name: Sweeper
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      max_posts:
+        description: "حداکثر پست در این اجرا"
+        required: false
+        default: "2"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: anime-news-publish
+  cancel-in-progress: false
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Fetch + filter + queue
+        run: python scripts/fetch.py
+
+      - name: Publish missed items to Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/publish.py --max-posts ${{ inputs.max_posts || 2 }}
+
+      - name: Commit state + queue + archive + logs
+        if: always()
+        run: |
+          git config user.name "anime-news-publisher"
+          git config user.email "anime-news-publisher@users.noreply.github.com"
+          git add data/state.json data/queue.json data/archive.jsonl logs/ || true
+          git diff --cached --quiet && echo "nothing to commit" && exit 0
+          git commit -m "sweeper: update state/queue/archive [skip ci]"
+          git pull --rebase origin main || true
+          git push origin main || (git pull --rebase origin main && git push origin main)
