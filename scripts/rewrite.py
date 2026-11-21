@@ -197,6 +197,12 @@ def detect_event(title: str, summary: str) -> str:
                              "manga to end", "manga will end",
                              "final chapter", "final volume")):
         return "manga_ending"
+    # Critic fix 2026-11-21 (review #1, run 44936475145): لایسنس (مثلاً
+    # «Yen Press Licenses ...») خودش یک رویداد است، نه اعلام انیمه تازه.
+    # بدون این شاخه، خبر لایسنس به «announcement» → «انیمه تازه» می‌افتاد و
+    # کپشن می‌گفت انیمه تازه‌ای اعلام شده (همان کلاس خطای پیام ۶).
+    if "licens" in tl:
+        return "license"
     if "gets tv anime" in tl or "anime adaptation" in tl or "anime announced" in tl:
         return "adaptation"
     if "film" in tl or "movie" in tl:
@@ -215,6 +221,8 @@ def detect_event(title: str, summary: str) -> str:
     if any(k in text for k in ("manga will end", "will end in the",
                                "ends serialization")):
         return "manga_ending"
+    if "licens" in text:
+        return "license"
     if "cast" in text:
         return "casting"
     if any(k in text for k in ("will premiere", "premieres", "premiere date")):
@@ -247,6 +255,10 @@ def detect_category(title: str, summary: str, event: str, hint: str | None) -> s
     # LIDENFILMS در خلاصه آن را فعال می‌کرد) و نه «فصل جدید» (که کلمه
     # «anime» در پس‌زمینه خلاصه آن را فعال می‌کرد).
     if event == "manga_ending":
+        return "مانگا و اقتباس"
+    # Critic fix 2026-11-21 (review #1, run 44936475145): لایسنس هم دسته‌اش
+    # «مانگا و اقتباس» است (انتشار رسمی مانگا/ناول برای بازار تازه).
+    if event == "license":
         return "مانگا و اقتباس"
     text = f"{title} {summary}".lower()
     # Critic fix 2026-11-21: «film»/«movie» با مرز کلمه — «LIDENFILMS»
@@ -307,6 +319,10 @@ def extract_facts(facts: dict, banks: dict) -> dict:
         # سریال‌سازی مانگا. بدون این شاخه، event_fa پیش‌فرض «خبر تازه» بود
         # و تیتر هیچ نشانی از پایان نداشت.
         event_fa = "پایان سریال‌سازی"
+    elif event == "license":
+        # Critic fix 2026-11-21 (review #1, run 44936475145): رویداد تازه —
+        # لایسنس (انتشار رسمی اثر برای بازار تازه، مثلاً Yen Press).
+        event_fa = "لایسنس تازه"
     elif event == "trailer":
         event_fa = "تریلر تازه"
     elif event == "announcement":
@@ -400,6 +416,7 @@ def _why_templates(fx: dict, banks: dict):
         "trailer": any(k in text for k in ("trailer", "promo", " pv ")),
         "adaptation": any(k in text for k in ("adaptation", "gets tv anime")),
         "manga": "manga" in text,
+        "license": "licens" in text,
         "visual": any(k in text for k in ("visual", "key visual")),
         "studio": bool(fx["studio_en"]),
         "premiered": "premiered" in text,
@@ -413,6 +430,10 @@ def _why_templates(fx: dict, banks: dict):
         "why_continuation": "premiered",
         # Critic fix 2026-11-21 (review #1, msg 6): «چرا»ی مخصوص پایان مانگا.
         "why_manga_ending": "manga",
+        # Critic fix 2026-11-21 (review #1, run 44936475145): «چرا»ی مخصوص
+        # لایسنس — نه why_adaptation/why_new_season که از لایسنس، «انیمه تازه
+        # در راه است» می‌ساختند.
+        "why_license": "license",
     }
     out = []
     for w in banks["templates-fa"]["why"]:
@@ -460,13 +481,15 @@ def _build_once(fx: dict, banks: dict, rng: random.Random):
     # قالب‌های خنثی (اعلام/تایید) مجازند — قالب‌های «برمی‌گردد / در راه است /
     # مسیر تازه / خبر خوب / صبر جواب داد» برای پایان نادرست‌اند (تست T1 اول
     # لید «برگشته است» را برای پایان مانگا تولید کرد).
+    # Critic fix 2026-11-21 (review #1, run 44936475145): همان محدودیت برای
+    # لایسنس — «در راه است / برگشته است» برای لایسنس هم نادرست است.
     _ending_safe_titles = {"title_01", "title_03", "title_05", "title_07",
                            "title_08", "title_10"}
     _ending_safe_leads = {"lead_02", "lead_03", "lead_12", "lead_13",
                           "lead_15", "lead_16"}
     _titles = templates["titles"]
     _leads = templates["leads"]
-    if fx["event"] == "manga_ending":
+    if fx["event"] in ("manga_ending", "license"):
         _titles = [t for t in _titles if t["id"] in _ending_safe_titles] or _titles
         _leads = [l for l in _leads if l["id"] in _ending_safe_leads] or _leads
     title = None
@@ -508,6 +531,10 @@ def _build_once(fx: dict, banks: dict, rng: random.Random):
         # why_manga_ending — نه why_adaptation (که از کلمه «adaptation» در
         # پس‌زمینه خلاصه تغذیه می‌شد و می‌گفت اقتباس تازه می‌آید).
         "manga_ending": ["why_manga_ending"],
+        # Critic fix 2026-11-21 (review #1, run 44936475145): برای لایسنس
+        # فقط why_license — نه why_new_season (که می‌گفت «قصه ادامه دارد و
+        # بخشی که مدت‌ها درباره‌اش حرف زده می‌شد، حالا واقعا ساخته می‌شود»).
+        "license": ["why_license"],
         "announcement": ["why_new_season"],  # Critic fix 2026-11-21 (review #1, item 14): why_continuation removed here — its pattern ("ادامه مستقیم قصه‌ای که از پیش آغاز کرده بود") is wrong for a brand-new production announcement (human QA sample 5 scored it 9/10 for this). why_new_season is always eligible (need: None), so no new HOLDs. The bank entry stays for a future true "returning season" category.
         "box_office": ["why_first_look"],
     }.get(fx["event"], [])
@@ -578,12 +605,18 @@ def check_gates(caption: str, title: str, fx: dict, why: str,
         "final volume", "will end", "manga ends", "concludes"))
     _adapt_src = any(k in _src for k in (
         "gets tv anime", "anime adaptation announced", "new anime adaptation"))
+    _license_src = "licens" in _src
     _claims_adapt = any(k in caption for k in (
         "اقتباس انیمه‌ای تازه", "انیمه تازه"))
     _claims_end = any(k in caption for k in (
         "پایان سریال‌سازی", "تمام می‌شود", "به پایان رسید"))
+    _claims_license = "لایسنس" in caption
     gates["event_consistency"] = not (
-        (_ending_src and _claims_adapt) or (_adapt_src and _claims_end))
+        (_ending_src and _claims_adapt) or (_adapt_src and _claims_end)
+        # Critic fix 2026-11-21 (review #1, run 44936475145): منبع لایسنس +
+        # ادعای انیمه تازه = وارونگی (Yen Press Licenses → «انیمه تازه اعلام
+        # شد»)؛ و برعکس، منبع اقتباس تازه + ادعای لایسنس هم ناسازگار است.
+        or (_license_src and _claims_adapt) or (_adapt_src and _claims_license))
     gates["no_placeholder"] = not _has_placeholder(caption)
     # انگلیسی محدود: فقط نام اثر/استودیو/منبع + لینک + هشتگ مجاز است
     allowed = set()
@@ -612,7 +645,7 @@ def check_gates(caption: str, title: str, fx: dict, why: str,
     # پیش‌فرض کلی «خبر تازه» نشانه نیست و شمرده نمی‌شود.
     specific_markers = [
         fx.get("date_fa"), "تریلر", "صداپیشه", "پخش", "کی‌ویژوال",
-        "اقتباس", "فصل", "استودیو", "پایان",
+        "اقتباس", "فصل", "استودیو", "پایان", "لایسنس",
     ]
     _ev = fx.get("event_fa")
     if _ev and _ev != "خبر تازه":
