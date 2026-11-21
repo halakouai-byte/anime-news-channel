@@ -386,6 +386,19 @@ def attach_second_sources(state: dict, queue: dict, token: str,
 # ---------------------------------------------------------------------------
 # حلقه اصلی
 # ---------------------------------------------------------------------------
+def is_pending(item: dict) -> bool:
+    """آیتم قابل انتشار در این اجرا: QUEUED/APPROVED، یا HOLD با دلیل
+    gates_failed (دوباره تست می‌شود — اصلاح یک گیت می‌تواند آن را آزاد کند).
+    HOLD انسانی (low-confidence و...) دوباره تست نمی‌شود.
+    Critic fix 2026-11-21 (run 44936475145): بدون این، Oshi No Ko ‏۸۵‏ و
+    BanG Dream ‏۸۰‏ بعد از اصلاح why_specific هم HOLD ماندند — چون publish
+    فقط QUEUED/APPROVED را می‌خواند و HOLD را هرگز دوباره ارزیابی نمی‌کرد."""
+    if item.get("status") in ("QUEUED", "APPROVED"):
+        return True
+    return (item.get("status") == "HOLD"
+            and str(item.get("hold_reason") or "").startswith("gates_failed"))
+
+
 def run_publish(max_posts: int = 2, dry: bool = False,
                 state_path=None, queue_path=None, archive_path=None,
                 workdir: Path | None = None) -> dict:
@@ -399,8 +412,7 @@ def run_publish(max_posts: int = 2, dry: bool = False,
     workdir = workdir or (repo_root() / "out")
     workdir.mkdir(parents=True, exist_ok=True)
 
-    pending = [i for i in queue["items"]
-               if i.get("status") in ("QUEUED", "APPROVED")]
+    pending = [i for i in queue["items"] if is_pending(i)]
     breaker = evaluate_circuit_breaker(state, len(pending))
     if not dry:
         attach_second_sources(state, queue, token, chat_id)
