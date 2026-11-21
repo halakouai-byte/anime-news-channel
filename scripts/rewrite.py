@@ -17,7 +17,7 @@ rewrite.py — موتور بازنویسی فارسی قالبی (template-based
 اثر) + لید یک‌جمله‌ای + بدنه ۲ تا ۳ جمله با حقایق + «چرا مهم است؟» دقیقاً
 یک جمله خاصِ همین خبر + منبع + لینک + ۲ تا ۳ هشتگ. طول کپشن ۶۰۰–۸۵۰ کاراکتر.
 
-۸ دروازه کیفی (ARCHITECTURE.md §4.3 / filter-v2.md §7.1) در check_gates
+۹ دروازه کیفی (ARCHITECTURE.md §4.3 / filter-v2.md §7.1) در check_gates
 پیاده شده است؛ ۳ بار رد شدن → HOLD انسانی (تصمیم انتشار با لایه بالاتر است).
 """
 
@@ -183,8 +183,20 @@ def detect_event(title: str, summary: str) -> str:
 
     «premiered on July 2» در خلاصه، پس‌زمینه است نه خبر؛ پس «پخش» فقط وقتی
     رویداد است که در تیتر باشد یا در خلاصه با فعل آینده آمده باشد.
+
+    Critic fix 2026-11-21 (review #1, content error msg 6): پایانِ یک اثر
+    خودش خبر است و باید اول بررسی شود. خلاصه خبر پایان معمولاً اقتباس
+    انیمه‌ایِ قدیمی را به‌عنوان پس‌زمینه می‌آورد («A 12-episode television
+    anime adaptation ... aired in Spring 2025»)؛ بدون این بررسیِ اول،
+    چکِ «adaptation» در خلاصه پس‌زمینه را رویداد می‌خواند و پست ادعا می‌کند
+    اقتباس تازه‌ای اعلام شده است.
     """
     tl = title.lower()
+    if any(k in tl for k in ("ends serialization", "end of serialization",
+                             "ends its serialization", "manga ends",
+                             "manga to end", "manga will end",
+                             "final chapter", "final volume")):
+        return "manga_ending"
     if "gets tv anime" in tl or "anime adaptation" in tl or "anime announced" in tl:
         return "adaptation"
     if "film" in tl or "movie" in tl:
@@ -200,11 +212,20 @@ def detect_event(title: str, summary: str) -> str:
     if "premier" in tl:
         return "date"
     text = f"{title} {summary}".lower()
+    if any(k in text for k in ("manga will end", "will end in the",
+                               "ends serialization")):
+        return "manga_ending"
     if "cast" in text:
         return "casting"
     if any(k in text for k in ("will premiere", "premieres", "premiere date")):
         return "date"
-    if any(k in text for k in ("gets tv anime", "anime adaptation", "adaptation")):
+    # Critic fix 2026-11-21: bare "adaptation"/"anime adaptation" removed —
+    # it matched background ("an anime adaptation aired in Spring 2025").
+    # Only a forward-looking adaptation announcement counts here.
+    if any(k in text for k in ("gets tv anime", "anime adaptation announced",
+                               "anime adaptation confirmed",
+                               "will get an anime adaptation",
+                               "new anime adaptation")):
         return "adaptation"
     if "box office" in text or "box-office" in text:
         return "box_office"
@@ -221,8 +242,16 @@ def detect_category(title: str, summary: str, event: str, hint: str | None) -> s
     """دسته‌بندی قانون‌محور (۶ دسته + خبر روز). hint معتبر بر بقیه مقدم است."""
     if hint in CATEGORIES_FA:
         return hint
+    # Critic fix 2026-11-21 (review #1, msg 6): رویداد پایان مانگا دسته‌اش
+    # «مانگا و اقتباس» است — نه «فیلم» (که کلمه «film» داخل نام استودیو
+    # LIDENFILMS در خلاصه آن را فعال می‌کرد) و نه «فصل جدید» (که کلمه
+    # «anime» در پس‌زمینه خلاصه آن را فعال می‌کرد).
+    if event == "manga_ending":
+        return "مانگا و اقتباس"
     text = f"{title} {summary}".lower()
-    if any(k in text for k in ("film", "movie", "box office")):
+    # Critic fix 2026-11-21: «film»/«movie» با مرز کلمه — «LIDENFILMS»
+    # نباید دسته «فیلم» را فعال کند.
+    if re.search(r"\bfilms?\b|\bmovies?\b|box office", text):
         return "فیلم"
     if any(k in text for k in ("season", "new anime in production", "premier",
                                "second season", "gets 5th part", "part 2")):
@@ -273,6 +302,11 @@ def extract_facts(facts: dict, banks: dict) -> dict:
         event_fa = "معرفی صداپیشه‌های تازه"
     elif event == "adaptation":
         event_fa = "اقتباس انیمه‌ای تازه"
+    elif event == "manga_ending":
+        # Critic fix 2026-11-21 (review #1, msg 6): رویداد تازه — پایان
+        # سریال‌سازی مانگا. بدون این شاخه، event_fa پیش‌فرض «خبر تازه» بود
+        # و تیتر هیچ نشانی از پایان نداشت.
+        event_fa = "پایان سریال‌سازی"
     elif event == "trailer":
         event_fa = "تریلر تازه"
     elif event == "announcement":
@@ -316,10 +350,20 @@ def _has_placeholder(text: str) -> bool:
 
 
 def _eligible_bodies(fx: dict, banks: dict):
-    """بدنه‌ها فقط وقتی انتخاب می‌شوند که حقیقتشان در منبع باشد."""
+    """بدنه‌ها فقط وقتی انتخاب می‌شوند که حقیقتشان در منبع باشد.
+
+    Critic fix 2026-11-21 (review #1, msg 6): body_studio («ساخت این بخش
+    تازه بر عهده {studio} است») و body_manga_origin («... چشم‌به‌راه نسخه
+    انیمه») فقط وقتی درست‌اند که خبر، یک تولید/اقتباس تازه باشد. برای
+    رویداد پایان (manga_ending) استودیوی پس‌زمینه خلاصه (مثلاً Crunchyroll
+    که فقط پخش‌کننده اقتباس قدیمی بود) نباید به «تهیه‌کننده بخش تازه»
+    تبدیل شود — پس هر دو فقط برای رویدادهای تولید تازه واجدند.
+    """
     text = f"{fx['title_en']} {fx['summary_en']}".lower()
     has_date_month = bool(fx["date_fa"]) and any(
         m in fx["date_fa"] for m in MONTHS_FA.values())
+    _new_production = fx["event"] in ("adaptation", "announcement", "date",
+                                      "trailer", "casting")
     has = {
         "date": bool(fx["date_fa"]),
         "date_month": has_date_month,
@@ -327,8 +371,8 @@ def _eligible_bodies(fx: dict, banks: dict):
         "visual": any(k in text for k in ("visual", "key visual", "teaser visual")),
         "trailer": any(k in text for k in ("trailer", "promo", " pv ")),
         "premiered": "premiered" in text,
-        "manga": any(k in text for k in ("manga", "light novel")),
-        "studio": bool(fx["studio_en"]),
+        "manga": any(k in text for k in ("manga", "light novel")) and _new_production,
+        "studio": bool(fx["studio_en"]) and _new_production,
         "event_live": any(k in text for k in ("livestream", "anniversary", "event")),
     }
     has_date_month = bool(fx["date_fa"]) and any(
@@ -367,6 +411,8 @@ def _why_templates(fx: dict, banks: dict):
         "why_visual_staff": "visual", "why_date_set": "date",
         "why_first_look": None, "why_studio": "studio",
         "why_continuation": "premiered",
+        # Critic fix 2026-11-21 (review #1, msg 6): «چرا»ی مخصوص پایان مانگا.
+        "why_manga_ending": "manga",
     }
     out = []
     for w in banks["templates-fa"]["why"]:
@@ -410,9 +456,22 @@ def _build_once(fx: dict, banks: dict, rng: random.Random):
         "why_fact": fx["date_fa"] or fx["event_fa"],
     }
     # تیتر: اولین قالبِ ≤۷۰ کاراکتر (نام انگلیسی اثر همیشه در تیتر است)
+    # Critic fix 2026-11-21 (review #1, msg 6): برای رویداد پایان فقط
+    # قالب‌های خنثی (اعلام/تایید) مجازند — قالب‌های «برمی‌گردد / در راه است /
+    # مسیر تازه / خبر خوب / صبر جواب داد» برای پایان نادرست‌اند (تست T1 اول
+    # لید «برگشته است» را برای پایان مانگا تولید کرد).
+    _ending_safe_titles = {"title_01", "title_03", "title_05", "title_07",
+                           "title_08", "title_10"}
+    _ending_safe_leads = {"lead_02", "lead_03", "lead_12", "lead_13",
+                          "lead_15", "lead_16"}
+    _titles = templates["titles"]
+    _leads = templates["leads"]
+    if fx["event"] == "manga_ending":
+        _titles = [t for t in _titles if t["id"] in _ending_safe_titles] or _titles
+        _leads = [l for l in _leads if l["id"] in _ending_safe_leads] or _leads
     title = None
     title_id = None
-    shuffled_titles = templates["titles"][:]
+    shuffled_titles = _titles[:]
     rng.shuffle(shuffled_titles)
     for t in shuffled_titles:
         cand = _fill(t["pattern"], ctx)
@@ -424,7 +483,7 @@ def _build_once(fx: dict, banks: dict, rng: random.Random):
         title = title[:70]
         title_id = "title_fallback"
     # لید
-    lead_tpl = rng.choice(templates["leads"])
+    lead_tpl = rng.choice(_leads)
     lead = _fill(lead_tpl["pattern"], ctx)
     # بدنه: ۲ جمله واجد شرایط (سوم فقط اگر کپشن کوتاه ماند)
     bodies = _eligible_bodies(fx, banks)
@@ -445,6 +504,10 @@ def _build_once(fx: dict, banks: dict, rng: random.Random):
         "casting": ["why_cast", "why_visual_staff"],
         "date": ["why_premiere_date", "why_date_set"],
         "trailer": ["why_trailer"],
+        # Critic fix 2026-11-21 (review #1, msg 6): برای پایان مانگا فقط
+        # why_manga_ending — نه why_adaptation (که از کلمه «adaptation» در
+        # پس‌زمینه خلاصه تغذیه می‌شد و می‌گفت اقتباس تازه می‌آید).
+        "manga_ending": ["why_manga_ending"],
         "announcement": ["why_new_season"],  # Critic fix 2026-11-21 (review #1, item 14): why_continuation removed here — its pattern ("ادامه مستقیم قصه‌ای که از پیش آغاز کرده بود") is wrong for a brand-new production announcement (human QA sample 5 scored it 9/10 for this). why_new_season is always eligible (need: None), so no new HOLDs. The bank entry stays for a future true "returning season" category.
         "box_office": ["why_first_look"],
     }.get(fx["event"], [])
@@ -474,7 +537,7 @@ def _build_once(fx: dict, banks: dict, rng: random.Random):
     }
 
 
-# ------------------------------------------------------- ۸ دروازه کیفی
+# ------------------------------------------------------- ۹ دروازه کیفی
 
 def _ngram_similarity(a: str, b: str, n: int = 5) -> float:
     """شباهت 5-gram کاراکتری پس از نرمال‌سازی (برای فارسی/انگلیسی نزدیک صفر است)."""
@@ -500,9 +563,27 @@ def check_gates(caption: str, title: str, fx: dict, why: str,
                 recent_posts: list | None = None,
                 template_usage: dict | None = None,
                 template_ids: dict | None = None) -> dict:
-    """هر ۸ دروازه را می‌سنجد؛ خروجی {gate_id: bool}."""
+    """هر ۹ دروازه را می‌سنجد؛ خروجی {gate_id: bool}."""
     gates: dict[str, bool] = {}
     gates["length"] = 600 <= len(caption) <= 850 and len(title) <= 70
+    gates["no_placeholder"] = not _has_placeholder(caption)
+    # سازگاری رویداد با منبع (دروازه ۹ — منتقد، بررسی #۱، خطای پیام ۶):
+    # اگر منبع از پایان می‌گوید، کپشن نباید ادعای اقتباس/پخش تازه کند —
+    # و برعکس، اگر منبع اعلام اقتباس تازه است، کپشن نباید از پایان بگوید.
+    # این دروازه همان شکافی را می‌بندد که ۸ دروازه ساختاری ندیدند: وارونگی
+    # رویداد (پایان مانگا → «اقتباس انیمه‌ای تازه اعلام شد»).
+    _src = f"{fx['title_en']} {fx['summary_en']}".lower()
+    _ending_src = any(k in _src for k in (
+        "ends serialization", "end of serialization", "final chapter",
+        "final volume", "will end", "manga ends", "concludes"))
+    _adapt_src = any(k in _src for k in (
+        "gets tv anime", "anime adaptation announced", "new anime adaptation"))
+    _claims_adapt = any(k in caption for k in (
+        "اقتباس انیمه‌ای تازه", "انیمه تازه"))
+    _claims_end = any(k in caption for k in (
+        "پایان سریال‌سازی", "تمام می‌شود", "به پایان رسید"))
+    gates["event_consistency"] = not (
+        (_ending_src and _claims_adapt) or (_adapt_src and _claims_end))
     gates["no_placeholder"] = not _has_placeholder(caption)
     # انگلیسی محدود: فقط نام اثر/استودیو/منبع + لینک + هشتگ مجاز است
     allowed = set()
@@ -522,11 +603,20 @@ def check_gates(caption: str, title: str, fx: dict, why: str,
     )
     usage = (template_usage or {}).get((template_ids or {}).get("lead"), 0)
     gates["template_freshness"] = usage <= 3
-    # «چرا مهم است؟» خاص: نام اثر + یک حقیقت مشخص (تاریخ/تریلر/کست/پخش/اقتباس)
+    # «چرا مهم است؟» خاص: نام اثر + یک حقیقت مشخص (تاریخ/تریلر/کست/پخش/اقتباس/پایان)
+    # Critic fix 2026-11-21 (review #1, msg 6 + live HOLDs): خودِ event_fa هم
+    # یک حقیقت مشخصِ همین خبر است (مثلاً «انیمه تازه» در why_new_season).
+    # بدون این، why_new_season برای اعلامیه‌های بدون فصل همیشه why_specific
+    # را رد می‌کرد — همان علتی که Oshi No Ko ‏(۸۵)‏ و BanG Dream ‏(۸۰)‏ را در
+    # ران زنده ۲۱ نوامبر HOLD کرد (بعد از حذف why_continuation از announcementها).
+    # پیش‌فرض کلی «خبر تازه» نشانه نیست و شمرده نمی‌شود.
     specific_markers = [
         fx.get("date_fa"), "تریلر", "صداپیشه", "پخش", "کی‌ویژوال",
-        "اقتباس", "فصل", "استودیو",
+        "اقتباس", "فصل", "استودیو", "پایان",
     ]
+    _ev = fx.get("event_fa")
+    if _ev and _ev != "خبر تازه":
+        specific_markers.append(_ev)
     _fr_names = [n for n in (fx.get("fr_fa"), fx.get("fr_en")) if n]
     gates["why_specific"] = bool(
         why and any(n in why for n in _fr_names)
@@ -594,7 +684,7 @@ def rewrite_post(facts: dict, seed: int | None = None,
         score = len(passed)
         if score > best_score:
             best_score, best = score, (built, gates, passed)
-        if score == 8 and 600 <= len(built["caption"]) <= 850:
+        if score == 9 and 600 <= len(built["caption"]) <= 850:
             best = (built, gates, passed)
             break
     built, gates, passed = best

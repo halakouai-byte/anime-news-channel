@@ -220,17 +220,18 @@ def publish_one(item: dict, state: dict, queue: dict, token: str, chat_id: str,
               if a.get("caption")]
     post = rewrite_post(facts, seed=seed, recent_posts=recent,
                         template_usage=template_usage_counts(state))
-    # ۸ دروازه کیفی (ARCHITECTURE.md §۴.۳): همه باید پاس شوند. موتور بازنویسی
+    # ۹ دروازه کیفی (ARCHITECTURE.md §۴.۳): همه باید پاس شوند. موتور بازنویسی
     # ۳۰ seed را امتحان می‌کند؛ اگر بهترین تلاش هم دروازه‌ای را رد کرد، خبر
     # به HOLD انسانی می‌رود، نه اینکه پست ناقص منتشر شود.
     all_gates = {"length", "no_placeholder", "english_limited",
                  "source_similarity", "recent_similarity",
-                 "template_freshness", "why_specific", "numbers_dates"}
+                 "template_freshness", "why_specific", "numbers_dates",
+                 "event_consistency"}
     missing = sorted(all_gates - set(post.get("gates_passed", [])))
     if missing:
         item["status"] = "HOLD"
         item["hold_reason"] = "gates_failed:" + ",".join(missing)
-        log_warn(f"gates {len(post.get('gates_passed', []))}/8 — HOLD "
+        log_warn(f"gates {len(post.get('gates_passed', []))}/9 — HOLD "
                  f"(missing: {','.join(missing)}): {item.get('title', '')[:50]}")
         append_archive({
             "guid": item.get("guid"), "hash": item.get("hash"),
