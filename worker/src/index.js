@@ -78,7 +78,13 @@ const UA =
 
 const FEEDS = [
   { id: "ann",         name: "Anime News Network", url: "https://www.animenewsnetwork.com/news/rss.xml", everyMin: 1 },
-  { id: "fandompost",  name: "The Fandom Post",    url: "https://www.fandompost.com/feed/",              everyMin: 1 },
+  // Fandom Post REMOVED from Worker polling 2026-11-21 (manager decision,
+  // option B): its server stably returns HTTP 403 to Cloudflare egress IPs
+  // (verified persistent 3.5+ hours, 2026-11-21 00:11-03:35 UTC, while the
+  // same feed returns 200 from other IPs). Coverage continues via the
+  // GitHub Actions sweeper (scripts/fetch.py still lists it; GitHub
+  // runner IPs are not blocked). Do NOT re-add it here without a live
+  // re-test from the Worker.
   { id: "mal",         name: "MyAnimeList News",   url: "https://myanimelist.net/rss/news.xml",         everyMin: 2 },
   { id: "animetv",     name: "AnimeTV",            url: "https://animetv-jp.net/feed/",                 everyMin: 2 },
   { id: "siliconera",  name: "Siliconera",         url: "https://www.siliconera.com/feed/",             everyMin: 2 },
