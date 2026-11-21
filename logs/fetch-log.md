@@ -1,0 +1,1 @@
+- 2026-11-21T00:13:50Z UTC (2026-11-21 تهران): fetched=270 queued=51 held=6 rejected=15 duplicates=5 digest=1 stale=192 breaking=1 reasons={'R17-reject': 1, 'stale-48h': 192, 'R9-duplicate-L2': 5, 'R2-digest': 1, 'R5-reject': 3, 'R15-non-anime': 9, 'R13-reject': 1, 'R1-reject': 1}
