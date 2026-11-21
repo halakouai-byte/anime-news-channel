@@ -185,6 +185,26 @@ def publish_one(item: dict, state: dict, queue: dict, token: str, chat_id: str,
         return None
     state.update(fresh)
 
+    # Critic fix 2026-11-21 (review #1, item 10 — URGENT): publish-time
+    # freshness re-check. The fetch step rejects items older than 48h,
+    # but an item queued when young ages in the queue — without this
+    # check the first publish wave would post days-old "news" (33 of 70
+    # queue items were already 2+ days old on 2026-11-21). Anything
+    # older than 48h at publish time is dropped (STALE, archived, never
+    # posted) instead of being sent.
+    pub_dt = parse_dt(item.get("pubDate"))
+    if pub_dt is not None:
+        from datetime import timedelta as _td
+        if now_utc() - pub_dt > _td(hours=48):
+            log_warn(f"stale at publish time (>48h), dropping {item.get('hash', '')[:12]}")
+            item["status"] = "STALE"
+            append_archive({
+                "guid": item.get("guid"), "hash": item.get("hash"),
+                "title": item.get("title"), "source": item.get("source"),
+                "status": "stale", "reason": "older than 48h at publish time",
+            }, path=archive_path)
+            return None
+
     facts = {
         "title_en": item.get("title", ""),
         "summary_en": item.get("summary", ""),

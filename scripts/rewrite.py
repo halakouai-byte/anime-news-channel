@@ -445,7 +445,7 @@ def _build_once(fx: dict, banks: dict, rng: random.Random):
         "casting": ["why_cast", "why_visual_staff"],
         "date": ["why_premiere_date", "why_date_set"],
         "trailer": ["why_trailer"],
-        "announcement": ["why_new_season", "why_continuation"],
+        "announcement": ["why_new_season"],  # Critic fix 2026-11-21 (review #1, item 14): why_continuation removed here — its pattern ("ادامه مستقیم قصه‌ای که از پیش آغاز کرده بود") is wrong for a brand-new production announcement (human QA sample 5 scored it 9/10 for this). why_new_season is always eligible (need: None), so no new HOLDs. The bank entry stays for a future true "returning season" category.
         "box_office": ["why_first_look"],
     }.get(fx["event"], [])
     rng.shuffle(why_tpls)
