@@ -25,7 +25,11 @@ concurrency:
 jobs:
   sweep:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    # Critic fix 2026-11-21 (review #1, run 44932633874): same defect as
+    # publish.yml — the sweeper runs the same publish.py with the same
+    # 15-min pacing sleep, so a 10-min timeout would kill any 2-post run
+    # the same way. 60 min, same reasoning as publish.yml.
+    timeout-minutes: 60
     steps:
       - name: Checkout
         uses: actions/checkout@v4

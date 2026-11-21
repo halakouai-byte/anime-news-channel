@@ -30,7 +30,13 @@ concurrency:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    # Critic fix 2026-11-21 (review #1, run 44932633874): timeout MUST exceed
+    # the pacing sleep — publish.py waits up to 15 min between posts
+    # (MIN_GAP_MINUTES), so a 2-post run needs ~17 min. With 15 it was
+    # killed mid-sleep and the 2nd post never went out. 60 covers up to
+    # ~4 posts (3 gaps) with headroom; the 15-min gap itself stays (product
+    # rule — audience pacing, not to be shortened to fit the timeout).
+    timeout-minutes: 60
     steps:
       - name: Checkout
         uses: actions/checkout@v4
