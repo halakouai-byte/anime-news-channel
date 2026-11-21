@@ -1,0 +1,1 @@
+- 2026-11-21T17:55:23Z UTC (30 آبان 1405، تهران): posted message_id=6 guid=https://myanimelist.net/news/74961851?_location=rss category=مانگا و اقتباس score=65 breaking=False latency_min=1498.6
