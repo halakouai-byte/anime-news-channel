@@ -154,7 +154,7 @@ from a local copy by hand outside the documented path.
   Pattern: LiveForge `build.yml` (gitleaks step), plus the SHA256
   verification the manager ordered.
 - `publish.yml` — `repository_dispatch` (event-driven) + manual
-  `workflow_dispatch`: priority score, Persian rewrite, 8 quality gates,
+  `workflow_dispatch`: priority score, Persian rewrite, 9 quality gates,
   Pillow cover (Playwright only as fallback), `sendPhoto`, then commit
   `state.json` + `queue.json` + `archive.jsonl`.
 - `sweeper.yml` — cron `*/15 * * * *`: publishes items the Worker or
@@ -235,11 +235,12 @@ history — never silently delete the file and move on.
   overrides «sensitive». There is no night silence (user decision,
   locked 2026-11-21). More than 3 breaking items in a day is an
   audit warning, not a cap.
-- 8 quality gates before publish (caption 600–850 chars, headline
+- 9 quality gates before publish (caption 600–850 chars, headline
   ≤ 70 chars, no placeholders, limited English, < 25% 5-gram similarity
   with the source summary, < 60% similarity with the last 30 posts,
   lead-template freshness max 3 uses in 7 days, specific «چرا مهم
-  است؟», numbers/dates from the source). 3 gate failures → human HOLD.
+  است؟», numbers/dates from the source, event-vs-source consistency).
+  3 gate failures → human HOLD.
 - Bank maintenance (v2 minimums): +15 templates + 10 phrases per month;
   new-name queue emptied weekly; franchises updated every anime season
   + monthly. If a template bank is not updated for 2 months, gate 6
@@ -328,6 +329,50 @@ history — never silently delete the file and move on.
   NO coverage from either path. Manager decision: DO NOT remove it from
   `scripts/fetch.py` — the error is graceful and each run re-tests it;
   reactivate only if another egress is found. See `sources-v2.md` §7.
+- 2026-11-21 ~21:25 Tehran — FIRST REAL POST LIVE (run 44932633874,
+  workflow_dispatch, head 285491a, dry OFF, max_posts 2): message_id 6,
+  «Haite Kudasai, Takamine-san» (MAL), cover attached (first live
+  cover-attach test PASSED). Run was CANCELLED at 18:10:24Z — only 1 post
+  went out; the 2nd post (after the 15-min gap) never fired. state.json:
+  posts_total 1, posted_message_ids [6].
+- 2026-11-21 ~21:31 Tehran — CONTENT ERROR in post 6 (critic finding):
+  the source (MAL 74961851) says the manga ENDS serialization (Feb issue
+  of Gangan Joker, end of a nearly 8-year run) but the published caption
+  claimed a NEW anime adaptation was announced, produced by Crunchyroll.
+  Root cause: `detect_event` read the summary's background («A 12-episode
+  television anime adaptation ... aired in Spring 2025. Crunchyroll...»)
+  as the event («adaptation»), and `body_studio`/`why_adaptation` turned
+  background entities into the news's actors. The 8 structural gates
+  passed it — none checked event-vs-source consistency. FIXED the same
+  night (local, for the browser commit; test `scripts/test_rewrite_msg6.py`
+  ALL PASSED): new event `manga_ending` (ending keywords checked FIRST in
+  `detect_event`; the summary-level «adaptation» check no longer accepts a
+  bare «adaptation» — only forward-looking phrasing); `body_studio` +
+  `body_manga_origin` only for new-production events; new why
+  `why_manga_ending` + safe title/lead allowlist for endings; 9th gate
+  `event_consistency` (ending-source + fresh-adaptation claim → FAIL, and
+  vice versa); `detect_category` word-boundary fix («LIDENFILMS» no longer
+  triggers «فیلم») + `manga_ending` → «مانگا و اقتباس»; `why_specific`
+  now accepts `event_fa` as a marker — this also fixes the systematic
+  announcement HOLDs (Oshi No Ko 85 + BanG Dream 80 were HOLDed for
+  missing `why_specific` in run 44932633874; both re-test 9/9 with the
+  fix). The wrong caption was corrected in place via `editMessageCaption`
+  (message_id 6 kept; verified live on t.me/s). Known follow-up (not
+  fixed here): the event taxonomy has no «license» event — a Yen Press
+  license announcement defaults to «announcement» → «انیمه تازه».
+- 2026-11-21 ~21:46 Tehran — RUN 44932633874 CANCELLED BY TIMEOUT
+  (critic finding, proven by the job's own step timings): the publish job
+  (`timeout-minutes: 15`) was killed at 18:10:24Z, 15m16s in — the
+  «Publish queue to Telegram» step ran 14m58s and was cancelled mid-sleep
+  (`publish.py` paces posts with a 15-min `time.sleep` between them, so a
+  2-post run needs ~17 min). Only post 1 (message_id 6) went out; the
+  `if: always()` commit step still saved state (posts_total 1, commit
+  3966f4a). FIX (local, for the browser commit, same bundle as the msg-6
+  rewrite fix): `timeout-minutes: 60` in BOTH `publish.yml` (15 → 60) and
+  `sweeper.yml` (10 → 60 — the sweeper runs the same publish.py with the
+  same gap, so its 10-min timeout had the identical defect, worse). The
+  15-min gap itself is NOT shortened — it is a deliberate product rule
+  (audience pacing). 60 covers up to ~4 posts with headroom.
 
 ## 9. Rules (hard)
 
@@ -359,3 +404,28 @@ history — never silently delete the file and move on.
   architecture, deployment, payment/delivery logic, or external
   connections MUST update this file in the same commit. The manager
   sweep checks that it stays current.
+
+## 10. Harsh critic (permanent role)
+
+Owner order, 2026-11-21 (via the manager): this team has a permanent
+harsh-critic member. Its only job is to constantly review the repo, the
+detector Worker, and the channel `@animekhabarfa` against the long strict
+checklist in `qa/critic-role.md` (30 items, scored 0–10 each, evidence
+only — no guessing; untested = 0). It reports the scores and the specific
+fixes to the manager; the team applies the fixes so the project keeps
+improving and expanding, and gradually becomes independent of the
+manager.
+
+- The critic is READ-ONLY (GitHub connector reads only; never writes,
+  never a write-approval card). Fixes are prepared locally and handed to
+  the manager for the browser commit, per the read/write split rule (§9).
+- Loop: the shared daily cron `team-critic-review-daily` (~09:27 Tehran,
+  all 4 teams, report to the management chat). No separate cron for this
+  team.
+- First full review: 2026-11-21 ~21:34 Tehran — **173/300 (58%)**.
+  Full scores in `qa/critic-role.md`. Top-5 fixes are listed there;
+  review #1's code/doc fixes were prepared locally in the same change as
+  this section (publish.py 48h freshness re-check, rewrite.py
+  why_continuation, templates-fa.json lead_05, PLAN.md superseded banner,
+  setup-qa-report.md §3 correction, README feeds line, ARCHITECTURE.md
+  §5.1 Playwright/static-cover correction).
