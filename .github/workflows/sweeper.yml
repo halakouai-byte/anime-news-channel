@@ -49,22 +49,20 @@ jobs:
         run: python scripts/fetch.py
 
       - name: Publish missed items to Telegram
-        # Skip cleanly (do not fail the run) while the Telegram secrets
-        # are not set yet — fetch + queue + state commit still run, and
-        # publish.py would otherwise SystemExit here on every 15-min
-        # tick. Once the secrets exist the step runs normally.
-        # (Manager decision 2026-11-21: the Worker-triggered publish.yml
-        # keeps failing loudly without secrets — that failure is the
-        # alarm that news arrived but cannot be sent.)
-        if: ${{ secrets.TELEGRAM_BOT_TOKEN != '' && secrets.TELEGRAM_CHAT_ID != '' }}
+        # NOTE (2026-11-21 ~00:40 Tehran, manager fix): this step used
+        # to be guarded by `if: secrets.TELEGRAM_BOT_TOKEN != '' ...` —
+        # that made the whole workflow file INVALID ("Unrecognized
+        # named-value: 'secrets'"), so every Sweeper run since 07:39 UTC
+        # failed validation before any job started, and no scheduled run
+        # was created after the last push. The `secrets` context cannot
+        # be used in `if:` conditions. The guard is removed: both
+        # secrets are set (verified 2026-11-21), and publish.py fails
+        # loudly if they ever go missing — the same alarm behaviour as
+        # publish.yml.
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python scripts/publish.py --max-posts ${{ inputs.max_posts || 2 }}
-
-      - name: Note — publishing skipped (Telegram secrets not set)
-        if: ${{ secrets.TELEGRAM_BOT_TOKEN == '' || secrets.TELEGRAM_CHAT_ID == '' }}
-        run: echo "Telegram secrets are not set yet — fetch + queue ran, nothing was sent. Set TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID in the repo Secrets to enable publishing."
 
       - name: Commit state + queue + archive + logs
         if: always()
