@@ -12,8 +12,9 @@
 تصمیم قطعی کاربر، قفل‌شده ۲۱ نوامبر ۲۰۲۶: خبرها حتی ۰۲:۰۰ تا ۰۷:۰۰ تهران
 هم همان موقع شناسایی می‌شوند):
 
-1. فیدهای RSS سررسیده را می‌خواند (۸ منبع — `sources-v2.md`):
-   ANN و Fandom Post هر ۱ دقیقه؛ MAL ،AnimeTV و Siliconera هر ۲ دقیقه؛
+1. فیدهای RSS سررسیده را می‌خواند (۷ منبع در Worker + ‏Fandom Post فقط در
+   sweeper — `sources-v2.md`):
+   ANN هر ۱ دقیقه؛ MAL ،AnimeTV و Siliconera هر ۲ دقیقه؛
    Anime Corner هر ۵ دقیقه؛ Honey's Anime و Anime Herald روزی ۱ بار
    (ساعت ۰۰:۳۰ UTC).
 2. آیتم تازه را تشخیص می‌دهد (تازه‌تر از highwater همان منبع و
@@ -119,8 +120,8 @@ wrangler tail   # هر تیک یک خط: fresh / excluded / dup / dispatch
 tick cron due=ann,fandompost,mal,animetv,siliconera fetched=4 fresh=0 excluded=0 dup=0 dispatch=skipped (no fresh items) errors=1
 ```
 
-(نمونه واقعی از `wrangler tail`، ۲۱ نوامبر ۲۰۲۶؛ ‏errors=1 همان ۴۰۳ فید
-Fandom Post است — پایین را ببینید.)
+(نمونه واقعی از `wrangler tail`، ۲۱ نوامبر ۲۰۲۶، پیش از حذف Fandom Post از
+polling؛ ‏errors=1 همان ۴۰۳ آن فید بود — پایین را ببینید.)
 
 ## محدودیت‌های Cloudflare Free — با عدد (فاز ۰، ۲۱ نوامبر ۲۰۲۶)
 
@@ -157,11 +158,12 @@ Fandom Post است — پایین را ببینید.)
 
 ## یافته‌های دیگر تست زنده
 
-- **Fandom Post از داخل Worker ‏۴۰۳ می‌دهد** (از همین VM با همان
-  User-Agent ‏۲۰۰ می‌دهد) — یعنی سرور آن IPهای خروجی Cloudflare را
-  بلاک می‌کند. Worker این را به‌عنوان خطای تیک log می‌کند و ادامه
-  می‌دهد؛ ANN ستون فقرات می‌ماند و sweeper ‏(Actions، با IP رانر
-  گیت‌هاب) پشتیبان Fandom Post است.
+- **Fandom Post از polling ورکر حذف شد (۲۱ نوامبر ۲۰۲۶، تصمیم مدیر —
+  گزینه ب):** سرور آن IPهای خروجی Cloudflare را بلاک می‌کند (۴۰۳ پایدار،
+  بیش از ۳٫۵ ساعت، ۰۰:۱۱ تا ۰۳:۳۵ UTC؛ از همین VM با همان User-Agent
+  ‏۲۰۰ می‌دهد). پوشش آن فقط با sweeper ‏Actions (هر ۱۵ دقیقه، با IP رانر
+  گیت‌هاب) می‌ماند؛ `scripts/fetch.py` هنوز آن را دارد. بدون تست زنده
+  دوباره از داخل Worker برنگردانیدش.
 - **Seed (cold start) تایید شد:** تیک اول ۳۹ آیتم ANN و تیک دوم ۳۸
   آیتم MAL/AnimeTV/Siliconera را «دیده‌شده» علامت زد و **هیچ dispatchای
   نفرستاد** — بدون flood.
