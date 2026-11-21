@@ -18,6 +18,15 @@ rewrites the news in Persian (template bank, no LLM), renders a V3 cover
 with Pillow (Playwright is only a documented fallback), and publishes it
 to the channel with `sendPhoto`.
 
+- Observability: the Worker's status endpoint (`GET /`) reads
+  `meta:last_tick` from KV, which is written ONLY at the top of each hour,
+  when fresh news arrives, or when a tick errors — never per tick (a
+  per-tick write would cost 1,440 KV writes/day against the 1,000/day
+  free limit). A `last_tick` up to ~1 hour old in quiet periods is
+  NORMAL and does not mean the cron stopped; verify liveness with
+  `wrangler tail` instead (confirmed live 2026-11-21 06:53 UTC: two
+  consecutive ticks, errors=0).
+
 - Channel: `@animekhabarfa` (title «انیمه‌خبر»)
 - Bot: `@animekhabarbot`
 - Source repo: `halakouai-byte/anime-news-channel` (public, created
