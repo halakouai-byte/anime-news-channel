@@ -1517,6 +1517,28 @@
       "status": "QUEUED",
       "hold_reason": "",
       "created_utc": "2026-11-21T06:08:49Z"
+    },
+    {
+      "guid": "https://animetv-jp.net/?p=51380",
+      "hash": "22736f269cfdc67d0968d252d5951fef2059450eda350a1029858155e640a6d4",
+      "story_key": "oishinbo|trailer|10388",
+      "title": "New Oishinbo TV Anime Set to Premiere on January 4, 2027",
+      "link": "https://animetv-jp.net/new-oishinbo-tv-anime-set-to-premiere-on-january-4-2027",
+      "summary": "The TV anime Oishinbo, based on the works of Tetsu Kariya and Akira Hanasaki, will begin airing on January 4, 2027. The new cast members, main PV, and key visual have also been revealed. The series is produced by Shin-Ei Animation and continues the story of the original anime, 35 years after the previous series […] L’article New Oishinbo TV Anime Set to Premiere on January 4, 2027 est apparu en premier sur AnimeTV チェーン .",
+      "source": "AnimeTV",
+      "source_name": "AnimeTV",
+      "tier": 1,
+      "pubDate": "2026-11-19T21:51:17+00:00",
+      "category": "فصل جدید",
+      "category_score": 4,
+      "category_source": "keyword",
+      "event_type": "trailer",
+      "franchise_en": "Oishinbo",
+      "priority_score": 65,
+      "is_breaking": false,
+      "status": "QUEUED",
+      "hold_reason": "",
+      "created_utc": "2026-11-21T07:08:05Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
