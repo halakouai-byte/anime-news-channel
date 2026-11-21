@@ -1,0 +1,1428 @@
+{
+  "started_utc": "2026-11-20T22:47:38Z",
+  "stages_seconds": {
+    "fetch_filter_dedupe": 14.25,
+    "rewrite_total": 0.03,
+    "cover_total": 0.97,
+    "rewrite_per_item": 0.01,
+    "cover_per_item": 0.32,
+    "total": 15.26
+  },
+  "items": [
+    {
+      "title_en": "Yen Press Licenses [Oshi No Ko] Étude for Two, Bungo Stray Dogs: The Untold Origins of the Detective Agency, More Manga/Novels",
+      "source": "ANN",
+      "category": "مانگا و اقتباس",
+      "priority_score": 85,
+      "is_breaking": true,
+      "gates_passed": [
+        "length",
+        "no_placeholder",
+        "english_limited",
+        "source_similarity",
+        "recent_similarity",
+        "template_freshness",
+        "numbers_dates"
+      ],
+      "gates_count": 7,
+      "would_hold": true,
+      "missing_gates": [
+        "why_specific"
+      ],
+      "caption_chars": 710,
+      "title_chars": 33,
+      "cover": "/home/hatch/workspace/anime-news-channel/dry-run-output/covers/cover-612aad7fa463.jpg",
+      "cover_mode": "symbolic",
+      "caption": "Bungo Stray Dogs؛ انیمه تازه تازه\n\nطرفداران بانگو استری داگز این خبر را از دست ندهند؛ انیمه تازه اثر رسما اعلام شد.\n\nاین اثر از روی مانگایی به همین نام ساخته می‌شود؛ مانگایی که خواننده‌هایش مدت‌هاست چشم‌به‌راه نسخه انیمه آن بوده‌اند. جزئیات بیشتر این خبر، از جمله زمان دقیق و عوامل اصلی، در گزارش Anime News Network آمده است و لینک کامل آن در انتهای همین پست است.\n\nچرا مهم است؟ چون تایید انیمه تازه یعنی قصه بانگو استری داگز ادامه دارد و بخشی که مدت‌ها درباره‌اش حرف زده می‌شد، حالا واقعا ساخته می‌شود.\n\nمنبع: Anime News Network\nhttps://animenewsnetwork.com/news/2026-11-20/yen-press-licenses-oshi-no-ko-etude-for-two-bungo-stray-dogs-the-untold-origins-of-the-detective-/.244035\n\n#انیمه #BungoStrayDogs #مانگا"
+    },
+    {
+      "title_en": "BanG Dream! Yume∞Mita Series Confirms New Anime in Production",
+      "source": "ANN",
+      "category": "فصل جدید",
+      "priority_score": 80,
+      "is_breaking": false,
+      "gates_passed": [
+        "length",
+        "no_placeholder",
+        "english_limited",
+        "source_similarity",
+        "recent_similarity",
+        "template_freshness",
+        "why_specific",
+        "numbers_dates"
+      ],
+      "gates_count": 8,
+      "would_hold": false,
+      "missing_gates": [],
+      "caption_chars": 712,
+      "title_chars": 43,
+      "cover": "/home/hatch/workspace/anime-news-channel/dry-run-output/covers/cover-2b1fbd28a612.jpg",
+      "cover_mode": "symbolic",
+      "caption": "BanG Dream! Yume∞Mita | انیمه تازه اعلام شد\n\nاز ژاپن خبر رسید: بنگ دریم! یومه میتا در مسیر تازه‌ای افتاده و انیمه تازه آن اعلام شد.\n\nبخش تازه این اثر پیش‌تر پخش خود را آغاز کرده بود و این خبر، ادامه همان مسیری است که عوامل ساخت از پیش اعلام کرده بودند. جزئیات بیشتر این خبر، از جمله زمان دقیق و عوامل اصلی، در گزارش Anime News Network آمده است و لینک کامل آن در انتهای همین پست است.\n\nچرا مهم است؟ چون این خبر ادامه مستقیم قصه‌ای است که بنگ دریم! یومه میتا از پیش آغاز کرده بود و نشان می‌دهد فصل تازه، دنباله همان راه است، نه شروعی جدا.\n\nمنبع: Anime News Network\nhttps://animenewsnetwork.com/news/2026-11-20/bang-dream-yume-mita-series-confirms-new-anime-in-production/.244026\n\n#انیمه #BangDreamYumeMita #فصل_جدید"
+    },
+    {
+      "title_en": "Shin Oishinbo Anime Reveals More Cast, Staff, January 4 Debut in Main Trailer",
+      "source": "ANN",
+      "category": "تریلر",
+      "priority_score": 70,
+      "is_breaking": false,
+      "gates_passed": [
+        "length",
+        "no_placeholder",
+        "english_limited",
+        "source_similarity",
+        "recent_similarity",
+        "template_freshness",
+        "why_specific",
+        "numbers_dates"
+      ],
+      "gates_count": 8,
+      "would_hold": false,
+      "missing_gates": [],
+      "caption_chars": 631,
+      "title_chars": 37,
+      "cover": "/home/hatch/workspace/anime-news-channel/dry-run-output/covers/cover-7a2361b24db1.jpg",
+      "cover_mode": "symbolic",
+      "caption": "Oishinbo؛ معرفی صداپیشه‌های تازه تازه\n\nدنیای انیمه یک خبر تازه دارد؛ اویشینبو با معرفی صداپیشه‌های تازه برگشته است.\n\nطبق اعلام رسمی، اویشینبو در ۴ ژانویه پخش می‌شود و این تاریخ از حالا در تقویم طرفداران اثر ثبت شده است. تریلر تازه اثر هم منتشر شده است؛ چند صحنه کوتاه که فضای فصل تازه را لو می‌دهد، بی‌آنکه قصه را خراب کند.\n\nچرا مهم است؟ چون معرفی صداپیشه‌های تازه، صدای شخصیت‌های اویشینبو را مشخص می‌کند و همان صداهایی است که در فصل تازه خواهید شنید.\n\nمنبع: Anime News Network\nhttps://animenewsnetwork.com/news/2026-11-19/shin-oishinbo-anime-reveals-more-cast-staff-january-4-debut-in-main-trailer/.243985\n\n#انیمه #Oishinbo #تریلر"
+    }
+  ],
+  "rejected": [
+    {
+      "title": "Criterion Channel Adds Speed Racer Anime",
+      "source": "ANN",
+      "reason": "R17-reject",
+      "status": "rejected"
+    },
+    {
+      "title": "K Manga Adds Godmother Manga",
+      "source": "ANN",
+      "reason": "R17-reject",
+      "status": "rejected"
+    },
+    {
+      "title": "'Shin Oishinbo' Reveals Additional Cast, Staff, Main Promo, Winter 2027 Premiere",
+      "source": "MAL",
+      "reason": "R9-duplicate",
+      "status": "duplicate"
+    },
+    {
+      "title": "'99-kai Danzai sareta Loop Reijou desu ga Konse wa \"Chouzetsu Aisare Mode\" desu tte!? Shin no Chikara ni Mezamete Hajimaru 100-kaime no Jinsei' Reveals Main Cast, Staff, 2027 Premiere",
+      "source": "MAL",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "'Isekai Munchkin' Reveals New Staff, Theme Songs, Second Promo",
+      "source": "MAL",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "'Sakamoto Days 2nd Season' Unveils Additional Cast, Opening Theme, First Promo",
+      "source": "MAL",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "'Soara to Mamono no Ie' Announces Additional Cast Pair",
+      "source": "MAL",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Light Novel 'Saigo ni Hitotsu dake Onegai shitemo Yoroshii deshou ka' Concludes with 8th Volume",
+      "source": "MAL",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Main Cast for 'Odoru Sennen Kazoku' Announced",
+      "source": "MAL",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "'Kanan-sama wa Akumade Choroi 2nd Season' Reveals Additional Cast, New Staff, First Promo, 2027 Debut",
+      "source": "MAL",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "BanG Dream! Yume∞Mita Gets New Anime Series",
+      "source": "AnimeCorner",
+      "reason": "R9-duplicate",
+      "status": "duplicate"
+    },
+    {
+      "title": "Fall 2026 Anime Rankings – Week 7",
+      "source": "AnimeCorner",
+      "reason": "R2-digest",
+      "status": "digest-candidate"
+    },
+    {
+      "title": "Atomic Pixel Brings Miku Expo Afterparty to Madrid and Lisbon",
+      "source": "AnimeCorner",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "KUKU-LOOP: The 100th Time's the Charm Anime Announced for 2027, Reveals Main Cast and Teaser Visual",
+      "source": "AnimeCorner",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Spice and Wolf Season 2 Announces January 2027 Premiere",
+      "source": "AnimeCorner",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Sakamoto Days Season 2 Reveals Key Visual, Main Trailer, January 18 Premiere, Creepy Nuts Theme Song Artist",
+      "source": "AnimeCorner",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Exclusive: Giant Ojosama Joins HIDIVE Winter 2027 Lineup, Anime Frontier Premiere Set for December 4",
+      "source": "AnimeCorner",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Exclusive Preview: Magnetic Press Brings Rodolphe and Christophe Dubois' TER Trilogy to Kickstarter in Deluxe Hardcover",
+      "source": "AnimeCorner",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Mistress Kanan Is Devilishly Easy Season 2 Anime Reveals Visual, Trailer, Additional Cast",
+      "source": "AnimeCorner",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "The Eternal Fool's Words of Wisdom: A Pawsitively Fantastic Adventure Anime Unveils Main Trailer, January 9 Premiere, Additional Cast, Theme Songs",
+      "source": "AnimeCorner",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Interview: Paru Itagaki on Beastars, Sanda, and Taika's Reason",
+      "source": "AnimeCorner",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Interview: Yoko Kanno During First Lucca Comics & Games Apperance",
+      "source": "AnimeCorner",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Are You a Landmine, Chihara-san? Anime Unveils Main Visual",
+      "source": "AnimeCorner",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Skip and Loafer Season 2 Reveals New Key Visual, New Trailer",
+      "source": "AnimeCorner",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Interview: SHAFT and Aniplex on Madoka Magica Walpurgisnacht Rising Core Themes and Impact",
+      "source": "AnimeCorner",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "TTRacing Launches the ORA Sofa Chair BT21 Collection in Makati, Philippines",
+      "source": "AnimeCorner",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Witch Watch Season 2 Premieres 2027",
+      "source": "AnimeCorner",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "MyGO and Ave Mujica Anime Sequel Unveils 2nd Trailer Featuring MyGO",
+      "source": "AnimeCorner",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Love Live! Hasunosora Anime Reveals New Trailer",
+      "source": "AnimeCorner",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "MyGO Releases \"Sepia\" Music Video",
+      "source": "AnimeCorner",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Re:ZERO Season 5 Anime Officially Announced",
+      "source": "AnimeCorner",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Gushing Over Magical Girls Season 2 Reveals New Visual, Trailer, 2027 Release Date",
+      "source": "AnimeCorner",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Hitsujibungaku, Kyary Pamyu Pamyu, and Otoboke Beaver Confirmed for matsuri's London Debut on December 14; Tickets on Sale",
+      "source": "AnimeCorner",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "The Reincarnated Elf Left on a Journey to Master His Magic Anime Reveals Main Trailer, New Cast and Theme Songs",
+      "source": "AnimeTV",
+      "reason": "R9-duplicate",
+      "status": "duplicate"
+    },
+    {
+      "title": "New Oishinbo TV Anime Set to Premiere on January 4, 2027",
+      "source": "AnimeTV",
+      "reason": "R9-duplicate",
+      "status": "duplicate"
+    },
+    {
+      "title": "Not-Sew-Wicked Stepmom Gets TV Anime Adaptation",
+      "source": "AnimeTV",
+      "reason": "R9-duplicate",
+      "status": "duplicate"
+    },
+    {
+      "title": "MangaPlus Adds ‘Legend of the Harem Hero’ Manga By Natsuna Tsunatsu & Toshihiro Chigusa",
+      "source": "FandomPost",
+      "reason": "R17-reject",
+      "status": "rejected"
+    },
+    {
+      "title": "The Ramparts of Ice Episode #22 Anime Review",
+      "source": "FandomPost",
+      "reason": "R1-reject",
+      "status": "rejected"
+    },
+    {
+      "title": "Godmother #1 Manga Review",
+      "source": "FandomPost",
+      "reason": "R1-reject",
+      "status": "rejected"
+    },
+    {
+      "title": "‘Charisma House’ Anime Reveals Terra Character Trailer",
+      "source": "FandomPost",
+      "reason": "R9-duplicate",
+      "status": "duplicate"
+    },
+    {
+      "title": "Top 20 Blu-ray Releases Week Ending November 7th, 2026",
+      "source": "FandomPost",
+      "reason": "R10-reject",
+      "status": "rejected"
+    },
+    {
+      "title": "12 Dirty Deeds to Unite the Princess and Her Heroine #16 Manga Review",
+      "source": "FandomPost",
+      "reason": "R1-reject",
+      "status": "rejected"
+    },
+    {
+      "title": "Umamusume Characters to Appear at Denver Broncos Game",
+      "source": "Siliconera",
+      "reason": "R5-reject",
+      "status": "rejected"
+    },
+    {
+      "title": "The Woobles Kit Lets People Crochet an Amigurumi Kirby",
+      "source": "Siliconera",
+      "reason": "R15-non-anime",
+      "status": "rejected"
+    },
+    {
+      "title": "Chiikawa Shows the Value of Unanswered Questions",
+      "source": "Siliconera",
+      "reason": "R15-non-anime",
+      "status": "rejected"
+    },
+    {
+      "title": "Deltarune Chapter 6 ‘Can Be Played From Beginning to End’",
+      "source": "Siliconera",
+      "reason": "R13-reject",
+      "status": "rejected"
+    },
+    {
+      "title": "Best Buy Black Friday 2026 Game and Console Sales Start",
+      "source": "Siliconera",
+      "reason": "R15-non-anime",
+      "status": "rejected"
+    },
+    {
+      "title": "Zenless Zone Zero Honkai: Star Rail Crossover Starts With 3.4 in December",
+      "source": "Siliconera",
+      "reason": "R15-non-anime",
+      "status": "rejected"
+    },
+    {
+      "title": "Square Enix Might Show FFVII Revelation in Jump Festa 2027",
+      "source": "Siliconera",
+      "reason": "R15-non-anime",
+      "status": "rejected"
+    },
+    {
+      "title": "Review: CRYMELIGHT Is a Good Roguelike and CRY Series Game",
+      "source": "Siliconera",
+      "reason": "R1-reject",
+      "status": "rejected"
+    },
+    {
+      "title": "Atelier Karia Artist Benitama Discusses Returning Yumia Characters",
+      "source": "Siliconera",
+      "reason": "R15-non-anime",
+      "status": "rejected"
+    },
+    {
+      "title": "Rebuild of Evangelion Asuka Figure Wears Her Cat Hat",
+      "source": "Siliconera",
+      "reason": "R5-reject",
+      "status": "rejected"
+    },
+    {
+      "title": "Professor Layton and the New World of Steam Gets Daily Puzzles for a Year",
+      "source": "Siliconera",
+      "reason": "R15-non-anime",
+      "status": "rejected"
+    },
+    {
+      "title": "Urban Tracks – Final Fantasy City Pop Album Packed With Song Arrangements",
+      "source": "Siliconera",
+      "reason": "R15-non-anime",
+      "status": "rejected"
+    },
+    {
+      "title": "WIXOSS Trading Card Game Ending in Japan",
+      "source": "Siliconera",
+      "reason": "R15-non-anime",
+      "status": "rejected"
+    },
+    {
+      "title": "New Girls’ Frontline Game Trailer Shows Off The Lunasia Covenant",
+      "source": "Siliconera",
+      "reason": "R15-non-anime",
+      "status": "rejected"
+    },
+    {
+      "title": "A Definitive Collection of 15 Tracks From the Mobile Suit Gundam SEED Series To Be Released in January 2027",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Dark Machine: The Animation OST, With Music by Sugizo, To Be Released December 9! Commemorative “Talk & Sign” Event on Release Day!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "RetBear to Perform, Kairiki Bear to Produce OP Theme Song for In a World Full of Zombies I’m the Only One Who Doesn’t Get Attacked",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Voidol UNLIMITED Adds New Character “Edgar Crow” Voiced by Hiroaki Hirata",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "AVIOT Opens Pre-Orders for 96Neko Collaboration True Wireless Earbuds!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Maaya Sakamoto 30th Anniversary Live Concert To Be Released on Blu-Ray & DVD December 9KAMOTO 30th Anniversary Live Concert To Be Released on Blu-Ray & DVD December 9",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Hatsune Miku “Magical Mirai 2026” - Final Tokyo Night Show Coming to Blu-ray and DVD February 3, 2027!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "TV Anime Mebius Dust OST Featuring Dé Dé Mouse, to Be Released Digitally September 16!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Anime NYC 2026 - Post-Show Field Report",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "TV Anime The Ghost In The Shell “po-ai feat. Mirai Moriyama” Has Been Released As a Single!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "AVIOT Opens Pre-Orders for Delicious in Dungeon True Wireless Collaboration Earbuds!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "AVIOT to Exhibit at Anime NYC 2026, the Largest Anime Convention on the U.S. East Coast",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "AVIOT Launches EVANGELION Collaboration True Wireless Earbuds",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "AVIOT Launches REBORN! Collaboration True Wireless Earbuds",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Shueisha Makes Global Push with MANGA MILLION, a Manga Platform Available in 100 Languages",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "AVIOT Launches JUJUTSU KAISEN True Wireless Earbuds Collection",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Anime Expo 2026: Jurassic Shadows Panel Reveals the Dino-Powered Action Series' You've Been Waiting For!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "The Ghost in the Shell Original Soundtrack Album Jacket and Tracklist Have Been Revealed!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Kyoto Animation's Sparks of Tomorrow World Premiere Draws Enthusiastic Response at Anime Expo 2026",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "New Panty & Stocking with Garterbelt The Vinyl: The First-Ever Analog Record Release Goes on Sale September 30!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "BY THE BEAT to Release Their 2nd Digital Single, “MERORI,” on July 31 JST and “Boku ni Mero-ri” on August 5 JST!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Ghost in the Shell: Stand Alone Complex Official Audio From All 5 Albums Released on YouTube!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "New TV Anime the Ghost in the Shell Begins Airing! Original Soundtrack Has Also Been Announced!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "The Apothecary Diaries Director Norihiro Naganuma Announces Original Ninjas vs. Dinosaur Battle Anime!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "AVIOT to Exhibit at Anime Expo 2026 in Los Angeles!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "AVIOT Reveals hololive English -Promise- & -Justice- True Wireless Collaboration Earbuds! Pre-Orders Begin June 30",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Mori Calliope Announces Los Angeles Pop-Up Store and Early 2nd Concert Blu-ray Screening",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "[Honey's Anime Interview] Eir Aoi on Music, Emotion, and Evolution",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "KADOKAWA Launches 2nd English Web Novel Contest to Discover Global Talent: MyAnimeList x Honeyfeed Writing Contest 2026 - THE HEROIC FANTASY presented by KADOKAWA",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "MyAnimeList × Honeyfeed Web Novel Contest 2025 Winners Announced: Three Titles Chosen by Global Fans!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Ginger Root and Luna Goami to Release Theme Songs for Kyoto Animation’s New Anime Sparks of Tomorrow",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Rico Sasaki Releases Full-Length Album RI PATHOS; Music Video for Lead Track “Touri Seikei” Unveiled",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "AiScReam Drops First Single Under New Lineup “NEXT CARD” and Launches Official TikTok Account",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "[Honey's Anime Interview] ZAQ's “Liar Veil” and the Art of Anime Composition",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "ASH DA HERO Performed Their First-Ever European Show at Animefest 2026 in the Czech Republic",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Aria the Natural and Aria the Origination - Two More Soundtracks to Be Released on Vinyl!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Ghost in the Shell: Stand Alone Complex and Innocence - Five Series Albums and One OST to Be Released on Vinyl!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "An Official Visualizer for “See You Soon” by SEKAI NO OWARI’s Nakajin Has Been Released!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "A Complete Collection of Maaya Sakamoto’s Fate/Grand Order Theme Songs to Be Released on July 29!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Nao Toyama’s New Album, OVER THE RAINBOW, Goes on Sale October 7!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "TV Anime Kujima Utaeba Ie Hororo Opening Theme Song “Komorebizaka”, by Galileo Galilei, CD Single Announcement and Jacket Illustration Reveal!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "TV anime Kujima Utaeba Ie Hororo Original Soundtrack Hororo Shoyo, composed by Manami Kakudo, to be released!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Ascendance of a Bookworm: Adopted Daughter of an Archduke DVD Vol. 1 & 2 Release Has Been Delayed",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Who Are Mrs. GREEN APPLE and Why is Their Album 10 Making Waves Worldwide?",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "MyAnimeList Unveils 78 Fan-Selected Titles in “You Should Read This Manga 2026”",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Ascendance of a Bookworm: Adopted Daughter of an Archduke New TV anime to begin airing April 2026!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "VTuber Unit “BY THE BEAT” Announces New Original Song “Double Vision”",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Shiro Sagisu Announces Two New Albums and Launches Official YouTube Channel",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "[Honey's Anime Interview] PassCode is Overcoming Weakness and Rewriting Fate with \"Liberator,\" Their Latest Song",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Daoko’s Upcoming Single “COMIT COMET” Chosen as Opening Theme for Yowayowa Sensei",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Pokémon feat. Hatsune Miku VOLTAGE Live! Special-edition Blu-ray to be released August 26, 2026!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Mirror Shibuya, an Illustrated Audio Drama Starring SZNO, the Multidimensional Artist from Bandai Namco Music Live × MusicRay’n, Begins Streaming March 21, 2026",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "ZAQ to Digitally Release “Liar Veil,” Ending Theme for Classroom of the Elite 4th Season: Second Year, First Semester, on April 2",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "PassCode Releases Documentary of Arena Show “PassCode YOKOHAMA BUNTAI 2025 ‘DESTINEX’” to Celebrate New Track “Liberator”",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "TV anime Kujima Utaeba Ie Hororo theme songs announced!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Eir Aoi Chosen to Perform New Opening of That Time I Got Reincarnated as a Slime Season 4! A New Chapter Begins with a Double Tie-Up Single!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "ASH DA HERO to Release New Single on May 27! “BELIEVERS” Chosen as Opening Theme for Wistoria: Wand and Sword Season 2",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Eir Aoi Kicks Off New Chapter with Lantis: New Song Selected as OP for Classroom of the Elite 4th Season: Second Year, First Semester",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "New Ghost in the Shell Scheduled for July 2026! With Music by Taisei Iwasaki, Ryo Konishi and Yuki Kanesaka!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "AVIOT Opens Pre-Orders for Second Wave of The Prince of Tennis II Collaboration True Wireless Earbuds!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Macross Frontier Galaxy Live☆Final 2025 Blu-Ray Jacket and Package Design Have Been Revealed!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Nao Toyama Announces Upcoming Hiatus. Final Live Performance at the Nippon Budokan to Be Held Next Year!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Winners Announced for MyAnimeList x Honeyfeed Writing Contest 2025, with Publication in Japan Confirmed!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "MyAnimeList and Honeyfeed Announce the Return of NOVELOUS Worlds for 2026, Powered by Shogakukan",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "majiko to Release New Song “Ribbon” in April as Opening Theme for The Food Diary of Miss Maid",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Mrs. GREEN APPLE Drops “lulu.” Season 2 OP Theme for Frieren: Beyond Journey’s End with Surprise Music Video",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Rico Sasaki Announces Full-Length Album RI PATHOS, Featuring Ten All-New Tracks",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "AVIOT Opened Pre-Orders for Puella Magi Madoka Magica the Movie -Rebellion- Collaboration True Wireless Earbuds!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "REIRIE Reveals New Artist Photos and “AISHITEYO” Music Video Ahead of Major-Label Debut EP Amethyst",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Maaya Sakamoto’s New Single “Tokei” Now Available on Digital Platforms!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "TV Anime Kirei ni Shitemoraemasu ka OP Theme Song “Kirei.” and ED Theme Song “Wakaba no Koro” Announced!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "SHINO, a Virtual Artist with Both Male and Female Souls, Makes Debut! Debut Digital Single “EGO” to Be Released on December 17",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Ending Theme Song to Easygoing Territory Defense by the Optimistic Lord “Make It” Will Be Released February 25, 2026!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "[Honey’s Anime Interview] Nowlu: The Voice Behind “Shirogarasu” and Her New EP \"Dose\"",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Kakuriyo No Yadomeshi & Kakuriyo No Yadomeshi: NI Original Soundtrack Featuring All 83 Tracks From the Anime Will Be Digitally Released December 24!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "REIRIE to Make Major Debut on January 28! Early Release of “AISHITEYO” and Nationwide Tour Announced",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Macross Frontier Galaxy Live☆Final 2025 is Coming to Blu-ray! A Brand-New Cover Illustration Has Been Released!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Daoko Releases Music Video for “Rhythm in the Sunset,” Lead Track From New EP meta millefeuille",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Up to 50% Off! AVIOT’s High-Quality Japanese Wireless Earbuds on Sale for Amazon Black Friday Sales 2025 – Featuring This Year’s Lowest Prices",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "PassCode Reveals New Song at Arena Concert! Roll Over and Die Tie-Up to Be Released as Single Next Year!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "AVIOT Opens Pre-Orders for HAIKYU!! Collaboration True Wireless Earbuds",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "AVIOT Opens Pre-Orders for Oshi no Ko Collaboration True Wireless Earbuds",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "AVIOT Releases The Prince of Tennis II Collaboration True Wireless Earbuds in North America!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "TV Anime Easygoing Territory Defense by the Optimistic Lord Theme Song “Okirakuze~shon” Goes on Sale February 18!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Mori Calliope Releases Music Video for Gachiakuta Second Cour Opening Theme “LET’S JUST CRASH”",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "mekakushe’s New Song “Space Gate” Now Streaming! Full Tracklist Revealed for Upcoming Album Love After 13.8 Billion Years!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "The Brave Fighter of Legend Da-Garn 35th Anniversary Blu-Ray Boxsets I & II coming in 2026!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Official Merchandise for “Chainsaw Man – The Movie: Reze Arc” will be available in North America!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "[Honey's Anime Interview] ASH Talks Ultraman, Inspiration, and What’s Next for ASH DA HERO",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Worldwide Launch Set for October 27: “MyAnimeList x Honeyfeed Writing Contest 2025 - Twilight Frontiers,” Presented by Frontier Works",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Aria the Animation Celebrates 20 Years! Original Soundtrack to be Released on Vinyl!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "The Ancient Magus’ Bride Complete Best, Featuring Themes and Insert Songs From the Anime and Game, Goes on Sale November 26!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Mori Calliope to Perform “LET’S JUST CRASH” as Opening Theme for Gachiakuta Second Cour",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "WurtS Announces First-Ever Arena Solo Shows “WurtS LIVE AT ARENA -INSIDE MY CAP-” in February 2026! Special DAN DA DAN Collaboration Music Video Released!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Up to 50% Off! AVIOT’s High-Quality Japanese Wireless Earbuds on Sale for Amazon Prime Big Deal Days 2025 – Featuring This Year’s Lowest Prices",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "AiScReam to Perform at YouTube Fanfest Japan 2025 on December 3!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "mekakushe’s New Song “Snow Globe Galaxy” Now Streaming! Jacket Art for Upcoming Album 138-Oku Nen Me no Koi Revealed!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Daoko’s New Single “Boku dake no Photon” from Her Upcoming Digital EP Now Streaming. Music Video Out Now!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "ASH and MindaRyn to Perform Part 2 Ending Theme for Ultraman Omega, “Kyoumei Revolution”!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "AVIOT Opens Pre-Orders for Ultraman Z Collaboration True Wireless Earbuds",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "AVIOT Opens Pre-Orders for The Apothecary Diaries Collaboration True Wireless Earbuds",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Love Live! 15th Anniversary Uma Musume Joins Tribute Album, Four New Songs Revealed!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "AVIOT Opens Pre-Orders for BUSTAFELLOWS Collaboration True Wireless Earbuds",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Hatsune Miku “Magical Mirai 2025” Final Tokyo Night Show Coming to Blu-ray and DVD February 4, 2026!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Mekakushe’s Digital Album 138-Oku Nen Me no Koi to Release on November 7! “Zutto Emerald” Available for Early Streaming Ahead of Release!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "HypMic Movie Hits 2 Billion Yen Box Office Mark! “Claim Victory (Immersive Edition)” Exhibition Video Available for a Limited Time!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Love Live! Unit AiScReam Drops Live-Action Music Video as “Ai♡Scream!” Surpasses 100 Million Streams!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "WurtS to Release New EP Digital Love Featuring “Doukashiteru” and “BEAT” on November 26, 2025!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Hito no Calendar Theme Song by Nonoka Obuchi “Hachigatsu no Afterglow” is Out Now on Streaming Platforms!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "“Nande?” from majiko’s Upcoming EP GOLDEN JUNKIE Is Now Available with Its Music Video!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Nao Toyama Secures Both Opening and Ending Themes for Kakuriyo no Yadomeshi: Ni!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Anime NYC 2025 - Post-Show Field Report",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "KADOKAWA Greenlights Publication Project for Popular Honeyfeed Title “Why Kill? When Witches Can Be Tentacled!”",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Main Visual and Promotional Video Out Now! Exclusive Worldwide Streaming on Prime Video Begins October 4!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Maaya Sakamoto’s 30th Anniversary Best Album M30 ~Your Best~ Coming October 22!!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "ELLEGARDEN Releases Music Video for ONE PIECE Opening Theme “Carmine”",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "AVIOT to Exhibit at Anime NYC 2025, the Largest Anime Convention on the U.S. East Coast",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "ELLEGARDEN Releases ONE PIECE Opening Theme “Carmine” Digitally, Reveals Jacket Visual",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Next-Generation Virtual Esports Project VSPO! Announces First Original Album VSPO! Songs Collection “DIAMOND in the ROUGH” with Jacket Art and Tracklist Revealed",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Opening Theme Song for Kakuriyo no Yadomeshi: Ni is Masayoshi Oishi’s “Tooryanse” sung by Nao Toyama!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "New Panty & Stocking with Garterbelt The Soundtrack On Sale September 24!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "BEYBLADE X US National Tournament Brings Anime-Worthy Duels to Los Angeles Anime Expo 2025",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "ELLEGARDEN Chosen to Perform New Opening Theme Song for ONE PIECE! Promotional Video Featuring the Song Now Streaming!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "WurtS Releases “Doukashiteru” Collaboration Music Video with DAN DA DAN!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "[Honey's Anime Interview] Goro Taniguchi, Creative Producer for \"Enter the Garden\", an Anime Series by Azuki and Dentsu",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "[Honey's Anime Interview] Takayuki Miyauchi and Kenta Wakisawa From T-SPARK at the Los Angeles Anime Expo 2025",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Daoko’s First Digital Single of 2025, “Zense wa Busho,” Now Streaming! Digital EP Release Date Also Announced!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "TOMY Group Brings High-End Hobby Collectibles and Gacha Toy Fun to LA Anime Expo 2025",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "ElenaBEY, a First-Year Blader, Wins the BEYBLADE X National Tournament Held in Los Angeles at Anime Expo and Earns a Spot at the World Championship in Japan!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "H△G Surpasses 400 Million Streams in China, Set to Join Lantis! Slated to perform OP & ED Theme Songs for Li’l Miss Vampire Can’t Suck Right",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Six Full-sized Music Videos by Cornelius Featuring Songs from Ghost in the Shell: Arise Now Streaming Online!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "fhána and Sachiko Kobayashi Celebrate the Release of New Theme Songs for Miss Kobayashi’s Dragon Maid Movie: “Parade of Tears” and “Bokutachi no Hibi”",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "“HYPNOSISMIC -Division Rap Battle- Movie”& “Uta no☆Prince-sama TABOO NIGHT XXXX”Anime Expo 2025 Screening Report",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Official Report: Bandai Namco Music Live Festival at Anime Friends 2025! Southeast Asia Concerts Also Confirmed!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "New \"Attack on Titan\" Collaboration Jewelry Featuring Striking Scenes and Large Natural Stones (5 Designs Total) Now Available!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "[Honey's Anime Interview] BEYBLADE X Interview with Masahiko Yamazaki, Hisato Takaoka, and Makoto Muraki at the Los Angeles Anime Expo 2025",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Up to 35% Off! AVIOT’s High-Quality Japanese Wireless Earbuds on Sale for Amazon Prime Day 2025 – Featuring This Year’s Lowest Prices",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "New VTuber Group Nova from VShojo Makes Surprise Debut at Anime Expo 2025! Debut Song “Starry Connection” Out Now on Streaming and YouTube",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Jaleco Sports: Goal! - A Nostalgic Kick from the 8-bit and 16-bit Era",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "New Panty & Stocking with Garterbelt TV Anime Airing this July after 15 Years!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "WurtS to Digitally Release “Doukashiteru,” Ending Theme for DAN DA DAN Season 2, on July 11!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "AVIOT to Open Pre-Orders for hololive English -Advent- Collaboration True Wireless Earbuds on July 2!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Azuki, COMISMA, and Xenotoon to Establish \"Studio Azuki,\" a US-Based Anime Studio",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Azuki Labs to Present “Community-Driven Anime Production” Panel at Anime Expo 2025",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "“hololive English -Advent-” POP UP SHOP Arrives at Anime Expo 2025!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "SHIBUYA TSUTAYA × Design COCO Launches New Brand: Project AXGRIT Begins!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Entries Open July 1 for Round 3 of the Anime Song Choir Project “ChoieL”, Now Featuring 28 Eligible Songs!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "KING RECORDS is Back at Anime Expo 2025",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Global Search for the Next Isekai Hit Begins July 7: “MyAnimeList x Honeyfeed Writing Contest 2025 - THE ISEKAI presented by KADOKAWA” Launches Worldwide!",
+      "source": "HoneysAnime",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "How Anime Reimagines the Realities of Traditional Maritime Logistics and Trade Networks",
+      "source": "AnimeHerald",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Meeting the “Sentenced to Be a Hero” Creators and Cast at NYCC 2026",
+      "source": "AnimeHerald",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "The Apothecary Diaries Cast Talks With Anime Herald",
+      "source": "AnimeHerald",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Talking GalaXic Baseball with Acky Bright at NYCC 2026",
+      "source": "AnimeHerald",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "KPop Demon Hunters’ Saja Boys Talk With Anime Herald at NYCC 2026",
+      "source": "AnimeHerald",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Cosmic Princess Kaguya’s Unexpected Explosion",
+      "source": "AnimeHerald",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Introducing Lightbox Expo Artist Megan Suran Kim",
+      "source": "AnimeHerald",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Introducing Lightbox Expo Artist Emerson Tung",
+      "source": "AnimeHerald",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Chainsmoker Cat, Jirai Kei, and Japanese Messy Vlogs: The Spectrum of Mental Health Representation",
+      "source": "AnimeHerald",
+      "reason": "stale-48h",
+      "status": "rejected"
+    },
+    {
+      "title": "Introducing Lightbox Expo Artist Sara Kipin",
+      "source": "AnimeHerald",
+      "reason": "stale-48h",
+      "status": "rejected"
+    }
+  ],
+  "fetch_stats": {
+    "fetched": 300,
+    "queued": 70,
+    "held": 15,
+    "rejected": 21,
+    "duplicates": 6,
+    "digest": 1,
+    "stale": 187,
+    "breaking": 1,
+    "reasons": {
+      "R17-reject": 3,
+      "R9-duplicate-L2": 6,
+      "stale-48h": 187,
+      "R2-digest": 1,
+      "R1-reject": 4,
+      "R10-reject": 1,
+      "R5-reject": 2,
+      "R15-non-anime": 10,
+      "R13-reject": 1
+    },
+    "fetch_seconds": 11.9,
+    "process_seconds": 2.3
+  },
+  "eligible_count": 70,
+  "held_count": 15,
+  "reject_reasons": {
+    "R17-reject": 3,
+    "R9-duplicate": 6,
+    "stale-48h": 187,
+    "R2-digest": 1,
+    "R1-reject": 4,
+    "R10-reject": 1,
+    "R5-reject": 2,
+    "R15-non-anime": 10,
+    "R13-reject": 1
+  },
+  "gate_counts": {
+    "length": 3,
+    "no_placeholder": 3,
+    "english_limited": 3,
+    "source_similarity": 3,
+    "recent_similarity": 3,
+    "template_freshness": 3,
+    "numbers_dates": 3,
+    "why_specific": 2
+  },
+  "finished_utc": "2026-11-20T22:47:53Z"
+}
