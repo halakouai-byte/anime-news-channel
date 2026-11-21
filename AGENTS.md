@@ -11,9 +11,7 @@ A Persian-language Telegram news channel about the anime world,
 `@animekhabarfa`, fully automated on **GitHub + Cloudflare only** — no
 other service, no paid service, no AI at runtime, no server. A
 Cloudflare Worker detects fresh news every 1 minute from 7 verified RSS
-sources in the Worker (Fandom Post is covered by the 15-minute sweeper
-only — it blocks Cloudflare egress IPs with a stable HTTP 403 since
-2026-11-21; see §7), triggers GitHub Actions with `repository_dispatch`, and Actions
+sources in the Worker (Fandom Post is currently uncovered — blocked with a stable HTTP 403 from both Cloudflare and GitHub runner egress IPs since 2026-11-21; it stays in `scripts/fetch.py` so each sweeper run re-tests it; see §7), triggers GitHub Actions with `repository_dispatch`, and Actions
 rewrites the news in Persian (template bank, no LLM), renders a V3 cover
 with Pillow (Playwright is only a documented fallback), and publishes it
 to the channel with `sendPhoto`.
@@ -160,7 +158,13 @@ from a local copy by hand outside the documented path.
   Pillow cover (Playwright only as fallback), `sendPhoto`, then commit
   `state.json` + `queue.json` + `archive.jsonl`.
 - `sweeper.yml` — cron `*/15 * * * *`: publishes items the Worker or
-  dispatch missed; also the keepalive.
+  dispatch missed; also the keepalive. The publish step is skipped
+  cleanly (not failed) while the Telegram secrets are unset — fetch +
+  queue + state commit still run. `publish.yml` (Worker-triggered) is
+  intentionally left failing loudly without secrets, as the alarm that
+  news arrived but cannot be sent. An empty queue alone never fails
+  `publish.py` (it returns posted=0); only missing secrets raise
+  SystemExit, before the queue is even loaded.
 - `digest.yml` — Fridays `30 10 * * 5`: weekly digest from
   `digest-candidate` items (phase 4; disabled in phase 1).
 - `keepalive.yml` — monthly `0 6 1 * *`: one commit so cron is not
@@ -247,9 +251,12 @@ history — never silently delete the file and move on.
   decisions, crisis management (`docs/runbook.md`).
 - Sources: 8 verified RSS feeds (ANN, MAL, Anime Corner, AnimeTV,
   Fandom Post, Siliconera, Honey's Anime, Anime Herald) — 7 polled by the
-  Worker every 1–5 minutes; Fandom Post is sweeper-only since 2026-11-21
-  (it blocks Cloudflare egress IPs with a stable HTTP 403; GitHub runner
-  IPs work, so `scripts/fetch.py` still lists it). Crunchyroll
+  Worker every 1–5 minutes; Fandom Post is blocked with a stable HTTP 403
+  from BOTH egresses (Cloudflare AND GitHub runner IPs — directly
+  observed in sweeper runs 44874121944 and 44878770507) and currently has
+  NO coverage from either path. It STAYS in `scripts/fetch.py` (manager
+  decision): the error is graceful, each sweeper run re-tests the feed,
+  and coverage resumes automatically if the block ever lifts. Crunchyroll
   News has no public RSS; Otaku USA is dead; Natalie/Oricon/Mantan
   Web/Anime!Anime!/AniTrendz/ComicBook were rejected with evidence
   (`sources-v2.md`). Never write a guessed feed URL — only an address
@@ -313,12 +320,26 @@ history — never silently delete the file and move on.
 - 2026-11-21 ~07:10 Tehran — Fandom Post REMOVED from Worker polling
   (manager decision, option B): stable HTTP 403 from Cloudflare egress
   IPs for 3.5+ hours (verified 00:11–03:35 UTC; same feed returns 200
-  from other IPs). Coverage continues via the 15-min sweeper
-  (`scripts/fetch.py` still lists it). Worker now polls 7 feeds;
-  `sources-v2.md` §6 and `worker/README.md` updated in the same commit.
+  from other IPs). Worker now polls 7 feeds; `sources-v2.md` §6 and
+  `worker/README.md` updated in the same commit. CORRECTION (same day,
+  ~10:40 Tehran): the GitHub runner is ALSO blocked (403 directly
+  observed in sweeper runs 44874121944 and 44878770507) — option B's
+  premise ("the sweeper covers it") was wrong; Fandom Post currently has
+  NO coverage from either path. Manager decision: DO NOT remove it from
+  `scripts/fetch.py` — the error is graceful and each run re-tests it;
+  reactivate only if another egress is found. See `sources-v2.md` §7.
 
 ## 9. Rules (hard)
 
+- GitHub read/write split (PERMANENT, user-stated, 2026-11-21): READS
+  (HEAD, files, commits, repo status, logs) ONLY via the GitHub
+  connector. WRITES (push, commit, branch, anything that changes the
+  repo or site) NEVER via the connector — and never by this team
+  directly. All writes go via the browser, done by the manager (Muse
+  in the «مدیر» chat). This team prepares the write (files + exact
+  commit message) and hands it to the manager; it never uses a
+  connector write tool and never sends a write approval card to the
+  user.
 - NEVER put a token, secret, password, private key, `.env` content, or
   wallet address in this repo — in any file, in any commit, in any
   branch. If a file ever seems to ask for one, stop and tell the team.
