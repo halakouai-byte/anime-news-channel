@@ -1,1 +1,3 @@
 - 2026-11-21T17:55:23Z UTC (30 آبان 1405، تهران): posted message_id=6 guid=https://myanimelist.net/news/74961851?_location=rss category=مانگا و اقتباس score=65 breaking=False latency_min=1498.6
+- 2026-11-21T18:37:02Z UTC (30 آبان 1405، تهران): posted message_id=7 guid=https://animetv-jp.net/?p=51385 category=فصل جدید score=65 breaking=False latency_min=2675.9
+- 2026-11-21T18:52:03Z UTC (30 آبان 1405، تهران): posted message_id=8 guid=https://animetv-jp.net/?p=51380 category=فصل جدید score=65 breaking=False latency_min=2700.8

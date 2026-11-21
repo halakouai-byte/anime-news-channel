@@ -1275,9 +1275,10 @@
       "franchise_en": "Oishinbo",
       "priority_score": 65,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "POSTED",
       "hold_reason": "",
-      "created_utc": "2026-11-21T06:08:49Z"
+      "created_utc": "2026-11-21T06:08:49Z",
+      "merged_into": "22736f269cfdc67d0968d252d5951fef2059450eda350a1029858155e640a6d4"
     },
     {
       "guid": "https://animecorner.me/total-fantasy-knockout-fabinikumanga-to-end-with-20th-volume/",
@@ -1495,9 +1496,12 @@
       "franchise_en": "The Reincarnated Elf Left on a Journey to Master His Magic",
       "priority_score": 65,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "POSTED",
       "hold_reason": "",
-      "created_utc": "2026-11-21T06:08:49Z"
+      "created_utc": "2026-11-21T06:08:49Z",
+      "message_id": 7,
+      "posted_utc": "2026-11-21T18:37:02Z",
+      "caption": "The Reincarnated Elf Left on a Journey to Master His Magic | معرفی صدا\n\nتقویم طرفداران الف تناسخ‌یافته در سفر تسلط بر جادو از امروز شلوغ‌تر شد؛ معرفی صداپیشه‌های تازه اثر اعلام شد.\n\nتریلر تازه اثر هم منتشر شده است؛ چند صحنه کوتاه که فضای فصل تازه را لو می‌دهد، بی‌آنکه قصه را خراب کند. در این اعلام، نام صداپیشه‌های تازه هم آمده است؛ انتخاب این صداها نشان می‌دهد عوامل ساخت برای این بخش از اثر برنامه جدی دارند.\n\nچرا مهم است؟ چون معرفی صداپیشه‌های تازه، صدای شخصیت‌های الف تناسخ‌یافته در سفر تسلط بر جادو را مشخص می‌کند و همان صداهایی است که در فصل تازه خواهید شنید.\n\nمنبع: AnimeTV\nhttps://animetv-jp.net/the-reincarnated-elf-left-on-a-journey-to-master-his-magic-anime-reveals-main-trailer-new-cast-and-theme-songs\n\n#انیمه #TheReincarnatedElfLeftOnAJourneyToMasterHisMagic #فصل_جدید"
     },
     {
       "guid": "https://animeherald.com/?p=79002",
@@ -1539,9 +1543,12 @@
       "franchise_en": "Oishinbo",
       "priority_score": 65,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "POSTED",
       "hold_reason": "",
-      "created_utc": "2026-11-21T07:08:05Z"
+      "created_utc": "2026-11-21T07:08:05Z",
+      "message_id": 8,
+      "posted_utc": "2026-11-21T18:52:03Z",
+      "caption": "Shin-Ei Animation | تاریخ تازه اعلام شد\n\nیک خبر خوب برای کسانی که شین‌ای انیمیشن را دوست دارند: تاریخ تازه اثر اعلام شد.\n\nاین خبر را AnimeTV منتشر کرده است؛ پخش اثر از ۴ ژانویه ۲۰۲۷ آغاز می‌شود و جزئیات بیشتر در گزارش AnimeTV آمده است. در این اعلام، نام صداپیشه‌های تازه هم آمده است؛ انتخاب این صداها نشان می‌دهد عوامل ساخت برای این بخش از اثر برنامه جدی دارند.\n\nچرا مهم است؟ چون با مشخص‌شدن ۴ ژانویه ۲۰۲۷ برای شین‌ای انیمیشن، انتظار بی‌پایان تمام شد و تاریخ دقیق، جای شایعه‌ها را گرفت.\n\nمنبع: AnimeTV\nhttps://animetv-jp.net/new-oishinbo-tv-anime-set-to-premiere-on-january-4-2027\n\n#انیمه #ShinEiAnimation #فصل_جدید\n\n📌 همچنین: 'Shin Oishinbo' Reveals Additional Cast, Staff, Main Promo, Winter 2027 Premiere — https://myanimelist.net/news/74957463"
     },
     {
       "guid": "https://www.animenewsnetwork.com/cms/.244043",

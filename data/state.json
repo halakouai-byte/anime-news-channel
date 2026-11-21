@@ -6,20 +6,24 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 160,
+    "duplicates_total": 217,
     "hold_total": 13,
-    "posts_today": 1,
+    "posts_today": 3,
     "posts_today_date": "2026-11-21",
-    "posts_total": 1,
-    "rejected_total": 60
+    "posts_total": 3,
+    "rejected_total": 75
   },
-  "last_fetch_utc": "2026-11-21T17:55:22Z",
-  "last_publish_utc": "2026-11-21T17:55:23Z",
+  "last_fetch_utc": "2026-11-21T18:37:01Z",
+  "last_publish_utc": "2026-11-21T18:52:03Z",
   "posted_hashes": {
-    "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6
+    "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
+    "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
+    "22736f269cfdc67d0968d252d5951fef2059450eda350a1029858155e640a6d4": 8
   },
   "posted_message_ids": [
-    6
+    6,
+    7,
+    8
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -34,6 +38,49 @@
         "takamine-san'"
       ],
       "posted_utc": "2026-11-21T17:55:23Z"
+    },
+    {
+      "title_norm": "the reincarnated elf left on a journey to master his magic anime reveals main trailer, new cast and theme songs",
+      "words": [
+        "a",
+        "and",
+        "anime",
+        "cast",
+        "elf",
+        "his",
+        "journey",
+        "left",
+        "magic",
+        "main",
+        "master",
+        "new",
+        "on",
+        "reincarnated",
+        "reveals",
+        "songs",
+        "the",
+        "theme",
+        "to",
+        "trailer,"
+      ],
+      "posted_utc": "2026-11-21T18:37:02Z"
+    },
+    {
+      "title_norm": "new oishinbo tv anime set to premiere on january 4, 2027",
+      "words": [
+        "2027",
+        "4,",
+        "anime",
+        "january",
+        "new",
+        "oishinbo",
+        "on",
+        "premiere",
+        "set",
+        "to",
+        "tv"
+      ],
+      "posted_utc": "2026-11-21T18:52:03Z"
     }
   ],
   "seen_at": {
@@ -208,20 +255,36 @@
     "haite kudasai san takamine|announcement|10388": {
       "message_id": 6,
       "posted_utc": "2026-11-21T17:55:23Z"
+    },
+    "elf his journey left magic master reincarnated|trailer|10388": {
+      "message_id": 7,
+      "posted_utc": "2026-11-21T18:37:02Z"
+    },
+    "oishinbo|trailer|10388": {
+      "message_id": 8,
+      "posted_utc": "2026-11-21T18:52:03Z"
     }
   },
   "template_usage_7d": {
     "title": [
-      "2026-11-21T17:55:23Z"
+      "2026-11-21T17:55:23Z",
+      "2026-11-21T18:37:02Z",
+      "2026-11-21T18:52:03Z"
     ],
     "lead": [
-      "2026-11-21T17:55:23Z"
+      "2026-11-21T17:55:23Z",
+      "2026-11-21T18:37:02Z",
+      "2026-11-21T18:52:03Z"
     ],
     "bodies": [
-      "2026-11-21T17:55:23Z"
+      "2026-11-21T17:55:23Z",
+      "2026-11-21T18:37:02Z",
+      "2026-11-21T18:52:03Z"
     ],
     "why": [
-      "2026-11-21T17:55:23Z"
+      "2026-11-21T17:55:23Z",
+      "2026-11-21T18:37:02Z",
+      "2026-11-21T18:52:03Z"
     ]
   },
   "version": 2
