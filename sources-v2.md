@@ -73,7 +73,7 @@
 
 ## ۴. جمع‌بندی برای معماری جدید
 
-- **هسته polling (۵ منبع اصلی):** ANN News، MAL News، Anime Corner، AnimeTV، Fandom Post.
+- **هسته polling ورکر (۴ منبع اصلی):** ANN News، MAL News، Anime Corner، AnimeTV. ‏Fandom Post از polling ورکر حذف شد (۲۱ نوامبر ۲۰۲۶ — بلاک IPهای خروجی Cloudflare با ۴۰۳ پایدار) و فقط با sweeper ‏(هر ۱۵ دقیقه، `scripts/fetch.py`) پوشش داده می‌شود — بخش ۶ را ببینید.
 - **تکمیلی (۳ منبع درجه ۲):** Siliconera (فقط آیتم انیمه)، Honey's Anime، Anime Herald (مصاحبه/مقاله).
 - **مجموع تاییدشده:** ۸ منبع — در بازه خواسته‌شده (۵ تا ۱۰).
 - **حذف‌شده از معماری قبلی:** هیچ‌کدام از ANN و MAL حذف نشدند؛ ولی polling هر ۲ ساعت برای ANN کند است → ۳۰ دقیقه پیشنهاد می‌شود.
@@ -94,3 +94,10 @@
 - Honey's Anime: `application/rss+xml`، ۱٬۳۲۸٬۲۶۲ بایت، ۱۵۰ آیتم، فقط ۱ آیتم در ۷ روز اخیر.
 - Anime Herald: `application/rss+xml`، ۲۵۹٬۴۱۳ بایت، ۱۰ آیتم، ۱ آیتم در ۷ روز اخیر.
 - نمونه تیترهای تازه (۲۰ نوامبر): ANN: «Yen Press Licenses [Oshi No Ko] Étude for Two…» ؛ MAL: «'Tougen Anki: Nikko Kegon no Taki-hen' Unveils Additional Cast» ؛ Anime Corner: «BanG Dream! Yume∞Mita Gets New Anime Series» ؛ AnimeTV: «CHARISMA Anime Reveals Terra Character PV» ؛ Fandom Post: «Crunchyroll Launches 'The Ogre's Bride' Anime French Dub».
+
+## ۶. تغییر ۲۱ نوامبر ۲۰۲۶ — Fandom Post از polling ورکر حذف شد (تصمیم مدیر، گزینه ب)
+
+- **دلیل:** سرور Fandom Post به‌طور پایدار به IPهای خروجی Cloudflare ‏HTTP 403‏ می‌دهد. مدرک: فاز ۰ (۲۰ نوامبر) ۴۰۳ از داخل Worker در برابر ۲۰۰ از VM با همان User-Agent؛ تیک تست dispatch ‏۰۰:۱۱:۱۸ UTC؛ تیک سویپ ۰۳:۲۵ UTC؛ تیک دستی ۰۳:۳۵ UTC — بیش از ۳٫۵ ساعت تکرار در تیک‌های پشت سر هم.
+- **تغییر:** فید از آرایه `FEEDS` در `worker/src/index.js` برداشته شد و ورکر دوباره دیپلوی شد. ورکر حالا ۷ فید را poll می‌کند.
+- **پوشش می‌ماند:** `scripts/fetch.py` هنوز Fandom Post را دارد (Tier 1) — sweeper ‏Actions (هر ۱۵ دقیقه، با IP رانر گیت‌هاب که بلاک نیست) خبرهای آن را می‌گیرد. تاخیر تشخیص خبر Fandom Post از ~۱ دقیقه به ~۱۵ دقیقه می‌رسد.
+- **برگرداندن:** فقط بعد از تست زنده دوباره از داخل Worker (اگر روزی ۲۰۰ داد) — نه با حدس.
