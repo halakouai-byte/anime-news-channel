@@ -6,24 +6,28 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 217,
+    "duplicates_total": 270,
     "hold_total": 13,
-    "posts_today": 3,
-    "posts_today_date": "2026-11-21",
-    "posts_total": 3,
-    "rejected_total": 75
+    "posts_today": 2,
+    "posts_today_date": "2026-11-22",
+    "posts_total": 5,
+    "rejected_total": 88
   },
-  "last_fetch_utc": "2026-11-21T18:37:01Z",
-  "last_publish_utc": "2026-11-21T18:52:03Z",
+  "last_fetch_utc": "2026-11-21T21:24:20Z",
+  "last_publish_utc": "2026-11-21T21:39:22Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
-    "22736f269cfdc67d0968d252d5951fef2059450eda350a1029858155e640a6d4": 8
+    "22736f269cfdc67d0968d252d5951fef2059450eda350a1029858155e640a6d4": 8,
+    "612aad7fa463ef2c15647c548aa504bc86d10dec992249705ebaebc4dcf5186d": 9,
+    "2b1fbd28a6121ae94f5c2433668f3dac5cf776dd14c074b69c645344a930ac84": 10
   },
   "posted_message_ids": [
     6,
     7,
-    8
+    8,
+    9,
+    10
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -81,6 +85,47 @@
         "tv"
       ],
       "posted_utc": "2026-11-21T18:52:03Z"
+    },
+    {
+      "title_norm": "yen press licenses [oshi no ko] étude for two, bungo stray dogs: the untold origins of the detective agency, more manga/novels",
+      "words": [
+        "[oshi",
+        "agency,",
+        "bungo",
+        "detective",
+        "dogs:",
+        "for",
+        "ko]",
+        "licenses",
+        "manga/novels",
+        "more",
+        "no",
+        "of",
+        "origins",
+        "press",
+        "stray",
+        "the",
+        "two,",
+        "untold",
+        "yen",
+        "étude"
+      ],
+      "posted_utc": "2026-11-21T21:24:22Z"
+    },
+    {
+      "title_norm": "bang dream! yume∞mita series confirms new anime in production",
+      "words": [
+        "anime",
+        "bang",
+        "confirms",
+        "dream!",
+        "in",
+        "new",
+        "production",
+        "series",
+        "yume∞mita"
+      ],
+      "posted_utc": "2026-11-21T21:39:22Z"
     }
   ],
   "seen_at": {
@@ -263,28 +308,44 @@
     "oishinbo|trailer|10388": {
       "message_id": 8,
       "posted_utc": "2026-11-21T18:52:03Z"
+    },
+    "ko no oshi|announcement|10388": {
+      "message_id": 9,
+      "posted_utc": "2026-11-21T21:24:22Z"
+    },
+    "bang dream|announcement|10388": {
+      "message_id": 10,
+      "posted_utc": "2026-11-21T21:39:22Z"
     }
   },
   "template_usage_7d": {
     "title": [
       "2026-11-21T17:55:23Z",
       "2026-11-21T18:37:02Z",
-      "2026-11-21T18:52:03Z"
+      "2026-11-21T18:52:03Z",
+      "2026-11-21T21:24:22Z",
+      "2026-11-21T21:39:22Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
       "2026-11-21T18:37:02Z",
-      "2026-11-21T18:52:03Z"
+      "2026-11-21T18:52:03Z",
+      "2026-11-21T21:24:22Z",
+      "2026-11-21T21:39:22Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
       "2026-11-21T18:37:02Z",
-      "2026-11-21T18:52:03Z"
+      "2026-11-21T18:52:03Z",
+      "2026-11-21T21:24:22Z",
+      "2026-11-21T21:39:22Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
       "2026-11-21T18:37:02Z",
-      "2026-11-21T18:52:03Z"
+      "2026-11-21T18:52:03Z",
+      "2026-11-21T21:24:22Z",
+      "2026-11-21T21:39:22Z"
     ]
   },
   "version": 2

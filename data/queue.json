@@ -40,9 +40,12 @@
       "franchise_en": "Oshi no Ko",
       "priority_score": 85,
       "is_breaking": true,
-      "status": "HOLD",
+      "status": "POSTED",
       "hold_reason": "gates_failed:why_specific",
-      "created_utc": "2026-11-21T00:13:49Z"
+      "created_utc": "2026-11-21T00:13:49Z",
+      "message_id": 9,
+      "posted_utc": "2026-11-21T21:24:22Z",
+      "caption": "Bungo Stray Dogs خبرساز شد: لایسنس تازه\n\nخبر تازه از بانگو استری داگز رسید و این‌بار خبر، لایسنس تازه است.\n\nطرفداران این اثر مدت‌ها منتظر چنین خبری بودند و حالا با این اعلام، تصویر آینده اثر روشن‌تر از قبل شده است. جزئیات بیشتر این خبر، از جمله زمان دقیق و عوامل اصلی، در گزارش Anime News Network آمده است و لینک کامل آن در انتهای همین پست است.\n\nچرا مهم است؟ چون لایسنس بانگو استری داگز یعنی این اثر رسماً به دست خواننده‌های تازه می‌رسد و راهش به بازار جهانی باز می‌شود.\n\nمنبع: Anime News Network\nhttps://animenewsnetwork.com/news/2026-11-20/yen-press-licenses-oshi-no-ko-etude-for-two-bungo-stray-dogs-the-untold-origins-of-the-detective-/.244035\n\n#انیمه #BungoStrayDogs #مانگا"
     },
     {
       "guid": "https://www.animenewsnetwork.com/cms/.244024",
@@ -106,9 +109,12 @@
       "franchise_en": "BanG Dream!",
       "priority_score": 80,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "POSTED",
       "hold_reason": "gates_failed:why_specific",
-      "created_utc": "2026-11-21T00:13:49Z"
+      "created_utc": "2026-11-21T00:13:49Z",
+      "message_id": 10,
+      "posted_utc": "2026-11-21T21:39:22Z",
+      "caption": "خبر تازه BanG Dream! Yume∞Mita: انیمه تازه\n\nبنگ دریم! یومه میتا سکوت را شکست؛ انیمه تازه تازه اثر اعلام شد.\n\nبخش تازه این اثر پیش‌تر پخش خود را آغاز کرده بود و این خبر، ادامه همان مسیری است که عوامل ساخت از پیش اعلام کرده بودند. جزئیات بیشتر این خبر، از جمله زمان دقیق و عوامل اصلی، در گزارش Anime News Network آمده است و لینک کامل آن در انتهای همین پست است.\n\nچرا مهم است؟ چون تایید انیمه تازه یعنی قصه بنگ دریم! یومه میتا ادامه دارد و بخشی که مدت‌ها درباره‌اش حرف زده می‌شد، حالا واقعا ساخته می‌شود.\n\nمنبع: Anime News Network\nhttps://animenewsnetwork.com/news/2026-11-20/bang-dream-yume-mita-series-confirms-new-anime-in-production/.244026\n\n#انیمه #BangDreamYumeMita #فصل_جدید\n\n📌 همچنین: 'BanG Dream! Yume∞Mita' New Anime in Production — https://myanimelist.net/news/74961509"
     },
     {
       "guid": "https://www.animenewsnetwork.com/cms/.244023",
@@ -901,9 +907,10 @@
       "franchise_en": "BanG Dream!",
       "priority_score": 55,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "POSTED",
       "hold_reason": "",
-      "created_utc": "2026-11-21T00:13:49Z"
+      "created_utc": "2026-11-21T00:13:49Z",
+      "merged_into": "2b1fbd28a6121ae94f5c2433668f3dac5cf776dd14c074b69c645344a930ac84"
     },
     {
       "guid": "https://myanimelist.net/news/74960793?_location=rss",
