@@ -373,6 +373,40 @@ history — never silently delete the file and move on.
   same gap, so its 10-min timeout had the identical defect, worse). The
   15-min gap itself is NOT shortened — it is a deliberate product rule
   (audience pacing). 60 covers up to ~4 posts with headroom.
+- 2026-11-21 ~22:22 Tehran — RUN 44936475145 (publish #3) SUCCESS:
+  18:36:40Z → 18:52:06Z (~15.5 min, no cancellation — the 60-min timeout
+  fix works). posts_total 3, posted_message_ids [6, 7, 8]. New posts (live
+  verified on t.me/s): msg 7 «The Reincarnated Elf Left on a Journey to
+  Master His Magic» (AnimeTV, 65, فصل جدید, new cast + trailer) and msg 8
+  «New Oishinbo TV Anime Set to Premiere on January 4, 2027» (AnimeTV, 65,
+  فصل جدید). Both captions correct, no event inversion. Queue after run:
+  60 QUEUED, 17 HOLD, 4 POSTED, 1 STALE (82 total). Note: queue shows 4
+  POSTED but only 3 message_ids — the 4th («Shin Oishinbo» MAL) is the same
+  Oishinbo story marked POSTED by cross-source dedupe (publish.py:342); no
+  phantom post. Both new posts are ~45h old at publish time (backlog
+  catch-up, inside the 48h freshness window).
+- 2026-11-21 ~22:25 Tehran — HOLD RE-TEST BUG + LICENSE EVENT (critic
+  finding, run 44936475145): Oshi No Ko 85 + BanG Dream 80 stayed HOLD
+  (`gates_failed:why_specific`) even though they pass 9/9 with the fixed
+  code — because `publish.py` only read QUEUED/APPROVED items and never
+  re-evaluated HOLD items. FIX (local, for the browser commit; test
+  `scripts/test_hold_retest.py` ALL PASSED): new `is_pending()` — HOLD
+  items with `hold_reason` starting `gates_failed` are re-tested every run
+  (publish_one re-runs the 9 gates; pass → posts, fail → stays HOLD);
+  human HOLDs (`low-confidence`, 13 items) are NOT re-tested. CAUGHT WHILE
+  TESTING: the Oshi No Ko caption that would have posted was a SECOND
+  inversion — «Bungo Stray Dogs در راه است؛ انیمه تازه» + «از روی مانگایی
+  ساخته می‌شود» for a Yen Press LICENSE announcement (no anime announced).
+  FIX in the same bundle: new event `license` (detect_event «licens» in
+  title/summary, checked before the adaptation fallthrough), event_fa
+  «لایسنس تازه», category «مانگا و اقتباس», new why `why_license` +
+  preferred map, neutral title/lead allowlist (same safe sets as
+  manga_ending), `event_consistency` now also fails license-source +
+  fresh-anime claim (and vice versa), «لایسنس» added to why_specific
+  markers. New caption: «Bungo Stray Dogs خبرساز شد: لایسنس تازه» (9/9).
+  The old wrong caption FAILS the new gate (proven in the test). HOLD
+  items older than 72h are REJECTED by fetch.py — the 4 gates_failed HOLDs
+  must post by ~Nov 23 or they are lost.
 
 ## 9. Rules (hard)
 
