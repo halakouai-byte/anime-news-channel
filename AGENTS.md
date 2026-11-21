@@ -407,6 +407,7 @@ history — never silently delete the file and move on.
   The old wrong caption FAILS the new gate (proven in the test). HOLD
   items older than 72h are REJECTED by fetch.py — the 4 gates_failed HOLDs
   must post by ~Nov 23 or they are lost.
+- 2026-11-21 ~00:40 Tehran — SWEEPER DEAD ALL DAY (manager sweep finding): every Sweeper run since 07:39 UTC failed workflow validation before any job started — `if: secrets.TELEGRAM_BOT_TOKEN != '' ...` is INVALID ("Unrecognized named-value: 'secrets'" — the `secrets` context cannot be used in `if:` conditions). Introduced by commit e9089f5 ("fix: sweeper skips publish cleanly while Telegram secrets are unset"); runs #1–#2 (before it) ran fine, #3–#17 all failed with no duration, and no scheduled run was created after the last push at 20:09 UTC. The channel's only posts that day came from manual publish runs (#2, #3) — the 15-min sweeper + keepalive never ran. FIX (same commit as this entry): both `secrets`-based `if:` conditions removed from sweeper.yml (the guard is obsolete — both secrets are set, verified 2026-11-21 — and publish.py fails loudly if they ever go missing, same alarm behaviour as publish.yml). Verify with a manual Sweeper dispatch right after this commit; the next scheduled tick then resumes automatically.
 
 ## 9. Rules (hard)
 
