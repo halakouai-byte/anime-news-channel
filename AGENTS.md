@@ -10,8 +10,10 @@ addresses, or account IDs. Secret NAMES are fine; values are never written.
 A Persian-language Telegram news channel about the anime world,
 `@animekhabarfa`, fully automated on **GitHub + Cloudflare only** — no
 other service, no paid service, no AI at runtime, no server. A
-Cloudflare Worker detects fresh news every 1 minute from 8 verified RSS
-sources, triggers GitHub Actions with `repository_dispatch`, and Actions
+Cloudflare Worker detects fresh news every 1 minute from 7 verified RSS
+sources in the Worker (Fandom Post is covered by the 15-minute sweeper
+only — it blocks Cloudflare egress IPs with a stable HTTP 403 since
+2026-11-21; see §7), triggers GitHub Actions with `repository_dispatch`, and Actions
 rewrites the news in Persian (template bank, no LLM), renders a V3 cover
 with Pillow (Playwright is only a documented fallback), and publishes it
 to the channel with `sendPhoto`.
@@ -235,7 +237,10 @@ history — never silently delete the file and move on.
   `docs/weekly-checklist.md`), monthly bank maintenance, taste
   decisions, crisis management (`docs/runbook.md`).
 - Sources: 8 verified RSS feeds (ANN, MAL, Anime Corner, AnimeTV,
-  Fandom Post, Siliconera, Honey's Anime, Anime Herald). Crunchyroll
+  Fandom Post, Siliconera, Honey's Anime, Anime Herald) — 7 polled by the
+  Worker every 1–5 minutes; Fandom Post is sweeper-only since 2026-11-21
+  (it blocks Cloudflare egress IPs with a stable HTTP 403; GitHub runner
+  IPs work, so `scripts/fetch.py` still lists it). Crunchyroll
   News has no public RSS; Otaku USA is dead; Natalie/Oricon/Mantan
   Web/Anime!Anime!/AniTrendz/ComicBook were rejected with evidence
   (`sources-v2.md`). Never write a guessed feed URL — only an address
@@ -296,6 +301,12 @@ history — never silently delete the file and move on.
   `docs/dry-run-acceptance-report.md` (0 of 6 criteria measurable
   before the publisher code landed; re-measure after push + first
   live dispatch).
+- 2026-11-21 ~07:10 Tehran — Fandom Post REMOVED from Worker polling
+  (manager decision, option B): stable HTTP 403 from Cloudflare egress
+  IPs for 3.5+ hours (verified 00:11–03:35 UTC; same feed returns 200
+  from other IPs). Coverage continues via the 15-min sweeper
+  (`scripts/fetch.py` still lists it). Worker now polls 7 feeds;
+  `sources-v2.md` §6 and `worker/README.md` updated in the same commit.
 
 ## 9. Rules (hard)
 
