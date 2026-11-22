@@ -2631,6 +2631,28 @@
       "status": "HOLD",
       "hold_reason": "gates_failed:why_specific",
       "created_utc": "2026-11-22T22:02:21Z"
+    },
+    {
+      "guid": "https://animetv-jp.net/?p=51446",
+      "hash": "b2cbced28e68d26986e2009ccc20b21179fa9ef91e353076625159aeca112b05",
+      "story_key": null,
+      "title": "Bride of the Barrier Master TV Anime Reveals January 6 Premiere",
+      "link": "https://animetv-jp.net/bride-of-the-barrier-master-tv-anime-reveals-january-6-premiere",
+      "summary": "The TV anime Bride of the Barrier Master will begin broadcasting on January 6 with a one-hour special premiere. The series will also be available exclusively on Netflix. The main visual and a new promotional video have been released. The opening theme song, titled “Ichirinka,” will be performed by Naniwa Danshi. New Trailer: Main Visual: […] L’article Bride of the Barrier Master TV Anime Reveals January 6 Premiere est apparu en premier sur AnimeTV チェーン .",
+      "source": "AnimeTV",
+      "source_name": "AnimeTV",
+      "tier": 1,
+      "pubDate": "2026-11-22T23:45:44+00:00",
+      "category": "فصل جدید",
+      "category_score": 5,
+      "category_source": "keyword",
+      "event_type": "trailer",
+      "franchise_en": null,
+      "priority_score": 50,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "gates_failed:length",
+      "created_utc": "2026-11-22T23:46:56Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
