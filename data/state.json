@@ -1,20 +1,20 @@
 {
   "circuit_breaker": {
-    "activated_at": null,
     "active": false,
+    "activated_at": null,
     "posts_today": 0,
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 472,
-    "hold_total": 16,
-    "posts_today": 10,
+    "duplicates_total": 591,
+    "hold_total": 17,
+    "posts_today": 14,
     "posts_today_date": "2026-11-22",
-    "posts_total": 13,
-    "rejected_total": 136
+    "posts_total": 17,
+    "rejected_total": 160
   },
-  "last_fetch_utc": "2026-11-22T11:03:01Z",
-  "last_publish_utc": "2026-11-22T11:18:04Z",
+  "last_fetch_utc": "2026-11-22T11:48:26Z",
+  "last_publish_utc": "2026-11-22T12:18:08Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -28,7 +28,11 @@
     "cc1c3e500795e12e078bebf091ce33bc1de3faf4a9a77094642d172928fe44e8": 17,
     "1ce189dd91ada3eb4cd8c3987ee682d1043f6a71082165d83b5dfe988045d56c": 18,
     "f8f7504394df745cd913d4f0445869570a2767ad93cfdab7f632ce44699ddc0e": 19,
-    "dac2cb5c9c78bcb8e8134c31dfef13884e8ece52333ffa833b0aaaa607ab1a2e": 20
+    "dac2cb5c9c78bcb8e8134c31dfef13884e8ece52333ffa833b0aaaa607ab1a2e": 20,
+    "252a32a4f67ea2ffcb309881842041da848cee606aa23291bbbfc2d516b44443": 21,
+    "5ee8c06f1bbc2c9ee2d1965becd22e5fb1e93c123c707201cfcf72c2fcd700dc": 22,
+    "17f3a9cff726a2162ecc481c2327c637e95aaea4394743a68687fb6d603fb843": 23,
+    "3f822a1a83a69e1005b5db86b5b6ae1939f4bd7ae00923b83e0e92e10d218e14": 24
   },
   "posted_message_ids": [
     6,
@@ -43,7 +47,11 @@
     17,
     18,
     19,
-    20
+    20,
+    21,
+    22,
+    23,
+    24
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -274,6 +282,85 @@
         "skill"
       ],
       "posted_utc": "2026-11-22T11:18:04Z"
+    },
+    {
+      "title_norm": "a tale of the secret saint tv anime reveals new key visual for “sutherland arc”",
+      "words": [
+        "a",
+        "anime",
+        "arc”",
+        "for",
+        "key",
+        "new",
+        "of",
+        "reveals",
+        "saint",
+        "secret",
+        "tale",
+        "the",
+        "tv",
+        "visual",
+        "“sutherland"
+      ],
+      "posted_utc": "2026-11-22T11:33:05Z"
+    },
+    {
+      "title_norm": "in a world full of zombies i’m the only one who doesn’t get attacked anime sets january 1 premiere",
+      "words": [
+        "1",
+        "a",
+        "anime",
+        "attacked",
+        "doesn’t",
+        "full",
+        "get",
+        "in",
+        "i’m",
+        "january",
+        "of",
+        "one",
+        "only",
+        "premiere",
+        "sets",
+        "the",
+        "who",
+        "world",
+        "zombies"
+      ],
+      "posted_utc": "2026-11-22T11:48:06Z"
+    },
+    {
+      "title_norm": "chiruran manga gets new stage play by all-female troupe o'clock kumamoto revue",
+      "words": [
+        "all-female",
+        "by",
+        "chiruran",
+        "gets",
+        "kumamoto",
+        "manga",
+        "new",
+        "o'clock",
+        "play",
+        "revue",
+        "stage",
+        "troupe"
+      ],
+      "posted_utc": "2026-11-22T12:03:07Z"
+    },
+    {
+      "title_norm": "'please put them on, takamine-san' manga ends in january",
+      "words": [
+        "'please",
+        "ends",
+        "in",
+        "january",
+        "manga",
+        "on,",
+        "put",
+        "takamine-san'",
+        "them"
+      ],
+      "posted_utc": "2026-11-22T12:18:08Z"
     }
   ],
   "seen_at": {
@@ -383,12 +470,15 @@
     "bc06815f9f919967b99a18291ab6e714b864486f0a8d4386826ed7276957e4dd": "2026-11-22T10:01:52Z",
     "cc1c3e500795e12e078bebf091ce33bc1de3faf4a9a77094642d172928fe44e8": "2026-11-22T10:01:52Z",
     "427146068bbf53366e581621c2fa908a51a61be7dc0ff969a285a189f8d7b122": "2026-11-22T11:03:00Z",
-    "dac2cb5c9c78bcb8e8134c31dfef13884e8ece52333ffa833b0aaaa607ab1a2e": "2026-11-22T11:03:00Z"
+    "dac2cb5c9c78bcb8e8134c31dfef13884e8ece52333ffa833b0aaaa607ab1a2e": "2026-11-22T11:03:00Z",
+    "4994f21b86f912a7460522007bf6b17b172116df6dab1a03be3e97f6009de9c7": "2026-11-22T11:18:24Z",
+    "0e50b7047253f8901a7629c1d742ee9d4aff9cce5f4eb4ed2fc580a6ee038a0b": "2026-11-22T11:48:25Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
     "0a7c98d8d45a4b88366aa8e431287c5bb23941e936afec6bdd2dd55262a69520",
     "0b91bb1c46256e8ff3115ce44f09960b59d401da4066dbfd4512ae0ec825c53e",
+    "0e50b7047253f8901a7629c1d742ee9d4aff9cce5f4eb4ed2fc580a6ee038a0b",
     "17f3a9cff726a2162ecc481c2327c637e95aaea4394743a68687fb6d603fb843",
     "1a0d8d13f8aa7fd33bf4f4ac7cf0b6263bc04c51213abe370b2e8536e6cfb4c7",
     "1ce189dd91ada3eb4cd8c3987ee682d1043f6a71082165d83b5dfe988045d56c",
@@ -417,6 +507,7 @@
     "434fc5a541586fc125746d1d11286b47c7c7ff542aa3a481097c5f9613cd73e1",
     "46f769bdf15d19fd3ee135c418685daf281f0f105fc639d4aaf1bcce6e92950c",
     "48f0aa63839d806e658110e628273d52c5ccb174eddcba0f22004d20d06944fb",
+    "4994f21b86f912a7460522007bf6b17b172116df6dab1a03be3e97f6009de9c7",
     "4af97ee3cb380b1e90ea0d6dd72cb3aaefe4d25a76d9a3fbc4a393e458be7cf9",
     "4c160152e3afd3af03f633476f37f84936ab29a5bc8e76b5574fb6bd6f734fb8",
     "4dc2b8a24b9562d3db57a40438e09f16d007dd20f5820288f5c52c277b1a511f",
@@ -550,7 +641,11 @@
       "2026-11-22T10:01:54Z",
       "2026-11-22T10:16:55Z",
       "2026-11-22T11:03:03Z",
-      "2026-11-22T11:18:04Z"
+      "2026-11-22T11:18:04Z",
+      "2026-11-22T11:33:05Z",
+      "2026-11-22T11:48:06Z",
+      "2026-11-22T12:03:07Z",
+      "2026-11-22T12:18:08Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -565,7 +660,11 @@
       "2026-11-22T10:01:54Z",
       "2026-11-22T10:16:55Z",
       "2026-11-22T11:03:03Z",
-      "2026-11-22T11:18:04Z"
+      "2026-11-22T11:18:04Z",
+      "2026-11-22T11:33:05Z",
+      "2026-11-22T11:48:06Z",
+      "2026-11-22T12:03:07Z",
+      "2026-11-22T12:18:08Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -580,7 +679,11 @@
       "2026-11-22T10:01:54Z",
       "2026-11-22T10:16:55Z",
       "2026-11-22T11:03:03Z",
-      "2026-11-22T11:18:04Z"
+      "2026-11-22T11:18:04Z",
+      "2026-11-22T11:33:05Z",
+      "2026-11-22T11:48:06Z",
+      "2026-11-22T12:03:07Z",
+      "2026-11-22T12:18:08Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -595,7 +698,11 @@
       "2026-11-22T10:01:54Z",
       "2026-11-22T10:16:55Z",
       "2026-11-22T11:03:03Z",
-      "2026-11-22T11:18:04Z"
+      "2026-11-22T11:18:04Z",
+      "2026-11-22T11:33:05Z",
+      "2026-11-22T11:48:06Z",
+      "2026-11-22T12:03:07Z",
+      "2026-11-22T12:18:08Z"
     ]
   },
   "version": 2
