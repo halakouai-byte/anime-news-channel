@@ -365,6 +365,37 @@ def _has_placeholder(text: str) -> bool:
     return bool(re.search(r"\{[a-z_]+\}|\[…\]|___", text))
 
 
+_SEASON_RETURN_RE = re.compile(
+    r"season\s+([2-9]|1[0-9])\b|2nd season|3rd season|[4-9]th season|"
+    r"second season|third season|fourth season|fifth season|"
+    r"sixth season|seventh season|eighth season|ninth season|"
+    r"new season\b|\bsequel\b",
+    re.IGNORECASE,
+)
+
+
+def _is_returning_season(fx: dict) -> bool:
+    """آیا خبر از فصل برگشتی (فصل ۲ به بعد / دنباله) است، نه انیمه کاملاً
+    تازه؟ فقط نشانه‌های صریح شماره فصل / دنباله قبول‌اند — «season» تنها
+    کافی نیست (فصل پخش هم season است) و «new anime» فصل برگشتی نیست.
+    منتقد، ۲۲ نوامبر ۲۰۲۶ — پیام‌های ۱۰ تا ۱۲: ‏why_new_season‏ («قصه ادامه
+    دارد») برای اعلامیه انیمه کاملاً تازه غلط بود."""
+    text = f"{fx['title_en']} {fx['summary_en']}".lower()
+    return bool(_SEASON_RETURN_RE.search(text))
+
+
+def _has_premiered(fx: dict) -> bool:
+    """«پخش آغاز شده» فقط وقتی درست است که پخش مال همین خبر باشد — نه
+    پس‌زمینه خلاصه (منتقد، ۲۲ نوامبر ۲۰۲۶ — پیام ۱۰: خلاصه ANN می‌گفت پروژه
+    قبلی Mugendai Mewtype «premiered on July 2» و body_season_premiered از
+    همان کلمه، «بخش تازه پیش‌تر پخش خود را آغاز کرده بود» ساخت؛ در حالی که
+    خبر، اعلامیه انیمه کاملاً تازه بود). پس: «premiered» در تیتر، یا در
+    خلاصه + نشانه فصل برگشتی."""
+    title = (fx["title_en"] or "").lower()
+    text = f"{fx['title_en']} {fx['summary_en']}".lower()
+    return "premiered" in title or ("premiered" in text and _is_returning_season(fx))
+
+
 def _eligible_bodies(fx: dict, banks: dict):
     """بدنه‌ها فقط وقتی انتخاب می‌شوند که حقیقتشان در منبع باشد.
 
@@ -386,7 +417,10 @@ def _eligible_bodies(fx: dict, banks: dict):
         "cast": "cast" in text,
         "visual": any(k in text for k in ("visual", "key visual", "teaser visual")),
         "trailer": any(k in text for k in ("trailer", "promo", " pv ")),
-        "premiered": "premiered" in text,
+        # Critic fix 2026-11-22 (review #2): «premiered» پس‌زمینه خلاصه
+        # (پروژه قبلی) نباید body_season_premiered را واجد کند — فقط پخشِ
+        # همین خبر (_has_premiered: تیتر، یا خلاصه + فصل برگشتی).
+        "premiered": _has_premiered(fx),
         "manga": any(k in text for k in ("manga", "light novel")) and _new_production,
         "studio": bool(fx["studio_en"]) and _new_production,
         "event_live": any(k in text for k in ("livestream", "anniversary", "event")),
@@ -419,11 +453,16 @@ def _why_templates(fx: dict, banks: dict):
         "license": "licens" in text,
         "visual": any(k in text for k in ("visual", "key visual")),
         "studio": bool(fx["studio_en"]),
-        "premiered": "premiered" in text,
+        # Critic fix 2026-11-22 (review #2): مثل بدنه — «premiered»
+        # پس‌زمینه نباید why_continuation («ادامه مستقیم قصه‌ای که از پیش
+        # آغاز کرده بود») را واجد کند.
+        "premiered": _has_premiered(fx),
     }
     need = {
         "why_premiere_date": "date", "why_new_season": None, "why_cast": "cast",
-        "why_trailer": "trailer", "why_adaptation": "manga",
+        # Critic fix 2026-11-22 (review #2): «چرا»ی مخصوص اعلامیه انیمه
+        # کاملاً تازه — «دنیای … بزرگ‌تر می‌شود»، نه «قصه ادامه دارد».
+        "why_new_announcement": None, "why_trailer": "trailer", "why_adaptation": "manga",
         "why_adaptation_generic": "adaptation",
         "why_visual_staff": "visual", "why_date_set": "date",
         "why_first_look": None, "why_studio": "studio",
@@ -541,7 +580,15 @@ def _build_once(fx: dict, banks: dict, rng: random.Random):
         # فقط why_license — نه why_new_season (که می‌گفت «قصه ادامه دارد و
         # بخشی که مدت‌ها درباره‌اش حرف زده می‌شد، حالا واقعا ساخته می‌شود»).
         "license": ["why_license"],
-        "announcement": ["why_new_season"],  # Critic fix 2026-11-21 (review #1, item 14): why_continuation removed here — its pattern ("ادامه مستقیم قصه‌ای که از پیش آغاز کرده بود") is wrong for a brand-new production announcement (human QA sample 5 scored it 9/10 for this). why_new_season is always eligible (need: None), so no new HOLDs. The bank entry stays for a future true "returning season" category.
+        # Critic fix 2026-11-21 (review #1, item 14): why_continuation از
+        # announcement حذف شد — «ادامه مستقیم قصه‌ای که از پیش آغاز کرده بود»
+        # برای اعلامیه تولید کاملاً تازه غلط است.
+        # Critic fix 2026-11-22 (review #2): برای اعلامیه انیمه کاملاً تازه
+        # why_new_season («قصه ادامه دارد») هم غلط است (پیام‌های ۱۰–۱۲) —
+        # فقط وقتی فصل برگشتی است why_new_season؛ وگرنه why_new_announcement
+        # («دنیای … بزرگ‌تر می‌شود»).
+        "announcement": (["why_new_season"] if _is_returning_season(fx)
+                         else ["why_new_announcement"]),
         "box_office": ["why_first_look"],
     }.get(fx["event"], [])
     rng.shuffle(why_tpls)
