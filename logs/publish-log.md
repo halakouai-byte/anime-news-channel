@@ -9,3 +9,5 @@
 - 2026-11-22T08:48:01Z UTC (1 آذر 1405، تهران): posted message_id=14 guid=https://animetv-jp.net/?p=51437 category=فصل جدید score=55 breaking=False latency_min=496.2
 - 2026-11-22T10:01:54Z UTC (1 آذر 1405، تهران): posted message_id=17 guid=https://animecorner.me/classroom-of-the-elite-season-5-announces-2027-premiere-date/ category=فصل جدید score=65 breaking=False latency_min=395.8
 - 2026-11-22T10:16:55Z UTC (1 آذر 1405، تهران): posted message_id=18 guid=https://myanimelist.net/news/74961958?_location=rss category=فصل جدید score=55 breaking=False latency_min=2432.6
+- 2026-11-22T11:03:03Z UTC (1 آذر 1405، تهران): posted message_id=19 guid=https://www.animenewsnetwork.com/cms/.244023 category=فیلم score=55 breaking=False latency_min=2652.2
+- 2026-11-22T11:18:04Z UTC (1 آذر 1405، تهران): posted message_id=20 guid=https://myanimelist.net/news/74968286?_location=rss category=فصل جدید score=45 breaking=False latency_min=20.2
