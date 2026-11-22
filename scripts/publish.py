@@ -18,6 +18,7 @@
 from __future__ import annotations
 
 import argparse
+import difflib
 import json
 import sys
 import time
@@ -46,6 +47,7 @@ from common import (  # noqa: E402
     parse_dt,
     redact,
     repo_root,
+    same_story_key,
     save_queue,
     save_state,
     tehran_date_str,
@@ -173,6 +175,47 @@ def template_usage_counts(state: dict) -> dict:
     return out
 
 
+def _title_similar(a: str, b: str, threshold: float = 0.85) -> bool:
+    """شباهت تیتر نرمال‌شده (همان آستانه لایه ۳ در fetch.py)."""
+    import re as _re
+
+    def _norm(t: str) -> str:
+        t = (t or "").lower()
+        t = _re.sub(r"[^a-z0-9 ]", " ", t)
+        return _re.sub(r"\s+", " ", t).strip()
+
+    na, nb = _norm(a), _norm(b)
+    if not na or not nb:
+        return False
+    return difflib.SequenceMatcher(None, na, nb).ratio() >= threshold
+
+
+def _find_posted_duplicate(item: dict, queue: dict, state: dict) -> dict | None:
+    """گارد تکراریِ لحظه انتشار (منتقد، ۲۲ نوامبر ۲۰۲۶ — ران ۴۴۹۷۱۶۱۶۳۵۶):
+    سه پست BanG Dream از سه منبع منتشر شد، چون dedupe در fetch فقط در برابر
+    پست‌شده‌ها (state) + همین اجرا می‌سنجد و _try_merge فقط QUEUED را علامت
+    می‌زند؛ HOLDهایی که با is_pending دوباره تست می‌شوند، هیچ چکِ «همین
+    داستان قبلاً پست شده؟» نمی‌بینند. این گارد آیتمِ در شرف انتشار را با
+    پست‌شده‌ها می‌سنجد — story_key با تحمل سطل ±۱ و رویداد generic
+    (same_story_key) + شباهت تیتر ≥ ۰٫۸۵ — و آیتم تکراری را برمی‌گرداند.
+    """
+    skey = item.get("story_key")
+    for other in queue.get("items", []):
+        if other is item or other.get("status") != "POSTED":
+            continue
+        okey = other.get("story_key")
+        if skey and okey and same_story_key(skey, okey):
+            return other
+        if _title_similar(item.get("title", ""), other.get("title", "")):
+            return other
+    if skey:
+        for k, posted in (state.get("story_keys") or {}).items():
+            if same_story_key(skey, k):
+                return {"message_id": posted.get("message_id"),
+                        "title": "", "story_key": k}
+    return None
+
+
 def publish_one(item: dict, state: dict, queue: dict, token: str, chat_id: str,
                 workdir: Path, archive_path=None,
                 state_path=None, queue_path=None) -> dict | None:
@@ -220,23 +263,40 @@ def publish_one(item: dict, state: dict, queue: dict, token: str, chat_id: str,
               if a.get("caption")]
     post = rewrite_post(facts, seed=seed, recent_posts=recent,
                         template_usage=template_usage_counts(state))
-    # ۹ دروازه کیفی (ARCHITECTURE.md §۴.۳): همه باید پاس شوند. موتور بازنویسی
+    # ۱۰ دروازه کیفی (ARCHITECTURE.md §۴.۳): همه باید پاس شوند. موتور بازنویسی
     # ۳۰ seed را امتحان می‌کند؛ اگر بهترین تلاش هم دروازه‌ای را رد کرد، خبر
     # به HOLD انسانی می‌رود، نه اینکه پست ناقص منتشر شود.
     all_gates = {"length", "no_placeholder", "english_limited",
                  "source_similarity", "recent_similarity",
                  "template_freshness", "why_specific", "numbers_dates",
-                 "event_consistency"}
+                 "event_consistency", "no_double_word"}
     missing = sorted(all_gates - set(post.get("gates_passed", [])))
     if missing:
         item["status"] = "HOLD"
         item["hold_reason"] = "gates_failed:" + ",".join(missing)
-        log_warn(f"gates {len(post.get('gates_passed', []))}/9 — HOLD "
+        log_warn(f"gates {len(post.get('gates_passed', []))}/10 — HOLD "
                  f"(missing: {','.join(missing)}): {item.get('title', '')[:50]}")
         append_archive({
             "guid": item.get("guid"), "hash": item.get("hash"),
             "title": item.get("title"), "source": item.get("source"),
             "status": "held", "reason": item["hold_reason"],
+        }, path=archive_path)
+        return None
+    # گارد تکراریِ لحظه انتشار — پیش از ساخت کاور (که بیهوده است اگر آیتم
+    # تکراری باشد): همین داستان با story_keyِ تحمل‌پذیر یا تیتر مشابه قبلاً
+    # پست شده؟ اگر آره، POSTED علامت می‌خورد و پست نمی‌شود (به‌جای اینکه
+    # HOLDِ دوباره‌تست‌شده مثل BanG Dream در ران ۴۴۹۷۱۶۱۶۳۵۶ سه‌بار پست شود).
+    dup = _find_posted_duplicate(item, queue, state)
+    if dup:
+        item["status"] = "POSTED"
+        item["duplicate_of"] = dup.get("message_id")
+        log_warn(f"duplicate of message {dup.get('message_id')} — skipping post: "
+                 f"{item.get('title', '')[:50]}")
+        append_archive({
+            "guid": item.get("guid"), "hash": item.get("hash"),
+            "title": item.get("title"), "source": item.get("source"),
+            "status": "duplicate", "reason": "R9-duplicate-publish-guard",
+            "duplicate-of": dup.get("message_id"),
         }, path=archive_path)
         return None
     # «خبر روز»: مهم‌ترین خبر صف

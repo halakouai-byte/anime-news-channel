@@ -106,7 +106,7 @@
     },
     {
       "id": "lead_11",
-      "pattern": "{fr_fa} سکوت را شکست؛ {event_fa} تازه اثر اعلام شد."
+      "pattern": "{fr_fa} سکوت را شکست؛ {event_fa} اثر اعلام شد."
     },
     {
       "id": "lead_12",
@@ -153,7 +153,7 @@
     },
     {
       "id": "title_06",
-      "pattern": "{fr_en}؛ {event_fa} تازه"
+      "pattern": "{fr_en}؛ {event_fa}"
     },
     {
       "id": "title_07",

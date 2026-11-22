@@ -17,7 +17,7 @@ rewrite.py — موتور بازنویسی فارسی قالبی (template-based
 اثر) + لید یک‌جمله‌ای + بدنه ۲ تا ۳ جمله با حقایق + «چرا مهم است؟» دقیقاً
 یک جمله خاصِ همین خبر + منبع + لینک + ۲ تا ۳ هشتگ. طول کپشن ۶۰۰–۸۵۰ کاراکتر.
 
-۹ دروازه کیفی (ARCHITECTURE.md §4.3 / filter-v2.md §7.1) در check_gates
+۱۰ دروازه کیفی (ARCHITECTURE.md §4.3 / filter-v2.md §7.1) در check_gates
 پیاده شده است؛ ۳ بار رد شدن → HOLD انسانی (تصمیم انتشار با لایه بالاتر است).
 """
 
@@ -492,6 +492,12 @@ def _build_once(fx: dict, banks: dict, rng: random.Random):
     if fx["event"] in ("manga_ending", "license"):
         _titles = [t for t in _titles if t["id"] in _ending_safe_titles] or _titles
         _leads = [l for l in _leads if l["id"] in _ending_safe_leads] or _leads
+    # Critic fix 2026-11-22 (run 44971616356 — پیام‌های ۱۱ و ۱۲): قالب
+    # title_04 («{fr_en} | {event_fa} در {date_fa}») وقتی تاریخ ندارد، تیتر
+    # را با «در»ِ آویزان تمام می‌کند («BanG Dream! Yume∞Mita | انیمه تازه
+    # در»). بدون تاریخ، این قالب مجاز نیست.
+    if not fx["date_fa"]:
+        _titles = [t for t in _titles if t["id"] != "title_04"] or _titles
     title = None
     title_id = None
     shuffled_titles = _titles[:]
@@ -564,7 +570,7 @@ def _build_once(fx: dict, banks: dict, rng: random.Random):
     }
 
 
-# ------------------------------------------------------- ۹ دروازه کیفی
+# ------------------------------------------------------- ۱۰ دروازه کیفی
 
 def _ngram_similarity(a: str, b: str, n: int = 5) -> float:
     """شباهت 5-gram کاراکتری پس از نرمال‌سازی (برای فارسی/انگلیسی نزدیک صفر است)."""
@@ -590,7 +596,7 @@ def check_gates(caption: str, title: str, fx: dict, why: str,
                 recent_posts: list | None = None,
                 template_usage: dict | None = None,
                 template_ids: dict | None = None) -> dict:
-    """هر ۹ دروازه را می‌سنجد؛ خروجی {gate_id: bool}."""
+    """هر ۱۰ دروازه را می‌سنجد؛ خروجی {gate_id: bool}."""
     gates: dict[str, bool] = {}
     gates["length"] = 600 <= len(caption) <= 850 and len(title) <= 70
     gates["no_placeholder"] = not _has_placeholder(caption)
@@ -675,6 +681,15 @@ def check_gates(caption: str, title: str, fx: dict, why: str,
     months_in_source += [MONTHS_FA[_abbr[a]] for a in _abbr if a in _src_text]
     if months_in_caption and not set(months_in_caption).issubset(set(months_in_source)):
         gates["numbers_dates"] = False
+    # دروازه ۱۰ — کلمه تکراری پشت سر هم (منتقد، ۲۲ نوامبر ۲۰۲۶ — پیام ۱۰):
+    # قالب lead_11 («{event_fa} تازه اثر اعلام شد») با event_fa «انیمه تازه»
+    # «انیمه تازه تازه اثر اعلام شد» ساخت. هیچ کپشن خبری نباید یک کلمه را
+    # دوبار پشت سر هم داشته باشد؛ این دروازه کلِ این کلاس خطا را می‌گیرد،
+    # حتی اگر قالب دیگری هم همین عیب را داشته باشد. فقط در یک خط می‌سنجد
+    # (نه دو سرِ پاراگراف — تیتر «…انیمه تازه» + لید «تازه‌ترین خبر…» خطا
+    # نیست) و «تازه» در «تازه‌ترین» را تکرار نمی‌شمرد (ZWNJ در lookahead).
+    gates["no_double_word"] = not re.search(
+        r"([\u0600-\u06FF]{2,})[ \t]+\1(?![\u0600-\u06FF\u200C])", caption_no_url)
     return gates
 
 

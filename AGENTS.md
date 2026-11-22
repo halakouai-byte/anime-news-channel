@@ -154,17 +154,18 @@ from a local copy by hand outside the documented path.
   Pattern: LiveForge `build.yml` (gitleaks step), plus the SHA256
   verification the manager ordered.
 - `publish.yml` — `repository_dispatch` (event-driven) + manual
-  `workflow_dispatch`: priority score, Persian rewrite, 9 quality gates,
+  `workflow_dispatch`: priority score, Persian rewrite, 10 quality gates,
   Pillow cover (Playwright only as fallback), `sendPhoto`, then commit
   `state.json` + `queue.json` + `archive.jsonl`.
 - `sweeper.yml` — cron `*/15 * * * *`: publishes items the Worker or
-  dispatch missed; also the keepalive. The publish step is skipped
-  cleanly (not failed) while the Telegram secrets are unset — fetch +
-  queue + state commit still run. `publish.yml` (Worker-triggered) is
-  intentionally left failing loudly without secrets, as the alarm that
-  news arrived but cannot be sent. An empty queue alone never fails
-  `publish.py` (it returns posted=0); only missing secrets raise
-  SystemExit, before the queue is even loaded.
+  dispatch missed; also the keepalive. The publish step runs
+  unconditionally (the old `if: secrets...` skip-guard was REMOVED in
+  commit 3082e75 on 2026-11-21 — `secrets` is not a valid context in
+  `if:` and the guard silently killed every sweeper run for ~14 hours;
+  both secrets are set, verified 2026-11-21, and publish.py fails loudly
+  if they ever go missing, same alarm behaviour as publish.yml). An empty
+  queue alone never fails `publish.py` (it returns posted=0); only
+  missing secrets raise SystemExit, before the queue is even loaded.
 - `digest.yml` — Fridays `30 10 * * 5`: weekly digest from
   `digest-candidate` items (phase 4; disabled in phase 1).
 - `keepalive.yml` — monthly `0 6 1 * *`: one commit so cron is not
@@ -223,23 +224,32 @@ history — never silently delete the file and move on.
   rejected item is recorded in `archive.jsonl` with a coded reason
   (e.g. `R7-rumor`, `R9-duplicate`).
 - Dedupe, three layers: (1) exact SHA-256 of normalized guid/link,
-  30-day `seen`; (2) story key (franchise + event type + 48h bucket);
-  (3) title similarity Jaccard/SequenceMatcher ≥ 0.85 in a 7-day window.
-  First complete version publishes; later sources are appended
-  (`editMessageCaption`, only if the first post is < 2h old and the
-  second source is Tier 1, max 3 sources). A materially new fact from
-  a second source → a separate «🔄 به‌روزرسانی» post linking the first.
+  30-day `seen`; (2) story key (franchise + event type + 48h bucket),
+  compared TOLERANTLY (`same_story_key` in `common.py`: bucket ±1 also
+  matches, and the generic events `event`/`other` act as wildcards —
+  added 2026-11-22 after one story posted 3 times); layer 2 also checks
+  the keys of QUEUED/HOLD items already in the queue, not only posted
+  ones; (3) title similarity Jaccard/SequenceMatcher ≥ 0.85 in a 7-day
+  window. At publish time, `publish_one` also runs a last-line guard
+  (`_find_posted_duplicate`): if the same story was already posted, the
+  item is marked POSTED and never sent. First complete version
+  publishes; later sources are appended (`editMessageCaption`, only if
+  the first post is < 2h old and the second source is Tier 1, max 3
+  sources). A materially new fact from a second source → a separate
+  «🔄 به‌روزرسانی» post linking the first.
 - Breaking (closed list, 5 items, `filter-v2.md` §5): immediate, 5-min
   gap, 🔴 label, exempt from the circuit breaker — but a
   sensitive breaking item STILL goes to HOLD. «Breaking» never
   overrides «sensitive». There is no night silence (user decision,
   locked 2026-11-21). More than 3 breaking items in a day is an
   audit warning, not a cap.
-- 9 quality gates before publish (caption 600–850 chars, headline
+- 10 quality gates before publish (caption 600–850 chars, headline
   ≤ 70 chars, no placeholders, limited English, < 25% 5-gram similarity
   with the source summary, < 60% similarity with the last 30 posts,
   lead-template freshness max 3 uses in 7 days, specific «چرا مهم
-  است؟», numbers/dates from the source, event-vs-source consistency).
+  است؟», numbers/dates from the source, event-vs-source consistency,
+  no doubled word in one line — gate 10, added 2026-11-22 after msg 10
+  printed «انیمه تازه تازه اثر اعلام شد»).
   3 gate failures → human HOLD.
 - Bank maintenance (v2 minimums): +15 templates + 10 phrases per month;
   new-name queue emptied weekly; franchises updated every anime season
@@ -407,7 +417,47 @@ history — never silently delete the file and move on.
   The old wrong caption FAILS the new gate (proven in the test). HOLD
   items older than 72h are REJECTED by fetch.py — the 4 gates_failed HOLDs
   must post by ~Nov 23 or they are lost.
-- 2026-11-21 ~00:40 Tehran — SWEEPER DEAD ALL DAY (manager sweep finding): every Sweeper run since 07:39 UTC failed workflow validation before any job started — `if: secrets.TELEGRAM_BOT_TOKEN != '' ...` is INVALID ("Unrecognized named-value: 'secrets'" — the `secrets` context cannot be used in `if:` conditions). Introduced by commit e9089f5 ("fix: sweeper skips publish cleanly while Telegram secrets are unset"); runs #1–#2 (before it) ran fine, #3–#17 all failed with no duration, and no scheduled run was created after the last push at 20:09 UTC. The channel's only posts that day came from manual publish runs (#2, #3) — the 15-min sweeper + keepalive never ran. FIX (same commit as this entry): both `secrets`-based `if:` conditions removed from sweeper.yml (the guard is obsolete — both secrets are set, verified 2026-11-21 — and publish.py fails loudly if they ever go missing, same alarm behaviour as publish.yml). Verify with a manual Sweeper dispatch right after this commit; the next scheduled tick then resumes automatically.
+- 2026-11-21 ~00:40 Tehran — SWEEPER DEAD ALL DAY (manager sweep
+  finding): every Sweeper run since 07:39 UTC failed workflow validation
+  before any job started — `if: secrets.TELEGRAM_BOT_TOKEN != '' ...` is
+  INVALID ("Unrecognized named-value: 'secrets'" — the `secrets` context
+  cannot be used in `if:` conditions). Introduced by commit e9089f5
+  ("fix: sweeper skips publish cleanly while Telegram secrets are
+  unset"); runs #1–#2 (before it) ran fine, #3–#17 all failed with no
+  duration, and no scheduled run was created after the last push at
+  20:09 UTC. The channel's only posts that day came from manual publish
+  runs (#2, #3) — the 15-min sweeper + keepalive never ran. FIX (same
+  commit as this entry): both `secrets`-based `if:` conditions removed
+  from sweeper.yml (the guard is obsolete — both secrets are set,
+  verified 2026-11-21 — and publish.py fails loudly if they ever go
+  missing, same alarm behaviour as publish.yml). Verify with a manual
+  Sweeper dispatch right after this commit; the next scheduled tick then
+  resumes automatically.
+- 2026-11-22 ~01:28 UTC — SCHEDULER BACK + TRIPLE POST (run 44971616356,
+  schedule, success, 15 min): the first scheduled sweeper run since
+  06:08 UTC Nov 21 posted messages 11 + 12 — but all three (msgs 10, 11,
+  12) were the SAME BanG Dream! Yume∞Mita new-anime story from ANN,
+  AnimeCorner, AnimeTV. Root cause (critic finding, proven in code +
+  queue records): (1) fetch layer 2 never compared against QUEUED/HOLD
+  keys from earlier runs (ANN + AnimeCorner had the IDENTICAL story_key
+  `bang dream|announcement|10388`); (2) the fixed 48h bucket splits a
+  story at the grid boundary (AnimeTV `...|10389`, ~9h after ANN);
+  (3) classify returned generic `event` for the MAL item (bare `event`
+  in its summary matched before `announcement`). FIX (local, for the
+  browser commit; test `scripts/test_dedupe_bangdream.py` ALL PASSED):
+  `same_story_key` in `common.py` (bucket ±1 + generic-event wildcard),
+  layer 2 also checks `queued_story_keys`, bare `event` removed from
+  classify's patterns, publish-time guard `_find_posted_duplicate` in
+  `publish_one` (marks a duplicate POSTED instead of sending it).
+  TEMPLATE BUGS in the same wave: msg 10's caption had «انیمه تازه تازه
+  اثر اعلام شد» (lead_11's literal «تازه» after {event_fa} «انیمه تازه»)
+  and msgs 11/12 had the headline «... | انیمه تازه در» (title_04 with an
+  empty {date_fa}). FIX in the same bundle: lead_11 + title_06 lose
+  their literal «تازه», title_04 is excluded when there is no date, and
+  a 10th gate `no_double_word` fails any caption with an adjacent
+  repeated word in one line. NOTE: the double-«تازه» is in msg 10, not
+  msg 11 as first reported — verified from the live t.me/s page.
+  posts_total 7, posted_message_ids [6, 7, 8, 9, 10, 11, 12].
 
 ## 9. Rules (hard)
 
@@ -445,7 +495,7 @@ history — never silently delete the file and move on.
 Owner order, 2026-11-21 (via the manager): this team has a permanent
 harsh-critic member. Its only job is to constantly review the repo, the
 detector Worker, and the channel `@animekhabarfa` against the long strict
-checklist in `qa/critic-role.md` (30 items, scored 0–10 each, evidence
+checklist in `qa/critic-role.md` (31 items, scored 0–10 each, evidence
 only — no guessing; untested = 0). It reports the scores and the specific
 fixes to the manager; the team applies the fixes so the project keeps
 improving and expanding, and gradually becomes independent of the
