@@ -156,9 +156,12 @@ from a local copy by hand outside the documented path.
 - `publish.yml` — `repository_dispatch` (event-driven) + manual
   `workflow_dispatch`: priority score, Persian rewrite, 10 quality gates,
   Pillow cover (Playwright only as fallback), `sendPhoto`, then commit
-  `state.json` + `queue.json` + `archive.jsonl`.
+  `state.json` + `queue.json` + `archive.jsonl` via
+  `scripts/merge_state.py` (union merge + `merge -s ours`, never rebase —
+  see §8, 2026-11-22 phantom posts).
 - `sweeper.yml` — cron `*/15 * * * *`: publishes items the Worker or
-  dispatch missed; also the keepalive. The publish step runs
+  dispatch missed; also the keepalive. Its commit step also uses
+  `scripts/merge_state.py` (same anti-race rule as publish.yml). The publish step runs
   unconditionally (the old `if: secrets...` skip-guard was REMOVED in
   commit 3082e75 on 2026-11-21 — `secrets` is not a valid context in
   `if:` and the guard silently killed every sweeper run for ~14 hours;
@@ -227,12 +230,21 @@ history — never silently delete the file and move on.
   30-day `seen`; (2) story key (franchise + event type + 48h bucket),
   compared TOLERANTLY (`same_story_key` in `common.py`: bucket ±1 also
   matches, and the generic events `event`/`other` act as wildcards —
-  added 2026-11-22 after one story posted 3 times); layer 2 also checks
+  added 2026-11-22 after one story posted 3 times; the reveal events
+  `announcement`/`date`/`trailer` also match each other — added
+  2026-11-22 after msgs 15/17 duplicated the same Elite season-5 story
+  with three different event types; `casting` stays separate, it is
+  usually a distinct news beat); layer 2 also checks
   the keys of QUEUED/HOLD items already in the queue, not only posted
   ones; (3) title similarity Jaccard/SequenceMatcher ≥ 0.85 in a 7-day
   window. At publish time, `publish_one` also runs a last-line guard
   (`_find_posted_duplicate`): if the same story was already posted, the
-  item is marked POSTED and never sent. First complete version
+  item is marked POSTED and never sent. Before sending, `publish_one`
+  re-reads the remote state (`sync_remote_state` in `common.py`): a run
+  whose checkout is stale (another run posted in the meantime) sees the
+  fresh posted records instead of re-posting. State is merged as a union,
+  never rebased — `scripts/merge_state.py` owns the commit step in both
+  workflows (see §8, 2026-11-22 phantom posts). First complete version
   publishes; later sources are appended (`editMessageCaption`, only if
   the first post is < 2h old and the second source is Tier 1, max 3
   sources). A materially new fact from a second source → a separate
@@ -458,6 +470,28 @@ history — never silently delete the file and move on.
   repeated word in one line. NOTE: the double-«تازه» is in msg 10, not
   msg 11 as first reported — verified from the live t.me/s page.
   posts_total 7, posted_message_ids [6, 7, 8, 9, 10, 11, 12].
+- 2026-11-22 ~10:20 UTC — PHANTOM POSTS 15 + 16 (manager sweep finding):
+  two messages live on Telegram with NO repo record. Msg 15 (AnimeCorner
+  Elite S5, 08:48:25Z) + msg 16 (MAL 74967203 AGAIN = same item as msg 13,
+  09:03:26Z) came from sweeper run 45003688383: it waited ~11 min on the
+  shared concurrency group (`anime-news-publish`, cancel-in-progress:
+  false) for publish run 45003298273, then checked out its trigger-time
+  SHA 6eaa4e8 (pre-26b8fd8) — stale state, no record of 13/14. Its step-7
+  commit failed in 1s (exit 128, git fatal — rebase conflict vs 26b8fd8;
+  the exact log line is admin-only, 403). Run 45010375302 (10:01) then
+  re-posted the same AnimeCorner item as msg 17 — it could not know about
+  msg 15. FIX (local, for the browser commit; test
+  `scripts/test_race_phantom.py` ALL PASSED): (1) `same_story_key` reveal
+  family — `announcement`/`date`/`trailer` match each other (`casting`
+  stays separate); (2) `sync_remote_state` in `common.py` — fetch + merge
+  the remote state before fetch and before each send; (3)
+  `scripts/merge_state.py` replaces `pull --rebase` in both workflows'
+  commit steps (union merge + `merge -s ours` + push retry). Re-publish
+  risk now zero (scan of all 105 queue items: 0 match a posted
+  story/hash). NOTE: archive.jsonl on main still has NO rows for msgs
+  15/16 (lost with the sweeper's runner) — a historical record gap, not
+  a re-post risk. Deletion of the duplicate msgs 15/16 is the manager's
+  decision (management chat), not the team's.
 
 ## 9. Rules (hard)
 
