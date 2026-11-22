@@ -6,28 +6,32 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 270,
-    "hold_total": 13,
-    "posts_today": 2,
+    "duplicates_total": 316,
+    "hold_total": 15,
+    "posts_today": 4,
     "posts_today_date": "2026-11-22",
-    "posts_total": 5,
-    "rejected_total": 88
+    "posts_total": 7,
+    "rejected_total": 100
   },
-  "last_fetch_utc": "2026-11-21T21:24:20Z",
-  "last_publish_utc": "2026-11-21T21:39:22Z",
+  "last_fetch_utc": "2026-11-22T01:28:47Z",
+  "last_publish_utc": "2026-11-22T01:43:48Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
     "22736f269cfdc67d0968d252d5951fef2059450eda350a1029858155e640a6d4": 8,
     "612aad7fa463ef2c15647c548aa504bc86d10dec992249705ebaebc4dcf5186d": 9,
-    "2b1fbd28a6121ae94f5c2433668f3dac5cf776dd14c074b69c645344a930ac84": 10
+    "2b1fbd28a6121ae94f5c2433668f3dac5cf776dd14c074b69c645344a930ac84": 10,
+    "39de3ecce1b19697ee58f4c4fe0ec56e4df8bbc93c17f0c5e7d6ccf001c19da7": 11,
+    "f827b5e3d5930c6713bc3cd7a520b4cfefdf50567c8e2bdc9de0b2e4d72ec7d6": 12
   },
   "posted_message_ids": [
     6,
     7,
     8,
     9,
-    10
+    10,
+    11,
+    12
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -126,6 +130,32 @@
         "yume∞mita"
       ],
       "posted_utc": "2026-11-21T21:39:22Z"
+    },
+    {
+      "title_norm": "bang dream! yume∞mita gets new anime series",
+      "words": [
+        "anime",
+        "bang",
+        "dream!",
+        "gets",
+        "new",
+        "series",
+        "yume∞mita"
+      ],
+      "posted_utc": "2026-11-22T01:28:48Z"
+    },
+    {
+      "title_norm": "bang dream! yume∞mita announces new anime project",
+      "words": [
+        "anime",
+        "announces",
+        "bang",
+        "dream!",
+        "new",
+        "project",
+        "yume∞mita"
+      ],
+      "posted_utc": "2026-11-22T01:43:48Z"
     }
   ],
   "seen_at": {
@@ -210,7 +240,16 @@
     "e7c20573002cdd88ce1c59150a47e469eeb7f3861def66c580163b4c7cfdea9c": "2026-11-21T17:55:22Z",
     "434fc5a541586fc125746d1d11286b47c7c7ff542aa3a481097c5f9613cd73e1": "2026-11-21T17:55:22Z",
     "33f35bb813ad8de3b0b252e9678f6b3a634f18bde20da2d99cea9efa956d4084": "2026-11-21T17:55:22Z",
-    "9fee23ad5f009e1becfcb09973d2da94eaab44efde898d07a882efa524a9be7c": "2026-11-21T17:55:22Z"
+    "9fee23ad5f009e1becfcb09973d2da94eaab44efde898d07a882efa524a9be7c": "2026-11-21T17:55:22Z",
+    "2cefe640231d450efb026bf70cbc6467780dea74dee6c15cbee92bde85fbac6c": "2026-11-22T01:28:47Z",
+    "60c4a38382f3d0e6eeac819c865cc1c7960cb0dc9544f0eefda9454a21e799a4": "2026-11-22T01:28:47Z",
+    "6e1ab1df6b2f6f47e8181799c6e52012e387a284303ac09ee1f322fa1c0ddf29": "2026-11-22T01:28:47Z",
+    "ea17ea35b8459b92ec49c8d19979ca586653617635513cf4805cf54d14b3dfd8": "2026-11-22T01:28:47Z",
+    "619d1017f31c801737833541eb85f7159c27db7d1a3b59e676680fc4298b6ae4": "2026-11-22T01:28:47Z",
+    "cec56704dbf9033b4ebbc882a2cf6c6dfa7d697e7eae20f95a3b653fdc1811db": "2026-11-22T01:28:47Z",
+    "252a32a4f67ea2ffcb309881842041da848cee606aa23291bbbfc2d516b44443": "2026-11-22T01:28:47Z",
+    "585439d95ed5f67891b5d051641fd957f96406605a066d4072b75281ed95125d": "2026-11-22T01:28:47Z",
+    "29c2eee791c1b5c960bfa299c9cfbd5a36d02f07a46991577e08400b4fd16669": "2026-11-22T01:28:47Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -222,11 +261,14 @@
     "1d5c4fa39ba05b8a85b6c45ac310a3d473907d7f127ab2e9683ec0777249e7ef",
     "21bd60f8469f5b7dfbbb64c68163e447281766a7a0d52faf3ad5d83dc38b1838",
     "22736f269cfdc67d0968d252d5951fef2059450eda350a1029858155e640a6d4",
+    "252a32a4f67ea2ffcb309881842041da848cee606aa23291bbbfc2d516b44443",
     "26464c75f88c40d81a4105732ec2ecb283e1e62f2ad5b9982e6854ed03a5f448",
     "28939b15ff18f6eaac54f92651af58a2ca94929213d352b7ad98ce2ee1544245",
+    "29c2eee791c1b5c960bfa299c9cfbd5a36d02f07a46991577e08400b4fd16669",
     "2ad3caf283f69ae096f7ad8e886086a5d300f93ba4a3a04bd760ebdac417665b",
     "2b1fbd28a6121ae94f5c2433668f3dac5cf776dd14c074b69c645344a930ac84",
     "2b2b9cfe3757a922b488e684317bd024a5dfc5edb2e9134c7b16e2796fd07780",
+    "2cefe640231d450efb026bf70cbc6467780dea74dee6c15cbee92bde85fbac6c",
     "2e46c6e43f2f0a38a5249d0305b016ccd83d43f25f32611ed82d491236bb50f5",
     "33f35bb813ad8de3b0b252e9678f6b3a634f18bde20da2d99cea9efa956d4084",
     "356a0d9f5b6564c258202890b0143484d47b4db522398012c7b84f5a9078adcf",
@@ -243,15 +285,19 @@
     "546398fe64bcfa08e9a83c34827a47003e2095f658160f401584ce0a37d46bc9",
     "55fbd9316f83ab9ddd419030f6b4f6f7d5496376b1f7430231ea3daa5342520a",
     "565ad2fae0ade0916d16b2fc362d7fb980a72c708317c90c7d7418130b360249",
+    "585439d95ed5f67891b5d051641fd957f96406605a066d4072b75281ed95125d",
     "5a01584e76b7f213e1db4472e418a9c43fc110a1fdef9de344a8127ddbf5930e",
     "5d2bef217e451b99415ea1f29744a95d408b49725f010032dd1d0ad326496e8e",
     "5d49ff92f644e290774c24819fb2202c5fbe92c4c1fb91ed575d0c2c49a42bb5",
     "5ee8c06f1bbc2c9ee2d1965becd22e5fb1e93c123c707201cfcf72c2fcd700dc",
+    "60c4a38382f3d0e6eeac819c865cc1c7960cb0dc9544f0eefda9454a21e799a4",
     "612aad7fa463ef2c15647c548aa504bc86d10dec992249705ebaebc4dcf5186d",
+    "619d1017f31c801737833541eb85f7159c27db7d1a3b59e676680fc4298b6ae4",
     "65c3a01149fef3d1ebad659f140a7e80c1bab3d95432d528a189a8bc92c2f3e8",
     "681f06194321104f1efdba59d73ce54344e226107feea4c0c511ab8ec62f3cf4",
     "68e1c6dc5827ae5e3302f6b1d77feda7a14e64422085af3c32f41a391d28b9da",
     "6b7a81660ff430840aeafe164ba1a86eba6effb0a6f6cfc8d3d3caa2741e8bfd",
+    "6e1ab1df6b2f6f47e8181799c6e52012e387a284303ac09ee1f322fa1c0ddf29",
     "7750e7a1930cd6063397a1c87921284679ab04dc816ea567c52b04b7250b6e69",
     "785c2cfb882ec84990f9cf152c02d2a0bf9bb7fdbd696002041ff17003708a23",
     "7a2361b24db1fe34f532175d50e7e35739aa7f59d7ddba1b909bc815f090b208",
@@ -283,10 +329,12 @@
     "c659337c14358c946f860553c3a0fa35692980d4cf7c509e2d6db71390eaad7c",
     "cb36ae53f87989b0a51432aafaf02b971914f5c97b7e5c2041c804f0a236f20e",
     "cc72b106851a485772057e8fce87604eca0dc521aadd6e5df8c3698a5a02fe26",
+    "cec56704dbf9033b4ebbc882a2cf6c6dfa7d697e7eae20f95a3b653fdc1811db",
     "d8f2a753661e6c1d82b8db93d83333716391a4f9002c0d540d6b1de1ff6877ec",
     "dd6353239c004194c06179c1068ac33f486b3787f58937bcdcf15cd72be050ed",
     "e7c20573002cdd88ce1c59150a47e469eeb7f3861def66c580163b4c7cfdea9c",
     "e7f35a482a83fbaa5888aef4245b5d282fee88503d90c4d51a4fa8f6a045ad42",
+    "ea17ea35b8459b92ec49c8d19979ca586653617635513cf4805cf54d14b3dfd8",
     "eef3ca68c798d0bc0eba6c7ce1f0c43dc9a26fb37f509dbe1cc95e26749edf13",
     "f3f3ab6ee331eac6a22bd5be691546365b06a0aa094f3f500b4d93cc7ecc79ee",
     "f6eec5dd2f40ad52e51ac09b8b8e45d29935ed47b6d2724f79cef2802b1c445b",
@@ -314,8 +362,12 @@
       "posted_utc": "2026-11-21T21:24:22Z"
     },
     "bang dream|announcement|10388": {
-      "message_id": 10,
-      "posted_utc": "2026-11-21T21:39:22Z"
+      "message_id": 11,
+      "posted_utc": "2026-11-22T01:28:48Z"
+    },
+    "bang dream|announcement|10389": {
+      "message_id": 12,
+      "posted_utc": "2026-11-22T01:43:48Z"
     }
   },
   "template_usage_7d": {
@@ -324,28 +376,36 @@
       "2026-11-21T18:37:02Z",
       "2026-11-21T18:52:03Z",
       "2026-11-21T21:24:22Z",
-      "2026-11-21T21:39:22Z"
+      "2026-11-21T21:39:22Z",
+      "2026-11-22T01:28:48Z",
+      "2026-11-22T01:43:48Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
       "2026-11-21T18:37:02Z",
       "2026-11-21T18:52:03Z",
       "2026-11-21T21:24:22Z",
-      "2026-11-21T21:39:22Z"
+      "2026-11-21T21:39:22Z",
+      "2026-11-22T01:28:48Z",
+      "2026-11-22T01:43:48Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
       "2026-11-21T18:37:02Z",
       "2026-11-21T18:52:03Z",
       "2026-11-21T21:24:22Z",
-      "2026-11-21T21:39:22Z"
+      "2026-11-21T21:39:22Z",
+      "2026-11-22T01:28:48Z",
+      "2026-11-22T01:43:48Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
       "2026-11-21T18:37:02Z",
       "2026-11-21T18:52:03Z",
       "2026-11-21T21:24:22Z",
-      "2026-11-21T21:39:22Z"
+      "2026-11-21T21:39:22Z",
+      "2026-11-22T01:28:48Z",
+      "2026-11-22T01:43:48Z"
     ]
   },
   "version": 2
