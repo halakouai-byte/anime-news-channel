@@ -73,9 +73,7 @@ jobs:
         run: |
           git config user.name "anime-news-publisher"
           git config user.email "anime-news-publisher@users.noreply.github.com"
-          git add data/state.json data/queue.json data/archive.jsonl logs/ || true
-          git diff --cached --quiet && echo "nothing to commit" && exit 0
-          git commit -m "publish: update state/queue/archive [skip ci]"
-          # اگر کامیت state بعد از ارسال شکست خورد: یک بار pull --rebase + retry
-          git pull --rebase origin main || true
-          git push origin main || (git pull --rebase origin main && git push origin main)
+          # ضد مسابقه (فانتوم ۱۵/۱۶، ۲۲ نوامبر ۲۰۲۶): به‌جای pull --rebase
+          # (که روی state/queue/archive تداخل می‌خورد و state را می‌انداخت)،
+          # merge_state.py رکوردها را union می‌کند و با merge -s ours push می‌کند.
+          python scripts/merge_state.py --commit-message "publish: update state/queue/archive [skip ci]"
