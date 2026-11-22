@@ -35,8 +35,14 @@ _EVENT_PATTERNS: list[tuple[str, list[str]]] = [
                     r"novel gets anime", r"game gets anime", r"anime adaptation of",
                     r"live-action"]),
     ("award", [r"\baward", r"wins .* award", r"nominated for"]),
+    # Critic fix 2026-11-22 (run 44971616356 — سه پست BanG Dream): کلمه تنها
+    # «event» اینجا بود و هر خلاصه‌ای که «announced at a special event»
+    # می‌گفت، پیش از رسیدن به «announcement» (که «new anime» دارد) به
+    # «event» می‌افتاد — MAL برای «New Anime in Production» رویداد «event»
+    # گرفت و story_key آن با «announcement» بقیه یکی نشد. فقط نام رویدادهای
+    # مشخص می‌مانند؛ اعلامِ یک رویداد از مسیر «announcement» می‌گذرد.
     ("event", [r"jump festa", r"anime expo", r"animejapan", r"comiket",
-               r"event", r"exhibition", r"stage play", r"concert"]),
+               r"exhibition", r"stage play", r"concert"]),
     ("announcement", [r"announces", r"announced", r"reveals", r"confirmed",
                       r"green-lit", r"greenlit", r"new season", r"season 2",
                       r"second season", r"sequel", r"new anime", r"film announced",

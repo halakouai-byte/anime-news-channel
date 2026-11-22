@@ -126,7 +126,7 @@ def main(argv=None) -> int:
         all_gates = {"length", "no_placeholder", "english_limited",
                      "source_similarity", "recent_similarity",
                      "template_freshness", "why_specific", "numbers_dates",
-                     "event_consistency"}
+                     "event_consistency", "no_double_word"}
         missing = sorted(all_gates - set(post.get("gates_passed", [])))
         report["items"].append({
             "title_en": item.get("title"),
@@ -193,7 +193,7 @@ def main(argv=None) -> int:
                      + ",".join(it["missing_gates"]) + ")") if it["would_hold"] else ""
         lines.append(
             f"- [{it['source']}] {it['title_en'][:80]} — دسته: {it['category']}، "
-            f"امتیاز: {it['priority_score']}، gates: {it['gates_count']}/9، "
+            f"امتیاز: {it['priority_score']}، gates: {it['gates_count']}/10، "
             f"کپشن: {it['caption_chars']} کاراکتر، کاور: {it['cover_mode']}{hold_note}")
     (outdir / "report.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 

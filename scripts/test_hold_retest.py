@@ -39,7 +39,7 @@ check("T1 HOLD without reason is NOT pending",
 check("T1 POSTED is NOT pending", not is_pending({"status": "POSTED"}))
 check("T1 STALE is NOT pending", not is_pending({"status": "STALE"}))
 
-# --- T2: the two real HOLD items pass 9/9 with the fixed code ----------------
+# --- T2: the two real HOLD items pass 10/10 with the fixed code ----------------
 REAL = [
     ("Oshi No Ko 85 (ANN)", {
         "title_en": "Yen Press Licenses [Oshi No Ko] Étude for Two, Bungo Stray Dogs: "
@@ -66,7 +66,7 @@ REAL = [
 for name, facts in REAL:
     post = rewrite_post(facts)
     passed = post.get("gates_passed", [])
-    check(f"T2 {name} gates 9/9", len(passed) == 9, f"({len(passed)}/9: {passed})")
+    check(f"T2 {name} gates 10/10", len(passed) == 10, f"({len(passed)}/10: {passed})")
     check(f"T2 {name} is pending after fix",
           is_pending({"status": "HOLD",
                       "hold_reason": "gates_failed:why_specific"}))
@@ -77,7 +77,7 @@ for name, facts in REAL:
 # Before the fix it rewrote to "Bungo Stray Dogs در راه است؛ انیمه تازه"
 # with a body claiming a new anime is being made from the manga — the same
 # inversion class as msg 6. It must now be event "license" with a correct
-# caption and 9/9 gates.
+# caption and 10/10 gates.
 BANKS = load_banks()
 LIC_FACTS = REAL[0][1]
 fx = extract_facts(LIC_FACTS, BANKS)
@@ -92,7 +92,7 @@ lic_cap = lic_post.get("caption", "")
 check("T3 no fresh-anime claim", "انیمه تازه" not in lic_cap)
 check("T3 no 'made from manga' body claim", "ساخته می‌شود" not in lic_cap)
 check("T3 mentions the license", "لایسنس" in lic_cap)
-check("T3 gates 9/9", len(lic_post.get("gates_passed", [])) == 9,
+check("T3 gates 10/10", len(lic_post.get("gates_passed", [])) == 10,
       f"({lic_post.get('gates_passed')})")
 print("--- T3 caption ---")
 print(lic_cap)

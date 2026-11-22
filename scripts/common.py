@@ -341,3 +341,35 @@ def normalize_url(url: str) -> str:
     query = "&".join(f"{k}={v}" for k, v in params)
     path = parsed.path.rstrip("/") or "/"
     return urlunparse((scheme, host, path, "", query, ""))
+
+
+# رویدادهای generic که نوع واقعی را نمی‌گویند — در تطابق story_key مثل
+# wildcard عمل می‌کنند (هر رویدادی با آن‌ها یکی است).
+_GENERIC_EVENTS = frozenset({"event", "other"})
+
+
+def same_story_key(k1: str | None, k2: str | None) -> bool:
+    """آیا دو story_key (`franchise|event|bucket`) یک داستان‌اند؟
+
+    مقایسه دقیق رشته کافی نیست — سه پست BanG Dream در ران ۴۴۹۷۱۶۱۶۳۵۶
+    (۲۲ نوامبر ۲۰۲۶) همین را ثابت کرد:
+    - سطل ۴۸ ساعته ثابت در مرز می‌شکند: AnimeTV با pubDate ۰۰:۵۰ UTC روز
+      بعد سطل ۱۰۳۸۹ گرفت، در حالی که ANN ‏(۱۵:۵۹ UTC روز قبل) سطل ۱۰۳۸۸
+      داشت — فقط ~۹ ساعت فاصله، ولی کلید متفاوت. پس سطل ±۱ هم یکی است.
+    - رویداد generic: ‏classify برای MAL ‏«event»‏ برگرداند (کلمه «event» در
+      خلاصه)، در حالی که بقیه «announcement» بودند. «event»/«other» نوع
+      واقعی نیستند، پس با هر رویدادی یکی شمرده می‌شوند.
+    """
+    if not k1 or not k2 or k1 == k2:
+        return bool(k1 and k1 == k2)
+    try:
+        fr1, ev1, b1 = k1.rsplit("|", 2)
+        fr2, ev2, b2 = k2.rsplit("|", 2)
+        bucket1, bucket2 = int(b1), int(b2)
+    except (ValueError, AttributeError):
+        return False
+    if fr1 != fr2:
+        return False
+    if abs(bucket1 - bucket2) > 1:
+        return False
+    return ev1 == ev2 or ev1 in _GENERIC_EVENTS or ev2 in _GENERIC_EVENTS

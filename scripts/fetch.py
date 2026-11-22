@@ -44,7 +44,10 @@ from common import (  # noqa: E402
     now_tehran,
     now_utc,
     parse_dt,
+    redact,
     repo_root,
+    same_story_key,
+    save_json,
     save_queue,
     save_state,
     sha256_hex,
@@ -362,6 +365,14 @@ def process_items(items: list[dict], state: dict, queue: dict,
     recent_titles = state.get("recent_titles", [])
     queued_hashes = {i.get("hash") for i in queue["items"]
                      if i.get("status") in ("QUEUED", "HOLD", "APPROVED")}
+    # Critic fix 2026-11-22 (run 44971616356 — سه پست BanG Dream): لایه ۲
+    # فقط در برابر پست‌شده‌ها (state) + همین اجرا می‌سنجید؛ کلید آیتم‌های
+    # QUEUED/HOLD از اجراهای قبل نه در state بود نه در این اجرا — پس ANN و
+    # AnimeCorner با همان story_key هر دو در صف ماندند. این مجموعه همان
+    # کلیدها را از صف فعلی هم می‌خواند.
+    queued_story_keys = {i.get("story_key") for i in queue["items"]
+                         if i.get("status") in ("QUEUED", "HOLD", "APPROVED")
+                         and i.get("story_key")}
     # ردیابی درون‌اجرا: dedupe فقط در برابر پست‌های قبلی کافی نیست — دو منبع
     # در یک fetch هم‌زمان می‌رسند و نسخه دوم باید با نسخه اولِ همین اجرا
     # سنجیده شود (dry-run ۲۱ نوامبر: بدون این ردیابی، ۰ تکراری گرفته شد
@@ -421,9 +432,21 @@ def process_items(items: list[dict], state: dict, queue: dict,
                             "source": source["short"], "status": "duplicate",
                             "reason": "R9-duplicate", "layer": 1}, path=archive_path)
             continue
-        # --- dedupe لایه ۲: story_key، ۴۸ ساعت (state + همین اجرا)
-        if skey and (skey in story_keys or skey in run_story_keys):
-            posted = story_keys.get(skey, {})
+        # --- dedupe لایه ۲: story_key، ۴۸ ساعت (state + همین اجرا + صف)
+        # Critic fix 2026-11-22 (run 44971616356 — سه پست BanG Dream):
+        # مقایسه دقیق رشته کافی نبود — سطل ۴۸ ساعته ثابت در مرز می‌شکند
+        # (AnimeTV سطل ۱۰۳۸۹ گرفت، ANN سطل ۱۰۳۸۸) و رویداد generic «event»
+        # با «announcement» یکی نبود (MAL). same_story_key هر دو را
+        # می‌پوشاند (سطل ±۱ + «event»/«other» به‌عنوان wildcard) و
+        # queued_story_keys آیتم‌های QUEUED/HOLD اجراهای قبل را هم می‌گیرد.
+        dup_key = None
+        if skey:
+            for cand in list(story_keys) + list(run_story_keys) + list(queued_story_keys):
+                if same_story_key(skey, cand):
+                    dup_key = cand
+                    break
+        if dup_key is not None:
+            posted = story_keys.get(dup_key, {})
             stats["duplicates"] += 1
             stats["reasons"]["R9-duplicate-L2"] = stats["reasons"].get("R9-duplicate-L2", 0) + 1
             state["counters"]["duplicates_total"] += 1

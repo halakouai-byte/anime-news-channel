@@ -71,7 +71,7 @@ cap = post["caption"]
 check("T1 no fresh-adaptation claim", "اقتباس انیمه‌ای تازه" not in cap)
 check("T1 no Crunchyroll-as-producer", "کرانچی‌رول" not in cap)
 check("T1 mentions the ending", "پایان" in cap)
-check("T1 gates 9/9", len(post["gates_passed"]) == 9,
+check("T1 gates 10/10", len(post["gates_passed"]) == 10,
       f"(passed {post['gates_passed']})")
 print("--- T1 caption ---")
 print(cap)
@@ -106,8 +106,8 @@ for fname, expected_event in SAMPLES:
     fx2 = extract_facts(facts, BANKS)
     check(f"T3 {fname} event unchanged ({recorded})",
           fx2["event"] == recorded, f"(got {fx2['event']})")
-    check(f"T3 {fname} gates 9/9", len(p["gates_passed"]) == 9,
-          f"(passed {len(p['gates_passed'])}/9: {p['gates_passed']})")
+    check(f"T3 {fname} gates 10/10", len(p["gates_passed"]) == 10,
+          f"(passed {len(p['gates_passed'])}/10: {p['gates_passed']})")
 
 # --- Test 4: adaptation detection still works ---------------------------
 check("T4 'Gets TV Anime' -> adaptation",
