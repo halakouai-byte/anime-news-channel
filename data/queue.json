@@ -2565,6 +2565,28 @@
       "status": "HOLD",
       "hold_reason": "low-confidence",
       "created_utc": "2026-11-22T17:15:50Z"
+    },
+    {
+      "guid": "https://www.animenewsnetwork.com/cms/.244079",
+      "hash": "cdb7246d188653bccc9e224daac0754b6db856d3fb9b8d69eefbf935b1981046",
+      "story_key": null,
+      "title": "Martial Arts Manhwa Yeolhyeol Gangho to End Next Year After 33 Years",
+      "link": "https://animenewsnetwork.com/news/2026-11-22/martial-arts-manhwa-yeolhyeol-gangho-to-end-next-year-after-33-years/.244079",
+      "summary": "Manhwa is scheduled to conclude in February 2027 with its 97th collected volume",
+      "source": "ANN",
+      "source_name": "Anime News Network",
+      "tier": 1,
+      "pubDate": "2026-11-22T19:15:00+00:00",
+      "category": "رویداد",
+      "category_score": 0,
+      "category_source": "keyword",
+      "event_type": "other",
+      "franchise_en": null,
+      "priority_score": 45,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "low-confidence",
+      "created_utc": "2026-11-22T20:00:51Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
