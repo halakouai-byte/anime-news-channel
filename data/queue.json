@@ -2609,6 +2609,28 @@
       "status": "HOLD",
       "hold_reason": "low-confidence",
       "created_utc": "2026-11-22T21:17:59Z"
+    },
+    {
+      "guid": "https://www.animenewsnetwork.com/cms/.244078",
+      "hash": "6eafe05bd996ad08145854db156f386aa5c4d607fb89a40aa8e1205a66dfa734",
+      "story_key": null,
+      "title": "Live-Action The Remarried Empress Series Drives Surge in Original Webtoon, Web Novel Readership",
+      "link": "https://animenewsnetwork.com/news/2026-11-22/live-action-the-remarried-empress-series-drives-surge-in-original-webtoon-web-novel-readership/.244078",
+      "summary": "Global views of original webtoon increased approximately 35-fold during 2 weeks following show's November 3 premiere",
+      "source": "ANN",
+      "source_name": "Anime News Network",
+      "tier": 1,
+      "pubDate": "2026-11-22T21:15:00+00:00",
+      "category": "مانگا و اقتباس",
+      "category_score": 3,
+      "category_source": "keyword",
+      "event_type": "adaptation",
+      "franchise_en": null,
+      "priority_score": 50,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "gates_failed:why_specific",
+      "created_utc": "2026-11-22T22:02:21Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
