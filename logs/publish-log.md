@@ -5,3 +5,5 @@
 - 2026-11-21T21:39:22Z UTC (1 آذر 1405، تهران): posted message_id=10 guid=https://www.animenewsnetwork.com/cms/.244026 category=فصل جدید score=80 breaking=False latency_min=1780.1
 - 2026-11-22T01:28:48Z UTC (1 آذر 1405، تهران): posted message_id=11 guid=https://animecorner.me/bang-dream-yumemita-gets-new-anime-series/ category=فصل جدید score=75 breaking=False latency_min=2150.5
 - 2026-11-22T01:43:48Z UTC (1 آذر 1405، تهران): posted message_id=12 guid=https://animetv-jp.net/?p=51413 category=فصل جدید score=70 breaking=False latency_min=1493.6
+- 2026-11-22T08:33:00Z UTC (1 آذر 1405، تهران): posted message_id=13 guid=https://myanimelist.net/news/74967203?_location=rss category=فصل جدید score=65 breaking=False latency_min=316.9
+- 2026-11-22T08:48:01Z UTC (1 آذر 1405، تهران): posted message_id=14 guid=https://animetv-jp.net/?p=51437 category=فصل جدید score=55 breaking=False latency_min=496.2
