@@ -65,7 +65,7 @@
       "franchise_en": null,
       "priority_score": 40,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "POSTED",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -157,8 +157,8 @@
       "franchise_en": null,
       "priority_score": 35,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:recent_similarity",
       "created_utc": "2026-11-21T00:13:49Z"
     },
     {
@@ -179,8 +179,8 @@
       "franchise_en": null,
       "priority_score": 50,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:why_specific",
       "created_utc": "2026-11-21T00:13:49Z"
     },
     {
@@ -201,7 +201,7 @@
       "franchise_en": null,
       "priority_score": 35,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -223,7 +223,7 @@
       "franchise_en": null,
       "priority_score": 40,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -245,7 +245,7 @@
       "franchise_en": null,
       "priority_score": 50,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -267,7 +267,7 @@
       "franchise_en": null,
       "priority_score": 40,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -289,7 +289,7 @@
       "franchise_en": null,
       "priority_score": 40,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -311,7 +311,7 @@
       "franchise_en": null,
       "priority_score": 40,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -333,7 +333,7 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -355,7 +355,7 @@
       "franchise_en": null,
       "priority_score": 40,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -377,7 +377,7 @@
       "franchise_en": null,
       "priority_score": 40,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -399,7 +399,7 @@
       "franchise_en": null,
       "priority_score": 30,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -421,7 +421,7 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -443,7 +443,7 @@
       "franchise_en": null,
       "priority_score": 35,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -465,7 +465,7 @@
       "franchise_en": null,
       "priority_score": 30,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -487,7 +487,7 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -509,7 +509,7 @@
       "franchise_en": null,
       "priority_score": 30,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -553,7 +553,7 @@
       "franchise_en": null,
       "priority_score": 40,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -575,7 +575,7 @@
       "franchise_en": null,
       "priority_score": 35,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -597,7 +597,7 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -619,7 +619,7 @@
       "franchise_en": null,
       "priority_score": 35,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -663,7 +663,7 @@
       "franchise_en": "The Reincarnated Elf Left on a Journey to Master His Magic",
       "priority_score": 55,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -751,7 +751,7 @@
       "franchise_en": null,
       "priority_score": 35,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -773,7 +773,7 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -795,7 +795,7 @@
       "franchise_en": null,
       "priority_score": 30,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -817,7 +817,7 @@
       "franchise_en": null,
       "priority_score": 35,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -889,8 +889,8 @@
       "franchise_en": "Kaketa Tsuki no Mercedes",
       "priority_score": 55,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:recent_similarity",
       "created_utc": "2026-11-21T00:13:49Z"
     },
     {
@@ -934,7 +934,7 @@
       "franchise_en": null,
       "priority_score": 40,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -978,7 +978,7 @@
       "franchise_en": null,
       "priority_score": 35,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -1000,7 +1000,7 @@
       "franchise_en": null,
       "priority_score": 40,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -1022,7 +1022,7 @@
       "franchise_en": "Mob Psycho 100",
       "priority_score": 50,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -1044,7 +1044,7 @@
       "franchise_en": null,
       "priority_score": 35,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -1132,7 +1132,7 @@
       "franchise_en": null,
       "priority_score": 40,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -1154,7 +1154,7 @@
       "franchise_en": "CHARISMA",
       "priority_score": 55,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -1176,7 +1176,7 @@
       "franchise_en": null,
       "priority_score": 35,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -1198,7 +1198,7 @@
       "franchise_en": "KUKU-LOOP",
       "priority_score": 55,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -1220,7 +1220,7 @@
       "franchise_en": null,
       "priority_score": 35,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -1242,8 +1242,8 @@
       "franchise_en": null,
       "priority_score": 35,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:length",
       "created_utc": "2026-11-21T00:13:49Z"
     },
     {
@@ -1264,7 +1264,7 @@
       "franchise_en": null,
       "priority_score": 30,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "STALE",
       "hold_reason": "",
       "created_utc": "2026-11-21T00:13:49Z"
     },
@@ -1403,8 +1403,8 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:english_limited,why_specific",
       "created_utc": "2026-11-21T06:08:49Z"
     },
     {
@@ -1425,8 +1425,8 @@
       "franchise_en": null,
       "priority_score": 50,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:english_limited,why_specific",
       "created_utc": "2026-11-21T06:08:49Z"
     },
     {
@@ -1447,8 +1447,8 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:english_limited,why_specific",
       "created_utc": "2026-11-21T06:08:49Z"
     },
     {
@@ -1469,8 +1469,8 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:english_limited,length,why_specific",
       "created_utc": "2026-11-21T06:08:49Z"
     },
     {
@@ -1491,7 +1491,7 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "POSTED",
       "hold_reason": "",
       "created_utc": "2026-11-21T06:08:49Z"
     },
@@ -1538,8 +1538,8 @@
       "franchise_en": null,
       "priority_score": 35,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:length,why_specific",
       "created_utc": "2026-11-21T06:08:49Z"
     },
     {
@@ -1585,8 +1585,8 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:why_specific",
       "created_utc": "2026-11-21T17:55:22Z"
     },
     {
@@ -1739,7 +1739,7 @@
       "franchise_en": null,
       "priority_score": 35,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "POSTED",
       "hold_reason": "",
       "created_utc": "2026-11-21T17:55:22Z"
     },
@@ -1761,8 +1761,8 @@
       "franchise_en": null,
       "priority_score": 35,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:why_specific",
       "created_utc": "2026-11-21T17:55:22Z"
     },
     {
@@ -1783,8 +1783,8 @@
       "franchise_en": null,
       "priority_score": 35,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:length",
       "created_utc": "2026-11-21T17:55:22Z"
     },
     {
@@ -1805,8 +1805,8 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:length",
       "created_utc": "2026-11-21T17:55:22Z"
     },
     {
@@ -1827,8 +1827,8 @@
       "franchise_en": null,
       "priority_score": 40,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:length,why_specific",
       "created_utc": "2026-11-21T17:55:22Z"
     },
     {
@@ -1871,8 +1871,8 @@
       "franchise_en": null,
       "priority_score": 40,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:length,why_specific",
       "created_utc": "2026-11-22T01:28:47Z"
     },
     {
@@ -1893,8 +1893,8 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:length",
       "created_utc": "2026-11-22T01:28:47Z"
     },
     {
@@ -1940,8 +1940,8 @@
       "franchise_en": null,
       "priority_score": 50,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:length",
       "created_utc": "2026-11-22T01:28:47Z"
     },
     {
@@ -1962,8 +1962,8 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:length",
       "created_utc": "2026-11-22T01:28:47Z"
     },
     {
@@ -1984,7 +1984,7 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "POSTED",
       "hold_reason": "",
       "created_utc": "2026-11-22T01:28:47Z"
     },
@@ -2006,8 +2006,8 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:length",
       "created_utc": "2026-11-22T01:28:47Z"
     },
     {
@@ -2050,8 +2050,8 @@
       "franchise_en": null,
       "priority_score": 50,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:why_specific",
       "created_utc": "2026-11-22T08:32:58Z"
     },
     {
@@ -2072,8 +2072,8 @@
       "franchise_en": null,
       "priority_score": 50,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:why_specific",
       "created_utc": "2026-11-22T08:32:58Z"
     },
     {
@@ -2094,8 +2094,8 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:why_specific",
       "created_utc": "2026-11-22T08:32:58Z"
     },
     {
@@ -2160,8 +2160,8 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:length",
       "created_utc": "2026-11-22T08:32:58Z"
     },
     {
@@ -2182,8 +2182,8 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:recent_similarity",
       "created_utc": "2026-11-22T08:32:58Z"
     },
     {
@@ -2229,8 +2229,8 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:why_specific",
       "created_utc": "2026-11-22T10:01:52Z"
     },
     {
@@ -2251,8 +2251,8 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:why_specific",
       "created_utc": "2026-11-22T10:01:52Z"
     },
     {
@@ -2273,8 +2273,8 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:length,why_specific",
       "created_utc": "2026-11-22T10:01:52Z"
     },
     {
@@ -2295,8 +2295,8 @@
       "franchise_en": null,
       "priority_score": 50,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:why_specific",
       "created_utc": "2026-11-22T10:01:52Z"
     },
     {
@@ -2317,8 +2317,8 @@
       "franchise_en": null,
       "priority_score": 40,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:why_specific",
       "created_utc": "2026-11-22T10:01:52Z"
     },
     {
@@ -2364,8 +2364,8 @@
       "franchise_en": null,
       "priority_score": 50,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:why_specific",
       "created_utc": "2026-11-22T11:03:00Z"
     },
     {
@@ -2386,7 +2386,7 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "POSTED",
       "hold_reason": "",
       "created_utc": "2026-11-22T11:03:00Z"
     },
@@ -2411,6 +2411,50 @@
       "status": "HOLD",
       "hold_reason": "low-confidence",
       "created_utc": "2026-11-22T11:18:24Z"
+    },
+    {
+      "guid": "https://myanimelist.net/news/74968322?_location=rss",
+      "hash": "0e50b7047253f8901a7629c1d742ee9d4aff9cce5f4eb4ed2fc580a6ee038a0b",
+      "story_key": null,
+      "title": "Light Novel 'Sono Mono. Nochi ni…' Gets TV Anime in 2027",
+      "link": "https://myanimelist.net/news/74968322",
+      "summary": "An official website opened for a television anime adaptation of NAHAaTO's Sono Mono. Nochi ni... (That Person. Later on...) light novel on Sunday, revealing the main cast, staff, opening theme song artist, and a teaser visual (pictured). The anime will premiere in 2027. Voice actors Kent Itou (Isekai no Sata wa Shachiku Shidai) and Yui Ogura (Goblin Slayer) are starring in the anime as Wazu and Mear, respectively. Staff Chief Director: Kouichi Oohata (9: Ruler's Crown) Director: Seung-...",
+      "source": "MAL",
+      "source_name": "MyAnimeList News",
+      "tier": 1,
+      "pubDate": "2026-11-22T11:36:49+00:00",
+      "category": "فصل جدید",
+      "category_score": 8,
+      "category_source": "keyword",
+      "event_type": "trailer",
+      "franchise_en": null,
+      "priority_score": 50,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "gates_failed:recent_similarity",
+      "created_utc": "2026-11-22T11:48:25Z"
+    },
+    {
+      "guid": "https://myanimelist.net/news/74968356?_location=rss",
+      "hash": "f6c537d4cba544ecb761b136c7a21e14f5f8444f8a254ed8f02e759a2aae2a87",
+      "story_key": null,
+      "title": "Singer, Voice Actress Kiyono Yasuno Announces Marriage",
+      "link": "https://myanimelist.net/news/74968356",
+      "summary": "Voice actress Kiyono Yasuno announced her marriage on her official website on Sunday. In her written message, Yasuno expressed her gratitude to everyone who had supported her throughout her career as a voice actress and singer. She also stated that she would continue to approach her works and roles with sincerity and strive to grow further as a performer. \"Although I still have much to learn, I hope to continue growing as an individual as well, taking things one step at a time each day. I w...",
+      "source": "MAL",
+      "source_name": "MyAnimeList News",
+      "tier": 1,
+      "pubDate": "2026-11-22T11:58:03+00:00",
+      "category": "فصل جدید",
+      "category_score": 2,
+      "category_source": "keyword",
+      "event_type": "announcement",
+      "franchise_en": null,
+      "priority_score": 55,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "low-confidence",
+      "created_utc": "2026-11-22T12:18:39Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
