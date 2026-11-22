@@ -2543,6 +2543,28 @@
       "status": "POSTED",
       "hold_reason": "",
       "created_utc": "2026-11-22T16:04:54Z"
+    },
+    {
+      "guid": "https://www.animenewsnetwork.com/cms/.244062",
+      "hash": "ba72c94009913e0276e4b2de75e979ba8a8d6c014b986b152a717579fc6f9cf4",
+      "story_key": "chainsaw man|other|10389",
+      "title": "Chainsaw Man Ranks #2 on Bookscan's October Adult Graphic Novel List in U.S.",
+      "link": "https://animenewsnetwork.com/news/2026-11-21/chainsaw-man-ranks-no.2-on-bookscan-october-adult-graphic-novel-list-in-u.s/.244062",
+      "summary": "13 manga volumes including Jujutsu Kaisen, The Summer Hikaru Died, The Guy She Was Interested In Wasn't a Guy at All, Dandadan, Phantom Busters, Demon Slayer, One Piece make list",
+      "source": "ANN",
+      "source_name": "Anime News Network",
+      "tier": 1,
+      "pubDate": "2026-11-22T17:15:00+00:00",
+      "category": "مانگا و اقتباس",
+      "category_score": 1,
+      "category_source": "keyword",
+      "event_type": "other",
+      "franchise_en": "Chainsaw Man",
+      "priority_score": 65,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "low-confidence",
+      "created_utc": "2026-11-22T17:15:50Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
