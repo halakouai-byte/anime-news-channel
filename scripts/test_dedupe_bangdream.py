@@ -113,8 +113,10 @@ check("T1 different franchise does not match",
       not same_story_key(ANN["story_key"], "one piece|announcement|10388"))
 check("T1 bucket diff 2 does not match",
       not same_story_key(ANN["story_key"], "bang dream|announcement|10390"))
-check("T1 different real event does not match (no over-dedupe)",
-      not same_story_key(ANN["story_key"], "bang dream|trailer|10388"))
+check("T1 reveal family: announcement matches trailer (phantom fix 2026-11-22)",
+      same_story_key(ANN["story_key"], "bang dream|trailer|10388"))
+check("T1 different real event still does not match (no over-dedupe)",
+      not same_story_key(ANN["story_key"], "bang dream|casting|10388"))
 
 # --- T2: classify.detect_event no longer returns generic "event" ------------
 ev = classify_detect_event(MAL["title"], MAL["summary"])
@@ -159,8 +161,13 @@ for name, it in (("AnimeCorner", CORNER), ("AnimeTV", TV), ("MAL", MAL)):
 trailer_item = {"title": "BanG Dream! Yume∞Mita Trailer Released",
                 "story_key": "bang dream|trailer|10388",
                 "pubDate": "2026-11-21T10:00:00+00:00"}
-check("T4 guard does NOT block a distinct trailer item",
-      _find_posted_duplicate(trailer_item, posted_queue, posted_state) is None)
+check("T4 guard blocks the same-day trailer item (phantom fix — trailer is part of the reveal)",
+      _find_posted_duplicate(trailer_item, posted_queue, posted_state) is not None)
+casting_item = {"title": "BanG Dream! Yume∞Mita Reveals New Cast Members",
+                "story_key": "bang dream|casting|10388",
+                "pubDate": "2026-11-21T10:00:00+00:00"}
+check("T4 guard does NOT block a distinct casting item",
+      _find_posted_duplicate(casting_item, posted_queue, posted_state) is None)
 
 # --- T5: templates + the 10th gate ------------------------------------------
 templates = BANKS["templates-fa"]

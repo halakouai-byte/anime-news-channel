@@ -16,6 +16,7 @@ import hashlib
 import json
 import os
 import re
+import subprocess
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -309,6 +310,230 @@ def sha256_hex(text: str) -> str:
 
 
 # ---------------------------------------------------------------------------
+# ادغام state راه‌دور — ضد مسابقه (پست‌های فانتوم، ۲۲ نوامبر ۲۰۲۶)
+# ---------------------------------------------------------------------------
+# ران ۴۵۰۰۳۶۸۸۳۸۳ (sweeper) با checkout کهنه (SHA زمان ساخت، پیش از
+# 26b8fd8) دو پست فرستاد و کامیتش روی rebase مرد؛ state محلی با پیام‌های
+# ۱۵ و ۱۶ از دست رفت و ران بعدی همان آیتم‌ها را دوباره پست کرد. state یک
+# فایل متنی برای rebase نیست — رکوردهای پست‌شده union می‌شوند. این
+# توابع همان قانون را برای همگام‌سازی پیش از ارسال و کامیت ضدتداخل
+# پیاده می‌کنند (merge_state.py هم از همین‌ها استفاده می‌کند).
+
+
+def merge_state_data(local: dict, remote: dict) -> dict:
+    """ادغام دو state — union رکوردهای پست‌شده (نه rebase متنی).
+
+    remote برنده است هرجا رکوردها با هم درگیرند (رکورد commitشده مرجع
+    است؛ مثلاً همان هش اگر دو message_id داشت، اولی — remote — می‌ماند).
+    posts_total از نو از posted_message_ids حساب می‌شود (جلوگیری از drift).
+    """
+    merged = dict(local)
+    ids = sorted({*local.get("posted_message_ids", []),
+                  *remote.get("posted_message_ids", [])})
+    merged["posted_message_ids"] = ids
+    hashes = dict(local.get("posted_hashes", {}) or {})
+    for h, mid in (remote.get("posted_hashes", {}) or {}).items():
+        if h in hashes and hashes[h] != mid:
+            log_warn("merge_state: hash %s has two message_ids "
+                     "(local %s, remote %s) — keeping remote"
+                     % (str(h)[:12], hashes[h], mid))
+        hashes[h] = mid
+    merged["posted_hashes"] = hashes
+    keys = dict(local.get("story_keys", {}) or {})
+    for k, v in (remote.get("story_keys", {}) or {}).items():
+        if k in keys and keys[k] != v:
+            log_warn("merge_state: story key %s has two records — keeping remote" % k)
+        keys[k] = v
+    merged["story_keys"] = keys
+    merged["seen_guids"] = sorted({*local.get("seen_guids", []),
+                                   *remote.get("seen_guids", [])})
+    seen_at = dict(local.get("seen_at", {}) or {})
+    seen_at.update(remote.get("seen_at", {}) or {})
+    merged["seen_at"] = seen_at
+    seen_titles = {(t.get("title_norm"), t.get("posted_utc"))
+                   for t in local.get("recent_titles", [])}
+    titles = list(local.get("recent_titles", []))
+    for t in remote.get("recent_titles", []):
+        if (t.get("title_norm"), t.get("posted_utc")) not in seen_titles:
+            titles.append(t)
+    merged["recent_titles"] = titles
+    merged["last_publish_utc"] = max(
+        (local.get("last_publish_utc") or ""),
+        (remote.get("last_publish_utc") or ""))
+    lc = dict(local.get("counters", {}) or {})
+    rc = remote.get("counters", {}) or {}
+    lc["posts_total"] = len(ids)
+    for k in ("duplicates_total", "rejected_total", "hold_total", "posts_today"):
+        lc[k] = max(lc.get(k, 0) or 0, rc.get(k, 0) or 0)
+    lc["posts_today_date"] = rc.get("posts_today_date") or lc.get("posts_today_date")
+    if lc.get("posts_today_date") != tehran_date_str():
+        lc["posts_today"] = 0
+        lc["posts_today_date"] = tehran_date_str()
+    merged["counters"] = lc
+    usage = {k: list(v) for k, v in (local.get("template_usage_7d", {}) or {}).items()}
+    for k, v in (remote.get("template_usage_7d", {}) or {}).items():
+        usage[k] = sorted(set(usage.get(k, [])) | set(v or []))
+    merged["template_usage_7d"] = usage
+    lb = local.get("circuit_breaker") or {}
+    rb = remote.get("circuit_breaker") or {}
+    merged["circuit_breaker"] = {
+        "active": bool(lb.get("active") or rb.get("active")),
+        "activated_at": max((lb.get("activated_at") or ""),
+                            (rb.get("activated_at") or "")) or None,
+        "posts_today": max(lb.get("posts_today", 0) or 0,
+                           rb.get("posts_today", 0) or 0),
+        "queue_size": max(lb.get("queue_size", 0) or 0,
+                          rb.get("queue_size", 0) or 0),
+    }
+    for k, v in remote.items():
+        merged.setdefault(k, v)
+    return merged
+
+
+_STATUS_RANK = {"POSTED": 4, "STALE": 3, "HOLD": 2, "QUEUED": 1}
+
+
+def _queue_item_key(item: dict) -> str:
+    return str(item.get("guid") or item.get("hash") or "")
+
+
+def merge_queue_data(local: dict, remote: dict) -> dict:
+    """ادغام دو queue — وضعیت پیشرفته‌تر می‌برد (POSTED > STALE > HOLD > QUEUED).
+
+    آیتمی که این ران پست کرده (POSTED محلی) هرگز با QUEUED راه‌دور
+    بازنویسی نمی‌شود؛ و آیتمی که ران دیگری پست کرده (POSTED راه‌دور)
+    هرگز دوباره QUEUED نمی‌شود. در تساوی رتبه، remote می‌برد (رکورد
+    commitشده مرجع است؛ ران جاری آیتم‌های QUEUED را در fetch بعدی
+    دوباره می‌سنجد). آیتم فقط در یک طرف → اضافه می‌شود.
+    """
+    by_key: dict[str, dict] = {}
+    order: list[str] = []
+    for source, items in (("local", local.get("items", [])),
+                          ("remote", remote.get("items", []))):
+        for item in items:
+            key = _queue_item_key(item)
+            if not key:
+                continue
+            if key not in by_key:
+                by_key[key] = item
+                order.append(key)
+                continue
+            cur = by_key[key]
+            new_rank = _STATUS_RANK.get(item.get("status"), 0)
+            cur_rank = _STATUS_RANK.get(cur.get("status"), 0)
+            if new_rank > cur_rank or (new_rank == cur_rank and source == "remote"):
+                by_key[key] = item
+    merged = dict(remote)
+    merged["items"] = [by_key[k] for k in order]
+    for k, v in local.items():
+        if k != "items":
+            merged.setdefault(k, v)
+    return merged
+
+
+def merge_archive_lines(local_lines: list[str], remote_lines: list[str],
+                        cap: int = 500) -> list[str]:
+    """ادغام archive.jsonl — union بر اساس (hash, status, message_id).
+
+    همان هش اگر دو بار پست شده باشد (فانتوم)، دو ردیف جدا می‌ماند —
+    هر دو ارسال واقعی‌اند و آرشیو باید هر دو را ثبت کند.
+    """
+    seen: set[tuple] = set()
+    out: list[str] = []
+    for line in list(remote_lines) + list(local_lines):
+        line = (line or "").strip()
+        if not line:
+            continue
+        try:
+            rec = json.loads(line)
+        except ValueError:
+            continue
+        key = (rec.get("hash"), rec.get("status"), str(rec.get("message_id")))
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(line)
+    out.sort(key=lambda l: json.loads(l).get("archived_utc", ""))
+    return out[-cap:]
+
+
+def sync_remote_state(state_path=None, queue_path=None, archive_path=None,
+                      repo_dir: str | Path | None = None,
+                      ref: str = "origin/main", timeout: int = 30) -> bool:
+    """همگام‌سازی state/queue/archive محلی با راه‌دور (origin/main) پیش از ارسال.
+
+    `git fetch` + خواندن فایل‌های راه‌دور با `git show` + ادغام union در
+    فایل‌های محلی. False یعنی همگام نشد (git نیست، remote نیست، fetch
+    خورد) — تماس‌گیرنده با state محلی ادامه می‌دهد و هشدار می‌دهد؛
+    هرگز کل ران را نمی‌اندازد. merge_state.py هم از همین تابع استفاده
+    می‌کند و False را خطا می‌شمرد.
+    """
+    root = Path(repo_dir) if repo_dir else repo_root()
+    sp = Path(state_path) if state_path else data_dir() / "state.json"
+    qp = Path(queue_path) if queue_path else data_dir() / "queue.json"
+    ap = Path(archive_path) if archive_path else data_dir() / "archive.jsonl"
+    try:
+        fetch = subprocess.run(
+            ["git", "-C", str(root), "fetch", "origin", "main"],
+            capture_output=True, timeout=timeout)
+    except (OSError, subprocess.SubprocessError):
+        log_warn("sync_remote_state: git fetch failed (no git/network?) "
+                 "— continuing with local state")
+        return False
+    if fetch.returncode != 0:
+        log_warn("sync_remote_state: git fetch origin main failed "
+                 "— continuing with local state")
+        return False
+
+    def _show(rel: str):
+        rr = subprocess.run(
+            ["git", "-C", str(root), "show", f"{ref}:{rel}"],
+            capture_output=True, timeout=timeout)
+        return rr.stdout if rr.returncode == 0 else None
+
+    try:
+        remote_state_raw = _show("data/state.json")
+        remote_queue_raw = _show("data/queue.json")
+        remote_archive_raw = _show("data/archive.jsonl")
+    except (OSError, subprocess.SubprocessError):
+        log_warn("sync_remote_state: git show failed — continuing with local state")
+        return False
+    changed = False
+    if remote_state_raw:
+        try:
+            remote_state = json.loads(remote_state_raw.decode("utf-8"))
+            local_state = load_state(sp)
+            merged = merge_state_data(local_state, remote_state)
+            if merged != local_state:
+                save_state(merged, sp)
+                changed = True
+        except ValueError:
+            log_warn("sync_remote_state: remote state.json is not valid JSON — skipped")
+    if remote_queue_raw:
+        try:
+            remote_queue = json.loads(remote_queue_raw.decode("utf-8"))
+            local_queue = load_queue(qp)
+            merged_q = merge_queue_data(local_queue, remote_queue)
+            if merged_q != local_queue:
+                save_queue(merged_q, qp)
+                changed = True
+        except ValueError:
+            log_warn("sync_remote_state: remote queue.json is not valid JSON — skipped")
+    if remote_archive_raw:
+        local_lines = (ap.read_text(encoding="utf-8").splitlines()
+                       if ap.exists() else [])
+        merged_lines = merge_archive_lines(
+            local_lines, remote_archive_raw.decode("utf-8").splitlines())
+        if merged_lines != local_lines:
+            ap.parent.mkdir(parents=True, exist_ok=True)
+            ap.write_text("\n".join(merged_lines) + "\n", encoding="utf-8")
+            changed = True
+    if changed:
+        log_info("sync_remote_state: local state refreshed from origin/main")
+    return True
+
+
+# ---------------------------------------------------------------------------
 # نرمال‌سازی URL (dedupe لایه ۱ — filter-v2 §۳.۱)
 # ---------------------------------------------------------------------------
 
@@ -347,6 +572,19 @@ def normalize_url(url: str) -> str:
 # wildcard عمل می‌کنند (هر رویدادی با آن‌ها یکی است).
 _GENERIC_EVENTS = frozenset({"event", "other"})
 
+# رویدادهای «رونمایی» — یک خبر واحد معمولاً با چند چهره می‌آید: یک منبع
+# «اعلام» می‌کند، یکی «تاریخ پخش» می‌دهد، یکی «تریلر» نشان می‌دهد.
+# پیام‌های ۱۵ و ۱۷ (۲۲ نوامبر ۲۰۲۶ — Classroom of the Elite فصل ۵) همین را
+# ثابت کردند: ANN ‏announcement‏، AnimeCorner ‏date‏، MAL ‏trailer‏ — سه
+# کلید متفاوت برای یک خبر. پس این سه رویداد با هم یکی شمرده می‌شوند.
+# «casting» عمداً بیرون است: معرفی صداپیشه معمولاً خبر جداگانه است
+# (مثل Tougen Anki) و نباید با رونمایی یکی شود.
+# معامله آگاهانه: normalize_franchise شماره فصل را حذف می‌کند، پس دو
+# رونماییِ فصل‌های مختلفِ یک فرنچایز در یک سطل ۴۸ ساعته هم یکی شمرده
+# می‌شوند — نادر است (همان ضعف برای رویداد یکسان از قبل هم بود) و بهای
+# آن کمتر از پست تکراریِ دیده‌شده در کانال است.
+_REVEAL_EVENTS = frozenset({"announcement", "date", "trailer"})
+
 
 def same_story_key(k1: str | None, k2: str | None) -> bool:
     """آیا دو story_key (`franchise|event|bucket`) یک داستان‌اند؟
@@ -359,6 +597,10 @@ def same_story_key(k1: str | None, k2: str | None) -> bool:
     - رویداد generic: ‏classify برای MAL ‏«event»‏ برگرداند (کلمه «event» در
       خلاصه)، در حالی که بقیه «announcement» بودند. «event»/«other» نوع
       واقعی نیستند، پس با هر رویدادی یکی شمرده می‌شوند.
+    - خانواده رونمایی (پیام‌های ۱۵ و ۱۷، ۲۲ نوامبر ۲۰۲۶ — Classroom of
+      the Elite فصل ۵): ANN ‏announcement‏، AnimeCorner ‏date‏، MAL
+      ‏trailer‏ — یک خبر، سه کلید. «announcement»/«date»/«trailer» با هم
+      یکی شمرده می‌شوند.
     """
     if not k1 or not k2 or k1 == k2:
         return bool(k1 and k1 == k2)
@@ -372,4 +614,6 @@ def same_story_key(k1: str | None, k2: str | None) -> bool:
         return False
     if abs(bucket1 - bucket2) > 1:
         return False
-    return ev1 == ev2 or ev1 in _GENERIC_EVENTS or ev2 in _GENERIC_EVENTS
+    if ev1 == ev2 or ev1 in _GENERIC_EVENTS or ev2 in _GENERIC_EVENTS:
+        return True
+    return ev1 in _REVEAL_EVENTS and ev2 in _REVEAL_EVENTS

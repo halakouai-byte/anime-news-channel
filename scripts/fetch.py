@@ -51,6 +51,7 @@ from common import (  # noqa: E402
     save_queue,
     save_state,
     sha256_hex,
+    sync_remote_state,
     tehran_date_str,
 )
 
@@ -538,6 +539,12 @@ def process_items(items: list[dict], state: dict, queue: dict,
 def run_fetch(source_names: list[str] | None = None,
               state_path=None, queue_path=None, archive_path=None,
               log_path=None, write: bool = True) -> dict:
+    # Critic fix 2026-11-22 (phantom posts 15/16): پیش از خواندن فیدها،
+    # state راه‌دور را بخوان — checkout این ران ممکن است کهنه باشد. در
+    # dry-run (--no-write) نیازی نیست؛ sync فایل محلی را می‌نویسد.
+    if write:
+        sync_remote_state(state_path=state_path, queue_path=queue_path,
+                          archive_path=archive_path)
     state = load_state(state_path)
     queue = load_queue(queue_path)
     expire_queue(queue, state, archive_path=archive_path)

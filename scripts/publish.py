@@ -50,6 +50,7 @@ from common import (  # noqa: E402
     same_story_key,
     save_queue,
     save_state,
+    sync_remote_state,
     tehran_date_str,
 )
 from rewrite import rewrite_post  # noqa: E402 — موتور بازنویسی (سازنده دیگر)
@@ -286,6 +287,22 @@ def publish_one(item: dict, state: dict, queue: dict, token: str, chat_id: str,
     # تکراری باشد): همین داستان با story_keyِ تحمل‌پذیر یا تیتر مشابه قبلاً
     # پست شده؟ اگر آره، POSTED علامت می‌خورد و پست نمی‌شود (به‌جای اینکه
     # HOLDِ دوباره‌تست‌شده مثل BanG Dream در ران ۴۴۹۷۱۶۱۶۳۵۶ سه‌بار پست شود).
+    # Critic fix 2026-11-22 (phantom posts 15/16): درست پیش از ارسال،
+    # state راه‌دور را تازه کن — ران دیگری ممکن است در همین ۱۵ دقیقه فاصله
+    # پست کرده باشد، یا checkout این ران کهنه باشد. بعد از sync، گارد هش
+    # را با state تازه دوباره بزن (گارد اول با state محلی بود).
+    if sync_remote_state(state_path=state_path, queue_path=queue_path,
+                         archive_path=archive_path):
+        state.clear()
+        state.update(load_state(state_path))
+        queue.clear()
+        queue.update(load_queue(queue_path))
+        if item.get("hash") in state.get("posted_hashes", {}):
+            log_warn(f"guard: already posted (remote state), skipping "
+                     f"{str(item.get('hash', ''))[:12]}")
+            item["status"] = "POSTED"
+            return None
+
     dup = _find_posted_duplicate(item, queue, state)
     if dup:
         item["status"] = "POSTED"
@@ -467,6 +484,12 @@ def run_publish(max_posts: int = 2, dry: bool = False,
     if not dry and (not token or not chat_id):
         raise SystemExit("TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID not set "
                          "(GitHub Secrets — values are never written here)")
+    # Critic fix 2026-11-22 (phantom posts 15/16): پیش از هر ارسال، state
+    # راه‌دور را بخوان — checkout این ران ممکن است کهنه باشد (ران دیگری
+    # هم‌زمان پست کرده). در dry-run نیازی نیست.
+    if not dry:
+        sync_remote_state(state_path=state_path, queue_path=queue_path,
+                          archive_path=archive_path)
     state = load_state(state_path)
     queue = load_queue(queue_path)
     workdir = workdir or (repo_root() / "out")
