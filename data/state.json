@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 2288,
+    "duplicates_total": 2338,
     "hold_total": 23,
-    "posts_today": 11,
+    "posts_today": 13,
     "posts_today_date": "2026-11-23",
-    "posts_total": 29,
-    "rejected_total": 365
+    "posts_total": 31,
+    "rejected_total": 370
   },
-  "last_fetch_utc": "2026-11-23T15:00:57Z",
-  "last_publish_utc": "2026-11-23T15:16:01Z",
+  "last_fetch_utc": "2026-11-23T16:00:54Z",
+  "last_publish_utc": "2026-11-23T16:15:57Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -44,7 +44,9 @@
     "058356c70aee8be3699903eabd5f3dc6d53c768f6b9f71ed3b879bf18cb31e9f": 33,
     "e954ac69bf10a7bdcae072d0856b1265f043ceb85b3a293bf5919140c8356990": 34,
     "7bb5702f82cd19f7de3bcd36dd339520f9d917a460602b74e90bf82da44d944b": 35,
-    "a947f1c8ad38f4e6e0d97c667cebf07d54f19f78d7d50dd4595ddca33770db32": 36
+    "a947f1c8ad38f4e6e0d97c667cebf07d54f19f78d7d50dd4595ddca33770db32": 36,
+    "062c52480e7c70a6243db17bbc2e693c7fa331228f57937554e368b9441e5af8": 37,
+    "b2cbced28e68d26986e2009ccc20b21179fa9ef91e353076625159aeca112b05": 38
   },
   "posted_message_ids": [
     6,
@@ -75,7 +77,9 @@
     33,
     34,
     35,
-    36
+    36,
+    37,
+    38
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -611,6 +615,46 @@
         "visual"
       ],
       "posted_utc": "2026-11-23T15:16:01Z"
+    },
+    {
+      "title_norm": "shiboyugi: playing death games to put food on the table anime sequel announced with new teaser visual",
+      "words": [
+        "anime",
+        "announced",
+        "death",
+        "food",
+        "games",
+        "new",
+        "on",
+        "playing",
+        "put",
+        "sequel",
+        "shiboyugi:",
+        "table",
+        "teaser",
+        "the",
+        "to",
+        "visual",
+        "with"
+      ],
+      "posted_utc": "2026-11-23T16:00:56Z"
+    },
+    {
+      "title_norm": "bride of the barrier master tv anime reveals january 6 premiere",
+      "words": [
+        "6",
+        "anime",
+        "barrier",
+        "bride",
+        "january",
+        "master",
+        "of",
+        "premiere",
+        "reveals",
+        "the",
+        "tv"
+      ],
+      "posted_utc": "2026-11-23T16:15:57Z"
     }
   ],
   "seen_at": {
@@ -959,7 +1003,9 @@
       "2026-11-23T11:45:01Z",
       "2026-11-23T12:00:02Z",
       "2026-11-23T15:01:00Z",
-      "2026-11-23T15:16:01Z"
+      "2026-11-23T15:16:01Z",
+      "2026-11-23T16:00:56Z",
+      "2026-11-23T16:15:57Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -990,7 +1036,9 @@
       "2026-11-23T11:45:01Z",
       "2026-11-23T12:00:02Z",
       "2026-11-23T15:01:00Z",
-      "2026-11-23T15:16:01Z"
+      "2026-11-23T15:16:01Z",
+      "2026-11-23T16:00:56Z",
+      "2026-11-23T16:15:57Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -1021,7 +1069,9 @@
       "2026-11-23T11:45:01Z",
       "2026-11-23T12:00:02Z",
       "2026-11-23T15:01:00Z",
-      "2026-11-23T15:16:01Z"
+      "2026-11-23T15:16:01Z",
+      "2026-11-23T16:00:56Z",
+      "2026-11-23T16:15:57Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -1052,7 +1102,9 @@
       "2026-11-23T11:45:01Z",
       "2026-11-23T12:00:02Z",
       "2026-11-23T15:01:00Z",
-      "2026-11-23T15:16:01Z"
+      "2026-11-23T15:16:01Z",
+      "2026-11-23T16:00:56Z",
+      "2026-11-23T16:15:57Z"
     ]
   },
   "version": 2

@@ -2660,9 +2660,10 @@
       "franchise_en": null,
       "priority_score": 50,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "POSTED",
       "hold_reason": "gates_failed:length",
-      "created_utc": "2026-11-22T23:46:56Z"
+      "created_utc": "2026-11-22T23:46:56Z",
+      "message_id": 38
     },
     {
       "guid": "https://animetv-jp.net/?p=51461",
@@ -2705,9 +2706,12 @@
       "franchise_en": null,
       "priority_score": 50,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "POSTED",
       "hold_reason": "gates_failed:english_limited,why_specific",
-      "created_utc": "2026-11-23T00:04:59Z"
+      "created_utc": "2026-11-23T00:04:59Z",
+      "message_id": 37,
+      "posted_utc": "2026-11-23T16:00:56Z",
+      "caption": "SHIBOYUGI؛ تریلر تازه\n\nخبر تازه از شیبویوگی رسید و این‌بار خبر، تریلر تازه است.\n\nبا این اعلام، شیبویوگی یک بار دیگر در مرکز توجه طرفداران قرار گرفت؛ خبری که از امروز در تقویم دنیای انیمه ثبت شده و ادامه‌اش را باید در روزهای آینده دنبال کرد. شیبویوگی از آن آثاری است که هر خبر تازه‌اش در دنیای انیمه بازتاب دارد؛ این اعلام هم از همان جنس خبرهاست و نشان می‌دهد عوامل ساخت هنوز برای این اثر برنامه دارند.\n\nچرا مهم است؟ چون کی‌ویژوال تازه شیبویوگی اولین تصویر رسمی از این بخش است و حال‌وهوای آن را بهتر از هر توضیحی نشان می‌دهد؛ تصویری که از امروز معیار انتظار طرفداران از فصل تازه خواهد بود.\n\nمنبع: AnimeTV\nhttps://animetv-jp.net/shiboyugi-playing-death-games-to-put-food-on-the-table-anime-sequel-announced-with-new-teaser-visual\n\n#انیمه #Shiboyugi #فصل_جدید"
     },
     {
       "guid": "https://animetv-jp.net/?p=51465",
