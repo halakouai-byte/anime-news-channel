@@ -2697,6 +2697,28 @@
       "status": "HOLD",
       "hold_reason": "gates_failed:english_limited,why_specific",
       "created_utc": "2026-11-23T00:04:59Z"
+    },
+    {
+      "guid": "https://animetv-jp.net/?p=51465",
+      "hash": "7bb5702f82cd19f7de3bcd36dd339520f9d917a460602b74e90bf82da44d944b",
+      "story_key": null,
+      "title": "BLUE BOX Season 2 Releases Special PV to Celebrate Episode 7",
+      "link": "https://animetv-jp.net/blue-box-season-2-releases-special-pv-to-celebrate-episode-7",
+      "summary": "The TV anime BLUE BOX Season 2 has released a special promotional video to celebrate the broadcast of Episode 33 (Season 2, Episode 7). The new season is streaming on Netflix, with new episodes released weekly. Special Trailer: Main Visual: STAFF:Director: Daisuke SakouCharacter Design & Chief Animation Supervisor: Miho TaninoSeries Composition & Screenplay: Yuko KakiharaMusic: […] L’article BLUE BOX Season 2 Releases Special PV to Celebrate Episode 7 est apparu en premier sur AnimeTV チェーン .",
+      "source": "AnimeTV",
+      "source_name": "AnimeTV",
+      "tier": 1,
+      "pubDate": "2026-11-23T00:08:09+00:00",
+      "category": "فصل جدید",
+      "category_score": 7,
+      "category_source": "keyword",
+      "event_type": "trailer",
+      "franchise_en": null,
+      "priority_score": 50,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "gates_failed:recent_similarity",
+      "created_utc": "2026-11-23T00:08:57Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
