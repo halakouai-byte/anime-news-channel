@@ -2019,9 +2019,12 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "POSTED",
       "hold_reason": "gates_failed:length",
-      "created_utc": "2026-11-22T01:28:47Z"
+      "created_utc": "2026-11-22T01:28:47Z",
+      "message_id": 55,
+      "posted_utc": "2026-11-23T21:42:58Z",
+      "caption": "Bleach در راه است؛ رویداد\n\nیک خبر خوب برای کسانی که بلیچ را دوست دارند: رویداد اثر اعلام شد.\n\nبلیچ از آن آثاری است که هر خبر تازه‌اش در دنیای انیمه بازتاب دارد؛ این اعلام هم از همان جنس خبرهاست و نشان می‌دهد عوامل ساخت هنوز برای این اثر برنامه دارند. این اعلام در جریان یک رویداد ویژه انجام شد؛ جایی که عوامل ساخت خبر تازه را مستقیم با طرفداران در میان گذاشتند.\n\nچرا مهم است؟ چون کی‌ویژوال تازه بلیچ اولین تصویر رسمی از این بخش است و حال‌وهوای آن را بهتر از هر توضیحی نشان می‌دهد؛ تصویری که از امروز معیار انتظار طرفداران از فصل تازه خواهد بود.\n\nمنبع: AnimeTV\nhttps://animetv-jp.net/bleach-fes-unveils-new-key-visual-featuring-ichigo-kurosaki-and-13-characters\n\n#انیمه #Bleach #تریلر"
     },
     {
       "guid": "https://animeherald.com/?p=78763",
@@ -2348,9 +2351,12 @@
       "franchise_en": null,
       "priority_score": 40,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "POSTED",
       "hold_reason": "gates_failed:why_specific",
-      "created_utc": "2026-11-22T10:01:52Z"
+      "created_utc": "2026-11-22T10:01:52Z",
+      "message_id": 58,
+      "posted_utc": "2026-11-23T22:28:02Z",
+      "caption": "Bride of the Barrier Master خبرساز شد: معرفی صداپیشه‌های تازه\n\nخبر امروز دنیای انیمه از عروس استاد مانع می‌آید؛ معرفی صداپیشه‌های تازه این اثر تایید شد.\n\nگزارش کامل این خبر در Anime Corner آمده است؛ جایی که زمان‌بندی و عوامل اصلی اثر هم در آن آمده و لینک آن در انتهای همین پست است تا خودتان هم بخوانید. برای طرفدارانی که عروس استاد مانع را دنبال می‌کنند، همین اعلام یعنی تصویر آینده اثر روشن‌تر شد؛ حالا نوبت جزئیات بیشتر است که در روزهای آینده از راه برسد و تکلیف بقیه بخش‌ها هم مشخص شود.\n\nچرا مهم است؟ چون معرفی صداپیشه‌های تازه، صدای شخصیت‌های عروس استاد مانع را مشخص می‌کند و همان صداهایی است که در فصل تازه خواهید شنید.\n\nمنبع: Anime Corner\nhttps://animecorner.me/bride-of-the-barrier-master-anime-reveals-main-trailer-visual-additional-cast-opening-theme-song-artist\n\n#انیمه #BrideOfTheBarrierMaster #تریلر"
     },
     {
       "guid": "https://animecorner.me/classroom-of-the-elite-season-5-announces-2027-premiere-date/",
@@ -3013,9 +3019,10 @@
       "franchise_en": null,
       "priority_score": 40,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "POSTED",
       "hold_reason": "",
-      "created_utc": "2026-11-23T15:00:57Z"
+      "created_utc": "2026-11-23T15:00:57Z",
+      "message_id": 56
     },
     {
       "guid": "https://myanimelist.net/news/74973042?_location=rss",
@@ -3091,6 +3098,53 @@
       "message_id": 51,
       "posted_utc": "2026-11-23T20:31:16Z",
       "caption": "Never-Before-Announced New Simulcasts؛ معرفی صداپیشه‌های تازه\n\nNever-Before-Announced New Simulcasts سکوت را شکست؛ معرفی صداپیشه‌های تازه اثر اعلام شد.\n\nبا این اعلام، Never-Before-Announced New Simulcasts یک بار دیگر در مرکز توجه طرفداران قرار گرفت؛ خبری که از امروز در تقویم دنیای انیمه ثبت شده و ادامه‌اش را باید در روزهای آینده دنبال کرد.\n\nچرا مهم است؟ چون معرفی صداپیشه‌های تازه، صدای شخصیت‌های Never-Before-Announced New Simulcasts را مشخص می‌کند و همان صداهایی است که در فصل تازه خواهید شنید؛ صداهایی که انتخابشان نشان می‌دهد عوامل ساخت برای این بخش برنامه جدی دارند.\n\nمنبع: Anime Corner\nhttps://animecorner.me/hidive-announces-never-before-announced-new-simulcasts-to-be-revealed-at-anime-frontier-in-schedule-unveil\n\n#انیمه #NeverBeforeAnnouncedNewSimulcasts #فصل_جدید"
+    },
+    {
+      "guid": "https://animetv-jp.net/?p=51501",
+      "hash": "04e5afda8fe231c18cb205c304cf99972cf5e99a69d8bb8789fa1fdc01526797",
+      "story_key": null,
+      "title": "Jimoto no Ijimekkotachi ni Shikaeshi shiyo toshitara TV Anime Reveals Lynn as Shigure Mangetsu",
+      "link": "https://animetv-jp.net/jimoto-no-ijimekkotachi-ni-shikaeshi-shiyo-toshitara-tv-anime-reveals-lynn-as-shigure-mangetsu",
+      "summary": "Lynn has been cast as Shigure Mangetsu, one of the heroines in the upcoming TV anime Jimoto no Ijimekkotachi ni Shikaeshi shiyo toshitara, Betsu no Tatakai ga Hajimatta, based on the original work by Kengo Matsumoto. The main cast is being revealed over four consecutive days. Kaori Maeda was announced as the voice of Akira […] L’article Jimoto no Ijimekkotachi ni Shikaeshi shiyo toshitara TV Anime Reveals Lynn as Shigure Mangetsu est apparu en premier sur AnimeTV チェーン .",
+      "source": "AnimeTV",
+      "source_name": "AnimeTV",
+      "tier": 1,
+      "pubDate": "2026-11-23T21:58:07+00:00",
+      "category": "فصل جدید",
+      "category_score": 5,
+      "category_source": "keyword",
+      "event_type": "casting",
+      "franchise_en": null,
+      "priority_score": 45,
+      "is_breaking": false,
+      "status": "POSTED",
+      "hold_reason": "",
+      "created_utc": "2026-11-23T21:58:24Z",
+      "message_id": 57,
+      "posted_utc": "2026-11-23T22:13:01Z",
+      "caption": "رسمی شد: معرفی صداپیشه‌های تازه Jimoto no Ijimekkotachi\n\nخبرش رسید: جیموتو نو ایجیمه‌کوتاچی قرار است معرفی صداپیشه‌های تازه داشته باشد.\n\nجیموتو نو ایجیمه‌کوتاچی از آن آثاری است که هر خبر تازه‌اش در دنیای انیمه بازتاب دارد؛ این اعلام هم از همان جنس خبرهاست و نشان می‌دهد عوامل ساخت هنوز برای این اثر برنامه دارند. گزارش کامل این خبر در AnimeTV آمده است؛ جایی که زمان‌بندی و عوامل اصلی اثر هم در آن آمده و لینک آن در انتهای همین پست است تا خودتان هم بخوانید.\n\nچرا مهم است؟ چون معرفی صداپیشه‌های تازه، صدای شخصیت‌های جیموتو نو ایجیمه‌کوتاچی را مشخص می‌کند و همان صداهایی است که در فصل تازه خواهید شنید.\n\nمنبع: AnimeTV\nhttps://animetv-jp.net/jimoto-no-ijimekkotachi-ni-shikaeshi-shiyo-toshitara-tv-anime-reveals-lynn-as-shigure-mangetsu\n\n#انیمه #JimotoNoIjimekkotachi #فصل_جدید"
+    },
+    {
+      "guid": "https://animetv-jp.net/?p=51497",
+      "hash": "39de558cf024e0674926afafaa251f645114e886edcd33e9f089f83a1cf375b4",
+      "story_key": null,
+      "title": "Magical Buffs: The Support Caster is Stronger Than He Realized! Anime Reveals Three New Cast Members",
+      "link": "https://animetv-jp.net/magical-buffs-the-support-caster-is-stronger-than-he-realized-anime-reveals-three-new-cast-members",
+      "summary": "The TV anime Magical Buffs: The Support Caster is Stronger Than He Realized!, based on the original work by Haka Tokura and Shin Arakawa, has announced three additional cast members: Yūki Hirose, Natsumi Takamori, and Yuka Nukui. The anime is scheduled to premiere on January 4, 2027. Key Visual: ADDITIONAL CAST:Nikola as Yuuki HiroseMehlis as […] L’article Magical Buffs: The Support Caster is Stronger Than He Realized! Anime Reveals Three New Cast Members est apparu en premier sur AnimeTV チェーン .",
+      "source": "AnimeTV",
+      "source_name": "AnimeTV",
+      "tier": 1,
+      "pubDate": "2026-11-23T21:50:52+00:00",
+      "category": "فصل جدید",
+      "category_score": 5,
+      "category_source": "keyword",
+      "event_type": "trailer",
+      "franchise_en": null,
+      "priority_score": 50,
+      "is_breaking": false,
+      "status": "QUEUED",
+      "hold_reason": "",
+      "created_utc": "2026-11-23T21:58:24Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
