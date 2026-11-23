@@ -261,7 +261,7 @@ history — never silently delete the file and move on.
   lead-template freshness max 3 uses in 7 days, specific «چرا مهم
   است؟», numbers/dates from the source, event-vs-source consistency,
   no doubled word in one line — gate 10, added 2026-11-22 after msg 10
-  printed «انیمه تازه تازه اثر اعلام شد»).
+  printed «انیمه تازه تازه اثر اعلام شد»). (2026-11-23: word-boundary fix — a franchise name ending in «را», e.g. «یوزاکورا را», is not a double; a true double like «تازه تازه» still fails)
   3 gate failures → human HOLD.
 - Bank maintenance (v2 minimums): +15 templates + 10 phrases per month;
   new-name queue emptied weekly; franchises updated every anime season
@@ -492,6 +492,23 @@ history — never silently delete the file and move on.
   15/16 (lost with the sweeper's runner) — a historical record gap, not
   a re-post risk. Deletion of the duplicate msgs 15/16 is the manager's
   decision (management chat), not the team's.
+- 2026-11-23 ~04:30 UTC — BANK BUNDLE (gate rescue, 8h silence 22 Nov):
+  35 gates_failed HOLD items were real news (20 new seasons) that the
+  rewrite could not turn into 600-char posts — thin sources, missing
+  franchise names (why_specific can NEVER pass when fr_en is None: the
+  name list is empty), and no long body template. FIX (local, for the
+  browser commit; test `scripts/test_gate_rescue.py` + frozen fixture):
+  +26 franchise names in `data/names-fa.json` (the new-name queue),
+  +10 long bodies (150–200 chars) + 4 whys (trailer/cast/visual/sequel)
+  + 3 note variants in `data/templates-fa.json`, early-break removed in
+  `rewrite_post` (all 30 attempts now run), gate-10 word-boundary fix
+  (see §7). Proof: 37/39 frozen fixture items reach 10/10 (was 0/39);
+  Sakamoto Days stays HOLD (event_consistency, correct) and the Anime
+  Herald essay stays HOLD (no franchise). No gate loosened. NOTE (same
+  run): `test_dedupe_bangdream.py` T3 fails on pristine main too —
+  pre-existing drift (normalize_franchise returns «bang dream mita
+  yume» but the test's hand-written ANN key is «bang dream»); needs a
+  dedupe-test fix, not in this bundle.
 
 ## 9. Rules (hard)
 
