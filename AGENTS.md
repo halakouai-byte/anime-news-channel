@@ -273,10 +273,24 @@ history — never silently delete the file and move on.
   + monthly. If a template bank is not updated for 2 months, gate 6
   starts rejecting posts — that is the system working correctly; the
   fix is adding templates, never loosening the gate.
+- Weekly HOLD triage (added 2026-11-23, critic review #3): every week,
+  review HOLD items oldest-first. low-confidence HOLDs NEVER re-test
+  (human only) and expire 72h after created_utc — they are the triage
+  priority; gates_failed HOLDs re-test every run via is_pending.
+  Trigger snapshot (review #3, 2026-11-23): 23 low-confidence, oldest
+  ~54h, 6 over 48h. Empty the new-name queue in the same session
+  (names the extractor flagged new_name=True; e.g. Oishinbo was already
+  in bank v1.1 — its msg-8 defect was the extractor, not the bank;
+  Tensei Kizoku added in bank v1.2).
 - Human in the loop (by design, ~1 hour/week): approving HOLD items,
   weekly 30-minute review (5 random posts, 10-question QA checklist in
   `docs/weekly-checklist.md`), monthly bank maintenance, taste
   decisions, crisis management (`docs/runbook.md`).
+- Bot commands: NONE until phase 2 (accepted silence, 2026-11-23,
+  critic review #3 — the third review scoring it 2/10). /start /latest
+  /help are advertised in BotFather but intentionally unanswered; the
+  bot is API-only (sendPhoto / editMessageCaption). No BotFather change
+  — the silence is the decision, not an oversight.
 - Sources: 8 verified RSS feeds (ANN, MAL, Anime Corner, AnimeTV,
   Fandom Post, Siliconera, Honey's Anime, Anime Herald) — 7 polled by the
   Worker every 1–5 minutes; Fandom Post is blocked with a stable HTTP 403
@@ -551,6 +565,29 @@ history — never silently delete the file and move on.
   missing period after the gate-10 parenthesis (manager note 2026-11-23
   ~05:36 Tehran) + the gate-count updates in the older tests (10/10 →
   11/11).
+- 2026-11-23 ~09:27 Tehran — CRITIC REVIEW #3: 224/310 (72%), up from
+  219 (71%). Main finding: extract_franchise matched the longest bank
+  name ANYWHERE in title+summary — msg 8's title was the studio
+  "Shin-Ei Animation" (17 chars) although "Oishinbo" (8 chars) was
+  already in bank v1.1. FIX (this bundle): two-stage matching —
+  anime/manga names in the title first, then in the summary, studios/
+  platforms/people only as a fallback with new_name=True; + Tensei
+  Kizoku keys (bank v1.2, 155 names). Proof: scripts/
+  test_extract_franchise.py 7/7 (old code → "Shin-Ei Animation" for the
+  real AnimeTV text; new code → "Oishinbo"). Also in this bundle:
+  _has_premiered now checks the date attached to "premiered" against
+  this item's date_fa (msg 18's body claimed the new Tougen Anki arc had
+  already aired — only the previous part had; test_has_premiered.py 7/7);
+  queue_size in merge_state_data takes the freshest state's value, not
+  max (the stale 51 is gone; test_queue_size_merge.py 5/5); the archive
+  row for msg 27 now holds the corrected 586-char caption; README
+  "10 gates" → 11, setup-qa-report "7 posts" → 23; bot-commands silence
+  formally accepted (no user-facing commands until phase 2, §7); weekly
+  HOLD triage added to §7. Msg 8's caption edit follows after this code
+  lands (approved in the manager's order; the corrected caption is in
+  the handoff). Msgs 18/20's live captions are still open defects from
+  review #3 (no edit ordered yet). Msgs 15/16 untouched — deletion
+  decision still with the user.
 
 ## 9. Rules (hard)
 
