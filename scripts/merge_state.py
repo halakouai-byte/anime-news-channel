@@ -58,6 +58,14 @@ def _remote_posted_ids(root: Path, ref: str) -> set[int] | None:
     return set(remote.get("posted_message_ids", []))
 
 
+def _remote_log_lines(root: Path, ref: str, rel: str) -> set[str] | None:
+    """خط‌های لاگ راه‌دور (برای راستی‌آزمایی قدم ۲). None اگر خوانده نشد."""
+    rr = _git(["show", f"{ref}:{rel}"], root)
+    if rr.returncode != 0:
+        return None
+    return {l.strip() for l in rr.stdout.decode("utf-8").splitlines() if l.strip()}
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(
         description="merge-based commit of state/queue/archive (anti-race)")
@@ -91,6 +99,21 @@ def main(argv=None) -> int:
             if missing:
                 log_error("merge_state: merged state is MISSING remote posted ids "
                           f"{sorted(missing)} — refusing to commit")
+                return 1
+        # بسته لاگ ۲۰۲۶-۱۱-۲۳: هیچ خط لاگ راه‌دور هم نباید گم شده باشد
+        # (همان قانونی که جلوی گم‌شدن خط‌های ۲۳/۲۴/۲۵ را می‌گیرد).
+        for rel in ("logs/publish-log.md", "logs/fetch-log.md"):
+            remote_lines = _remote_log_lines(root, args.ref, rel)
+            if remote_lines is None:
+                continue
+            lp = root / rel
+            local_lines = {l.strip() for l in
+                           (lp.read_text(encoding="utf-8").splitlines()
+                            if lp.exists() else []) if l.strip()}
+            missing_log = remote_lines - local_lines
+            if missing_log:
+                log_error(f"merge_state: merged {rel} is MISSING "
+                          f"{len(missing_log)} remote line(s) — refusing to commit")
                 return 1
         # ۳. stage + commit
         add = _git(["add", *[f for f in DATA_FILES if (root / f).exists()]], root)

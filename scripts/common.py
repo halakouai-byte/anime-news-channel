@@ -457,6 +457,39 @@ def merge_archive_lines(local_lines: list[str], remote_lines: list[str],
     return out[-cap:]
 
 
+_LOG_TS_RE = re.compile(r"^-\s*(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z)")
+
+
+def merge_log_lines(local_lines: list[str], remote_lines: list[str],
+                    cap: int = 500) -> list[str]:
+    """ادغام logs/*.md — union خط‌به‌خط، مرتب بر اساس تایم‌استمپ.
+
+    گم‌شدن خط‌های publish-log برای پیام‌های ۲۳/۲۴/۲۵ (۲۲ نوامبر ۲۰۲۶):
+    publish.py بعد از هر پست یک خط به publish-log.md اضافه می‌کند، ولی
+    sync_remote_state فقط state/queue/archive را ادغام می‌کرد — نه logs/.
+    پس رانی با checkout کهنه، با `merge -s ours` خط‌های تازه‌ترِ راه‌دور
+    را بی‌صدا می‌انداخت (publish-log فقط موقع پست اضافه می‌شود، پس مثل
+    fetch-log خودش ترمیم نمی‌شد). این تابع همان قانون union را برای
+    لاگ‌ها پیاده می‌کند: خط تکراری (همان رشته) یک بار می‌ماند، خط‌های
+    تازه‌ترِ هر دو طرف حفظ می‌شوند، و ترتیب زمانی است.
+    """
+    seen: set[str] = set()
+    out: list[str] = []
+    for line in list(remote_lines) + list(local_lines):
+        line = (line or "").strip()
+        if not line or line in seen:
+            continue
+        seen.add(line)
+        out.append(line)
+
+    def _ts(line: str) -> str:
+        m = _LOG_TS_RE.match(line)
+        return m.group(1) if m else ""
+
+    out.sort(key=_ts)
+    return out[-cap:]
+
+
 def sync_remote_state(state_path=None, queue_path=None, archive_path=None,
                       repo_dir: str | Path | None = None,
                       ref: str = "origin/main", timeout: int = 30) -> bool:
@@ -527,6 +560,22 @@ def sync_remote_state(state_path=None, queue_path=None, archive_path=None,
         if merged_lines != local_lines:
             ap.parent.mkdir(parents=True, exist_ok=True)
             ap.write_text("\n".join(merged_lines) + "\n", encoding="utf-8")
+            changed = True
+    # بسته لاگ ۲۰۲۶-۱۱-۲۳: لاگ‌ها هم union می‌شوند (publish-log.md و
+    # fetch-log.md) — وگرنه `merge -s ours` در کامیت، خط‌های تازه‌ترِ
+    # راه‌دور را بی‌صدا می‌اندازد (پیام‌های ۲۳/۲۴/۲۵ در publish-log).
+    for rel in ("logs/publish-log.md", "logs/fetch-log.md"):
+        remote_log_raw = _show(rel)
+        if not remote_log_raw:
+            continue
+        lp = root / rel
+        local_log_lines = (lp.read_text(encoding="utf-8").splitlines()
+                           if lp.exists() else [])
+        merged_log = merge_log_lines(
+            local_log_lines, remote_log_raw.decode("utf-8").splitlines())
+        if merged_log != local_log_lines:
+            lp.parent.mkdir(parents=True, exist_ok=True)
+            lp.write_text("\n".join(merged_log) + "\n", encoding="utf-8")
             changed = True
     if changed:
         log_info("sync_remote_state: local state refreshed from origin/main")
