@@ -1469,7 +1469,7 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "STALE",
       "hold_reason": "gates_failed:english_limited,length,why_specific",
       "created_utc": "2026-11-21T06:08:49Z"
     },
