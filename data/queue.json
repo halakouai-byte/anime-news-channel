@@ -2719,6 +2719,28 @@
       "status": "HOLD",
       "hold_reason": "gates_failed:recent_similarity",
       "created_utc": "2026-11-23T00:08:57Z"
+    },
+    {
+      "guid": "https://animetv-jp.net/?p=51468",
+      "hash": "e954ac69bf10a7bdcae072d0856b1265f043ceb85b3a293bf5919140c8356990",
+      "story_key": null,
+      "title": "Aria the Scarlet Ammo Corto Short Anime Reveals Key Visual, Cast, and April 2027 Streaming Debut",
+      "link": "https://animetv-jp.net/aria-the-scarlet-ammo-corto-short-anime-reveals-key-visual-cast-and-april-2027-streaming-debut",
+      "summary": "The new short anime Aria the Scarlet Ammo Corto has revealed its first key visual, voice cast, and main staff. The anime is scheduled to begin streaming on various platforms in Japan in April 2027. The project celebrates the 15th anniversary of the original Aria the Scarlet Ammo TV anime, which premiered in 2011. Key […] L’article Aria the Scarlet Ammo Corto Short Anime Reveals Key Visual, Cast, and April 2027 Streaming Debut est apparu en premier sur AnimeTV チェーン .",
+      "source": "AnimeTV",
+      "source_name": "AnimeTV",
+      "tier": 1,
+      "pubDate": "2026-11-23T00:14:36+00:00",
+      "category": "فصل جدید",
+      "category_score": 6,
+      "category_source": "keyword",
+      "event_type": "trailer",
+      "franchise_en": null,
+      "priority_score": 50,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "gates_failed:english_limited,why_specific",
+      "created_utc": "2026-11-23T00:16:51Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
