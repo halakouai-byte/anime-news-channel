@@ -38,3 +38,5 @@
 - 2026-11-23T20:16:05Z UTC (2 آذر 1405، تهران): posted message_id=50 guid=https://myanimelist.net/news/74967291?_location=rss category=فصل جدید score=45 breaking=False latency_min=2426.8
 - 2026-11-23T20:31:16Z UTC (3 آذر 1405، تهران): posted message_id=51 guid=https://animecorner.me/hidive-announces-never-before-announced-new-simulcasts-to-be-revealed-at-anime-frontier-in-schedule-unveil/ category=فصل جدید score=55 breaking=False latency_min=4.5
 - 2026-11-23T20:46:18Z UTC (3 آذر 1405، تهران): posted message_id=52 guid=https://www.animenewsnetwork.com/cms/.244073 category=فصل جدید score=45 breaking=False latency_min=2467.7
+- 2026-11-23T21:01:20Z UTC (3 آذر 1405، تهران): posted message_id=53 guid=https://animetv-jp.net/?p=51440 category=فصل جدید score=45 breaking=False latency_min=2661.6
+- 2026-11-23T21:16:21Z UTC (3 آذر 1405، تهران): posted message_id=54 guid=https://animetv-jp.net/?p=51424 category=فیلم score=45 breaking=False latency_min=2718.0

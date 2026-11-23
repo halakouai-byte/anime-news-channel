@@ -1898,9 +1898,12 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "POSTED",
       "hold_reason": "gates_failed:length",
-      "created_utc": "2026-11-22T01:28:47Z"
+      "created_utc": "2026-11-22T01:28:47Z",
+      "message_id": 53,
+      "posted_utc": "2026-11-23T21:01:20Z",
+      "caption": "خبر تازه Crunchyroll: فصل ۲\n\nتقویم طرفداران کرانچی‌رول از امروز شلوغ‌تر شد؛ فصل ۲ اثر اعلام شد.\n\nاین اعلام در جریان یک رویداد ویژه انجام شد؛ جایی که عوامل ساخت خبر تازه را مستقیم با طرفداران در میان گذاشتند. برای طرفدارانی که کرانچی‌رول را دنبال می‌کنند، همین اعلام یعنی تصویر آینده اثر روشن‌تر شد؛ حالا نوبت جزئیات بیشتر است که در روزهای آینده از راه برسد و تکلیف بقیه بخش‌ها هم مشخص شود.\n\nچرا مهم است؟ چون تایید فصل تازه یعنی قصه کرانچی‌رول ادامه دارد و شخصیت‌های آشنا دوباره برمی‌گردند؛ ادامه‌ای که مسیر قصه را یک فصل دیگر جلو می‌برد.\n\nمنبع: AnimeTV\nhttps://animetv-jp.net/tamons-b-side-tv-anime-season-2-officially-announced\n\n#انیمه #Crunchyroll #فصل_جدید"
     },
     {
       "guid": "https://animetv-jp.net/?p=51437",
@@ -1970,9 +1973,10 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "POSTED",
       "hold_reason": "gates_failed:length",
-      "created_utc": "2026-11-22T01:28:47Z"
+      "created_utc": "2026-11-22T01:28:47Z",
+      "message_id": 54
     },
     {
       "guid": "https://animetv-jp.net/?p=51420",

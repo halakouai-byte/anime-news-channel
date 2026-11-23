@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 2696,
+    "duplicates_total": 2748,
     "hold_total": 23,
-    "posts_today": 0,
+    "posts_today": 2,
     "posts_today_date": "2026-11-24",
-    "posts_total": 45,
-    "rejected_total": 418
+    "posts_total": 47,
+    "rejected_total": 427
   },
-  "last_fetch_utc": "2026-11-23T20:31:15Z",
-  "last_publish_utc": "2026-11-23T20:46:18Z",
+  "last_fetch_utc": "2026-11-23T21:00:58Z",
+  "last_publish_utc": "2026-11-23T21:16:21Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -60,7 +60,9 @@
     "3e40813191148123e86cf44921296223d224e51720768cd6887e0a0ade59dfd7": 49,
     "562fa88f8259a9943ca083df918890a08f2f53619cd0d00c29d70f5ec7d0e63c": 50,
     "08feaa449c8e58d80893e793628574892c1a825bdfdb9e940bf979040639633e": 51,
-    "52ce1c83096320e36a9c7b8704378e993cac98cc4b8516486ad4e27e54803da7": 52
+    "52ce1c83096320e36a9c7b8704378e993cac98cc4b8516486ad4e27e54803da7": 52,
+    "6e1ab1df6b2f6f47e8181799c6e52012e387a284303ac09ee1f322fa1c0ddf29": 53,
+    "cec56704dbf9033b4ebbc882a2cf6c6dfa7d697e7eae20f95a3b653fdc1811db": 54
   },
   "posted_message_ids": [
     6,
@@ -107,7 +109,9 @@
     49,
     50,
     51,
-    52
+    52,
+    53,
+    54
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -927,6 +931,37 @@
         "video"
       ],
       "posted_utc": "2026-11-23T20:46:18Z"
+    },
+    {
+      "title_norm": "tamon’s b-side tv anime season 2 officially announced",
+      "words": [
+        "2",
+        "anime",
+        "announced",
+        "b-side",
+        "officially",
+        "season",
+        "tamon’s",
+        "tv"
+      ],
+      "posted_utc": "2026-11-23T21:01:20Z"
+    },
+    {
+      "title_norm": "witch on the holy night anime film reveals third key visual",
+      "words": [
+        "anime",
+        "film",
+        "holy",
+        "key",
+        "night",
+        "on",
+        "reveals",
+        "the",
+        "third",
+        "visual",
+        "witch"
+      ],
+      "posted_utc": "2026-11-23T21:16:21Z"
     }
   ],
   "seen_at": {
@@ -1301,7 +1336,9 @@
       "2026-11-23T20:01:04Z",
       "2026-11-23T20:16:05Z",
       "2026-11-23T20:31:16Z",
-      "2026-11-23T20:46:18Z"
+      "2026-11-23T20:46:18Z",
+      "2026-11-23T21:01:20Z",
+      "2026-11-23T21:16:21Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -1348,7 +1385,9 @@
       "2026-11-23T20:01:04Z",
       "2026-11-23T20:16:05Z",
       "2026-11-23T20:31:16Z",
-      "2026-11-23T20:46:18Z"
+      "2026-11-23T20:46:18Z",
+      "2026-11-23T21:01:20Z",
+      "2026-11-23T21:16:21Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -1395,7 +1434,9 @@
       "2026-11-23T20:01:04Z",
       "2026-11-23T20:16:05Z",
       "2026-11-23T20:31:16Z",
-      "2026-11-23T20:46:18Z"
+      "2026-11-23T20:46:18Z",
+      "2026-11-23T21:01:20Z",
+      "2026-11-23T21:16:21Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -1442,7 +1483,9 @@
       "2026-11-23T20:01:04Z",
       "2026-11-23T20:16:05Z",
       "2026-11-23T20:31:16Z",
-      "2026-11-23T20:46:18Z"
+      "2026-11-23T20:46:18Z",
+      "2026-11-23T21:01:20Z",
+      "2026-11-23T21:16:21Z"
     ]
   },
   "version": 2
