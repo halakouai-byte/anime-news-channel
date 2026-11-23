@@ -227,9 +227,9 @@ check("T5 fixed caption PASSES no_double_word",
 
 # End-to-end: the caption the fixed code produces for the ANN item now.
 post = rewrite_post(facts, seed=int(sha256_hex(ANN["guid"])[:8], 16))
-check("T5 rewrite_post passes 10/10 for the ANN BanG Dream item",
-      len(post.get("gates_passed", [])) == 10,
-      f"({len(post.get('gates_passed', []))}/10: {post.get('gates_passed')})")
+check("T5 rewrite_post passes 11/11 for the ANN BanG Dream item",
+      len(post.get("gates_passed", [])) == 11,
+      f"({len(post.get('gates_passed', []))}/11: {post.get('gates_passed')})")
 check("T5 produced caption has no doubled word",
       "تازه تازه" not in post.get("caption", ""))
 check("T5 produced title does not end with dangling «در»",

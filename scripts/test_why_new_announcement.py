@@ -109,8 +109,8 @@ check("T4 BanG Dream why is why_new_announcement",
 check("T4 BanG Dream body_season_premiered NOT selected",
       "body_season_premiered" not in post["template_ids"]["bodies"],
       f"(got {post['template_ids']['bodies']})")
-check("T4 BanG Dream passes 10/10",
-      len(post["gates_passed"]) == 10, f"({len(post['gates_passed'])}/10)")
+check("T4 BanG Dream passes 11/11",
+      len(post["gates_passed"]) == 11, f"({len(post['gates_passed'])}/11)")
 check("T4 BanG Dream why says «دنیای … بزرگ‌تر می‌شود»",
       "بزرگ‌تر می‌شود" in post["caption"] and "قصه" not in post["caption"].split("چرا مهم است؟")[1])
 
@@ -127,8 +127,8 @@ check("T5 Frieren S2 body_season_premiered IS eligible",
            "event": "announcement", "event_fa": "انیمه تازه", "date_fa": "",
            "fr_fa": "فریرن", "fr_en": "Frieren", "studio_en": "", "studio_fa": "",
            "source_name": "ANN", "pubDate": FRIEREN_S2["pubDate"]}, BANKS)])
-check("T5 Frieren S2 passes 10/10",
-      len(post2["gates_passed"]) == 10, f"({len(post2['gates_passed'])}/10)")
+check("T5 Frieren S2 passes 11/11",
+      len(post2["gates_passed"]) == 11, f"({len(post2['gates_passed'])}/11)")
 
 # --- T6: AnimeCorner BanG Dream (منبع دوم پیام ۱۱) هم why تازه می‌گیرد ---
 ac = dict(BANGDREAM_ANN)

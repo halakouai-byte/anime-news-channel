@@ -572,9 +572,15 @@ def _build_once(fx: dict, banks: dict, rng: random.Random):
     bodies = _eligible_bodies(fx, banks)
     specific = [b for b in bodies if b["id"] not in ("body_more_detail", "body_wait", "body_franchise_context")]
     generic = [b for b in bodies if b["id"] in ("body_more_detail", "body_wait", "body_franchise_context")]
-    date_bodies = [b for b in specific if b["id"] in ("body_premiere", "body_source_date",
-                                                      "body_premiere_long")]
-    other = [b for b in specific if b["id"] not in ("body_premiere", "body_source_date")]
+    # دروازه ۱۱ (پیام ۲۷، Hidan no Aria، ۲۳ نوامبر ۲۰۲۶): other هیچ قالب
+    # تاریخی ندارد — همه قالب‌های تاریخی یک مجموعه‌اند. پیش‌تر other فقط
+    # body_premiere و body_source_date را کنار می‌گذاشت، نه body_premiere_long
+    # را (بسته بانک ۲۳ نوامبر)؛ پس همان قالب دوبار (body_premiere_long × ۲)
+    # یا دو قالب با جمله هم‌پوشان (body_premiere + body_premiere_long — جمله
+    # اولی پیشوند دومی است) در بدنه می‌آمد و جمله بلند دوبار تکرار می‌شد.
+    date_ids = ("body_premiere", "body_source_date", "body_premiere_long")
+    date_bodies = [b for b in specific if b["id"] in date_ids]
+    other = [b for b in specific if b["id"] not in date_ids]
     rng.shuffle(date_bodies)
     rng.shuffle(other)
     rng.shuffle(generic)
@@ -663,11 +669,31 @@ def _word_similarity(a: str, b: str) -> float:
     return len(wa & wb) / len(wa | wb)
 
 
+def _has_repeated_sentence(caption: str, min_len: int = 40) -> bool:
+    """یک جمله بلند (≥ ۴۰ حرف) دوبار در یک کپشن آمده است؟ — دروازه ۱۱.
+
+    پیام ۲۷ (Hidan no Aria، ۲۳ نوامبر ۲۰۲۶): جمله body_premiere_long دوبار
+    پشت سر هم در بدنه آمد. جمله‌ها با «.»، «!»، «؟»، «؛» و خط تازه جدا
+    می‌شوند؛ عبارت‌های کوتاه (< ۴۰ حرف) شمرده نمی‌شوند تا تکرارهای طبیعی
+    (نام اثر، «خبر تازه») خطا نخورند. لینک منبع از شمارش کنار گذاشته می‌شود.
+    """
+    text = re.sub(r"https?://\S+", "", caption)
+    segs = [re.sub(r"\s+", " ", s).strip()
+            for s in re.split(r"[.!؟؛\n]+", text)]
+    seen = set()
+    for s in segs:
+        if len(s) >= min_len:
+            if s in seen:
+                return True
+            seen.add(s)
+    return False
+
+
 def check_gates(caption: str, title: str, fx: dict, why: str,
                 recent_posts: list | None = None,
                 template_usage: dict | None = None,
                 template_ids: dict | None = None) -> dict:
-    """هر ۱۰ دروازه را می‌سنجد؛ خروجی {gate_id: bool}."""
+    """هر ۱۱ دروازه را می‌سنجد؛ خروجی {gate_id: bool}."""
     gates: dict[str, bool] = {}
     gates["length"] = 600 <= len(caption) <= 850 and len(title) <= 70
     gates["no_placeholder"] = not _has_placeholder(caption)
@@ -765,6 +791,12 @@ def check_gates(caption: str, title: str, fx: dict, why: str,
     gates["no_double_word"] = not re.search(
         r"(?<![\u0600-\u06FF\u200C])([\u0600-\u06FF]{2,})[ \t]+\1(?![\u0600-\u06FF\u200C])",
         caption_no_url)
+    # دروازه ۱۱ — جمله بلند تکراری در یک کپشن (پیام ۲۷، ۲۳ نوامبر ۲۰۲۶):
+    # همان جمله نباید دوبار بیاید، حتی اگر از دو قالب متفاوت آمده باشد
+    # (body_premiere + body_premiere_long — جمله اولی پیشوند دومی است).
+    # نگهبان نهایی است: رفع ریشه‌ای در _build_once جلوی ساخت دوباره را
+    # می‌گیرد، ولی این دروازه هر منبع تکرار دیگر را هم در پست‌شدن می‌گیرد.
+    gates["no_repeated_sentence"] = not _has_repeated_sentence(caption_no_url)
     return gates
 
 
@@ -808,7 +840,7 @@ def rewrite_post(facts: dict, seed: int | None = None,
         if score > best_score:
             best_score, best = score, (built, gates, passed)
         # بسته بانک ۲۰۲۶-۱۱-۲۳: حذف early-break (توقف در اولین ۹/۱۰ با طول
-        # معتبر) — هر ۳۰ تلاش امتحان می‌شود تا ۱۰/۱۰ احتمالی در تلاش‌های
+        # معتبر) — هر ۳۰ تلاش امتحان می‌شود تا ۱۱/۱۱ احتمالی در تلاش‌های
         # بعدی از دست نرود؛ best فقط وقتی بهتر شود عوض می‌شود، پس حذف
         # break هیچ آیتمی را که پیش‌تر قبول می‌شد رد نمی‌کند.
     built, gates, passed = best

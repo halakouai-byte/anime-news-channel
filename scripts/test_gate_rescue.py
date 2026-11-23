@@ -68,7 +68,7 @@ def main() -> int:
         passed = set(post.get("gates_passed", []))
         recorded = set(g for g in (it["hold_reason"] or "")
                        .replace("gates_failed:", "").split(",") if g)
-        if len(passed) == 10:
+        if len(passed) == 11:
             # فقط event_consistency باید همیشه HOLD بماند (کپشن گمراه‌کننده —
             # Sakamoto Days). recent_similarity معیارش شباهت کپشن است، نه
             # یکسانی خبر: وقتی قالب‌های تازه جمله‌بندی را به‌اندازه کافی
@@ -84,9 +84,10 @@ def main() -> int:
                 ["length", "no_placeholder", "english_limited",
                  "source_similarity", "recent_similarity",
                  "template_freshness", "why_specific", "numbers_dates",
-                 "event_consistency", "no_double_word"]) - passed)))
+                 "event_consistency", "no_double_word",
+                 "no_repeated_sentence"]) - passed)))
     print(f"fixture: {len(items)} gates_failed HOLD items")
-    print(f"rescued (10/10): {len(rescued)}")
+    print(f"rescued (11/11): {len(rescued)}")
     for t in rescued:
         print(f"  + {t}")
     print(f"still held: {len(still_held)}")
