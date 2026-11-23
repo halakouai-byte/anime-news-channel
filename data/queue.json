@@ -2019,9 +2019,12 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "POSTED",
       "hold_reason": "gates_failed:length",
-      "created_utc": "2026-11-22T01:28:47Z"
+      "created_utc": "2026-11-22T01:28:47Z",
+      "message_id": 55,
+      "posted_utc": "2026-11-23T21:42:58Z",
+      "caption": "Bleach در راه است؛ رویداد\n\nیک خبر خوب برای کسانی که بلیچ را دوست دارند: رویداد اثر اعلام شد.\n\nبلیچ از آن آثاری است که هر خبر تازه‌اش در دنیای انیمه بازتاب دارد؛ این اعلام هم از همان جنس خبرهاست و نشان می‌دهد عوامل ساخت هنوز برای این اثر برنامه دارند. این اعلام در جریان یک رویداد ویژه انجام شد؛ جایی که عوامل ساخت خبر تازه را مستقیم با طرفداران در میان گذاشتند.\n\nچرا مهم است؟ چون کی‌ویژوال تازه بلیچ اولین تصویر رسمی از این بخش است و حال‌وهوای آن را بهتر از هر توضیحی نشان می‌دهد؛ تصویری که از امروز معیار انتظار طرفداران از فصل تازه خواهد بود.\n\nمنبع: AnimeTV\nhttps://animetv-jp.net/bleach-fes-unveils-new-key-visual-featuring-ichigo-kurosaki-and-13-characters\n\n#انیمه #Bleach #تریلر"
     },
     {
       "guid": "https://animeherald.com/?p=78763",
@@ -3013,9 +3016,10 @@
       "franchise_en": null,
       "priority_score": 40,
       "is_breaking": false,
-      "status": "QUEUED",
+      "status": "POSTED",
       "hold_reason": "",
-      "created_utc": "2026-11-23T15:00:57Z"
+      "created_utc": "2026-11-23T15:00:57Z",
+      "message_id": 56
     },
     {
       "guid": "https://myanimelist.net/news/74973042?_location=rss",
