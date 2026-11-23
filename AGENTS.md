@@ -244,7 +244,7 @@ history — never silently delete the file and move on.
   whose checkout is stale (another run posted in the meantime) sees the
   fresh posted records instead of re-posting. State is merged as a union,
   never rebased — `scripts/merge_state.py` owns the commit step in both
-  workflows (see §8, 2026-11-22 phantom posts). First complete version
+  workflows (see §8, 2026-11-22 phantom posts). Logs are merged the same way since 2026-11-23 (line-wise union, timestamp-sorted) — a stale checkout no longer discards newer publish-log lines (msgs 23/24/25). First complete version
   publishes; later sources are appended (`editMessageCaption`, only if
   the first post is < 2h old and the second source is Tier 1, max 3
   sources). A materially new fact from a second source → a separate
@@ -509,6 +509,21 @@ history — never silently delete the file and move on.
   pre-existing drift (normalize_franchise returns «bang dream mita
   yume» but the test's hand-written ANN key is «bang dream»); needs a
   dedupe-test fix, not in this bundle.
+- 2026-11-23 ~04:50 UTC — PUBLISH-LOG MERGE (log-loss fix): publish-log.md
+  on main had 13 lines, last = msg 22, although state.json + archive.jsonl
+  prove msgs 23/24/25 posted. Cause: sync_remote_state merged only
+  state/queue/archive, not logs/ — a run with a stale checkout pushed via
+  merge -s ours and silently discarded the remote's newer publish-log
+  lines. FIX (local, for the browser commit; test
+  `scripts/test_log_merge.py`): merge_log_lines in `common.py` (line-wise
+  union, timestamp-sorted) + sync_remote_state now merges
+  logs/publish-log.md and logs/fetch-log.md + merge_state.py step 2
+  verifies no remote log line is missing before committing. Proof:
+  temp-git-repo replay — a stale checkout keeps remote lines 23/24/25 +
+  its own line 26, and merge_state pushes all six. NOTE: the already-lost
+  23/24/25 lines cannot be resurrected (they were never committed;
+  latency_min is not in the archive) — the archive + state remain the
+  authoritative record; the fix only prevents future loss.
 
 ## 9. Rules (hard)
 
