@@ -588,6 +588,32 @@ history — never silently delete the file and move on.
   the handoff). Msgs 18/20's live captions are still open defects from
   review #3 (no edit ordered yet). Msgs 15/16 untouched — deletion
   decision still with the user.
+- 2026-11-23 ~15:35 Tehran — QUEUE-DETACH FIX (run #34, manager order):
+  Zatsuyou (msg 31) posted but its queue row stayed QUEUED; Aristocrat
+  (msg 32) posted but its row stayed HOLD; Wakako-zake was held on
+  why_specific but its row stayed QUEUED. Root cause: `sync_remote_state`
+  always returned True, so the pre-send sync in `publish_one` always
+  reloaded the queue from disk and orphaned the `item` reference — the
+  POSTED/HOLD mutation was written to a detached dict and lost, while
+  state.json + archive.jsonl stayed correct. The queue never self-healed
+  (nothing reconciled it with posted_hashes). FIX (this bundle): (1)
+  `publish_one` re-finds the item by hash in the reloaded queue
+  (`_find_queue_row`) so the mutation lands on the live row; (2)
+  `sync_remote_state` reconciles queue rows with posted_hashes
+  (`reconcile_queue_posted`) — a posted row now reads POSTED; (3)
+  `sync_remote_state` returns `changed` instead of constant True, and
+  `merge_state.py` checks the fetch explicitly so the fetch-failure
+  abort (phantom-posts safety) is preserved. Proof:
+  scripts/test_queue_detach.py 26/26 (detach replay, sync return value,
+  reconcile, publish_one end-to-end with a real temp git repo, merge_state
+  abort on fetch failure + exit 0 when nothing changed). Full suite:
+  11/12 files pass — only the pre-existing test_dedupe_bangdream T3
+  failure (proven on pristine main, untouched by this bundle). NOTE:
+  `attach_second_sources` markings are still lost the same way (its
+  in-memory POSTED is wiped by the next publish_one sync) — idempotent,
+  follow-up for the next critic review, not in this bundle. Msg 31's
+  caption was fixed by the manager (Bleach → Zatsuyou); msg 29's Ginza
+  caption is correct and untouched.
 
 ## 9. Rules (hard)
 
