@@ -82,14 +82,20 @@ def main(argv=None) -> int:
     data = root / "data"
 
     for attempt in range(1, args.attempts + 1):
-        # ۱. fetch + ادغام union
-        if not sync_remote_state(state_path=data / "state.json",
-                                 queue_path=data / "queue.json",
-                                 archive_path=data / "archive.jsonl",
-                                 ref=args.ref, repo_dir=root):
+        # ۱. fetch + ادغام union — اول fetch را جدا چک کن: sync از
+        # ۲۰۲۶-۱۱-۲۳ در صورت عدم تغییر False برمی‌گرداند (دیگر نشانه خطا
+        # نیست)، پس خطای fetch جداگانه abort می‌کند تا کامیت با state
+        # کهنه (مسابقه فانتوم ۱۵/۱۶) تکرار نشود.
+        fetch = _git(["fetch", "origin", "main"], root)
+        if fetch.returncode != 0:
             log_error("merge_state: could not fetch origin/main — aborting "
                       "(state stays local-only; next run will re-sync)")
             return 1
+        changed = sync_remote_state(state_path=data / "state.json",
+                                    queue_path=data / "queue.json",
+                                    archive_path=data / "archive.jsonl",
+                                    ref=args.ref, repo_dir=root)
+        log_info(f"merge_state: sync changed={changed}")
         # ۲. راستی‌آزمایی: هیچ رکورد پست‌شده راه‌دور نباید گم شده باشد
         remote_ids = _remote_posted_ids(root, args.ref)
         if remote_ids is not None:

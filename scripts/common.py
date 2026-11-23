@@ -500,16 +500,42 @@ def merge_log_lines(local_lines: list[str], remote_lines: list[str],
     return out[-cap:]
 
 
+def reconcile_queue_posted(state: dict, queue: dict) -> bool:
+    """همگام‌سازی وضعیت صف با posted_hashes (رفع ۲۰۲۶-۱۱-۲۳، باگ جداافتادن).
+
+    ردیفی که هش آن در posted_hashes است باید POSTED بخواند. publish_one
+    پیش‌تر این تغییر را روی یک دیکشنری جداافتاده می‌نوشت (sync پیش‌ازارسال
+    صف را از دیسک دوباره می‌خواند)، پس ردیف‌های کهنه تا انقضا QUEUED
+    می‌ماندند. state مرجع است؛ صف فقط اینجا به آن می‌رسد. فقط ارتقا
+    می‌دهد (هرگز POSTED را پس نمی‌گیرد) و message_id را از state می‌گیرد.
+    True یعنی چیزی عوض شد.
+    """
+    posted = state.get("posted_hashes", {}) or {}
+    changed = False
+    for row in queue.get("items", []):
+        h = row.get("hash")
+        if not h or h not in posted:
+            continue
+        if row.get("status") == "POSTED" and row.get("message_id") == posted[h]:
+            continue
+        row["status"] = "POSTED"
+        row["message_id"] = posted[h]
+        changed = True
+    return changed
+
+
 def sync_remote_state(state_path=None, queue_path=None, archive_path=None,
                       repo_dir: str | Path | None = None,
                       ref: str = "origin/main", timeout: int = 30) -> bool:
     """همگام‌سازی state/queue/archive محلی با راه‌دور (origin/main) پیش از ارسال.
 
     `git fetch` + خواندن فایل‌های راه‌دور با `git show` + ادغام union در
-    فایل‌های محلی. False یعنی همگام نشد (git نیست، remote نیست، fetch
-    خورد) — تماس‌گیرنده با state محلی ادامه می‌دهد و هشدار می‌دهد؛
-    هرگز کل ران را نمی‌اندازد. merge_state.py هم از همین تابع استفاده
-    می‌کند و False را خطا می‌شمرد.
+    فایل‌های محلی + همگام‌سازی وضعیت صف با posted_hashes (رفع ۲۰۲۶-۱۱-۲۳).
+    True یعنی ادغام چیزی را عوض کرد؛ False یعنی یا چیزی برای ادغام نبود،
+    یا همگام نشد (git نیست، remote نیست، fetch خورد — در این صورت
+    تماس‌گیرنده با state محلی ادامه می‌دهد و هشدار می‌دهد؛ هرگز کل ران
+    را نمی‌اندازد). توجه: False دیگر «خطا» نیست — merge_state.py خطای
+    fetch را جداگانه چک می‌کند (رفع ۲۰۲۶-۱۱-۲۳).
     """
     root = Path(repo_dir) if repo_dir else repo_root()
     sp = Path(state_path) if state_path else data_dir() / "state.json"
@@ -542,11 +568,13 @@ def sync_remote_state(state_path=None, queue_path=None, archive_path=None,
         log_warn("sync_remote_state: git show failed — continuing with local state")
         return False
     changed = False
+    merged_state = None
     if remote_state_raw:
         try:
             remote_state = json.loads(remote_state_raw.decode("utf-8"))
             local_state = load_state(sp)
             merged = merge_state_data(local_state, remote_state)
+            merged_state = merged
             if merged != local_state:
                 save_state(merged, sp)
                 changed = True
@@ -557,6 +585,13 @@ def sync_remote_state(state_path=None, queue_path=None, archive_path=None,
             remote_queue = json.loads(remote_queue_raw.decode("utf-8"))
             local_queue = load_queue(qp)
             merged_q = merge_queue_data(local_queue, remote_queue)
+            # همگام‌سازی وضعیت صف با posted_hashes (رفع ۲۰۲۶-۱۱-۲۳):
+            # ردیف پست‌شده باید POSTED بخواند — publish_one پیش‌تر این
+            # تغییر را روی دیکشنری جداافتاده می‌نوشت و ردیف تا انقضا
+            # QUEUED می‌ماند. state مرجع است؛ صف فقط اینجا به آن می‌رسد.
+            if merged_state is None:
+                merged_state = load_state(sp)
+            reconcile_queue_posted(merged_state, merged_q)
             if merged_q != local_queue:
                 save_queue(merged_q, qp)
                 changed = True
@@ -589,7 +624,7 @@ def sync_remote_state(state_path=None, queue_path=None, archive_path=None,
             changed = True
     if changed:
         log_info("sync_remote_state: local state refreshed from origin/main")
-    return True
+    return changed
 
 
 # ---------------------------------------------------------------------------

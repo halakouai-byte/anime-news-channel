@@ -217,6 +217,25 @@ def _find_posted_duplicate(item: dict, queue: dict, state: dict) -> dict | None:
     return None
 
 
+def _find_queue_row(queue: dict, item: dict) -> dict | None:
+    """ردیف زنده آیتم در صف تازه‌خوانده‌شده (رفع ۲۰۲۶-۱۱-۲۳، باگ جداافتادن).
+
+    بعد از sync پیش‌ازارسال، `queue.clear(); queue.update(...)` ردیف‌ها را
+    با دیکشنری‌های تازه جایگزین می‌کند و ارجاع `item` جدا می‌افتد — تغییر
+    وضعیت روی آن گم می‌شود. این تابع همان ردیف را با هش (یا guid) پیدا
+    می‌کند تا تغییر روی ردیف زنده بنشیند. None یعنی ردیف در صف تازه نیست
+    (مثلاً ادغام آن را انداخته).
+    """
+    h = item.get("hash")
+    g = item.get("guid")
+    for row in queue.get("items", []):
+        if h and row.get("hash") == h:
+            return row
+        if g and row.get("guid") == g:
+            return row
+    return None
+
+
 def publish_one(item: dict, state: dict, queue: dict, token: str, chat_id: str,
                 workdir: Path, archive_path=None,
                 state_path=None, queue_path=None) -> dict | None:
@@ -297,6 +316,17 @@ def publish_one(item: dict, state: dict, queue: dict, token: str, chat_id: str,
         state.update(load_state(state_path))
         queue.clear()
         queue.update(load_queue(queue_path))
+        # رفع ۲۰۲۶-۱۱-۲۳ (باگ جداافتادن): بارگذاری دوباره صف، ردیف‌ها را
+        # با دیکشنری‌های تازه جایگزین می‌کند و ارجاع `item` جدا می‌افتد —
+        # تغییر وضعیت روی آن گم می‌شد (Zatsuyou پیام ۳۱ پست شد ولی ردیفش
+        # QUEUED ماند؛ Wakako-zake هم HOLD نشد). به ردیف زنده (همان هش)
+        # برگرد تا تغییر بنشیند.
+        _live = _find_queue_row(queue, item)
+        if _live is not None:
+            item = _live
+        else:
+            log_warn(f"sync: queue row {str(item.get('hash', ''))[:12]} "
+                     "vanished after reload — continuing with detached item")
         if item.get("hash") in state.get("posted_hashes", {}):
             log_warn(f"guard: already posted (remote state), skipping "
                      f"{str(item.get('hash', ''))[:12]}")
