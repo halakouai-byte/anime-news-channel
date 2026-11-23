@@ -86,27 +86,43 @@ def seed_from_facts(facts: dict) -> int:
 
 # ------------------------------------------------------- استخراج حقایق
 
-def _all_names(banks: dict) -> dict:
+def _section_names(banks: dict, *sections: str) -> dict:
     names = {}
-    for section in ("anime", "manga_lightnovel", "studios", "platforms", "people"):
-        names.update(banks["names-fa"].get(section, {}))
+    for section in sections:
+        names.update(banks["names-fa"].get(section, {}) or {})
     return names
 
 
-def extract_franchise(title: str, summary: str, banks: dict):
-    """نام اثر: طولانی‌ترین نام مصوب که در تیتر/خلاصه آمده؛ وگرنه عبارت گیومه‌دار."""
-    names = _all_names(banks)
-    hay = f"{title}\n{summary}"
-    hay_low = hay.lower()
-    best = None
+def _longest_in(text_low: str, names: dict) -> str | None:
+    """طولانی‌ترین نام بانک که در متن آمده (case-insensitive)."""
     for en in sorted(names, key=len, reverse=True):
         if len(en) < 3:
             continue
-        if en.lower() in hay_low:
-            best = en
-            break
+        if en.lower() in text_low:
+            return en
+    return None
+
+
+def extract_franchise(title: str, summary: str, banks: dict):
+    """نام اثر — دو مرحله‌ای (نقد ۳، پیام ۸: تیتر «Shin-Ei Animation» بود
+    چون «Shin-Ei Animation» با ۱۷ حرف، طولانی‌تر از «Oishinbo» با ۸ حرف
+    بود — در حالی که «Oishinbo» در بانک هم بود؛ طولانی‌ترین تطابق در هر
+    جای متن، نام پس‌زمینه خلاصه را بر نام تیتر ترجیح می‌داد):
+    ۱) نام‌های انیمه/مانگا در تیتر؛ ۲) همان‌ها در خلاصه؛
+    ۳) استودیو/پلتفرم/شخص فقط وقتی هیچ نام انیمه‌ای نیست — و آن‌وقت
+    new_name=True است (نام واقعی اثر در بانک نیست و باید اضافه شود).
+    وگرنه عبارت گیومه‌دار در تیتر؛ وگرنه None.
+    """
+    anime = _section_names(banks, "anime", "manga_lightnovel")
+    other = _section_names(banks, "studios", "platforms", "people")
+    title_low = (title or "").lower()
+    summary_low = (summary or "").lower()
+    best = _longest_in(title_low, anime) or _longest_in(summary_low, anime)
     if best:
-        return best, names[best], False
+        return best, anime[best], False
+    best = _longest_in(f"{title_low}\n{summary_low}", other)
+    if best:
+        return best, other[best], True
     quoted = re.search(r"[\"'‘’“”]([^\"'‘’“”]{3,80})[\"'‘’“”]", title)
     if quoted:
         return quoted.group(1).strip(), quoted.group(1).strip(), True
@@ -384,16 +400,78 @@ def _is_returning_season(fx: dict) -> bool:
     return bool(_SEASON_RETURN_RE.search(text))
 
 
+def _date_fa_parts(date_fa: str | None) -> tuple[str | None, str | None]:
+    """date_fa فارسی («۴ ژانویه ۲۰۲۷» / «آوریل ۲۰۲۷» / «۲۰۲۷») را به
+    (ماه انگلیسی، سال) برمی‌گرداند؛ برای سنجش تاریخ «premiered» با تاریخ
+    همین آیتم (نقد ۳، پیام ۱۸)."""
+    if not date_fa:
+        return None, None
+    month_en = None
+    for en, fa in MONTHS_FA.items():
+        if fa in date_fa:
+            month_en = en
+            break
+    year = None
+    m = re.search(r"\d{4}", date_fa.translate(EN_DIGITS))
+    if m:
+        year = m.group(0)
+    return month_en, year
+
+
+def _premiered_date_matches(fx: dict) -> bool:
+    """آیا تاریخی که به «premiered» در خلاصه چسبیده، همان date_fa همین
+    آیتم است؟ «premiered on July 2, 2025» برای بخشی که date_fa آن
+    «آوریل ۲۰۲۷» است، پس‌زمینه است — نه پخش همین بخش (نقد ۳، پیام ۱۸:
+    خلاصه MAL می‌گفت بخش قبلی Tougen Anki پخش شده و بدنه از همان کلمه،
+    «بخش تازه پیش‌تر پخش خود را آغاز کرده بود» ساخت؛ در حالی که قوس تازه
+    هنوز پخش نشده بود). بدون date_fa یا بدون تاریخِ چسبیده به «premiered»،
+    گارد رد می‌کند (محافظه‌کارانه: از دست‌رفتن یک قالب، بهتر از ادعای
+    غلط است)."""
+    month_fa, year_fa = _date_fa_parts(fx.get("date_fa"))
+    if not year_fa:
+        return False
+    text = (fx.get("summary_en") or "").lower()
+    months = "|".join(m.lower() for m in MONTHS_FA)
+    for m in re.finditer(r"premiered", text):
+        window = text[m.start():m.start() + 90]
+        dm = re.search(
+            rf"\b({months})\s+(\d{{1,2}})(?:\s*,\s*|\s+)(\d{{4}})"
+            rf"|\b({months})\s+(\d{{4}})"
+            rf"|\b(20\d{{2}})\b",
+            window)
+        if not dm:
+            continue
+        if dm.group(1):  # ماه + روز + سال
+            if dm.group(3) != year_fa:
+                continue
+            if month_fa and dm.group(1).capitalize() != month_fa:
+                continue
+            return True
+        if dm.group(4):  # ماه + سال
+            if dm.group(5) != year_fa:
+                continue
+            if month_fa and dm.group(4).capitalize() != month_fa:
+                continue
+            return True
+        if dm.group(6) == year_fa:  # فقط سال
+            return True
+    return False
+
+
 def _has_premiered(fx: dict) -> bool:
     """«پخش آغاز شده» فقط وقتی درست است که پخش مال همین خبر باشد — نه
     پس‌زمینه خلاصه (منتقد، ۲۲ نوامبر ۲۰۲۶ — پیام ۱۰: خلاصه ANN می‌گفت پروژه
     قبلی Mugendai Mewtype «premiered on July 2» و body_season_premiered از
     همان کلمه، «بخش تازه پیش‌تر پخش خود را آغاز کرده بود» ساخت؛ در حالی که
     خبر، اعلامیه انیمه کاملاً تازه بود). پس: «premiered» در تیتر، یا در
-    خلاصه + نشانه فصل برگشتی."""
+    خلاصه + نشانه فصل برگشتی + تاریخِ چسبیده به «premiered» همان date_fa
+    همین آیتم باشد (نقد ۳، پیام ۱۸)."""
     title = (fx["title_en"] or "").lower()
     text = f"{fx['title_en']} {fx['summary_en']}".lower()
-    return "premiered" in title or ("premiered" in text and _is_returning_season(fx))
+    if "premiered" in title:
+        return True
+    return ("premiered" in text and _is_returning_season(fx)
+            and _premiered_date_matches(fx))
 
 
 def _eligible_bodies(fx: dict, banks: dict):

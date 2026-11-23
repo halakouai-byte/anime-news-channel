@@ -320,6 +320,13 @@ def sha256_hex(text: str) -> str:
 # پیاده می‌کنند (merge_state.py هم از همین‌ها استفاده می‌کند).
 
 
+def _state_freshness(state: dict) -> str:
+    """تازه‌ترین تایم‌استمپ state — برای اینکه queue_size از تازه‌ترین
+    state بیاید، نه max (نقد ۳: مقدار ۵۱ کهنه از max-merge چسبیده بود)."""
+    return max(state.get("last_fetch_utc") or "",
+               state.get("last_publish_utc") or "")
+
+
 def merge_state_data(local: dict, remote: dict) -> dict:
     """ادغام دو state — union رکوردهای پست‌شده (نه rebase متنی).
 
@@ -376,14 +383,17 @@ def merge_state_data(local: dict, remote: dict) -> dict:
     merged["template_usage_7d"] = usage
     lb = local.get("circuit_breaker") or {}
     rb = remote.get("circuit_breaker") or {}
+    # queue_size عکس لحظه‌ای صف است، نه شمارنده — پس مقدار تازه‌ترین
+    # state می‌برد، نه max (نقد ۳: ۵۱ کهنه از max-merge چسبیده بود و
+    # با هر ادغام برمی‌گشت؛ هر ران publish تازه‌ترین pending را می‌نویسد).
+    fresh_cb = lb if _state_freshness(local) >= _state_freshness(remote) else rb
     merged["circuit_breaker"] = {
         "active": bool(lb.get("active") or rb.get("active")),
         "activated_at": max((lb.get("activated_at") or ""),
                             (rb.get("activated_at") or "")) or None,
         "posts_today": max(lb.get("posts_today", 0) or 0,
                            rb.get("posts_today", 0) or 0),
-        "queue_size": max(lb.get("queue_size", 0) or 0,
-                          rb.get("queue_size", 0) or 0),
+        "queue_size": fresh_cb.get("queue_size", 0) or 0,
     }
     for k, v in remote.items():
         merged.setdefault(k, v)

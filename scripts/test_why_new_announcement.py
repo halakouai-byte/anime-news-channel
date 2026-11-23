@@ -9,6 +9,9 @@
   Mugendai Mewtype که ۲ ژوئیه پخش شده بود)، نه از همین خبر.
 اصلاح: why_new_announcement («دنیای … بزرگ‌تر می‌شود») + نگاشت مشروط
 announcement + _has_premiered سخت‌گیرانه (تیتر، یا خلاصه + فصل برگشتی).
+نقد ۳ (پیام ۱۸): گارد سخت‌گیرتر شد — تاریخِ چسبیده به «premiered» باید
+همان date_fa همین آیتم باشد؛ «فصل اول در ۲۰۲۳ پخش شد» برای فصل دومِ
+هنوز پخش‌نشده، premiered نیست (T3/T5 فریرن به‌روز شد).
 
 اجرا: python3 scripts/test_why_new_announcement.py (از ریشه ریپو)
 """
@@ -94,8 +97,13 @@ for title, summary in [
 # --- T3: _has_premiered ---
 check("T3 BanG Dream background premiered is NOT premiered",
       not _has_premiered(fx_of(BANGDREAM_ANN["title_en"], BANGDREAM_ANN["summary_en"])))
-check("T3 Frieren S2 summary premiered + returning IS premiered",
-      _has_premiered(fx_of(FRIEREN_S2["title_en"], FRIEREN_S2["summary_en"])))
+# نقد ۳ (پیام ۱۸): «the first season premiered in September 2023» پخشِ
+# فصل اول است، نه فصل دوم (خبر)؛ date_fa این آیتم خالی است و تاریخِ
+# «premiered» با آن نمی‌خواند — پس body_season_premiered («بخش تازه
+# پیش‌تر پخش خود را آغاز کرده بود») برای فصل دومِ هنوز پخش‌نشده غلط
+# است. انتظار قدیم (IS premiered) همان باگ پیام ۱۸ بود.
+check("T3 Frieren S2 first-season premiered is NOT premiered",
+      not _has_premiered(fx_of(FRIEREN_S2["title_en"], FRIEREN_S2["summary_en"])))
 check("T3 title-premiered IS premiered",
       _has_premiered(fx_of(TITLE_PREMIERED["title_en"], TITLE_PREMIERED["summary_en"])))
 check("T3 no premiere at all is NOT premiered",
@@ -121,8 +129,11 @@ post2 = rewrite_post(FRIEREN_S2, seed=int(sha256_hex("frieren-s2")[:8], 16))
 check("T5 Frieren S2 why is why_new_season or why_sequel (continuation)",
       post2["template_ids"]["why"] in ("why_new_season", "why_sequel"),
       f"(got {post2['template_ids']['why']})")
-check("T5 Frieren S2 body_season_premiered IS eligible",
-      "body_season_premiered" in [b["id"] for b in _eligible_bodies(
+# نقد ۳ (پیام ۱۸): فصل اول در سپتامبر ۲۰۲۳ پخش شده، فصل دوم هنوز نه —
+# پس body_season_premiered برای این آیتم واجد شرایط نیست (انتظار قدیم
+# همان باگ پیام ۱۸ بود).
+check("T5 Frieren S2 body_season_premiered NOT eligible",
+      "body_season_premiered" not in [b["id"] for b in _eligible_bodies(
           {"title_en": FRIEREN_S2["title_en"], "summary_en": FRIEREN_S2["summary_en"],
            "event": "announcement", "event_fa": "انیمه تازه", "date_fa": "",
            "fr_fa": "فریرن", "fr_en": "Frieren", "studio_en": "", "studio_fa": "",
