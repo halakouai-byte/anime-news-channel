@@ -2106,9 +2106,12 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "POSTED",
       "hold_reason": "gates_failed:why_specific",
-      "created_utc": "2026-11-22T08:32:58Z"
+      "created_utc": "2026-11-22T08:32:58Z",
+      "message_id": 52,
+      "posted_utc": "2026-11-23T20:46:18Z",
+      "caption": "رسمی شد: معرفی صداپیشه‌های تازه Bride of the Barrier Master\n\nدنیای انیمه یک خبر تازه دارد؛ عروس استاد مانع با معرفی صداپیشه‌های تازه برگشته است.\n\nطبق اعلام رسمی، عروس استاد مانع در ۶ ژانویه پخش می‌شود و این تاریخ از حالا در تقویم طرفداران اثر ثبت شده است. گزارش کامل این خبر در Anime News Network آمده است؛ جایی که زمان‌بندی و عوامل اصلی اثر هم در آن آمده و لینک آن در انتهای همین پست است تا خودتان هم بخوانید.\n\nچرا مهم است؟ چون معرفی صداپیشه‌های تازه، صدای شخصیت‌های عروس استاد مانع را مشخص می‌کند و همان صداهایی است که در فصل تازه خواهید شنید.\n\nمنبع: Anime News Network\nhttps://animenewsnetwork.com/news/2026-11-21/bride-of-the-barrier-master-tv-anime-reveals-1-hour-debut-on-january-6-more-cast-in-video/.244073\n\n#انیمه #BrideOfTheBarrierMaster #فصل_جدید"
     },
     {
       "guid": "https://www.animenewsnetwork.com/cms/.244051",
@@ -3059,6 +3062,31 @@
       "message_id": 43,
       "posted_utc": "2026-11-23T17:31:02Z",
       "caption": "رسمی شد: فصل ۲ Akane-banashi\n\nخبرش رسید: آکانه‌باناشی قرار است فصل ۲ داشته باشد.\n\nاین خبر را Anime News Network منتشر کرده است؛ پخش اثر از ۹ ژانویه آغاز می‌شود و جزئیات بیشتر در گزارش Anime News Network آمده است. گزارش کامل این خبر در Anime News Network آمده است؛ جایی که زمان‌بندی و عوامل اصلی اثر هم در آن آمده و لینک آن در انتهای همین پست است تا خودتان هم بخوانید.\n\nچرا مهم است؟ چون تایید فصل تازه یعنی قصه آکانه‌باناشی ادامه دارد و شخصیت‌های آشنا دوباره برمی‌گردند؛ ادامه‌ای که مسیر قصه را یک فصل دیگر جلو می‌برد.\n\nمنبع: Anime News Network\nhttps://animenewsnetwork.com/news/2026-11-23/akane-banashi-season-2-announces-january-9-debut/.244109\n\n#انیمه #AkaneBanashi #فصل_جدید"
+    },
+    {
+      "guid": "https://animecorner.me/hidive-announces-never-before-announced-new-simulcasts-to-be-revealed-at-anime-frontier-in-schedule-unveil/",
+      "hash": "08feaa449c8e58d80893e793628574892c1a825bdfdb9e940bf979040639633e",
+      "story_key": null,
+      "title": "HIDIVE Announces 'Never-Before-Announced New Simulcasts' to Be Revealed at Anime Frontier in Schedule Unveil",
+      "link": "https://animecorner.me/hidive-announces-never-before-announced-new-simulcasts-to-be-revealed-at-anime-frontier-in-schedule-unveil",
+      "summary": "Anime streamer HIDIVE announced its schedule for Anime Frontier 2026 across December 4-6, which…",
+      "source": "AnimeCorner",
+      "source_name": "Anime Corner",
+      "tier": 1,
+      "pubDate": "2026-11-23T20:26:47+00:00",
+      "category": "فصل جدید",
+      "category_score": 7,
+      "category_source": "keyword",
+      "event_type": "announcement",
+      "franchise_en": null,
+      "priority_score": 55,
+      "is_breaking": false,
+      "status": "POSTED",
+      "hold_reason": "",
+      "created_utc": "2026-11-23T20:31:14Z",
+      "message_id": 51,
+      "posted_utc": "2026-11-23T20:31:16Z",
+      "caption": "Never-Before-Announced New Simulcasts؛ معرفی صداپیشه‌های تازه\n\nNever-Before-Announced New Simulcasts سکوت را شکست؛ معرفی صداپیشه‌های تازه اثر اعلام شد.\n\nبا این اعلام، Never-Before-Announced New Simulcasts یک بار دیگر در مرکز توجه طرفداران قرار گرفت؛ خبری که از امروز در تقویم دنیای انیمه ثبت شده و ادامه‌اش را باید در روزهای آینده دنبال کرد.\n\nچرا مهم است؟ چون معرفی صداپیشه‌های تازه، صدای شخصیت‌های Never-Before-Announced New Simulcasts را مشخص می‌کند و همان صداهایی است که در فصل تازه خواهید شنید؛ صداهایی که انتخابشان نشان می‌دهد عوامل ساخت برای این بخش برنامه جدی دارند.\n\nمنبع: Anime Corner\nhttps://animecorner.me/hidive-announces-never-before-announced-new-simulcasts-to-be-revealed-at-anime-frontier-in-schedule-unveil\n\n#انیمه #NeverBeforeAnnouncedNewSimulcasts #فصل_جدید"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",

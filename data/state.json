@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 2645,
+    "duplicates_total": 2696,
     "hold_total": 23,
-    "posts_today": 25,
-    "posts_today_date": "2026-11-23",
-    "posts_total": 43,
-    "rejected_total": 410
+    "posts_today": 0,
+    "posts_today_date": "2026-11-24",
+    "posts_total": 45,
+    "rejected_total": 418
   },
-  "last_fetch_utc": "2026-11-23T20:01:01Z",
-  "last_publish_utc": "2026-11-23T20:16:05Z",
+  "last_fetch_utc": "2026-11-23T20:31:15Z",
+  "last_publish_utc": "2026-11-23T20:46:18Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -58,7 +58,9 @@
     "db8e11fbfb4083a909039c5701812ee4114907be896a962155a3954f9f6d15bd": 47,
     "a2a43b4d6c104dff96af192215549bbf008dea99d6cf88b8d36e5470029526f5": 48,
     "3e40813191148123e86cf44921296223d224e51720768cd6887e0a0ade59dfd7": 49,
-    "562fa88f8259a9943ca083df918890a08f2f53619cd0d00c29d70f5ec7d0e63c": 50
+    "562fa88f8259a9943ca083df918890a08f2f53619cd0d00c29d70f5ec7d0e63c": 50,
+    "08feaa449c8e58d80893e793628574892c1a825bdfdb9e940bf979040639633e": 51,
+    "52ce1c83096320e36a9c7b8704378e993cac98cc4b8516486ad4e27e54803da7": 52
   },
   "posted_message_ids": [
     6,
@@ -103,7 +105,9 @@
     47,
     48,
     49,
-    50
+    50,
+    51,
+    52
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -880,6 +884,49 @@
         "theme,"
       ],
       "posted_utc": "2026-11-23T20:16:05Z"
+    },
+    {
+      "title_norm": "hidive announces 'never-before-announced new simulcasts' to be revealed at anime frontier in schedule unveil",
+      "words": [
+        "'never-before-announced",
+        "anime",
+        "announces",
+        "at",
+        "be",
+        "frontier",
+        "hidive",
+        "in",
+        "new",
+        "revealed",
+        "schedule",
+        "simulcasts'",
+        "to",
+        "unveil"
+      ],
+      "posted_utc": "2026-11-23T20:31:16Z"
+    },
+    {
+      "title_norm": "bride of the barrier master tv anime reveals 1-hour debut on january 6, more cast in video",
+      "words": [
+        "1-hour",
+        "6,",
+        "anime",
+        "barrier",
+        "bride",
+        "cast",
+        "debut",
+        "in",
+        "january",
+        "master",
+        "more",
+        "of",
+        "on",
+        "reveals",
+        "the",
+        "tv",
+        "video"
+      ],
+      "posted_utc": "2026-11-23T20:46:18Z"
     }
   ],
   "seen_at": {
@@ -1017,12 +1064,14 @@
     "a6b2f0f8a070ee79587074f72dc265c6c17721234d00313a340f519c88ad0125": "2026-11-23T11:30:26Z",
     "e4716188e1605c52b387257f46a51de59d61991e17787db32799bedf68f66737": "2026-11-23T15:00:57Z",
     "0a270000483bab68a04815dd2e2efa62225dd1e5ac87cf4622a0dde97fefdb8b": "2026-11-23T16:16:21Z",
-    "bf2c6b21ad39f60264e4379044a81876161b23d02d6aa58e1629864d8ce0f570": "2026-11-23T17:19:57Z"
+    "bf2c6b21ad39f60264e4379044a81876161b23d02d6aa58e1629864d8ce0f570": "2026-11-23T17:19:57Z",
+    "08feaa449c8e58d80893e793628574892c1a825bdfdb9e940bf979040639633e": "2026-11-23T20:31:14Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
     "058356c70aee8be3699903eabd5f3dc6d53c768f6b9f71ed3b879bf18cb31e9f",
     "062c52480e7c70a6243db17bbc2e693c7fa331228f57937554e368b9441e5af8",
+    "08feaa449c8e58d80893e793628574892c1a825bdfdb9e940bf979040639633e",
     "0a270000483bab68a04815dd2e2efa62225dd1e5ac87cf4622a0dde97fefdb8b",
     "0a7c98d8d45a4b88366aa8e431287c5bb23941e936afec6bdd2dd55262a69520",
     "0b91bb1c46256e8ff3115ce44f09960b59d401da4066dbfd4512ae0ec825c53e",
@@ -1250,7 +1299,9 @@
       "2026-11-23T19:01:05Z",
       "2026-11-23T19:16:06Z",
       "2026-11-23T20:01:04Z",
-      "2026-11-23T20:16:05Z"
+      "2026-11-23T20:16:05Z",
+      "2026-11-23T20:31:16Z",
+      "2026-11-23T20:46:18Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -1295,7 +1346,9 @@
       "2026-11-23T19:01:05Z",
       "2026-11-23T19:16:06Z",
       "2026-11-23T20:01:04Z",
-      "2026-11-23T20:16:05Z"
+      "2026-11-23T20:16:05Z",
+      "2026-11-23T20:31:16Z",
+      "2026-11-23T20:46:18Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -1340,7 +1393,9 @@
       "2026-11-23T19:01:05Z",
       "2026-11-23T19:16:06Z",
       "2026-11-23T20:01:04Z",
-      "2026-11-23T20:16:05Z"
+      "2026-11-23T20:16:05Z",
+      "2026-11-23T20:31:16Z",
+      "2026-11-23T20:46:18Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -1385,7 +1440,9 @@
       "2026-11-23T19:01:05Z",
       "2026-11-23T19:16:06Z",
       "2026-11-23T20:01:04Z",
-      "2026-11-23T20:16:05Z"
+      "2026-11-23T20:16:05Z",
+      "2026-11-23T20:31:16Z",
+      "2026-11-23T20:46:18Z"
     ]
   },
   "version": 2
