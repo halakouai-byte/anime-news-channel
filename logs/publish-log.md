@@ -20,3 +20,5 @@
 - 2026-11-23T11:30:00Z UTC (2 آذر 1405، تهران): posted message_id=32 guid=https://animetv-jp.net/?p=51485 category=فصل جدید score=50 breaking=False latency_min=658.6
 - 2026-11-23T11:45:01Z UTC (2 آذر 1405، تهران): posted message_id=33 guid=https://animetv-jp.net/?p=51479 category=تریلر score=50 breaking=False latency_min=679.5
 - 2026-11-23T12:00:02Z UTC (2 آذر 1405، تهران): posted message_id=34 guid=https://animetv-jp.net/?p=51468 category=فصل جدید score=50 breaking=False latency_min=705.4
+- 2026-11-23T15:01:00Z UTC (2 آذر 1405، تهران): posted message_id=35 guid=https://animetv-jp.net/?p=51465 category=فصل جدید score=50 breaking=False latency_min=892.9
+- 2026-11-23T15:16:01Z UTC (2 آذر 1405، تهران): posted message_id=36 guid=https://animetv-jp.net/?p=51461 category=تریلر score=50 breaking=False latency_min=912.7

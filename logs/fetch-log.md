@@ -36,3 +36,4 @@
 - 2026-11-23T02:44:18Z UTC (2026-11-23 تهران): fetched=270 queued=1 held=1 rejected=4 duplicates=58 digest=0 stale=206 breaking=0 reasons={'R9-duplicate-L1': 54, 'R9-duplicate-L2': 4, 'stale-48h': 206, 'R15-non-anime': 3, 'R1-reject': 1}
 - 2026-11-23T11:14:57Z UTC (2026-11-23 تهران): fetched=270 queued=1 held=0 rejected=4 duplicates=52 digest=0 stale=213 breaking=0 reasons={'R9-duplicate-L1': 48, 'R9-duplicate-L2': 4, 'stale-48h': 213, 'R15-non-anime': 3, 'R1-reject': 1}
 - 2026-11-23T11:30:27Z UTC (2026-11-23 تهران): fetched=270 queued=1 held=0 rejected=4 duplicates=53 digest=0 stale=212 breaking=0 reasons={'R9-duplicate-L1': 49, 'R9-duplicate-L2': 4, 'stale-48h': 212, 'R15-non-anime': 3, 'R1-reject': 1}
+- 2026-11-23T15:00:57Z UTC (2026-11-23 تهران): fetched=270 queued=1 held=0 rejected=4 duplicates=50 digest=0 stale=215 breaking=0 reasons={'R9-duplicate-L1': 46, 'R9-duplicate-L2': 4, 'stale-48h': 215, 'R1-reject': 2, 'R15-non-anime': 2}
