@@ -42,3 +42,7 @@
 - 2026-11-23T21:16:21Z UTC (3 آذر 1405، تهران): posted message_id=54 guid=https://animetv-jp.net/?p=51424 category=فیلم score=45 breaking=False latency_min=2718.0
 - 2026-11-23T21:42:58Z UTC (3 آذر 1405، تهران): posted message_id=55 guid=https://animetv-jp.net/?p=51416 category=تریلر score=45 breaking=False latency_min=2776.5
 - 2026-11-23T21:57:59Z UTC (3 آذر 1405، تهران): posted message_id=56 guid=https://www.siliconera.com/?p=1127444 category=مانگا و اقتباس score=40 breaking=False latency_min=418.0
+- 2026-11-23T22:13:01Z UTC (3 آذر 1405، تهران): posted message_id=57 guid=https://animetv-jp.net/?p=51501 category=فصل جدید score=45 breaking=False latency_min=14.9
+- 2026-11-23T22:28:02Z UTC (3 آذر 1405، تهران): posted message_id=58 guid=https://animecorner.me/bride-of-the-barrier-master-anime-reveals-main-trailer-visual-additional-cast-opening-theme-song-artist/ category=تریلر score=40 breaking=False latency_min=2565.8
+- 2026-11-23T22:43:03Z UTC (3 آذر 1405، تهران): posted message_id=59 guid=https://animetv-jp.net/?p=51504 category=فصل جدید score=50 breaking=False latency_min=39.2
+- 2026-11-23T22:58:05Z UTC (3 آذر 1405، تهران): posted message_id=60 guid=https://www.animenewsnetwork.com/cms/.244064 category=مانگا و اقتباس score=40 breaking=False latency_min=2792.6

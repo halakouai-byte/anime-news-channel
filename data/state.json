@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 2800,
-    "hold_total": 23,
-    "posts_today": 4,
+    "duplicates_total": 2900,
+    "hold_total": 24,
+    "posts_today": 8,
     "posts_today_date": "2026-11-24",
-    "posts_total": 49,
-    "rejected_total": 436
+    "posts_total": 53,
+    "rejected_total": 455
   },
-  "last_fetch_utc": "2026-11-23T21:42:55Z",
-  "last_publish_utc": "2026-11-23T21:57:59Z",
+  "last_fetch_utc": "2026-11-23T22:28:25Z",
+  "last_publish_utc": "2026-11-23T22:58:05Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -64,7 +64,11 @@
     "6e1ab1df6b2f6f47e8181799c6e52012e387a284303ac09ee1f322fa1c0ddf29": 53,
     "cec56704dbf9033b4ebbc882a2cf6c6dfa7d697e7eae20f95a3b653fdc1811db": 54,
     "585439d95ed5f67891b5d051641fd957f96406605a066d4072b75281ed95125d": 55,
-    "e4716188e1605c52b387257f46a51de59d61991e17787db32799bedf68f66737": 56
+    "e4716188e1605c52b387257f46a51de59d61991e17787db32799bedf68f66737": 56,
+    "04e5afda8fe231c18cb205c304cf99972cf5e99a69d8bb8789fa1fdc01526797": 57,
+    "bc06815f9f919967b99a18291ab6e714b864486f0a8d4386826ed7276957e4dd": 58,
+    "3a7039401f1cef43fcbd5bd0733afbd307fd2f0ed2ba8c20dea1e606795a9f39": 59,
+    "60c4a38382f3d0e6eeac819c865cc1c7960cb0dc9544f0eefda9454a21e799a4": 60
   },
   "posted_message_ids": [
     6,
@@ -115,7 +119,11 @@
     53,
     54,
     55,
-    56
+    56,
+    57,
+    58,
+    59,
+    60
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1003,6 +1011,77 @@
         "yozakura"
       ],
       "posted_utc": "2026-11-23T21:57:59Z"
+    },
+    {
+      "title_norm": "jimoto no ijimekkotachi ni shikaeshi shiyo toshitara tv anime reveals lynn as shigure mangetsu",
+      "words": [
+        "anime",
+        "as",
+        "ijimekkotachi",
+        "jimoto",
+        "lynn",
+        "mangetsu",
+        "ni",
+        "no",
+        "reveals",
+        "shigure",
+        "shikaeshi",
+        "shiyo",
+        "toshitara",
+        "tv"
+      ],
+      "posted_utc": "2026-11-23T22:13:01Z"
+    },
+    {
+      "title_norm": "bride of the barrier master anime reveals main trailer, visual, additional cast, opening theme song artist",
+      "words": [
+        "additional",
+        "anime",
+        "artist",
+        "barrier",
+        "bride",
+        "cast,",
+        "main",
+        "master",
+        "of",
+        "opening",
+        "reveals",
+        "song",
+        "the",
+        "theme",
+        "trailer,",
+        "visual,"
+      ],
+      "posted_utc": "2026-11-23T22:28:02Z"
+    },
+    {
+      "title_norm": "akane-banashi season 2 set to premiere on january 9, 2027",
+      "words": [
+        "2",
+        "2027",
+        "9,",
+        "akane-banashi",
+        "january",
+        "on",
+        "premiere",
+        "season",
+        "set",
+        "to"
+      ],
+      "posted_utc": "2026-11-23T22:43:03Z"
+    },
+    {
+      "title_norm": "kurumizawa's folly manga ends in 3 chapters",
+      "words": [
+        "3",
+        "chapters",
+        "ends",
+        "folly",
+        "in",
+        "kurumizawa's",
+        "manga"
+      ],
+      "posted_utc": "2026-11-23T22:58:05Z"
     }
   ],
   "seen_at": {
@@ -1141,10 +1220,15 @@
     "e4716188e1605c52b387257f46a51de59d61991e17787db32799bedf68f66737": "2026-11-23T15:00:57Z",
     "0a270000483bab68a04815dd2e2efa62225dd1e5ac87cf4622a0dde97fefdb8b": "2026-11-23T16:16:21Z",
     "bf2c6b21ad39f60264e4379044a81876161b23d02d6aa58e1629864d8ce0f570": "2026-11-23T17:19:57Z",
-    "08feaa449c8e58d80893e793628574892c1a825bdfdb9e940bf979040639633e": "2026-11-23T20:31:14Z"
+    "08feaa449c8e58d80893e793628574892c1a825bdfdb9e940bf979040639633e": "2026-11-23T20:31:14Z",
+    "04e5afda8fe231c18cb205c304cf99972cf5e99a69d8bb8789fa1fdc01526797": "2026-11-23T21:58:24Z",
+    "39de558cf024e0674926afafaa251f645114e886edcd33e9f089f83a1cf375b4": "2026-11-23T21:58:24Z",
+    "2df34036c5d4472fe4f08aa72282ec8a45dc160f458fbbde5a9c3aa279ea4a6b": "2026-11-23T22:28:25Z",
+    "3a7039401f1cef43fcbd5bd0733afbd307fd2f0ed2ba8c20dea1e606795a9f39": "2026-11-23T22:28:25Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
+    "04e5afda8fe231c18cb205c304cf99972cf5e99a69d8bb8789fa1fdc01526797",
     "058356c70aee8be3699903eabd5f3dc6d53c768f6b9f71ed3b879bf18cb31e9f",
     "062c52480e7c70a6243db17bbc2e693c7fa331228f57937554e368b9441e5af8",
     "08feaa449c8e58d80893e793628574892c1a825bdfdb9e940bf979040639633e",
@@ -1169,13 +1253,16 @@
     "2b1fbd28a6121ae94f5c2433668f3dac5cf776dd14c074b69c645344a930ac84",
     "2b2b9cfe3757a922b488e684317bd024a5dfc5edb2e9134c7b16e2796fd07780",
     "2cefe640231d450efb026bf70cbc6467780dea74dee6c15cbee92bde85fbac6c",
+    "2df34036c5d4472fe4f08aa72282ec8a45dc160f458fbbde5a9c3aa279ea4a6b",
     "2e46c6e43f2f0a38a5249d0305b016ccd83d43f25f32611ed82d491236bb50f5",
     "33f35bb813ad8de3b0b252e9678f6b3a634f18bde20da2d99cea9efa956d4084",
     "356a0d9f5b6564c258202890b0143484d47b4db522398012c7b84f5a9078adcf",
     "387601de815769e621da98b8be095068e42788bc2ca64537ca33db62015f2cc3",
     "39de3ecce1b19697ee58f4c4fe0ec56e4df8bbc93c17f0c5e7d6ccf001c19da7",
+    "39de558cf024e0674926afafaa251f645114e886edcd33e9f089f83a1cf375b4",
     "39f07d5ddb52d3a3c3f5c18eaa42ef34ad7e17a02661faf4049d85b39156a55f",
     "3a38ea041e01c2a6be3770a71a7931882956664c46c86ccf9a01f126952287ee",
+    "3a7039401f1cef43fcbd5bd0733afbd307fd2f0ed2ba8c20dea1e606795a9f39",
     "3c1437beaeb3e29f68da14c92e306dd179c360943470f5e03d08f8c7af169af1",
     "3e40813191148123e86cf44921296223d224e51720768cd6887e0a0ade59dfd7",
     "3f822a1a83a69e1005b5db86b5b6ae1939f4bd7ae00923b83e0e92e10d218e14",
@@ -1381,7 +1468,11 @@
       "2026-11-23T21:01:20Z",
       "2026-11-23T21:16:21Z",
       "2026-11-23T21:42:58Z",
-      "2026-11-23T21:57:59Z"
+      "2026-11-23T21:57:59Z",
+      "2026-11-23T22:13:01Z",
+      "2026-11-23T22:28:02Z",
+      "2026-11-23T22:43:03Z",
+      "2026-11-23T22:58:05Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -1432,7 +1523,11 @@
       "2026-11-23T21:01:20Z",
       "2026-11-23T21:16:21Z",
       "2026-11-23T21:42:58Z",
-      "2026-11-23T21:57:59Z"
+      "2026-11-23T21:57:59Z",
+      "2026-11-23T22:13:01Z",
+      "2026-11-23T22:28:02Z",
+      "2026-11-23T22:43:03Z",
+      "2026-11-23T22:58:05Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -1483,7 +1578,11 @@
       "2026-11-23T21:01:20Z",
       "2026-11-23T21:16:21Z",
       "2026-11-23T21:42:58Z",
-      "2026-11-23T21:57:59Z"
+      "2026-11-23T21:57:59Z",
+      "2026-11-23T22:13:01Z",
+      "2026-11-23T22:28:02Z",
+      "2026-11-23T22:43:03Z",
+      "2026-11-23T22:58:05Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -1534,7 +1633,11 @@
       "2026-11-23T21:01:20Z",
       "2026-11-23T21:16:21Z",
       "2026-11-23T21:42:58Z",
-      "2026-11-23T21:57:59Z"
+      "2026-11-23T21:57:59Z",
+      "2026-11-23T22:13:01Z",
+      "2026-11-23T22:28:02Z",
+      "2026-11-23T22:43:03Z",
+      "2026-11-23T22:58:05Z"
     ]
   },
   "version": 2
