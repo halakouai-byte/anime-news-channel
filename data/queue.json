@@ -2785,6 +2785,28 @@
       "status": "HOLD",
       "hold_reason": "gates_failed:english_limited,why_specific",
       "created_utc": "2026-11-23T00:26:57Z"
+    },
+    {
+      "guid": "https://animetv-jp.net/?p=51485",
+      "hash": "659466f9ab04d82fa96858dc1bbb47012515a14ebcb0b32112bf8e6cfbf8503c",
+      "story_key": null,
+      "title": "As a Reincarnated Aristocrat Season 3 Reveals New Trailer and Three Additional Cast Members",
+      "link": "https://animetv-jp.net/as-a-reincarnated-aristocrat-season-3-reveals-new-trailer-and-three-additional-cast-members",
+      "summary": "A new trailer and three additional cast members have been revealed for the ongoing third season of As a Reincarnated Aristocrat, I’ll Use My Appraisal Skill to Rise in the World. The latest trailer highlights the anime’s “Assassin Arc” storyline. Season 3 is ongoing with a new episode every Sunday on Crunchyroll. New Trailer: Key […] L’article As a Reincarnated Aristocrat Season 3 Reveals New Trailer and Three Additional Cast Members est apparu en premier sur AnimeTV チェーン .",
+      "source": "AnimeTV",
+      "source_name": "AnimeTV",
+      "tier": 1,
+      "pubDate": "2026-11-23T00:31:26+00:00",
+      "category": "فصل جدید",
+      "category_score": 6,
+      "category_source": "keyword",
+      "event_type": "trailer",
+      "franchise_en": null,
+      "priority_score": 50,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "gates_failed:recent_similarity",
+      "created_utc": "2026-11-23T00:32:52Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
