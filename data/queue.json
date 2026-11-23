@@ -2371,9 +2371,10 @@
       "franchise_en": null,
       "priority_score": 50,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "POSTED",
       "hold_reason": "gates_failed:why_specific",
-      "created_utc": "2026-11-22T11:03:00Z"
+      "created_utc": "2026-11-22T11:03:00Z",
+      "message_id": 42
     },
     {
       "guid": "https://myanimelist.net/news/74968286?_location=rss",
@@ -2438,9 +2439,12 @@
       "franchise_en": null,
       "priority_score": 50,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "POSTED",
       "hold_reason": "gates_failed:recent_similarity",
-      "created_utc": "2026-11-22T11:48:25Z"
+      "created_utc": "2026-11-22T11:48:25Z",
+      "message_id": 41,
+      "posted_utc": "2026-11-23T17:01:00Z",
+      "caption": "Sono Mono. Nochi ni… | اقتباس انیمه‌ای تازه تایید شد\n\nدنیای انیمه یک خبر تازه دارد؛ سونو مونو نوچی نی با اقتباس انیمه‌ای تازه برگشته است.\n\nاین خبر را MyAnimeList News منتشر کرده است؛ اثر برای ۲۰۲۷ اعلام شده است و جزئیات بیشتر در گزارش MyAnimeList News آمده است. هم‌زمان با این خبر، کی‌ویژوال تازه اثر هم منتشر شد؛ تصویری که حال‌وهوای بخش تازه را بهتر از هر توضیحی نشان می‌دهد و اولین نگاه رسمی به این بخش است.\n\nچرا مهم است؟ چون اعلام اقتباس انیمه‌ای سونو مونو نوچی نی یعنی این اثر از این پس در دنیای انیمه هم حضور دارد و نسخه متحرک آن در راه است.\n\nمنبع: MyAnimeList News\nhttps://myanimelist.net/news/74968322\n\n#انیمه #SonoMonoNochiNi #فصل_جدید"
     },
     {
       "guid": "https://myanimelist.net/news/74968356?_location=rss",

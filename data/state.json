@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 2388,
+    "duplicates_total": 2439,
     "hold_total": 23,
-    "posts_today": 15,
+    "posts_today": 17,
     "posts_today_date": "2026-11-23",
-    "posts_total": 33,
-    "rejected_total": 375
+    "posts_total": 35,
+    "rejected_total": 381
   },
-  "last_fetch_utc": "2026-11-23T16:16:22Z",
-  "last_publish_utc": "2026-11-23T16:45:59Z",
+  "last_fetch_utc": "2026-11-23T17:00:57Z",
+  "last_publish_utc": "2026-11-23T17:16:01Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -48,7 +48,9 @@
     "062c52480e7c70a6243db17bbc2e693c7fa331228f57937554e368b9441e5af8": 37,
     "b2cbced28e68d26986e2009ccc20b21179fa9ef91e353076625159aeca112b05": 38,
     "0a270000483bab68a04815dd2e2efa62225dd1e5ac87cf4622a0dde97fefdb8b": 39,
-    "6eafe05bd996ad08145854db156f386aa5c4d607fb89a40aa8e1205a66dfa734": 40
+    "6eafe05bd996ad08145854db156f386aa5c4d607fb89a40aa8e1205a66dfa734": 40,
+    "0e50b7047253f8901a7629c1d742ee9d4aff9cce5f4eb4ed2fc580a6ee038a0b": 41,
+    "427146068bbf53366e581621c2fa908a51a61be7dc0ff969a285a189f8d7b122": 42
   },
   "posted_message_ids": [
     6,
@@ -83,7 +85,9 @@
     37,
     38,
     39,
-    40
+    40,
+    41,
+    42
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -688,6 +692,38 @@
         "webtoon,"
       ],
       "posted_utc": "2026-11-23T16:45:59Z"
+    },
+    {
+      "title_norm": "light novel 'sono mono. nochi ni…' gets tv anime in 2027",
+      "words": [
+        "'sono",
+        "2027",
+        "anime",
+        "gets",
+        "in",
+        "light",
+        "mono.",
+        "ni…'",
+        "nochi",
+        "novel",
+        "tv"
+      ],
+      "posted_utc": "2026-11-23T17:01:00Z"
+    },
+    {
+      "title_norm": "shōzen tv anime unveils new trailer, key visual, cast",
+      "words": [
+        "anime",
+        "cast",
+        "key",
+        "new",
+        "shōzen",
+        "trailer,",
+        "tv",
+        "unveils",
+        "visual,"
+      ],
+      "posted_utc": "2026-11-23T17:16:01Z"
     }
   ],
   "seen_at": {
@@ -1046,7 +1082,9 @@
       "2026-11-23T16:00:56Z",
       "2026-11-23T16:15:57Z",
       "2026-11-23T16:30:58Z",
-      "2026-11-23T16:45:59Z"
+      "2026-11-23T16:45:59Z",
+      "2026-11-23T17:01:00Z",
+      "2026-11-23T17:16:01Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -1081,7 +1119,9 @@
       "2026-11-23T16:00:56Z",
       "2026-11-23T16:15:57Z",
       "2026-11-23T16:30:58Z",
-      "2026-11-23T16:45:59Z"
+      "2026-11-23T16:45:59Z",
+      "2026-11-23T17:01:00Z",
+      "2026-11-23T17:16:01Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -1116,7 +1156,9 @@
       "2026-11-23T16:00:56Z",
       "2026-11-23T16:15:57Z",
       "2026-11-23T16:30:58Z",
-      "2026-11-23T16:45:59Z"
+      "2026-11-23T16:45:59Z",
+      "2026-11-23T17:01:00Z",
+      "2026-11-23T17:16:01Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -1151,7 +1193,9 @@
       "2026-11-23T16:00:56Z",
       "2026-11-23T16:15:57Z",
       "2026-11-23T16:30:58Z",
-      "2026-11-23T16:45:59Z"
+      "2026-11-23T16:45:59Z",
+      "2026-11-23T17:01:00Z",
+      "2026-11-23T17:16:01Z"
     ]
   },
   "version": 2
