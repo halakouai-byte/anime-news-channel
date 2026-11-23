@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 2594,
+    "duplicates_total": 2645,
     "hold_total": 23,
-    "posts_today": 23,
+    "posts_today": 25,
     "posts_today_date": "2026-11-23",
-    "posts_total": 41,
-    "rejected_total": 402
+    "posts_total": 43,
+    "rejected_total": 410
   },
-  "last_fetch_utc": "2026-11-23T19:01:03Z",
-  "last_publish_utc": "2026-11-23T19:16:06Z",
+  "last_fetch_utc": "2026-11-23T20:01:01Z",
+  "last_publish_utc": "2026-11-23T20:16:05Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -56,7 +56,9 @@
     "5d1f0e59a777b35c85938873bfdc1be3cf7485e2d0bca454730921ee5fd0f118": 45,
     "619d1017f31c801737833541eb85f7159c27db7d1a3b59e676680fc4298b6ae4": 46,
     "db8e11fbfb4083a909039c5701812ee4114907be896a962155a3954f9f6d15bd": 47,
-    "a2a43b4d6c104dff96af192215549bbf008dea99d6cf88b8d36e5470029526f5": 48
+    "a2a43b4d6c104dff96af192215549bbf008dea99d6cf88b8d36e5470029526f5": 48,
+    "3e40813191148123e86cf44921296223d224e51720768cd6887e0a0ade59dfd7": 49,
+    "562fa88f8259a9943ca083df918890a08f2f53619cd0d00c29d70f5ec7d0e63c": 50
   },
   "posted_message_ids": [
     6,
@@ -99,7 +101,9 @@
     45,
     46,
     47,
-    48
+    48,
+    49,
+    50
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -843,6 +847,39 @@
         "unveils"
       ],
       "posted_utc": "2026-11-23T19:16:06Z"
+    },
+    {
+      "title_norm": "'shibou yuugi de meshi wo kuu.' sequel anime in production",
+      "words": [
+        "'shibou",
+        "anime",
+        "de",
+        "in",
+        "kuu.'",
+        "meshi",
+        "production",
+        "sequel",
+        "wo",
+        "yuugi"
+      ],
+      "posted_utc": "2026-11-23T20:01:04Z"
+    },
+    {
+      "title_norm": "'kekkaishi no ichirinka' reveals additional cast, staff, opening theme, first promo",
+      "words": [
+        "'kekkaishi",
+        "additional",
+        "cast,",
+        "first",
+        "ichirinka'",
+        "no",
+        "opening",
+        "promo",
+        "reveals",
+        "staff,",
+        "theme,"
+      ],
+      "posted_utc": "2026-11-23T20:16:05Z"
     }
   ],
   "seen_at": {
@@ -1211,7 +1248,9 @@
       "2026-11-23T18:01:06Z",
       "2026-11-23T18:16:08Z",
       "2026-11-23T19:01:05Z",
-      "2026-11-23T19:16:06Z"
+      "2026-11-23T19:16:06Z",
+      "2026-11-23T20:01:04Z",
+      "2026-11-23T20:16:05Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -1254,7 +1293,9 @@
       "2026-11-23T18:01:06Z",
       "2026-11-23T18:16:08Z",
       "2026-11-23T19:01:05Z",
-      "2026-11-23T19:16:06Z"
+      "2026-11-23T19:16:06Z",
+      "2026-11-23T20:01:04Z",
+      "2026-11-23T20:16:05Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -1297,7 +1338,9 @@
       "2026-11-23T18:01:06Z",
       "2026-11-23T18:16:08Z",
       "2026-11-23T19:01:05Z",
-      "2026-11-23T19:16:06Z"
+      "2026-11-23T19:16:06Z",
+      "2026-11-23T20:01:04Z",
+      "2026-11-23T20:16:05Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -1340,7 +1383,9 @@
       "2026-11-23T18:01:06Z",
       "2026-11-23T18:16:08Z",
       "2026-11-23T19:01:05Z",
-      "2026-11-23T19:16:06Z"
+      "2026-11-23T19:16:06Z",
+      "2026-11-23T20:01:04Z",
+      "2026-11-23T20:16:05Z"
     ]
   },
   "version": 2

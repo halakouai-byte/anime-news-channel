@@ -2173,9 +2173,12 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "POSTED",
       "hold_reason": "gates_failed:length",
-      "created_utc": "2026-11-22T08:32:58Z"
+      "created_utc": "2026-11-22T08:32:58Z",
+      "message_id": 49,
+      "posted_utc": "2026-11-23T20:01:04Z",
+      "caption": "Shibou Yuugi de Meshi wo Kuu | معرفی صداپیشه‌های تازه تایید شد\n\nطرفداران شیبویوگی این خبر را از دست ندهند؛ معرفی صداپیشه‌های تازه اثر رسما اعلام شد.\n\nشیبویوگی از آن آثاری است که هر خبر تازه‌اش در دنیای انیمه بازتاب دارد؛ این اعلام هم از همان جنس خبرهاست و نشان می‌دهد عوامل ساخت هنوز برای این اثر برنامه دارند. این اثر از روی مانگایی به همین نام ساخته می‌شود؛ مانگایی که خواننده‌هایش مدت‌هاست چشم‌به‌راه نسخه انیمه آن بوده‌اند.\n\nچرا مهم است؟ چون معرفی صداپیشه‌های تازه، صدای شخصیت‌های شیبویوگی را مشخص می‌کند و همان صداهایی است که در فصل تازه خواهید شنید.\n\nمنبع: MyAnimeList News\nhttps://myanimelist.net/news/74967311\n\n#انیمه #ShibouYuugiDeMeshiWoKuu #فصل_جدید"
     },
     {
       "guid": "https://myanimelist.net/news/74967291?_location=rss",
@@ -2195,9 +2198,10 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "POSTED",
       "hold_reason": "gates_failed:recent_similarity",
-      "created_utc": "2026-11-22T08:32:58Z"
+      "created_utc": "2026-11-22T08:32:58Z",
+      "message_id": 50
     },
     {
       "guid": "https://myanimelist.net/news/74967203?_location=rss",
