@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 2490,
+    "duplicates_total": 2542,
     "hold_total": 23,
-    "posts_today": 19,
+    "posts_today": 21,
     "posts_today_date": "2026-11-23",
-    "posts_total": 37,
-    "rejected_total": 387
+    "posts_total": 39,
+    "rejected_total": 394
   },
-  "last_fetch_utc": "2026-11-23T17:19:57Z",
-  "last_publish_utc": "2026-11-23T17:46:04Z",
+  "last_fetch_utc": "2026-11-23T18:00:58Z",
+  "last_publish_utc": "2026-11-23T18:16:08Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -52,7 +52,9 @@
     "0e50b7047253f8901a7629c1d742ee9d4aff9cce5f4eb4ed2fc580a6ee038a0b": 41,
     "427146068bbf53366e581621c2fa908a51a61be7dc0ff969a285a189f8d7b122": 42,
     "bf2c6b21ad39f60264e4379044a81876161b23d02d6aa58e1629864d8ce0f570": 43,
-    "273ad646060e5ea48d24a77d0c0dfa9aacfb4e02d97942d266a3698646c2630c": 44
+    "273ad646060e5ea48d24a77d0c0dfa9aacfb4e02d97942d266a3698646c2630c": 44,
+    "5d1f0e59a777b35c85938873bfdc1be3cf7485e2d0bca454730921ee5fd0f118": 45,
+    "619d1017f31c801737833541eb85f7159c27db7d1a3b59e676680fc4298b6ae4": 46
   },
   "posted_message_ids": [
     6,
@@ -91,7 +93,9 @@
     41,
     42,
     43,
-    44
+    44,
+    45,
+    46
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -761,6 +765,42 @@
         "visual"
       ],
       "posted_utc": "2026-11-23T17:46:04Z"
+    },
+    {
+      "title_norm": "shiboyugi: playing death games to put food on the table anime announces sequel",
+      "words": [
+        "anime",
+        "announces",
+        "death",
+        "food",
+        "games",
+        "on",
+        "playing",
+        "put",
+        "sequel",
+        "shiboyugi:",
+        "table",
+        "the",
+        "to"
+      ],
+      "posted_utc": "2026-11-23T18:01:06Z"
+    },
+    {
+      "title_norm": "cardfight!! vanguard veil lift tv anime sets january 9, 2027 premiere",
+      "words": [
+        "2027",
+        "9,",
+        "anime",
+        "cardfight!!",
+        "january",
+        "lift",
+        "premiere",
+        "sets",
+        "tv",
+        "vanguard",
+        "veil"
+      ],
+      "posted_utc": "2026-11-23T18:16:08Z"
     }
   ],
   "seen_at": {
@@ -1125,7 +1165,9 @@
       "2026-11-23T17:01:00Z",
       "2026-11-23T17:16:01Z",
       "2026-11-23T17:31:02Z",
-      "2026-11-23T17:46:04Z"
+      "2026-11-23T17:46:04Z",
+      "2026-11-23T18:01:06Z",
+      "2026-11-23T18:16:08Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -1164,7 +1206,9 @@
       "2026-11-23T17:01:00Z",
       "2026-11-23T17:16:01Z",
       "2026-11-23T17:31:02Z",
-      "2026-11-23T17:46:04Z"
+      "2026-11-23T17:46:04Z",
+      "2026-11-23T18:01:06Z",
+      "2026-11-23T18:16:08Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -1203,7 +1247,9 @@
       "2026-11-23T17:01:00Z",
       "2026-11-23T17:16:01Z",
       "2026-11-23T17:31:02Z",
-      "2026-11-23T17:46:04Z"
+      "2026-11-23T17:46:04Z",
+      "2026-11-23T18:01:06Z",
+      "2026-11-23T18:16:08Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -1242,7 +1288,9 @@
       "2026-11-23T17:01:00Z",
       "2026-11-23T17:16:01Z",
       "2026-11-23T17:31:02Z",
-      "2026-11-23T17:46:04Z"
+      "2026-11-23T17:46:04Z",
+      "2026-11-23T18:01:06Z",
+      "2026-11-23T18:16:08Z"
     ]
   },
   "version": 2
