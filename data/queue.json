@@ -2763,6 +2763,28 @@
       "status": "HOLD",
       "hold_reason": "gates_failed:english_limited,why_specific",
       "created_utc": "2026-11-23T00:20:54Z"
+    },
+    {
+      "guid": "https://animetv-jp.net/?p=51479",
+      "hash": "058356c70aee8be3699903eabd5f3dc6d53c768f6b9f71ed3b879bf18cb31e9f",
+      "story_key": null,
+      "title": "Shozen Anime Reveals Second PV, New Key Visual, and Additional Cast Ahead of April 2027 Premiere",
+      "link": "https://animetv-jp.net/shozen-anime-reveals-second-pv-new-key-visual-and-additional-cast-ahead-of-april-2027-premiere",
+      "summary": "The second promotional video, first key visual, and additional cast members for the TV anime Shozen, based on the manga by Jiang Jia Meizi, have been revealed. Ahead of the anime’s broadcast in April 2027, an advance screening and talk event will be held on February 6, 2027, at United Cinema Aqua City Odaiba in […] L’article Shozen Anime Reveals Second PV, New Key Visual, and Additional Cast Ahead of April 2027 Premiere est apparu en premier sur AnimeTV チェーン .",
+      "source": "AnimeTV",
+      "source_name": "AnimeTV",
+      "tier": 1,
+      "pubDate": "2026-11-23T00:25:30+00:00",
+      "category": "تریلر",
+      "category_score": 5,
+      "category_source": "keyword",
+      "event_type": "trailer",
+      "franchise_en": null,
+      "priority_score": 50,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "gates_failed:english_limited,why_specific",
+      "created_utc": "2026-11-23T00:26:57Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
