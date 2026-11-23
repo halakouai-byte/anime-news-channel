@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 2017,
+    "duplicates_total": 2075,
     "hold_total": 22,
-    "posts_today": 1,
+    "posts_today": 3,
     "posts_today_date": "2026-11-23",
-    "posts_total": 19,
-    "rejected_total": 345
+    "posts_total": 21,
+    "rejected_total": 349
   },
-  "last_fetch_utc": "2026-11-23T01:18:00Z",
-  "last_publish_utc": "2026-11-23T01:18:02Z",
+  "last_fetch_utc": "2026-11-23T02:20:57Z",
+  "last_publish_utc": "2026-11-23T02:35:59Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -34,7 +34,9 @@
     "17f3a9cff726a2162ecc481c2327c637e95aaea4394743a68687fb6d603fb843": 23,
     "3f822a1a83a69e1005b5db86b5b6ae1939f4bd7ae00923b83e0e92e10d218e14": 24,
     "87ea51c86096fb79b30b2645a8a5c42348352949d06e4ef8028551c44f345ac9": 25,
-    "1c9c9c29844940b02b9a8a67b999641b13ca469bd8fed4a7178879d90d555e01": 26
+    "1c9c9c29844940b02b9a8a67b999641b13ca469bd8fed4a7178879d90d555e01": 26,
+    "b5ccfc16623d9bdb35badfc7e6c3e3f24cf91d691bd0180f56eaeca5fdfa41a6": 27,
+    "bd64dcc6b838835ab7f1747a19d045f544de541e960b9bb333c41bb138228393": 28
   },
   "posted_message_ids": [
     6,
@@ -55,7 +57,9 @@
     23,
     24,
     25,
-    26
+    26,
+    27,
+    28
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -405,6 +409,42 @@
         "video"
       ],
       "posted_utc": "2026-11-23T01:18:02Z"
+    },
+    {
+      "title_norm": "'hidan no aria corto' reveals main staff, new cast, april 2027 premiere",
+      "words": [
+        "'hidan",
+        "2027",
+        "april",
+        "aria",
+        "cast,",
+        "corto'",
+        "main",
+        "new",
+        "no",
+        "premiere",
+        "reveals",
+        "staff,"
+      ],
+      "posted_utc": "2026-11-23T02:20:58Z"
+    },
+    {
+      "title_norm": "isshiki-san wants to know about love anime reveals new wedding dress visual",
+      "words": [
+        "about",
+        "anime",
+        "dress",
+        "isshiki-san",
+        "know",
+        "love",
+        "new",
+        "reveals",
+        "to",
+        "visual",
+        "wants",
+        "wedding"
+      ],
+      "posted_utc": "2026-11-23T02:35:59Z"
     }
   ],
   "seen_at": {
@@ -707,6 +747,10 @@
     "academia hero my|other|10388": {
       "message_id": 19,
       "posted_utc": "2026-11-22T11:03:03Z"
+    },
+    "gintama|trailer|10389": {
+      "message_id": 27,
+      "posted_utc": "2026-11-23T02:20:58Z"
     }
   },
   "template_usage_7d": {
@@ -729,7 +773,9 @@
       "2026-11-22T12:03:07Z",
       "2026-11-22T12:18:08Z",
       "2026-11-22T16:04:57Z",
-      "2026-11-23T01:18:02Z"
+      "2026-11-23T01:18:02Z",
+      "2026-11-23T02:20:58Z",
+      "2026-11-23T02:35:59Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -750,7 +796,9 @@
       "2026-11-22T12:03:07Z",
       "2026-11-22T12:18:08Z",
       "2026-11-22T16:04:57Z",
-      "2026-11-23T01:18:02Z"
+      "2026-11-23T01:18:02Z",
+      "2026-11-23T02:20:58Z",
+      "2026-11-23T02:35:59Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -771,7 +819,9 @@
       "2026-11-22T12:03:07Z",
       "2026-11-22T12:18:08Z",
       "2026-11-22T16:04:57Z",
-      "2026-11-23T01:18:02Z"
+      "2026-11-23T01:18:02Z",
+      "2026-11-23T02:20:58Z",
+      "2026-11-23T02:35:59Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -792,7 +842,9 @@
       "2026-11-22T12:03:07Z",
       "2026-11-22T12:18:08Z",
       "2026-11-22T16:04:57Z",
-      "2026-11-23T01:18:02Z"
+      "2026-11-23T01:18:02Z",
+      "2026-11-23T02:20:58Z",
+      "2026-11-23T02:35:59Z"
     ]
   },
   "version": 2

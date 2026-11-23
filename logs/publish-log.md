@@ -12,3 +12,5 @@
 - 2026-11-22T11:33:05Z UTC (1 آذر 1405، تهران): posted message_id=21 guid=https://animetv-jp.net/?p=51420 category=فصل جدید score=45 breaking=False latency_min=705.8
 - 2026-11-22T11:48:06Z UTC (1 آذر 1405، تهران): posted message_id=22 guid=https://animetv-jp.net/?p=51395 category=فصل جدید score=45 breaking=False latency_min=2128.7
 - 2026-11-23T01:18:02Z UTC (2 آذر 1405، تهران): posted message_id=26 guid=https://www.animenewsnetwork.com/cms/.244094 category=فصل جدید score=50 breaking=False latency_min=38.5
+- 2026-11-23T02:20:58Z UTC (2 آذر 1405، تهران): posted message_id=27 guid=https://myanimelist.net/news/74967474?_location=rss category=فصل جدید score=70 breaking=False latency_min=1070.9
+- 2026-11-23T02:35:59Z UTC (2 آذر 1405، تهران): posted message_id=28 guid=https://animetv-jp.net/?p=51475 category=فصل جدید score=55 breaking=False latency_min=136.4
