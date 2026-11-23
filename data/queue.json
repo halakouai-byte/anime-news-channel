@@ -2094,9 +2094,10 @@
       "franchise_en": null,
       "priority_score": 50,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "POSTED",
       "hold_reason": "gates_failed:why_specific",
-      "created_utc": "2026-11-22T08:32:58Z"
+      "created_utc": "2026-11-22T08:32:58Z",
+      "duplicate_of": 45
     },
     {
       "guid": "https://www.animenewsnetwork.com/cms/.244073",
@@ -2307,9 +2308,10 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "POSTED",
       "hold_reason": "gates_failed:length,why_specific",
-      "created_utc": "2026-11-22T10:01:52Z"
+      "created_utc": "2026-11-22T10:01:52Z",
+      "duplicate_of": 36
     },
     {
       "guid": "https://animecorner.me/shiboyugi-playing-death-games-to-put-food-on-the-table-anime-announces-sequel/",
