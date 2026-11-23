@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 2133,
+    "duplicates_total": 2238,
     "hold_total": 23,
-    "posts_today": 5,
+    "posts_today": 9,
     "posts_today_date": "2026-11-23",
-    "posts_total": 23,
-    "rejected_total": 353
+    "posts_total": 27,
+    "rejected_total": 361
   },
-  "last_fetch_utc": "2026-11-23T02:44:18Z",
-  "last_publish_utc": "2026-11-23T03:06:01Z",
+  "last_fetch_utc": "2026-11-23T11:30:27Z",
+  "last_publish_utc": "2026-11-23T12:00:02Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -38,7 +38,11 @@
     "b5ccfc16623d9bdb35badfc7e6c3e3f24cf91d691bd0180f56eaeca5fdfa41a6": 27,
     "bd64dcc6b838835ab7f1747a19d045f544de541e960b9bb333c41bb138228393": 28,
     "934ed12bca57628f7c47883bc2e82a0aa4b9805a41c5895d3bf7c6fdd57dc2d4": 29,
-    "f3f3ab6ee331eac6a22bd5be691546365b06a0aa094f3f500b4d93cc7ecc79ee": 30
+    "f3f3ab6ee331eac6a22bd5be691546365b06a0aa094f3f500b4d93cc7ecc79ee": 30,
+    "795c25e601abbfbaa0f5a47d18411c0242a0f7134af359a4a39e33988adcb8ec": 31,
+    "659466f9ab04d82fa96858dc1bbb47012515a14ebcb0b32112bf8e6cfbf8503c": 32,
+    "058356c70aee8be3699903eabd5f3dc6d53c768f6b9f71ed3b879bf18cb31e9f": 33,
+    "e954ac69bf10a7bdcae072d0856b1265f043ceb85b3a293bf5919140c8356990": 34
   },
   "posted_message_ids": [
     6,
@@ -63,7 +67,11 @@
     27,
     28,
     29,
-    30
+    30,
+    31,
+    32,
+    33,
+    34
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -480,6 +488,89 @@
         "with"
       ],
       "posted_utc": "2026-11-23T03:06:01Z"
+    },
+    {
+      "title_norm": "'zatsuyou fuyo jutsushi ga jibun no saikyou ni kizuku made' announces additional cast",
+      "words": [
+        "'zatsuyou",
+        "additional",
+        "announces",
+        "cast",
+        "fuyo",
+        "ga",
+        "jibun",
+        "jutsushi",
+        "kizuku",
+        "made'",
+        "ni",
+        "no",
+        "saikyou"
+      ],
+      "posted_utc": "2026-11-23T11:14:59Z"
+    },
+    {
+      "title_norm": "as a reincarnated aristocrat season 3 reveals new trailer and three additional cast members",
+      "words": [
+        "3",
+        "a",
+        "additional",
+        "and",
+        "aristocrat",
+        "as",
+        "cast",
+        "members",
+        "new",
+        "reincarnated",
+        "reveals",
+        "season",
+        "three",
+        "trailer"
+      ],
+      "posted_utc": "2026-11-23T11:30:00Z"
+    },
+    {
+      "title_norm": "shozen anime reveals second pv, new key visual, and additional cast ahead of april 2027 premiere",
+      "words": [
+        "2027",
+        "additional",
+        "ahead",
+        "and",
+        "anime",
+        "april",
+        "cast",
+        "key",
+        "new",
+        "of",
+        "premiere",
+        "pv,",
+        "reveals",
+        "second",
+        "shozen",
+        "visual,"
+      ],
+      "posted_utc": "2026-11-23T11:45:01Z"
+    },
+    {
+      "title_norm": "aria the scarlet ammo corto short anime reveals key visual, cast, and april 2027 streaming debut",
+      "words": [
+        "2027",
+        "ammo",
+        "and",
+        "anime",
+        "april",
+        "aria",
+        "cast,",
+        "corto",
+        "debut",
+        "key",
+        "reveals",
+        "scarlet",
+        "short",
+        "streaming",
+        "the",
+        "visual,"
+      ],
+      "posted_utc": "2026-11-23T12:00:02Z"
     }
   ],
   "seen_at": {
@@ -612,7 +703,9 @@
     "d38622bb4143e2ad1fc8c6e1b1ce32dff234fca343e04f7b53095e07ecfb2606": "2026-11-23T00:50:53Z",
     "1c9c9c29844940b02b9a8a67b999641b13ca469bd8fed4a7178879d90d555e01": "2026-11-23T01:17:59Z",
     "3c1437beaeb3e29f68da14c92e306dd179c360943470f5e03d08f8c7af169af1": "2026-11-23T02:44:17Z",
-    "9dc5b6296405b249fa7aa05812b7a22c475d57082136b075cc77325aa9d723bc": "2026-11-23T02:44:17Z"
+    "9dc5b6296405b249fa7aa05812b7a22c475d57082136b075cc77325aa9d723bc": "2026-11-23T02:44:17Z",
+    "795c25e601abbfbaa0f5a47d18411c0242a0f7134af359a4a39e33988adcb8ec": "2026-11-23T11:14:56Z",
+    "a6b2f0f8a070ee79587074f72dc265c6c17721234d00313a340f519c88ad0125": "2026-11-23T11:30:26Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -680,6 +773,7 @@
     "6eafe05bd996ad08145854db156f386aa5c4d607fb89a40aa8e1205a66dfa734",
     "7750e7a1930cd6063397a1c87921284679ab04dc816ea567c52b04b7250b6e69",
     "785c2cfb882ec84990f9cf152c02d2a0bf9bb7fdbd696002041ff17003708a23",
+    "795c25e601abbfbaa0f5a47d18411c0242a0f7134af359a4a39e33988adcb8ec",
     "7a2361b24db1fe34f532175d50e7e35739aa7f59d7ddba1b909bc815f090b208",
     "7bb5702f82cd19f7de3bcd36dd339520f9d917a460602b74e90bf82da44d944b",
     "7c24bca63d41ba9fc0ca79709a52f33970b7366ec86e2e1d2cf3b1114f1586a4",
@@ -702,6 +796,7 @@
     "a2a43b4d6c104dff96af192215549bbf008dea99d6cf88b8d36e5470029526f5",
     "a36974e59e523b901511448b8699ae5db50e7de14152252b543065bef6ea00a9",
     "a4d5993827f3abbb9050d391f198deca6721cb20ef25d5968ca5c98a1826e738",
+    "a6b2f0f8a070ee79587074f72dc265c6c17721234d00313a340f519c88ad0125",
     "a837eae7bf900bdae752c17c6fd8d9cd56381a830470c266381f701a70e228a9",
     "a8beb4da25bf82638105ba08ff26cbe8631964ffdc2851b7526c6bcba121611d",
     "a947f1c8ad38f4e6e0d97c667cebf07d54f19f78d7d50dd4595ddca33770db32",
@@ -816,7 +911,11 @@
       "2026-11-23T02:20:58Z",
       "2026-11-23T02:35:59Z",
       "2026-11-23T02:51:00Z",
-      "2026-11-23T03:06:01Z"
+      "2026-11-23T03:06:01Z",
+      "2026-11-23T11:14:59Z",
+      "2026-11-23T11:30:00Z",
+      "2026-11-23T11:45:01Z",
+      "2026-11-23T12:00:02Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -841,7 +940,11 @@
       "2026-11-23T02:20:58Z",
       "2026-11-23T02:35:59Z",
       "2026-11-23T02:51:00Z",
-      "2026-11-23T03:06:01Z"
+      "2026-11-23T03:06:01Z",
+      "2026-11-23T11:14:59Z",
+      "2026-11-23T11:30:00Z",
+      "2026-11-23T11:45:01Z",
+      "2026-11-23T12:00:02Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -866,7 +969,11 @@
       "2026-11-23T02:20:58Z",
       "2026-11-23T02:35:59Z",
       "2026-11-23T02:51:00Z",
-      "2026-11-23T03:06:01Z"
+      "2026-11-23T03:06:01Z",
+      "2026-11-23T11:14:59Z",
+      "2026-11-23T11:30:00Z",
+      "2026-11-23T11:45:01Z",
+      "2026-11-23T12:00:02Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -891,7 +998,11 @@
       "2026-11-23T02:20:58Z",
       "2026-11-23T02:35:59Z",
       "2026-11-23T02:51:00Z",
-      "2026-11-23T03:06:01Z"
+      "2026-11-23T03:06:01Z",
+      "2026-11-23T11:14:59Z",
+      "2026-11-23T11:30:00Z",
+      "2026-11-23T11:45:01Z",
+      "2026-11-23T12:00:02Z"
     ]
   },
   "version": 2
