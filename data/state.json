@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 2439,
+    "duplicates_total": 2490,
     "hold_total": 23,
-    "posts_today": 17,
+    "posts_today": 19,
     "posts_today_date": "2026-11-23",
-    "posts_total": 35,
-    "rejected_total": 381
+    "posts_total": 37,
+    "rejected_total": 387
   },
-  "last_fetch_utc": "2026-11-23T17:00:57Z",
-  "last_publish_utc": "2026-11-23T17:16:01Z",
+  "last_fetch_utc": "2026-11-23T17:19:57Z",
+  "last_publish_utc": "2026-11-23T17:46:04Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -50,7 +50,9 @@
     "0a270000483bab68a04815dd2e2efa62225dd1e5ac87cf4622a0dde97fefdb8b": 39,
     "6eafe05bd996ad08145854db156f386aa5c4d607fb89a40aa8e1205a66dfa734": 40,
     "0e50b7047253f8901a7629c1d742ee9d4aff9cce5f4eb4ed2fc580a6ee038a0b": 41,
-    "427146068bbf53366e581621c2fa908a51a61be7dc0ff969a285a189f8d7b122": 42
+    "427146068bbf53366e581621c2fa908a51a61be7dc0ff969a285a189f8d7b122": 42,
+    "bf2c6b21ad39f60264e4379044a81876161b23d02d6aa58e1629864d8ce0f570": 43,
+    "273ad646060e5ea48d24a77d0c0dfa9aacfb4e02d97942d266a3698646c2630c": 44
   },
   "posted_message_ids": [
     6,
@@ -87,7 +89,9 @@
     39,
     40,
     41,
-    42
+    42,
+    43,
+    44
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -724,6 +728,39 @@
         "visual,"
       ],
       "posted_utc": "2026-11-23T17:16:01Z"
+    },
+    {
+      "title_norm": "akane-banashi season 2 announces january 9 debut",
+      "words": [
+        "2",
+        "9",
+        "akane-banashi",
+        "announces",
+        "debut",
+        "january",
+        "season"
+      ],
+      "posted_utc": "2026-11-23T17:31:02Z"
+    },
+    {
+      "title_norm": "the detective is already dead anime's 2nd season reveals trailer, visual for new arc",
+      "words": [
+        "2nd",
+        "already",
+        "anime's",
+        "arc",
+        "dead",
+        "detective",
+        "for",
+        "is",
+        "new",
+        "reveals",
+        "season",
+        "the",
+        "trailer,",
+        "visual"
+      ],
+      "posted_utc": "2026-11-23T17:46:04Z"
     }
   ],
   "seen_at": {
@@ -860,7 +897,8 @@
     "795c25e601abbfbaa0f5a47d18411c0242a0f7134af359a4a39e33988adcb8ec": "2026-11-23T11:14:56Z",
     "a6b2f0f8a070ee79587074f72dc265c6c17721234d00313a340f519c88ad0125": "2026-11-23T11:30:26Z",
     "e4716188e1605c52b387257f46a51de59d61991e17787db32799bedf68f66737": "2026-11-23T15:00:57Z",
-    "0a270000483bab68a04815dd2e2efa62225dd1e5ac87cf4622a0dde97fefdb8b": "2026-11-23T16:16:21Z"
+    "0a270000483bab68a04815dd2e2efa62225dd1e5ac87cf4622a0dde97fefdb8b": "2026-11-23T16:16:21Z",
+    "bf2c6b21ad39f60264e4379044a81876161b23d02d6aa58e1629864d8ce0f570": "2026-11-23T17:19:57Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -967,6 +1005,7 @@
     "ba72c94009913e0276e4b2de75e979ba8a8d6c014b986b152a717579fc6f9cf4",
     "bc06815f9f919967b99a18291ab6e714b864486f0a8d4386826ed7276957e4dd",
     "bd64dcc6b838835ab7f1747a19d045f544de541e960b9bb333c41bb138228393",
+    "bf2c6b21ad39f60264e4379044a81876161b23d02d6aa58e1629864d8ce0f570",
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af",
     "c3996e9c2f6e78c16bbe33779e9eb6dd1db26774b2f3bf28f6f8f93d4c867fd6",
     "c659337c14358c946f860553c3a0fa35692980d4cf7c509e2d6db71390eaad7c",
@@ -1084,7 +1123,9 @@
       "2026-11-23T16:30:58Z",
       "2026-11-23T16:45:59Z",
       "2026-11-23T17:01:00Z",
-      "2026-11-23T17:16:01Z"
+      "2026-11-23T17:16:01Z",
+      "2026-11-23T17:31:02Z",
+      "2026-11-23T17:46:04Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -1121,7 +1162,9 @@
       "2026-11-23T16:30:58Z",
       "2026-11-23T16:45:59Z",
       "2026-11-23T17:01:00Z",
-      "2026-11-23T17:16:01Z"
+      "2026-11-23T17:16:01Z",
+      "2026-11-23T17:31:02Z",
+      "2026-11-23T17:46:04Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -1158,7 +1201,9 @@
       "2026-11-23T16:30:58Z",
       "2026-11-23T16:45:59Z",
       "2026-11-23T17:01:00Z",
-      "2026-11-23T17:16:01Z"
+      "2026-11-23T17:16:01Z",
+      "2026-11-23T17:31:02Z",
+      "2026-11-23T17:46:04Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -1195,7 +1240,9 @@
       "2026-11-23T16:30:58Z",
       "2026-11-23T16:45:59Z",
       "2026-11-23T17:01:00Z",
-      "2026-11-23T17:16:01Z"
+      "2026-11-23T17:16:01Z",
+      "2026-11-23T17:31:02Z",
+      "2026-11-23T17:46:04Z"
     ]
   },
   "version": 2

@@ -28,3 +28,5 @@
 - 2026-11-23T16:45:59Z UTC (2 آذر 1405، تهران): posted message_id=40 guid=https://www.animenewsnetwork.com/cms/.244078 category=مانگا و اقتباس score=50 breaking=False latency_min=1171.0
 - 2026-11-23T17:01:00Z UTC (2 آذر 1405، تهران): posted message_id=41 guid=https://myanimelist.net/news/74968322?_location=rss category=فصل جدید score=50 breaking=False latency_min=1764.2
 - 2026-11-23T17:16:01Z UTC (2 آذر 1405، تهران): posted message_id=42 guid=https://www.animenewsnetwork.com/cms/.244063 category=تریلر score=50 breaking=False latency_min=1876.0
+- 2026-11-23T17:31:02Z UTC (2 آذر 1405، تهران): posted message_id=43 guid=https://www.animenewsnetwork.com/cms/.244109 category=فصل جدید score=60 breaking=False latency_min=36.3
+- 2026-11-23T17:46:04Z UTC (2 آذر 1405، تهران): posted message_id=44 guid=https://www.animenewsnetwork.com/cms/.244074 category=تریلر score=50 breaking=False latency_min=2146.1

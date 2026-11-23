@@ -2056,9 +2056,12 @@
       "franchise_en": null,
       "priority_score": 50,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "POSTED",
       "hold_reason": "gates_failed:why_specific",
-      "created_utc": "2026-11-22T08:32:58Z"
+      "created_utc": "2026-11-22T08:32:58Z",
+      "message_id": 44,
+      "posted_utc": "2026-11-23T17:46:04Z",
+      "caption": "The Detective is Already Dead: تریلر تازه و جزئیات تازه\n\nیک خبر خوب برای کسانی که کارآگاه مرده است را دوست دارند: تریلر تازه اثر اعلام شد.\n\nهم‌زمان با این خبر، کی‌ویژوال تازه اثر هم منتشر شد؛ تصویری که حال‌وهوای بخش تازه را بهتر از هر توضیحی نشان می‌دهد و اولین نگاه رسمی به این بخش است.\n\nچرا مهم است؟ چون کی‌ویژوال تازه کارآگاه مرده است اولین تصویر رسمی از این بخش است و حال‌وهوای آن را بهتر از هر توضیحی نشان می‌دهد؛ تصویری که از امروز معیار انتظار طرفداران از فصل تازه خواهد بود.\n\nمنبع: Anime News Network\nhttps://animenewsnetwork.com/news/2026-11-22/the-detective-is-already-dead-anime-2nd-season-reveals-trailer-visual-for-new-arc/.244074\n\n#انیمه #TheDetectiveIsAlreadyDead #تریلر"
     },
     {
       "guid": "https://www.animenewsnetwork.com/cms/.244070",
@@ -3017,6 +3020,31 @@
       "message_id": 39,
       "posted_utc": "2026-11-23T16:30:58Z",
       "caption": "One Punch Man برمی‌گردد؛ معرفی صداپیشه‌های تازه\n\nاگر وان پانچ من را دنبال می‌کنید، این خبر مال شماست: معرفی صداپیشه‌های تازه اثر رسما تایید شد.\n\nبا این اعلام، وان پانچ من یک بار دیگر در مرکز توجه طرفداران قرار گرفت؛ خبری که از امروز در تقویم دنیای انیمه ثبت شده و ادامه‌اش را باید در روزهای آینده دنبال کرد. برای طرفدارانی که وان پانچ من را دنبال می‌کنند، همین اعلام یعنی تصویر آینده اثر روشن‌تر شد؛ حالا نوبت جزئیات بیشتر است که در روزهای آینده از راه برسد و تکلیف بقیه بخش‌ها هم مشخص شود.\n\nچرا مهم است؟ چون معرفی صداپیشه‌های تازه، صدای شخصیت‌های وان پانچ من را مشخص می‌کند و همان صداهایی است که در فصل تازه خواهید شنید؛ صداهایی که انتخابشان نشان می‌دهد عوامل ساخت برای این بخش برنامه جدی دارند.\n\nمنبع: MyAnimeList News\nhttps://myanimelist.net/news/74973042\n\n#انیمه #OnePunchMan #فصل_جدید"
+    },
+    {
+      "guid": "https://www.animenewsnetwork.com/cms/.244109",
+      "hash": "bf2c6b21ad39f60264e4379044a81876161b23d02d6aa58e1629864d8ce0f570",
+      "story_key": null,
+      "title": "Akane-banashi Season 2 Announces January 9 Debut",
+      "link": "https://animenewsnetwork.com/news/2026-11-23/akane-banashi-season-2-announces-january-9-debut/.244109",
+      "summary": "New season starts streaming on ABEMA, Netflix on January 10",
+      "source": "ANN",
+      "source_name": "Anime News Network",
+      "tier": 1,
+      "pubDate": "2026-11-23T16:54:44+00:00",
+      "category": "فصل جدید",
+      "category_score": 4,
+      "category_source": "keyword",
+      "event_type": "announcement",
+      "franchise_en": null,
+      "priority_score": 60,
+      "is_breaking": false,
+      "status": "POSTED",
+      "hold_reason": "",
+      "created_utc": "2026-11-23T17:19:57Z",
+      "message_id": 43,
+      "posted_utc": "2026-11-23T17:31:02Z",
+      "caption": "رسمی شد: فصل ۲ Akane-banashi\n\nخبرش رسید: آکانه‌باناشی قرار است فصل ۲ داشته باشد.\n\nاین خبر را Anime News Network منتشر کرده است؛ پخش اثر از ۹ ژانویه آغاز می‌شود و جزئیات بیشتر در گزارش Anime News Network آمده است. گزارش کامل این خبر در Anime News Network آمده است؛ جایی که زمان‌بندی و عوامل اصلی اثر هم در آن آمده و لینک آن در انتهای همین پست است تا خودتان هم بخوانید.\n\nچرا مهم است؟ چون تایید فصل تازه یعنی قصه آکانه‌باناشی ادامه دارد و شخصیت‌های آشنا دوباره برمی‌گردند؛ ادامه‌ای که مسیر قصه را یک فصل دیگر جلو می‌برد.\n\nمنبع: Anime News Network\nhttps://animenewsnetwork.com/news/2026-11-23/akane-banashi-season-2-announces-january-9-debut/.244109\n\n#انیمه #AkaneBanashi #فصل_جدید"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
