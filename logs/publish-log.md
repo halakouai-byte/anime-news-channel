@@ -32,3 +32,5 @@
 - 2026-11-23T17:46:04Z UTC (2 آذر 1405، تهران): posted message_id=44 guid=https://www.animenewsnetwork.com/cms/.244074 category=تریلر score=50 breaking=False latency_min=2146.1
 - 2026-11-23T18:01:06Z UTC (2 آذر 1405، تهران): posted message_id=45 guid=https://animecorner.me/shiboyugi-playing-death-games-to-put-food-on-the-table-anime-announces-sequel/ category=فصل جدید score=50 breaking=False latency_min=2241.5
 - 2026-11-23T18:16:08Z UTC (2 آذر 1405، تهران): posted message_id=46 guid=https://animetv-jp.net/?p=51435 category=فصل جدید score=50 breaking=False latency_min=2519.1
+- 2026-11-23T19:01:05Z UTC (2 آذر 1405، تهران): posted message_id=47 guid=https://www.animenewsnetwork.com/cms/.244061 category=فصل جدید score=45 breaking=False latency_min=2071.1
+- 2026-11-23T19:16:06Z UTC (2 آذر 1405، تهران): posted message_id=48 guid=https://www.animenewsnetwork.com/cms/.244075 category=فصل جدید score=45 breaking=False latency_min=2086.1

@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 2542,
+    "duplicates_total": 2594,
     "hold_total": 23,
-    "posts_today": 21,
+    "posts_today": 23,
     "posts_today_date": "2026-11-23",
-    "posts_total": 39,
-    "rejected_total": 394
+    "posts_total": 41,
+    "rejected_total": 402
   },
-  "last_fetch_utc": "2026-11-23T18:00:58Z",
-  "last_publish_utc": "2026-11-23T18:16:08Z",
+  "last_fetch_utc": "2026-11-23T19:01:03Z",
+  "last_publish_utc": "2026-11-23T19:16:06Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -54,7 +54,9 @@
     "bf2c6b21ad39f60264e4379044a81876161b23d02d6aa58e1629864d8ce0f570": 43,
     "273ad646060e5ea48d24a77d0c0dfa9aacfb4e02d97942d266a3698646c2630c": 44,
     "5d1f0e59a777b35c85938873bfdc1be3cf7485e2d0bca454730921ee5fd0f118": 45,
-    "619d1017f31c801737833541eb85f7159c27db7d1a3b59e676680fc4298b6ae4": 46
+    "619d1017f31c801737833541eb85f7159c27db7d1a3b59e676680fc4298b6ae4": 46,
+    "db8e11fbfb4083a909039c5701812ee4114907be896a962155a3954f9f6d15bd": 47,
+    "a2a43b4d6c104dff96af192215549bbf008dea99d6cf88b8d36e5470029526f5": 48
   },
   "posted_message_ids": [
     6,
@@ -95,7 +97,9 @@
     43,
     44,
     45,
-    46
+    46,
+    47,
+    48
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -801,6 +805,44 @@
         "veil"
       ],
       "posted_utc": "2026-11-23T18:16:08Z"
+    },
+    {
+      "title_norm": "mission: yozakura family season 2 anime's 2nd part casts shinichirō miki",
+      "words": [
+        "2",
+        "2nd",
+        "anime's",
+        "casts",
+        "family",
+        "miki",
+        "mission:",
+        "part",
+        "season",
+        "shinichirō",
+        "yozakura"
+      ],
+      "posted_utc": "2026-11-23T19:01:05Z"
+    },
+    {
+      "title_norm": "new aria the scarlet ammo short anime unveils title, new & returning cast, april 2027 debut",
+      "words": [
+        "&",
+        "2027",
+        "ammo",
+        "anime",
+        "april",
+        "aria",
+        "cast,",
+        "debut",
+        "new",
+        "returning",
+        "scarlet",
+        "short",
+        "the",
+        "title,",
+        "unveils"
+      ],
+      "posted_utc": "2026-11-23T19:16:06Z"
     }
   ],
   "seen_at": {
@@ -1167,7 +1209,9 @@
       "2026-11-23T17:31:02Z",
       "2026-11-23T17:46:04Z",
       "2026-11-23T18:01:06Z",
-      "2026-11-23T18:16:08Z"
+      "2026-11-23T18:16:08Z",
+      "2026-11-23T19:01:05Z",
+      "2026-11-23T19:16:06Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -1208,7 +1252,9 @@
       "2026-11-23T17:31:02Z",
       "2026-11-23T17:46:04Z",
       "2026-11-23T18:01:06Z",
-      "2026-11-23T18:16:08Z"
+      "2026-11-23T18:16:08Z",
+      "2026-11-23T19:01:05Z",
+      "2026-11-23T19:16:06Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -1249,7 +1295,9 @@
       "2026-11-23T17:31:02Z",
       "2026-11-23T17:46:04Z",
       "2026-11-23T18:01:06Z",
-      "2026-11-23T18:16:08Z"
+      "2026-11-23T18:16:08Z",
+      "2026-11-23T19:01:05Z",
+      "2026-11-23T19:16:06Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -1290,7 +1338,9 @@
       "2026-11-23T17:31:02Z",
       "2026-11-23T17:46:04Z",
       "2026-11-23T18:01:06Z",
-      "2026-11-23T18:16:08Z"
+      "2026-11-23T18:16:08Z",
+      "2026-11-23T19:01:05Z",
+      "2026-11-23T19:16:06Z"
     ]
   },
   "version": 2

@@ -2242,9 +2242,12 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "POSTED",
       "hold_reason": "gates_failed:why_specific",
-      "created_utc": "2026-11-22T10:01:52Z"
+      "created_utc": "2026-11-22T10:01:52Z",
+      "message_id": 47,
+      "posted_utc": "2026-11-23T19:01:05Z",
+      "caption": "خبر تازه Mission: Yozakura Family: معرفی صداپیشه‌های تازه\n\nماموریت: خانواده یوزاکورا دوباره خبرساز شد؛ این‌بار با معرفی صداپیشه‌های تازه.\n\nگزارش کامل این خبر در Anime News Network آمده است؛ جایی که زمان‌بندی و عوامل اصلی اثر هم در آن آمده و لینک آن در انتهای همین پست است تا خودتان هم بخوانید.\n\nچرا مهم است؟ چون معرفی صداپیشه‌های تازه، صدای شخصیت‌های ماموریت: خانواده یوزاکورا را مشخص می‌کند و همان صداهایی است که در فصل تازه خواهید شنید؛ صداهایی که انتخابشان نشان می‌دهد عوامل ساخت برای این بخش برنامه جدی دارند.\n\nمنبع: Anime News Network\nhttps://animenewsnetwork.com/news/2026-11-22/mission-yozakura-family-season-2-anime-2nd-part-casts-shinichiro-miki/.244061\n\n#انیمه #Mission #فصل_جدید"
     },
     {
       "guid": "https://www.animenewsnetwork.com/cms/.244075",
@@ -2264,9 +2267,10 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "POSTED",
       "hold_reason": "gates_failed:why_specific",
-      "created_utc": "2026-11-22T10:01:52Z"
+      "created_utc": "2026-11-22T10:01:52Z",
+      "message_id": 48
     },
     {
       "guid": "https://animecorner.me/the-detective-is-already-dead-season-2-reveals-new-trailer-visual/",
