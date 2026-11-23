@@ -1403,7 +1403,7 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "STALE",
       "hold_reason": "gates_failed:english_limited,why_specific",
       "created_utc": "2026-11-21T06:08:49Z"
     },
@@ -1425,7 +1425,7 @@
       "franchise_en": null,
       "priority_score": 50,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "STALE",
       "hold_reason": "gates_failed:english_limited,why_specific",
       "created_utc": "2026-11-21T06:08:49Z"
     },
@@ -1447,7 +1447,7 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "STALE",
       "hold_reason": "gates_failed:english_limited,why_specific",
       "created_utc": "2026-11-21T06:08:49Z"
     },
@@ -1538,7 +1538,7 @@
       "franchise_en": null,
       "priority_score": 35,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "STALE",
       "hold_reason": "gates_failed:length,why_specific",
       "created_utc": "2026-11-21T06:08:49Z"
     },
@@ -2807,6 +2807,28 @@
       "status": "HOLD",
       "hold_reason": "gates_failed:recent_similarity",
       "created_utc": "2026-11-23T00:32:52Z"
+    },
+    {
+      "guid": "https://animetv-jp.net/?p=51489",
+      "hash": "d38622bb4143e2ad1fc8c6e1b1ce32dff234fca343e04f7b53095e07ecfb2606",
+      "story_key": null,
+      "title": "The One. Later On… TV Anime Announced for 2027",
+      "link": "https://animetv-jp.net/the-one-later-on-tv-anime-announced-for-2027",
+      "summary": "A TV anime adaptation of the light novel series The One. Later On… is set to premiere in 2027. A teaser visual has also been released. The story follows Wazu, who gains incredible strength and sets out on a journey to build a harem. However, things do not go as planned. Teaser Visual: CAST:Kent Ito […] L’article The One. Later On… TV Anime Announced for 2027 est apparu en premier sur AnimeTV チェーン .",
+      "source": "AnimeTV",
+      "source_name": "AnimeTV",
+      "tier": 1,
+      "pubDate": "2026-11-23T00:49:01+00:00",
+      "category": "فصل جدید",
+      "category_score": 6,
+      "category_source": "keyword",
+      "event_type": "trailer",
+      "franchise_en": null,
+      "priority_score": 50,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "gates_failed:english_limited,length,why_specific",
+      "created_utc": "2026-11-23T00:50:53Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
