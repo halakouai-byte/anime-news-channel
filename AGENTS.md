@@ -154,7 +154,7 @@ from a local copy by hand outside the documented path.
   Pattern: LiveForge `build.yml` (gitleaks step), plus the SHA256
   verification the manager ordered.
 - `publish.yml` — `repository_dispatch` (event-driven) + manual
-  `workflow_dispatch`: priority score, Persian rewrite, 10 quality gates,
+  `workflow_dispatch`: priority score, Persian rewrite, 11 quality gates,
   Pillow cover (Playwright only as fallback), `sendPhoto`, then commit
   `state.json` + `queue.json` + `archive.jsonl` via
   `scripts/merge_state.py` (union merge + `merge -s ours`, never rebase —
@@ -255,13 +255,18 @@ history — never silently delete the file and move on.
   overrides «sensitive». There is no night silence (user decision,
   locked 2026-11-21). More than 3 breaking items in a day is an
   audit warning, not a cap.
-- 10 quality gates before publish (caption 600–850 chars, headline
+- 11 quality gates before publish (caption 600–850 chars, headline
   ≤ 70 chars, no placeholders, limited English, < 25% 5-gram similarity
   with the source summary, < 60% similarity with the last 30 posts,
   lead-template freshness max 3 uses in 7 days, specific «چرا مهم
   است؟», numbers/dates from the source, event-vs-source consistency,
   no doubled word in one line — gate 10, added 2026-11-22 after msg 10
-  printed «انیمه تازه تازه اثر اعلام شد»). (2026-11-23: word-boundary fix — a franchise name ending in «را», e.g. «یوزاکورا را», is not a double; a true double like «تازه تازه» still fails)
+  printed «انیمه تازه تازه اثر اعلام شد»). (2026-11-23: word-boundary fix — a franchise name ending in «را», e.g. «یوزاکورا را», is not a double; a true double like «تازه تازه» still fails).
+  No repeated long sentence (≥ 40 chars) in one post — gate 11, added
+  2026-11-23 after msg 27 (Hidan no Aria) printed the body_premiere_long
+  sentence twice in a row; root cause was `other` in _build_once not
+  excluding body_premiere_long, so the same date body could be picked
+  twice (or body_premiere + body_premiere_long, whose sentences overlap).
   3 gate failures → human HOLD.
 - Bank maintenance (v2 minimums): +15 templates + 10 phrases per month;
   new-name queue emptied weekly; franchises updated every anime season
@@ -524,6 +529,28 @@ history — never silently delete the file and move on.
   23/24/25 lines cannot be resurrected (they were never committed;
   latency_min is not in the archive) — the archive + state remain the
   authoritative record; the fix only prevents future loss.
+- 2026-11-23 ~07:00 UTC — REPEATED SENTENCE (msg 27, Hidan no Aria):
+  the 787-char caption printed the body_premiere_long sentence twice in
+  a row. Root cause (my Bundle 1 regression): _build_once put
+  body_premiere_long in the date_bodies set but NOT in the `other`
+  exclusion list (only body_premiere + body_source_date were excluded),
+  so the same template could be picked twice, or body_premiere +
+  body_premiere_long together (the first sentence is a prefix of the
+  second). The gate suite could not see it — the duplicated caption
+  still scored 10/10. FIX (local, for the browser commit; test
+  `scripts/test_sentence_dup.py`): `other` now excludes ALL date bodies
+  via one shared id set (any future date body is excluded automatically)
+  + gate 11 no_repeated_sentence (a ≥ 40-char sentence twice in one
+  post fails; short repeats like the franchise name are not flagged).
+  Proof: Hidan item over 100 seeds — 5/100 best captions had the
+  duplication before the fix (3 with identical body ids), 0/100 after;
+  the real msg 27 caption fails the gate, msg 30 (same sentence once)
+  passes. The gate was validated against all 16 posted captions in the
+  archive — only msg 27 fails. NOTE: msg 27 itself is NOT touched —
+  deletion/editing is for the management chat. Also in this commit: the
+  missing period after the gate-10 parenthesis (manager note 2026-11-23
+  ~05:36 Tehran) + the gate-count updates in the older tests (10/10 →
+  11/11).
 
 ## 9. Rules (hard)
 
