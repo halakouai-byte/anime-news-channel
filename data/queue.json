@@ -2741,6 +2741,28 @@
       "status": "HOLD",
       "hold_reason": "gates_failed:english_limited,why_specific",
       "created_utc": "2026-11-23T00:16:51Z"
+    },
+    {
+      "guid": "https://animetv-jp.net/?p=51475",
+      "hash": "bd64dcc6b838835ab7f1747a19d045f544de541e960b9bb333c41bb138228393",
+      "story_key": null,
+      "title": "Isshiki-san Wants to Know About Love Anime Reveals New Wedding Dress Visual",
+      "link": "https://animetv-jp.net/isshiki-san-wants-to-know-about-love-anime-reveals-new-wedding-dress-visual",
+      "summary": "The TV anime Isshiki-san Wants to Know About Love, based on the manga by Ayune Araragi, has revealed a new wedding dress visual featuring Rinna Isshiki. The illustration was released on November 22 to celebrate Japan’s Good Couples Day. It is the anime’s third seasonal visual. The series is scheduled to premiere in January 2027. […] L’article Isshiki-san Wants to Know About Love Anime Reveals New Wedding Dress Visual est apparu en premier sur AnimeTV チェーン .",
+      "source": "AnimeTV",
+      "source_name": "AnimeTV",
+      "tier": 1,
+      "pubDate": "2026-11-23T00:19:35+00:00",
+      "category": "فصل جدید",
+      "category_score": 3,
+      "category_source": "keyword",
+      "event_type": "announcement",
+      "franchise_en": null,
+      "priority_score": 55,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "gates_failed:english_limited,why_specific",
+      "created_utc": "2026-11-23T00:20:54Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
