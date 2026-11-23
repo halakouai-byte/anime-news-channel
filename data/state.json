@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 1959,
+    "duplicates_total": 2017,
     "hold_total": 22,
-    "posts_today": 0,
+    "posts_today": 1,
     "posts_today_date": "2026-11-23",
-    "posts_total": 18,
-    "rejected_total": 341
+    "posts_total": 19,
+    "rejected_total": 345
   },
-  "last_fetch_utc": "2026-11-23T00:50:53Z",
-  "last_publish_utc": "2026-11-22T16:04:57Z",
+  "last_fetch_utc": "2026-11-23T01:18:00Z",
+  "last_publish_utc": "2026-11-23T01:18:02Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -33,7 +33,8 @@
     "5ee8c06f1bbc2c9ee2d1965becd22e5fb1e93c123c707201cfcf72c2fcd700dc": 22,
     "17f3a9cff726a2162ecc481c2327c637e95aaea4394743a68687fb6d603fb843": 23,
     "3f822a1a83a69e1005b5db86b5b6ae1939f4bd7ae00923b83e0e92e10d218e14": 24,
-    "87ea51c86096fb79b30b2645a8a5c42348352949d06e4ef8028551c44f345ac9": 25
+    "87ea51c86096fb79b30b2645a8a5c42348352949d06e4ef8028551c44f345ac9": 25,
+    "1c9c9c29844940b02b9a8a67b999641b13ca469bd8fed4a7178879d90d555e01": 26
   },
   "posted_message_ids": [
     6,
@@ -53,7 +54,8 @@
     22,
     23,
     24,
-    25
+    25,
+    26
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -381,6 +383,28 @@
         "witch"
       ],
       "posted_utc": "2026-11-22T16:04:57Z"
+    },
+    {
+      "title_norm": "'as a reincarnated aristocrat, i'll use my appraisal skill' season 3's new video announces more cast",
+      "words": [
+        "'as",
+        "3's",
+        "a",
+        "announces",
+        "appraisal",
+        "aristocrat,",
+        "cast",
+        "i'll",
+        "more",
+        "my",
+        "new",
+        "reincarnated",
+        "season",
+        "skill'",
+        "use",
+        "video"
+      ],
+      "posted_utc": "2026-11-23T01:18:02Z"
     }
   ],
   "seen_at": {
@@ -510,7 +534,8 @@
     "bd64dcc6b838835ab7f1747a19d045f544de541e960b9bb333c41bb138228393": "2026-11-23T00:20:54Z",
     "058356c70aee8be3699903eabd5f3dc6d53c768f6b9f71ed3b879bf18cb31e9f": "2026-11-23T00:26:57Z",
     "659466f9ab04d82fa96858dc1bbb47012515a14ebcb0b32112bf8e6cfbf8503c": "2026-11-23T00:32:52Z",
-    "d38622bb4143e2ad1fc8c6e1b1ce32dff234fca343e04f7b53095e07ecfb2606": "2026-11-23T00:50:53Z"
+    "d38622bb4143e2ad1fc8c6e1b1ce32dff234fca343e04f7b53095e07ecfb2606": "2026-11-23T00:50:53Z",
+    "1c9c9c29844940b02b9a8a67b999641b13ca469bd8fed4a7178879d90d555e01": "2026-11-23T01:17:59Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -521,6 +546,7 @@
     "0e50b7047253f8901a7629c1d742ee9d4aff9cce5f4eb4ed2fc580a6ee038a0b",
     "17f3a9cff726a2162ecc481c2327c637e95aaea4394743a68687fb6d603fb843",
     "1a0d8d13f8aa7fd33bf4f4ac7cf0b6263bc04c51213abe370b2e8536e6cfb4c7",
+    "1c9c9c29844940b02b9a8a67b999641b13ca469bd8fed4a7178879d90d555e01",
     "1ce189dd91ada3eb4cd8c3987ee682d1043f6a71082165d83b5dfe988045d56c",
     "1d5c4fa39ba05b8a85b6c45ac310a3d473907d7f127ab2e9683ec0777249e7ef",
     "21bd60f8469f5b7dfbbb64c68163e447281766a7a0d52faf3ad5d83dc38b1838",
@@ -702,7 +728,8 @@
       "2026-11-22T11:48:06Z",
       "2026-11-22T12:03:07Z",
       "2026-11-22T12:18:08Z",
-      "2026-11-22T16:04:57Z"
+      "2026-11-22T16:04:57Z",
+      "2026-11-23T01:18:02Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -722,7 +749,8 @@
       "2026-11-22T11:48:06Z",
       "2026-11-22T12:03:07Z",
       "2026-11-22T12:18:08Z",
-      "2026-11-22T16:04:57Z"
+      "2026-11-22T16:04:57Z",
+      "2026-11-23T01:18:02Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -742,7 +770,8 @@
       "2026-11-22T11:48:06Z",
       "2026-11-22T12:03:07Z",
       "2026-11-22T12:18:08Z",
-      "2026-11-22T16:04:57Z"
+      "2026-11-22T16:04:57Z",
+      "2026-11-23T01:18:02Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -762,7 +791,8 @@
       "2026-11-22T11:48:06Z",
       "2026-11-22T12:03:07Z",
       "2026-11-22T12:18:08Z",
-      "2026-11-22T16:04:57Z"
+      "2026-11-22T16:04:57Z",
+      "2026-11-23T01:18:02Z"
     ]
   },
   "version": 2

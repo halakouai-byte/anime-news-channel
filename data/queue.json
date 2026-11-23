@@ -2829,6 +2829,28 @@
       "status": "HOLD",
       "hold_reason": "gates_failed:english_limited,length,why_specific",
       "created_utc": "2026-11-23T00:50:53Z"
+    },
+    {
+      "guid": "https://www.animenewsnetwork.com/cms/.244094",
+      "hash": "1c9c9c29844940b02b9a8a67b999641b13ca469bd8fed4a7178879d90d555e01",
+      "story_key": null,
+      "title": "'As a Reincarnated Aristocrat, I'll Use My Appraisal Skill' Season 3's New Video Announces More Cast",
+      "link": "https://animenewsnetwork.com/news/2026-11-22/as-a-reincarnated-aristocrat-ill-use-my-appraisal-skill-season-3-new-video-announces-more-cast/.244094",
+      "summary": "Anna Nagase, Kōsuke Toriumi, Ayumu Murase join series in episode 33",
+      "source": "ANN",
+      "source_name": "Anime News Network",
+      "tier": 1,
+      "pubDate": "2026-11-23T00:39:33+00:00",
+      "category": "فصل جدید",
+      "category_score": 5,
+      "category_source": "keyword",
+      "event_type": "casting",
+      "franchise_en": null,
+      "priority_score": 50,
+      "is_breaking": false,
+      "status": "QUEUED",
+      "hold_reason": "",
+      "created_utc": "2026-11-23T01:17:59Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
