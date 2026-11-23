@@ -116,8 +116,10 @@ check("T4 BanG Dream why says «دنیای … بزرگ‌تر می‌شود»",
 
 # --- T5: بازنویسی فصل برگشتی — why_new_season حفظ می‌شود ---
 post2 = rewrite_post(FRIEREN_S2, seed=int(sha256_hex("frieren-s2")[:8], 16))
-check("T5 Frieren S2 why is why_new_season",
-      post2["template_ids"]["why"] == "why_new_season",
+# بسته بانک ۲۰۲۶-۱۱-۲۳: why_sequel هم «چرا»ی ادامه برای فصل برگشتی است
+# («قصه ادامه دارد») — مثل why_new_season درست است؛ هر دو قابل‌قبول‌اند.
+check("T5 Frieren S2 why is why_new_season or why_sequel (continuation)",
+      post2["template_ids"]["why"] in ("why_new_season", "why_sequel"),
       f"(got {post2['template_ids']['why']})")
 check("T5 Frieren S2 body_season_premiered IS eligible",
       "body_season_premiered" in [b["id"] for b in _eligible_bodies(

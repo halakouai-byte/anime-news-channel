@@ -424,6 +424,9 @@ def _eligible_bodies(fx: dict, banks: dict):
         "manga": any(k in text for k in ("manga", "light novel")) and _new_production,
         "studio": bool(fx["studio_en"]) and _new_production,
         "event_live": any(k in text for k in ("livestream", "anniversary", "event")),
+        # بسته بانک ۲۰۲۶-۱۱-۲۳: فصل برگشتی (فصل ۲ به بعد / دنباله) — فقط
+        # نشانه‌های صریح شماره فصل / دنباله (مثل بدنه why_sequel).
+        "returning": _is_returning_season(fx),
     }
     has_date_month = bool(fx["date_fa"]) and any(
         m in fx["date_fa"] for m in MONTHS_FA.values())
@@ -433,6 +436,13 @@ def _eligible_bodies(fx: dict, banks: dict):
         "body_season_premiered": "premiered", "body_manga_origin": "manga",
         "body_studio": "studio", "body_anniversary": "event_live",
         "body_more_detail": None, "body_wait": None, "body_franchise_context": None,
+        # بسته بانک ۲۰۲۶-۱۱-۲۳: بدنه‌های بلند (۱۵۰–۲۰۰ حرف) برای اینکه خبرهای
+        # کوتاه به کف ۶۰۰ حرف کپشن برسند — بدون شل‌کردن هیچ گیت.
+        "body_patience_long": None, "body_source_follow_long": None,
+        "body_franchise_wait_long": None, "body_calendar_long": None,
+        "body_trailer_long": "trailer", "body_cast_long": "cast",
+        "body_visual_long": "visual", "body_premiere_long": "date_month",
+        "body_sequel_long": "returning", "body_studio_long": "studio",
     }
     out = []
     for b in banks["templates-fa"]["bodies"]:
@@ -457,6 +467,8 @@ def _why_templates(fx: dict, banks: dict):
         # پس‌زمینه نباید why_continuation («ادامه مستقیم قصه‌ای که از پیش
         # آغاز کرده بود») را واجد کند.
         "premiered": _has_premiered(fx),
+        # بسته بانک ۲۰۲۶-۱۱-۲۳: فصل برگشتی — برای why_sequel.
+        "returning": _is_returning_season(fx),
     }
     need = {
         "why_premiere_date": "date", "why_new_season": None, "why_cast": "cast",
@@ -473,6 +485,9 @@ def _why_templates(fx: dict, banks: dict):
         # لایسنس — نه why_adaptation/why_new_season که از لایسنس، «انیمه تازه
         # در راه است» می‌ساختند.
         "why_license": "license",
+        # بسته بانک ۲۰۲۶-۱۱-۲۳: «چرا»های بلند برای تریلر/کست/ویژوال/دنباله.
+        "why_trailer_long": "trailer", "why_cast_long": "cast",
+        "why_visual_long": "visual", "why_sequel": "returning",
     }
     out = []
     for w in banks["templates-fa"]["why"]:
@@ -557,7 +572,8 @@ def _build_once(fx: dict, banks: dict, rng: random.Random):
     bodies = _eligible_bodies(fx, banks)
     specific = [b for b in bodies if b["id"] not in ("body_more_detail", "body_wait", "body_franchise_context")]
     generic = [b for b in bodies if b["id"] in ("body_more_detail", "body_wait", "body_franchise_context")]
-    date_bodies = [b for b in specific if b["id"] in ("body_premiere", "body_source_date")]
+    date_bodies = [b for b in specific if b["id"] in ("body_premiere", "body_source_date",
+                                                      "body_premiere_long")]
     other = [b for b in specific if b["id"] not in ("body_premiere", "body_source_date")]
     rng.shuffle(date_bodies)
     rng.shuffle(other)
@@ -569,9 +585,9 @@ def _build_once(fx: dict, banks: dict, rng: random.Random):
     why_tpls = _why_templates(fx, banks)
     preferred = {
         "adaptation": ["why_adaptation", "why_adaptation_generic", "why_visual_staff"],
-        "casting": ["why_cast", "why_visual_staff"],
+        "casting": ["why_cast", "why_cast_long", "why_visual_staff", "why_visual_long"],
         "date": ["why_premiere_date", "why_date_set"],
-        "trailer": ["why_trailer"],
+        "trailer": ["why_trailer", "why_trailer_long", "why_visual_long"],
         # Critic fix 2026-11-21 (review #1, msg 6): برای پایان مانگا فقط
         # why_manga_ending — نه why_adaptation (که از کلمه «adaptation» در
         # پس‌زمینه خلاصه تغذیه می‌شد و می‌گفت اقتباس تازه می‌آید).
@@ -587,7 +603,7 @@ def _build_once(fx: dict, banks: dict, rng: random.Random):
         # why_new_season («قصه ادامه دارد») هم غلط است (پیام‌های ۱۰–۱۲) —
         # فقط وقتی فصل برگشتی است why_new_season؛ وگرنه why_new_announcement
         # («دنیای … بزرگ‌تر می‌شود»).
-        "announcement": (["why_new_season"] if _is_returning_season(fx)
+        "announcement": (["why_new_season", "why_sequel"] if _is_returning_season(fx)
                          else ["why_new_announcement"]),
         "box_office": ["why_first_look"],
     }.get(fx["event"], [])
@@ -600,7 +616,15 @@ def _build_once(fx: dict, banks: dict, rng: random.Random):
     note = ""
     pub_fa = pubdate_fa(fx["pubDate"])
     if pub_fa:
-        note = f"این خبر را {fx['source_name']} در {pub_fa} منتشر کرد."
+        # بسته بانک ۲۰۲۶-۱۱-۲۳: چند note بلندتر (۹۰–۱۲۰ حرف) به‌جای یک جمله
+        # ثابت ~۵۰ حرفی — پل طولی برای کپشن‌های ۵۵۰–۵۹۹ حرفی (rewrite_post
+        # وقتی کپشن زیر ۶۰۰ است، همین note را می‌گذارد).
+        notes = templates.get("notes") or []
+        if notes:
+            ctx["pub_fa"] = pub_fa
+            note = _fill(rng.choice(notes)["pattern"], ctx)
+        else:
+            note = f"این خبر را {fx['source_name']} در {pub_fa} منتشر کرد."
     hashtags = _hashtag(fx["fr_en"], fx["category"], banks)
     caption = (
         f"{title}\n\n{lead}\n\n{body}\n\n{why_line}\n\n"
@@ -735,8 +759,12 @@ def check_gates(caption: str, title: str, fx: dict, why: str,
     # حتی اگر قالب دیگری هم همین عیب را داشته باشد. فقط در یک خط می‌سنجد
     # (نه دو سرِ پاراگراف — تیتر «…انیمه تازه» + لید «تازه‌ترین خبر…» خطا
     # نیست) و «تازه» در «تازه‌ترین» را تکرار نمی‌شمرد (ZWNJ در lookahead).
+    # بسته بانک ۲۰۲۶-۱۱-۲۳: lookbehind در آغاز — نام فرنچایزی که خودش به
+    # «را» ختم می‌شود («یوزاکورا را») نباید خطا بخورد؛ تکرار واقعی فقط
+    # وقتی است که کلمه اول هم از مرز کلمه شروع شده باشد.
     gates["no_double_word"] = not re.search(
-        r"([\u0600-\u06FF]{2,})[ \t]+\1(?![\u0600-\u06FF\u200C])", caption_no_url)
+        r"(?<![\u0600-\u06FF\u200C])([\u0600-\u06FF]{2,})[ \t]+\1(?![\u0600-\u06FF\u200C])",
+        caption_no_url)
     return gates
 
 
@@ -779,9 +807,10 @@ def rewrite_post(facts: dict, seed: int | None = None,
         score = len(passed)
         if score > best_score:
             best_score, best = score, (built, gates, passed)
-        if score == 9 and 600 <= len(built["caption"]) <= 850:
-            best = (built, gates, passed)
-            break
+        # بسته بانک ۲۰۲۶-۱۱-۲۳: حذف early-break (توقف در اولین ۹/۱۰ با طول
+        # معتبر) — هر ۳۰ تلاش امتحان می‌شود تا ۱۰/۱۰ احتمالی در تلاش‌های
+        # بعدی از دست نرود؛ best فقط وقتی بهتر شود عوض می‌شود، پس حذف
+        # break هیچ آیتمی را که پیش‌تر قبول می‌شد رد نمی‌کند.
     built, gates, passed = best
     return {
         "title": built["title"],
