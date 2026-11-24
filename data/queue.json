@@ -1610,7 +1610,7 @@
       "franchise_en": null,
       "priority_score": 40,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "REJECTED",
       "hold_reason": "low-confidence",
       "created_utc": "2026-11-21T17:55:22Z"
     },
@@ -1655,7 +1655,7 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "REJECTED",
       "hold_reason": "low-confidence",
       "created_utc": "2026-11-21T17:55:22Z"
     },
@@ -1677,7 +1677,7 @@
       "franchise_en": "The Apothecary Diaries",
       "priority_score": 70,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "REJECTED",
       "hold_reason": "low-confidence",
       "created_utc": "2026-11-21T17:55:22Z"
     },
@@ -1699,7 +1699,7 @@
       "franchise_en": null,
       "priority_score": 35,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "REJECTED",
       "hold_reason": "low-confidence",
       "created_utc": "2026-11-21T17:55:22Z"
     },
@@ -1721,7 +1721,7 @@
       "franchise_en": null,
       "priority_score": 35,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "REJECTED",
       "hold_reason": "low-confidence",
       "created_utc": "2026-11-21T17:55:22Z"
     },
@@ -3531,6 +3531,28 @@
       "attach_to": 69,
       "created_utc": "2026-11-24T17:00:55Z",
       "pubDate": "2026-11-23T23:00:00+00:00"
+    },
+    {
+      "guid": "https://www.animenewsnetwork.com/cms/.244121",
+      "hash": "211eae7acdc4d7a5b5c6e3fd7064a86f48ce106ac074a288d1be7896b902f562",
+      "story_key": null,
+      "title": "HIDIVE to Premiere Murciélago Anime at Anime Frontier Event in Texas",
+      "link": "https://animenewsnetwork.com/news/2026-11-24/hidive-to-premiere-murcielago-anime-at-anime-frontier-event-in-texas/.244121",
+      "summary": "Fort Worth convention to host world premiere on December 5 before January 2027 TV debut",
+      "source": "ANN",
+      "source_name": "Anime News Network",
+      "tier": 1,
+      "pubDate": "2026-11-24T16:24:04+00:00",
+      "category": "رویداد",
+      "category_score": 2,
+      "category_source": "keyword",
+      "event_type": "other",
+      "franchise_en": null,
+      "priority_score": 40,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "low-confidence",
+      "created_utc": "2026-11-24T18:00:57Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
