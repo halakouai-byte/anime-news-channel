@@ -76,4 +76,8 @@ jobs:
           # ضد مسابقه (فانتوم ۱۵/۱۶، ۲۲ نوامبر ۲۰۲۶): به‌جای pull --rebase
           # (که روی state/queue/archive تداخل می‌خورد و state را می‌انداخت)،
           # merge_state.py رکوردها را union می‌کند و با merge -s ours push می‌کند.
+          # + برگرداندن فایل‌های غیر‌داده از origin/main پیش از merge
+          # (حادثه ۲۴ نوامبر ۲۰۲۶، مرج 3c34da3): ورکر فقط data/ و logs/
+          # را مالک است؛ کلون کهنه نباید کد/داک را برگرداند.
           python scripts/merge_state.py --commit-message "publish: update state/queue/archive [skip ci]"
+
