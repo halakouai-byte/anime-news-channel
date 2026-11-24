@@ -664,6 +664,50 @@ history — never silently delete the file and move on.
   now restores non-data files from origin/main before the merge
   (see the bundle entry above). The worker only ever owns data/ and
   logs/ — it must never revert anything else.
+- 2026-11-24 ~13:30 Tehran — DUPLICATE 65/66 + GUNDAM/OSCAR
+  MIS-IDENTIFICATION (manager sweep): Publish #58 (run 45356000263,
+  08:25 UTC) posted msg 65 (ANN Oscars-eligibility list) but its state
+  never reached main — the commit step's first push failed at 08:40:59Z
+  (remote had moved: five review-#4 bundle commits landed 08:30–08:33
+  UTC during the 15-min pacing wait) and the retry saw «nothing to
+  commit» and returned 0 WITHOUT pushing, while the run still ended
+  Success. Msg 65 is a phantom (no state/queue/archive/log record, like
+  15/16); Publish #59 (run 45364596127, 09:22 UTC) re-posted the same
+  story as msg 66, then msg 67 (Wakako-zake S10). FIX (this bundle):
+  merge_state.py — «nothing to commit» no longer returns 0; it only
+  skips the commit, and merge + push ALWAYS run (even with nothing
+  fresh), so a previous attempt's unpushed commit is never lost. The
+  non-data restore now also runs on the retry/no-op path (amended into
+  HEAD) so the retry push cannot revert remote code/docs. Proof:
+  scripts/test_merge_state_push_retry.py 7/7 — replays run #58 (local
+  commit + remote moved + clean tree): the old code exits 0 and leaves
+  the remote at [6, 7] (msg 65 lost), the fixed code pushes msg 65 and
+  keeps the bundle. The same file's T2 (remote deletion) is preserved
+  by keeping the restore AFTER the commit on the normal path (a file
+  the worker checked out but never committed is only caught by the
+  HEAD diff). (2) Mis-identification: msg 66's caption falsely said
+  «انیمه تازه Gundam» for an Oscars-eligibility list. Root cause:
+  extract_franchise took «Gundam» from a comma-list summary lead (the
+  title names no bank anime) and detect_event fell through to
+  «announcement» («Oscars»/«eligible» were not award keywords), so
+  event_fa became «انیمه تازه»; event_consistency had no award branch
+  and why_specific counted «انیمه تازه» itself as a specific marker.
+  FIX (this bundle): detect_event recognises «oscar»/«eligib» as
+  «award» (title + text); event_consistency fails an award source +
+  «انیمه تازه» claim; extract_franchise has a roundup guard (after the
+  title stage: if the title names no anime and the article is a list
+  — «, More » or 3+ commas in title + summary lead — no name is
+  returned, so the item HOLDs as new_name). The guard is deliberately
+  after the title stage: a license roundup whose title names the lead
+  franchise ([Oshi No Ko] + «, More Manga») and a single-franchise
+  casting title with 3 commas (Pen to Wappa) both still resolve
+  correctly. Proof: test_extract_franchise.py 13/13 (3 new msg-66
+  cases) + test_rewrite_msg6.py Test 5 (award event, franchise None,
+  rewrite HOLDs, gate + control); full suite 14/15 (only the
+  pre-existing test_dedupe_bangdream T3). Deletion of msgs 65/66 is
+  the owner's decision — nothing deleted. Known follow-up: no
+  award-specific why template yet (a single-franchise award article
+  may pick an unpreferred why).
 
 ## 9. Rules (hard)
 
