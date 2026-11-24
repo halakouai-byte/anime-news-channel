@@ -3479,8 +3479,8 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:why_specific",
       "created_utc": "2026-11-24T16:26:54Z"
     },
     {
@@ -3507,6 +3507,30 @@
       "message_id": 69,
       "posted_utc": "2026-11-24T16:26:57Z",
       "caption": "Sakamoto Days | پایان سریال‌سازی تایید شد\n\nدر میان خبرهای امروز، خبر روزهای ساکاموتو را هم داریم: پایان سریال‌سازی اثر تایید شد.\n\nبرای طرفدارانی که روزهای ساکاموتو را دنبال می‌کنند، همین اعلام یعنی تصویر آینده اثر روشن‌تر شد؛ حالا نوبت جزئیات بیشتر است که در روزهای آینده از راه برسد و تکلیف بقیه بخش‌ها هم مشخص شود. با این اعلام، روزهای ساکاموتو یک بار دیگر در مرکز توجه طرفداران قرار گرفت؛ خبری که از امروز در تقویم دنیای انیمه ثبت شده و ادامه‌اش را باید در روزهای آینده دنبال کرد.\n\nچرا مهم است؟ چون پایان روزهای ساکاموتو یعنی بسته‌شدن دوره‌ای از قصه‌ای که خواننده‌ها سال‌ها همراهش بودند.\n\nمنبع: Anime News Network\nhttps://animenewsnetwork.com/news/2026-11-22/sakamoto-days-manga-ends/.244098\n\n#انیمه #SakamotoDays #مانگا"
+    },
+    {
+      "guid": "https://animetv-jp.net/?p=51493",
+      "hash": "2aba6266620a28f7e969f08e4181f2dc57dd8e00004a113da0fad18cb217a861",
+      "story_key": "days sakamoto|adaptation|10390",
+      "title": "SAKAMOTO DAYS Manga Officially Ends After Six Years",
+      "link": "https://animetv-jp.net/sakamoto-days-manga-officially-ends-after-six-years",
+      "source": "AnimeTV",
+      "status": "POSTED",
+      "attach_to": 69,
+      "created_utc": "2026-11-24T17:00:55Z",
+      "pubDate": "2026-11-23T21:41:25+00:00"
+    },
+    {
+      "guid": "https://www.siliconera.com/?p=1127503",
+      "hash": "b49738038fa5ba3838c8dadae7b290fcd559cce461f6d35e6b159749b73b682d",
+      "story_key": "days sakamoto|announcement|10390",
+      "title": "Sakamoto Days Manga Ended With Chapter 284",
+      "link": "https://siliconera.com/sakamoto-days-manga-ended-with-chapter-284",
+      "source": "Siliconera",
+      "status": "POSTED",
+      "attach_to": 69,
+      "created_utc": "2026-11-24T17:00:55Z",
+      "pubDate": "2026-11-23T23:00:00+00:00"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
