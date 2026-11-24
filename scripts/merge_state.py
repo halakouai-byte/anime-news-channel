@@ -15,11 +15,25 @@ state/queue/archive تداخل خورد، push ناممکن شد و state محل
      باشند — اگر نباشند، کامیت نمی‌شود (جلوگیری از اینکه merge بعدی
      رکورد راه‌دور را بی‌صدا بیندازد).
   3. `git add` + `git commit` (اگر چیزی برای کامیت نیست، خروج ۰).
+  3.۵. برگرداندن فایل‌های غیر‌داده از راه‌دور (حادثه ۲۰۲۶-۱۱-۲۴،
+     پایین را ببین) — ورکر فقط data/ و logs/ را می‌نویسد، پس بقیه
+     فایل‌ها باید دقیقاً همان origin/main باشند.
   4. `git merge -s ours origin/main` — remote را به‌عنوان mergeشده
      ثبت می‌کند بدون اینکه درخت (که همین حالا union شده) را دست
      بزند؛ پس push دیگر non-fast-forward نمی‌خورد.
   5. `git push`؛ اگر خورد (ران دیگری هم‌زمان کامیت کرد)، از قدم ۱
      تکرار می‌شود (حداکثر ۳ تلاش).
+
+حادثه دوم (۲۴ نوامبر ۲۰۲۶، مرج 3c34da3): ورکر انتشار از کلون کهنه
+(55bc1b5، پیش از بسته نقد ۴) push کرد؛ `merge -s ours` درخت کهنه
+را کامل نگه داشت و تغییرهای کد/داکِ راه‌دور (رتبه وضعیت، بانک v1.3،
+تست‌ها، README، AGENTS.md) از main برگشتند — چون sync فقط data/ و
+logs/ را union می‌کند و قدم ۴ هیچ فایلی را از راه‌دور برنمی‌گرداند.
+داده‌ها سالم ماندند (union آرشیو کپشن‌های درست‌شده را نگه داشت)، ولی
+کد و داک برگشتند. از آن پس قدم ۳٫۵ پیش از merge، همه فایل‌های غیر
+از data/ و logs/ را از origin/main می‌گیرد (محتوا + حذف‌ها) و به
+همان کامیت اضافه می‌کند — ورکر فقط data/logs را مالک است و هرگز
+نباید چیز دیگری را برگرداند.
 
 استفاده (در ورک‌فلو، بعد از git config):
   python scripts/merge_state.py --commit-message "publish: update state/queue/archive [skip ci]"
@@ -64,6 +78,53 @@ def _remote_log_lines(root: Path, ref: str, rel: str) -> set[str] | None:
     if rr.returncode != 0:
         return None
     return {l.strip() for l in rr.stdout.decode("utf-8").splitlines() if l.strip()}
+
+
+def _non_data_files(root: Path, ref: str) -> list[str] | None:
+    """فایل‌های غیر‌داده در ref (نه data/ و نه logs/)؛ None اگر خوانده نشد.
+    فهرست را در پایتون فیلتر می‌کنیم چون `:!` (exclude) در بعضی
+    دستورهای git پشتیبانی نمی‌شود و checkout روی pathspecِ خالی خطا
+    می‌دهد (وقتی ریپو فقط data/ و logs/ دارد — مثل ریپوهای تست)."""
+    rr = _git(["ls-tree", "-r", "--name-only", ref], root)
+    if rr.returncode != 0:
+        return None
+    return [l for l in rr.stdout.decode("utf-8").splitlines()
+            if l and not l.startswith("data/") and not l.startswith("logs/")]
+
+
+def _restore_non_data_files(root: Path, ref: str) -> bool | None:
+    """فایل‌های غیر‌داده را از ref برگردان (قدم ۳٫۵، حادثه ۲۰۲۶-۱۱-۲۴):
+    `merge -s ours` درخت محلی را کامل نگه می‌دارد؛ اگر کلون کهنه
+    باشد، تغییرهای کد/داکِ راه‌دور بی‌صدا برمی‌گردند — چون sync فقط
+    data/ و logs/ را union می‌کند. ورکر فقط data/ و logs/ را
+    می‌نویسد، پس همه فایل‌های دیگر باید دقیقاً همان ref باشند.
+    محتوا را از ref می‌گیریم و فایل‌هایی را که ref حذف کرده پاک
+    می‌کنیم؛ تغییرها در index می‌مانند تا caller به کامیت اضافه کند.
+    True اگر چیزی تغییر کرد، False اگر چیزی برای برگرداندن نبود،
+    None اگر خطا بود (caller باید abort کند، نه اینکه درخت کهنه را push کند)."""
+    files = _non_data_files(root, ref)
+    if files is None:
+        log_error("merge_state: could not list files in " + ref)
+        return None
+    if files:
+        co = _git(["checkout", ref, "--", *files], root)
+        if co.returncode != 0:
+            log_error("merge_state: checkout non-data files from " + ref + " failed: "
+                      + co.stderr.decode("utf-8", "replace")[:300])
+            return None
+    # فایل‌های غیر‌داده که ref حذف کرده ولی در HEAD محلی هنوز هستند
+    diff = _git(["diff", "--name-only", "--diff-filter=D", "HEAD", ref], root)
+    if diff.returncode == 0:
+        for rel in diff.stdout.decode("utf-8").splitlines():
+            rel = rel.strip()
+            if not rel or rel.startswith("data/") or rel.startswith("logs/"):
+                continue
+            rm = _git(["rm", "-q", "--", rel], root)
+            if rm.returncode != 0:
+                log_error(f"merge_state: git rm {rel} failed: "
+                          + rm.stderr.decode("utf-8", "replace")[:300])
+                return None
+    return _git(["diff", "--cached", "--quiet"], root).returncode != 0
 
 
 def main(argv=None) -> int:
@@ -135,6 +196,23 @@ def main(argv=None) -> int:
             log_error("merge_state: git commit failed: "
                       + commit.stderr.decode("utf-8", "replace")[:300])
             return 1
+        # ۳٫۵. فایل‌های غیر‌داده را از راه‌دور برگردان (حادثه ۲۰۲۶-۱۱-۲۴):
+        # `merge -s ours` درخت محلی را کامل نگه می‌دارد، پس اگر کلون
+        # کهنه باشد، کد/داکِ راه‌دور برمی‌گردد. ورکر فقط data/ و logs/
+        # را می‌نویسد — بقیه باید دقیقاً همان origin/main باشند.
+        restored = _restore_non_data_files(root, args.ref)
+        if restored is None:
+            log_error("merge_state: could not restore non-data files "
+                      "— refusing to push a stale tree")
+            return 1
+        if restored:
+            amend = _git(["commit", "--amend", "--no-edit"], root)
+            if amend.returncode != 0:
+                log_error("merge_state: git commit --amend failed: "
+                          + amend.stderr.decode("utf-8", "replace")[:300])
+                return 1
+            log_info("merge_state: restored non-data files from "
+                     + args.ref + " (amended into the state commit)")
         # ۴. ثبت remote به‌عنوان mergeشده، بدون دست‌زدن به درخت
         merge = _git(["merge", "-s", "ours", args.ref], root)
         if merge.returncode != 0:

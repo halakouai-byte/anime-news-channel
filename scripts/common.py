@@ -400,7 +400,12 @@ def merge_state_data(local: dict, remote: dict) -> dict:
     return merged
 
 
-_STATUS_RANK = {"POSTED": 4, "STALE": 3, "HOLD": 2, "QUEUED": 1}
+# رتبه وضعیت برای ادغام صف (نقد ۴، ۲۰۲۶-۱۱-۲۴): REJECTED و EXPIRED
+# وضعیت‌های پایانی‌اند و باید بالای HOLD/QUEUED بمانند — وگرنه
+# merge_queue_data ردِ expire_queue را برمی‌گرداند (HOLD راه‌دورِ کهنه
+# بر REJECTED محلی می‌برد و آیتم ۷۲ ساعته برای همیشه HOLD می‌ماند؛
+# با شبیه‌سازی ثابت شد). هم‌رتبه STALE (۳) و زیر POSTED (۴).
+_STATUS_RANK = {"POSTED": 4, "STALE": 3, "REJECTED": 3, "EXPIRED": 3, "HOLD": 2, "QUEUED": 1}
 
 
 def _queue_item_key(item: dict) -> str:
@@ -408,7 +413,7 @@ def _queue_item_key(item: dict) -> str:
 
 
 def merge_queue_data(local: dict, remote: dict) -> dict:
-    """ادغام دو queue — وضعیت پیشرفته‌تر می‌برد (POSTED > STALE > HOLD > QUEUED).
+    """ادغام دو queue — وضعیت پیشرفته‌تر می‌برد (POSTED > STALE/REJECTED/EXPIRED > HOLD > QUEUED).
 
     آیتمی که این ران پست کرده (POSTED محلی) هرگز با QUEUED راه‌دور
     بازنویسی نمی‌شود؛ و آیتمی که ران دیگری پست کرده (POSTED راه‌دور)

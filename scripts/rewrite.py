@@ -103,21 +103,40 @@ def _longest_in(text_low: str, names: dict) -> str | None:
     return None
 
 
+def _summary_lead(summary: str) -> str:
+    """جمله اول خلاصه، بدون محتوای داخل پرانتز (نقد ۴، پیام ۳۱:
+    «Bleach» در اعتبارات بازیگران خلاصه آمده بود — «Melis: Natsumi
+    Takamori (Bleach: Sennen Kessen-hen)» — و مرحله خلاصه آن را
+    به‌جای اثر واقعی گرفت. ذکرِ گذرا در اعتبارات یا «known for»
+    موضوع خبر نیست؛ فقط جمله اول خلاصه برای تطابق نام به کار می‌رود.
+    اگر جمله اول نام نداشته باشد، آیتم new_name می‌شود (HOLD امن)،
+    نه اینکه نامِ گذرا پست شود."""
+    s = (summary or "")
+    s = re.sub(r"\([^)]*\)", " ", s)
+    for sep in (". ", "\n", "。"):
+        if sep in s:
+            s = s.split(sep, 1)[0]
+            break
+    return s
+
+
 def extract_franchise(title: str, summary: str, banks: dict):
     """نام اثر — دو مرحله‌ای (نقد ۳، پیام ۸: تیتر «Shin-Ei Animation» بود
     چون «Shin-Ei Animation» با ۱۷ حرف، طولانی‌تر از «Oishinbo» با ۸ حرف
     بود — در حالی که «Oishinbo» در بانک هم بود؛ طولانی‌ترین تطابق در هر
     جای متن، نام پس‌زمینه خلاصه را بر نام تیتر ترجیح می‌داد):
-    ۱) نام‌های انیمه/مانگا در تیتر؛ ۲) همان‌ها در خلاصه؛
-    ۳) استودیو/پلتفرم/شخص فقط وقتی هیچ نام انیمه‌ای نیست — و آن‌وقت
-    new_name=True است (نام واقعی اثر در بانک نیست و باید اضافه شود).
-    وگرنه عبارت گیومه‌دار در تیتر؛ وگرنه None.
+    ۱) نام‌های انیمه/مانگا در تیتر؛ ۲) همان‌ها در جمله اول خلاصه
+    (بدون محتوای داخل پرانتز — نقد ۴، پیام ۳۱: «Bleach» در اعتبارات
+    بازیگران خلاصه بود)؛ ۳) استودیو/پلتفرم/شخص فقط وقتی هیچ نام
+    انیمه‌ای نیست — و آن‌وقت new_name=True است (نام واقعی اثر در بانک
+    نیست و باید اضافه شود). وگرنه عبارت گیومه‌دار در تیتر؛ وگرنه None.
     """
     anime = _section_names(banks, "anime", "manga_lightnovel")
     other = _section_names(banks, "studios", "platforms", "people")
     title_low = (title or "").lower()
     summary_low = (summary or "").lower()
-    best = _longest_in(title_low, anime) or _longest_in(summary_low, anime)
+    summary_lead = _summary_lead(summary).lower()
+    best = _longest_in(title_low, anime) or _longest_in(summary_lead, anime)
     if best:
         return best, anime[best], False
     best = _longest_in(f"{title_low}\n{summary_low}", other)

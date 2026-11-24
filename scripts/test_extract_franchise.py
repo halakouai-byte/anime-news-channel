@@ -99,6 +99,42 @@ def main() -> int:
             "A TV anime adaptation of the manga was announced.", BANKS),
         ("Some Brand New Anime", "Some Brand New Anime", True)))
 
+    # ۸) پیام ۳۱ (نقد ۴): تیتر Zatsuyou دارد؛ خلاصه در اعتبارات بازیگران
+    # «Bleach» را ذکر می‌کند — باید Zatsuyou بگیرد، نه Bleach
+    results.append(check(
+        "msg31-zatsuyou-not-bleach",
+        extract_franchise(
+            "'Zatsuyou Fuyo Jutsushi ga Jibun no Saikyou ni Kizuku made' "
+            "Announces Additional Cast",
+            "The official website for the television anime of Zatsuyou Fuyo "
+            "Jutsushi ga Jibun no Saikyou ni Kizuku made revealed additional "
+            "cast members on Sunday. Melis: Natsumi Takamori (Bleach: "
+            "Sennen Kessen-hen).", BANKS),
+        ("Zatsuyou Fuyo Jutsushi ga Jibun no Saikyou ni Kizuku made",
+         "زاتسویو فویو جوتسوشی", False)))
+
+    # ۹) جمله اول خلاصه می‌برد، نه ذکرِ گذرای بلندتر در جمله بعد (نقد ۴)
+    # کد قدیم (خلاصه کامل) طولانی‌ترین نام را می‌گرفت: «Frieren» (۲۹ حرف)
+    # بر «Oishinbo» (۸ حرف) — با اینکه Frieren فقط در اعتبارات آمده بود.
+    results.append(check(
+        "summary-lead-beats-passing-mention",
+        extract_franchise(
+            "Additional Cast Members Revealed for Upcoming Anime",
+            "The official website for the television anime of Oishinbo "
+            "revealed additional cast members. Melis: Natsumi Takamori "
+            "(Frieren: Beyond Journey's End) joins the cast.", BANKS),
+        ("Oishinbo", "اویشینبو", False)))
+
+    # ۱۰) نام فقط داخل پرانتز در جمله بعد: نباید گرفته شود (نقد ۴)
+    results.append(check(
+        "parenthetical-only-is-not-a-match",
+        extract_franchise(
+            "Additional Cast Members Revealed for Upcoming Anime",
+            "The new cast members were announced on Friday. The theme song "
+            "is performed by the artist (Bleach: Sennen Kessen-hen).",
+            BANKS),
+        (None, None, True)))
+
     print(f"{sum(results)}/{len(results)} passed")
     return 0 if all(results) else 1
 
