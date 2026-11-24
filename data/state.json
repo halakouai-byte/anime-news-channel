@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 3282,
+    "duplicates_total": 3324,
     "hold_total": 26,
-    "posts_today": 12,
+    "posts_today": 14,
     "posts_today_date": "2026-11-24",
-    "posts_total": 57,
-    "rejected_total": 538
+    "posts_total": 59,
+    "rejected_total": 549
   },
-  "last_fetch_utc": "2026-11-24T07:24:54Z",
-  "last_publish_utc": "2026-11-24T07:24:56Z",
+  "last_fetch_utc": "2026-11-24T09:22:53Z",
+  "last_publish_utc": "2026-11-24T09:37:55Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -72,7 +72,9 @@
     "d7cffbd8f4db9006c0ce0f24accab434b25cad19114c7978a3959d1822ddd3ed": 61,
     "9e86bf6966bfd41f8c46168f6f329ea393d67771d9de952f07fc21b8b6933c4b": 62,
     "0bc30a47b713e30fb41716367218d03dcf671214797ecf5f9bb66276b6f7a344": 63,
-    "ce1c890641c95f6dac534cb17e95236e8a8e08a630da793f96c4e5fea4b5e9b9": 64
+    "ce1c890641c95f6dac534cb17e95236e8a8e08a630da793f96c4e5fea4b5e9b9": 64,
+    "7fd88509d070aab6bbfc92d6eadefa91ed8914be803ae5a73c4f0c53deb097ff": 66,
+    "3c1437beaeb3e29f68da14c92e306dd179c360943470f5e03d08f8c7af169af1": 67
   },
   "posted_message_ids": [
     6,
@@ -131,7 +133,9 @@
     61,
     62,
     63,
-    64
+    64,
+    66,
+    67
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1154,6 +1158,44 @@
         "yoru'"
       ],
       "posted_utc": "2026-11-24T07:24:56Z"
+    },
+    {
+      "title_norm": "all you need is kill, kaguya!, grotesqqque, more anime confirmed eligible for oscars",
+      "words": [
+        "all",
+        "anime",
+        "confirmed",
+        "eligible",
+        "for",
+        "grotesqqque,",
+        "is",
+        "kaguya!,",
+        "kill,",
+        "more",
+        "need",
+        "oscars",
+        "you"
+      ],
+      "posted_utc": "2026-11-24T09:22:54Z"
+    },
+    {
+      "title_norm": "live-action wakako-zake season 10 unveils january 6 debut, year-end special, opening song artists",
+      "words": [
+        "10",
+        "6",
+        "artists",
+        "debut,",
+        "january",
+        "live-action",
+        "opening",
+        "season",
+        "song",
+        "special,",
+        "unveils",
+        "wakako-zake",
+        "year-end"
+      ],
+      "posted_utc": "2026-11-24T09:37:55Z"
     }
   ],
   "seen_at": {
@@ -1304,7 +1346,8 @@
     "1b12ce94c8707f499d16ad1d3a1c0fcf2159e4a39332ef7668056d5db995746a": "2026-11-24T03:27:54Z",
     "6148b7e319973aae07941a14765045e6b6c2a8cc09c2167f5d76f18701e725d7": "2026-11-24T04:22:53Z",
     "0bc30a47b713e30fb41716367218d03dcf671214797ecf5f9bb66276b6f7a344": "2026-11-24T06:54:56Z",
-    "ce1c890641c95f6dac534cb17e95236e8a8e08a630da793f96c4e5fea4b5e9b9": "2026-11-24T07:24:53Z"
+    "ce1c890641c95f6dac534cb17e95236e8a8e08a630da793f96c4e5fea4b5e9b9": "2026-11-24T07:24:53Z",
+    "7fd88509d070aab6bbfc92d6eadefa91ed8914be803ae5a73c4f0c53deb097ff": "2026-11-24T09:22:52Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -1387,6 +1430,7 @@
     "7a2361b24db1fe34f532175d50e7e35739aa7f59d7ddba1b909bc815f090b208",
     "7bb5702f82cd19f7de3bcd36dd339520f9d917a460602b74e90bf82da44d944b",
     "7c24bca63d41ba9fc0ca79709a52f33970b7366ec86e2e1d2cf3b1114f1586a4",
+    "7fd88509d070aab6bbfc92d6eadefa91ed8914be803ae5a73c4f0c53deb097ff",
     "810bc8f763383b1bf116c8b44c504bd217380e9da8f0f605dfbc3602781104c7",
     "83bef13656dc4b7b017452cc0331f34c52a396ae71499b1d7b3e810e59f5a745",
     "83c98bfed4d560a0c1582b5f5552c42503186f7bb51553f81447e2d247ee83f1",
@@ -1568,7 +1612,9 @@
       "2026-11-24T02:23:58Z",
       "2026-11-24T02:38:59Z",
       "2026-11-24T06:54:58Z",
-      "2026-11-24T07:24:56Z"
+      "2026-11-24T07:24:56Z",
+      "2026-11-24T09:22:54Z",
+      "2026-11-24T09:37:55Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -1627,7 +1673,9 @@
       "2026-11-24T02:23:58Z",
       "2026-11-24T02:38:59Z",
       "2026-11-24T06:54:58Z",
-      "2026-11-24T07:24:56Z"
+      "2026-11-24T07:24:56Z",
+      "2026-11-24T09:22:54Z",
+      "2026-11-24T09:37:55Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -1686,7 +1734,9 @@
       "2026-11-24T02:23:58Z",
       "2026-11-24T02:38:59Z",
       "2026-11-24T06:54:58Z",
-      "2026-11-24T07:24:56Z"
+      "2026-11-24T07:24:56Z",
+      "2026-11-24T09:22:54Z",
+      "2026-11-24T09:37:55Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -1745,7 +1795,9 @@
       "2026-11-24T02:23:58Z",
       "2026-11-24T02:38:59Z",
       "2026-11-24T06:54:58Z",
-      "2026-11-24T07:24:56Z"
+      "2026-11-24T07:24:56Z",
+      "2026-11-24T09:22:54Z",
+      "2026-11-24T09:37:55Z"
     ]
   },
   "version": 2
