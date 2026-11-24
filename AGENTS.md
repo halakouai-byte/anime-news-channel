@@ -286,11 +286,11 @@ history — never silently delete the file and move on.
   weekly 30-minute review (5 random posts, 10-question QA checklist in
   `docs/weekly-checklist.md`), monthly bank maintenance, taste
   decisions, crisis management (`docs/runbook.md`).
-- Bot commands: NONE until phase 2 (accepted silence, 2026-11-23,
-  critic review #3 — the third review scoring it 2/10). /start /latest
-  /help are advertised in BotFather but intentionally unanswered; the
-  bot is API-only (sendPhoto / editMessageCaption). No BotFather change
-  — the silence is the decision, not an oversight.
+- Bot commands: NONE until phase 2. 2026-11-24 (manager decision,
+  critic review #4): /start /latest /help were REMOVED from the bot
+  menu via setMyCommands — getMyCommands now returns [] (verified via
+  Bot API). The menu stays empty until phase 2, when an update handler
+  exists. The bot is API-only (sendPhoto / editMessageCaption).
 - Sources: 8 verified RSS feeds (ANN, MAL, Anime Corner, AnimeTV,
   Fandom Post, Siliconera, Honey's Anime, Anime Herald) — 7 polled by the
   Worker every 1–5 minutes; Fandom Post is blocked with a stable HTTP 403
@@ -614,6 +614,56 @@ history — never silently delete the file and move on.
   follow-up for the next critic review, not in this bundle. Msg 31's
   caption was fixed by the manager (Bleach → Zatsuyou); msg 29's Ginza
   caption is correct and untouched.
+- 2026-11-24 ~10:20 Tehran — CRITIC REVIEW #4 FIX BUNDLE (manager order),
+  REBASED 2026-11-24 ~11:00 Tehran onto current main (3c34da3) after the
+  publish worker reverted the first landing (see the revert note below):
+  (1) Status-rank fix in merge_queue_data (common.py): REJECTED: 3 and
+  EXPIRED: 3 added to _STATUS_RANK (same rank as STALE, below POSTED) —
+  the 72h HOLD / 48h QUEUED expiry from expire_queue was being undone
+  by the next sync (a stale remote HOLD outranked a local REJECTED);
+  proven by simulation in review #4. Test: scripts/test_status_rank.py
+  7/7 (merge in both directions, POSTED still wins, expire+merge
+  end-to-end). (2) Bank v1.3: Wakako-zake + Zatsuyou Fuyo Jutsushi
+  (+ full name) added (anime 155→158) — Wakako-zake was HOLD on
+  why_specific; Zatsuyou was mis-identified as Bleach (msg 31).
+  extract_franchise stage 2 now uses only the first sentence of the
+  summary with parenthetical credits stripped (_summary_lead) — a
+  passing mention in cast credits no longer wins the match. Tests:
+  test_extract_franchise.py 10/10 (3 new: msg-31 replay, summary-lead
+  beats passing mention, parenthetical-only is not a match). (3) Docs:
+  README live-status + setup-qa-report status/§5 updated to 57 posts
+  (were still saying "no posts published"). (4) Archive: NO change in
+  this rebased bundle — main's archive.jsonl already has the corrected
+  captions (msg 20: 626, msg 31: 806) AND the new msg 63 row (Akira,
+  830 chars) and msg 64 row (WITCH ON THE HOLY NIGHT, 703 chars); the
+  union merge saved them through the revert. The
+  publish-log gap (no lines for 6 messages: 15, 16, 19, 20, 23, 24, 25)
+  is recorded here. (5) Bot menu emptied (manager decision):
+  /start /latest /help removed via setMyCommands; getMyCommands [].
+  (6) Worker git-flow fix (merge_state.py): before the `merge -s ours`,
+  all non-data files are restored from origin/main (content + deletions)
+  and amended into the commit, so a stale clone can no longer revert
+  code/docs — test: scripts/test_merge_state_norevert.py (replay of
+  the 2026-11-24 revert). Review #4 record in qa/critic-role.md carries
+  the preview correction (total 224/310, item 27: 8→9). Full suite:
+  13/14 files pass — only the pre-existing test_dedupe_bangdream T3
+  failure (proven on pristine main).
+- 2026-11-24 07:09:59 UTC — WORKER REVERT (publish run, merge 3c34da3):
+  the publish worker pushed from a stale clone (55bc1b5, before the
+  review-#4 bundle landed 06:57–06:59 UTC in b79e0b6/4cf8d36/ccbcc66);
+  its `merge -s ours` kept the stale tree, so the bundle's code/docs
+  changes (common.py rank, names-fa v1.2, test_status_rank.py,
+  rewrite.py, tests, README, setup-qa-report, AGENTS.md) were reverted
+  from main. The data files SURVIVED because merge_state.py's union
+  merge (sync_remote_state) had already merged the remote archive into
+  the worker's tree — archive.jsonl kept the corrected captions
+  (626/806) and gained msg 63; the qa/critic-role.md review #4 record
+  also survived on main (only the preview correction, commit c6cbc3a,
+  was lost). Root cause: `merge -s ours` discards ALL remote changes
+  outside data/logs, not just conflicting ones. Fix: merge_state.py
+  now restores non-data files from origin/main before the merge
+  (see the bundle entry above). The worker only ever owns data/ and
+  logs/ — it must never revert anything else.
 
 ## 9. Rules (hard)
 
