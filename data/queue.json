@@ -3313,6 +3313,28 @@
       "status": "HOLD",
       "hold_reason": "gates_failed:why_specific",
       "created_utc": "2026-11-24T03:27:54Z"
+    },
+    {
+      "guid": "https://www.animenewsnetwork.com/cms/.244140",
+      "hash": "6148b7e319973aae07941a14765045e6b6c2a8cc09c2167f5d76f18701e725d7",
+      "story_key": null,
+      "title": "Getbackers Voice Comic Staff Apologizes for Generative AI Use in PR Video",
+      "link": "https://animenewsnetwork.com/news/2026-11-23/getbackers-voice-comic-staff-apologizes-for-generative-ai-use-in-pr-video/.244140",
+      "summary": "Staff: Voice comic itself does not use generative AI",
+      "source": "ANN",
+      "source_name": "Anime News Network",
+      "tier": 1,
+      "pubDate": "2026-11-24T03:22:47+00:00",
+      "category": "فصل جدید",
+      "category_score": 2,
+      "category_source": "keyword",
+      "event_type": "other",
+      "franchise_en": null,
+      "priority_score": 40,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "R6-hold",
+      "created_utc": "2026-11-24T04:22:53Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
