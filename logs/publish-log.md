@@ -49,3 +49,4 @@
 - 2026-11-24T02:23:58Z UTC (3 آذر 1405، تهران): posted message_id=61 guid=https://www.animenewsnetwork.com/cms/.244138 category=فیلم score=65 breaking=False latency_min=61.3
 - 2026-11-24T02:38:59Z UTC (3 آذر 1405، تهران): posted message_id=62 guid=https://www.animenewsnetwork.com/cms/.244102 category=مانگا و اقتباس score=45 breaking=False latency_min=64.8
 - 2026-11-24T06:54:58Z UTC (3 آذر 1405، تهران): posted message_id=63 guid=https://animetv-jp.net/?p=51511 category=تریلر score=50 breaking=False latency_min=2.3
+- 2026-11-24T07:24:56Z UTC (3 آذر 1405، تهران): posted message_id=64 guid=https://myanimelist.net/news/74975780?_location=rss category=فیلم score=55 breaking=False latency_min=3.4

@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 3238,
+    "duplicates_total": 3282,
     "hold_total": 26,
-    "posts_today": 11,
+    "posts_today": 12,
     "posts_today_date": "2026-11-24",
-    "posts_total": 56,
-    "rejected_total": 527
+    "posts_total": 57,
+    "rejected_total": 538
   },
-  "last_fetch_utc": "2026-11-24T06:54:56Z",
-  "last_publish_utc": "2026-11-24T06:54:58Z",
+  "last_fetch_utc": "2026-11-24T07:24:54Z",
+  "last_publish_utc": "2026-11-24T07:24:56Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -71,7 +71,8 @@
     "60c4a38382f3d0e6eeac819c865cc1c7960cb0dc9544f0eefda9454a21e799a4": 60,
     "d7cffbd8f4db9006c0ce0f24accab434b25cad19114c7978a3959d1822ddd3ed": 61,
     "9e86bf6966bfd41f8c46168f6f329ea393d67771d9de952f07fc21b8b6933c4b": 62,
-    "0bc30a47b713e30fb41716367218d03dcf671214797ecf5f9bb66276b6f7a344": 63
+    "0bc30a47b713e30fb41716367218d03dcf671214797ecf5f9bb66276b6f7a344": 63,
+    "ce1c890641c95f6dac534cb17e95236e8a8e08a630da793f96c4e5fea4b5e9b9": 64
   },
   "posted_message_ids": [
     6,
@@ -129,7 +130,8 @@
     60,
     61,
     62,
-    63
+    63,
+    64
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1140,6 +1142,18 @@
         "tv"
       ],
       "posted_utc": "2026-11-24T06:54:58Z"
+    },
+    {
+      "title_norm": "'mahoutsukai no yoru' sequel anime announced",
+      "words": [
+        "'mahoutsukai",
+        "anime",
+        "announced",
+        "no",
+        "sequel",
+        "yoru'"
+      ],
+      "posted_utc": "2026-11-24T07:24:56Z"
     }
   ],
   "seen_at": {
@@ -1289,7 +1303,8 @@
     "50d2724a8f6b223c372b761461aadc75f7b8c6fa4d99162e64636cffcacc32a2": "2026-11-24T03:27:54Z",
     "1b12ce94c8707f499d16ad1d3a1c0fcf2159e4a39332ef7668056d5db995746a": "2026-11-24T03:27:54Z",
     "6148b7e319973aae07941a14765045e6b6c2a8cc09c2167f5d76f18701e725d7": "2026-11-24T04:22:53Z",
-    "0bc30a47b713e30fb41716367218d03dcf671214797ecf5f9bb66276b6f7a344": "2026-11-24T06:54:56Z"
+    "0bc30a47b713e30fb41716367218d03dcf671214797ecf5f9bb66276b6f7a344": "2026-11-24T06:54:56Z",
+    "ce1c890641c95f6dac534cb17e95236e8a8e08a630da793f96c4e5fea4b5e9b9": "2026-11-24T07:24:53Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -1415,6 +1430,7 @@
     "cc1c3e500795e12e078bebf091ce33bc1de3faf4a9a77094642d172928fe44e8",
     "cc72b106851a485772057e8fce87604eca0dc521aadd6e5df8c3698a5a02fe26",
     "cdb7246d188653bccc9e224daac0754b6db856d3fb9b8d69eefbf935b1981046",
+    "ce1c890641c95f6dac534cb17e95236e8a8e08a630da793f96c4e5fea4b5e9b9",
     "cec56704dbf9033b4ebbc882a2cf6c6dfa7d697e7eae20f95a3b653fdc1811db",
     "d232aeb252ea89472166c208f66d6be358f331d8ee8c54154da138f889e93d8a",
     "d38622bb4143e2ad1fc8c6e1b1ce32dff234fca343e04f7b53095e07ecfb2606",
@@ -1551,7 +1567,8 @@
       "2026-11-23T22:58:05Z",
       "2026-11-24T02:23:58Z",
       "2026-11-24T02:38:59Z",
-      "2026-11-24T06:54:58Z"
+      "2026-11-24T06:54:58Z",
+      "2026-11-24T07:24:56Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -1609,7 +1626,8 @@
       "2026-11-23T22:58:05Z",
       "2026-11-24T02:23:58Z",
       "2026-11-24T02:38:59Z",
-      "2026-11-24T06:54:58Z"
+      "2026-11-24T06:54:58Z",
+      "2026-11-24T07:24:56Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -1667,7 +1685,8 @@
       "2026-11-23T22:58:05Z",
       "2026-11-24T02:23:58Z",
       "2026-11-24T02:38:59Z",
-      "2026-11-24T06:54:58Z"
+      "2026-11-24T06:54:58Z",
+      "2026-11-24T07:24:56Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -1725,7 +1744,8 @@
       "2026-11-23T22:58:05Z",
       "2026-11-24T02:23:58Z",
       "2026-11-24T02:38:59Z",
-      "2026-11-24T06:54:58Z"
+      "2026-11-24T06:54:58Z",
+      "2026-11-24T07:24:56Z"
     ]
   },
   "version": 2
