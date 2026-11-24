@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 3744,
+    "duplicates_total": 3773,
     "hold_total": 28,
-    "posts_today": 0,
+    "posts_today": 2,
     "posts_today_date": "2026-11-25",
-    "posts_total": 61,
-    "rejected_total": 704
+    "posts_total": 63,
+    "rejected_total": 718
   },
-  "last_fetch_utc": "2026-11-24T23:00:58Z",
-  "last_publish_utc": "2026-11-24T16:26:57Z",
+  "last_fetch_utc": "2026-11-24T23:33:01Z",
+  "last_publish_utc": "2026-11-24T23:48:04Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -76,7 +76,9 @@
     "7fd88509d070aab6bbfc92d6eadefa91ed8914be803ae5a73c4f0c53deb097ff": 66,
     "3c1437beaeb3e29f68da14c92e306dd179c360943470f5e03d08f8c7af169af1": 67,
     "c787674791e3243040eacf353aa505fe1a7e4d3b55275c37fa6d1d68f69fd057": 68,
-    "4be5a6bcb8694c8deca29b4926fc44fef5cc117e4c83dc3f1c903b271c290df6": 69
+    "4be5a6bcb8694c8deca29b4926fc44fef5cc117e4c83dc3f1c903b271c290df6": 69,
+    "6c0e521e4acb3891946b2c286e335e8af36acd022b1921de57780fdbcc4e106e": 70,
+    "c4be96f526c73f97da978d14c1d31524d80c12a4f83185b967cd9e1e8107efcf": 71
   },
   "posted_message_ids": [
     6,
@@ -139,7 +141,9 @@
     66,
     67,
     68,
-    69
+    69,
+    70,
+    71
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1225,6 +1229,42 @@
         "sakamoto"
       ],
       "posted_utc": "2026-11-24T16:26:57Z"
+    },
+    {
+      "title_norm": "witch on the holy night anime film announces sequel",
+      "words": [
+        "anime",
+        "announces",
+        "film",
+        "holy",
+        "night",
+        "on",
+        "sequel",
+        "the",
+        "witch"
+      ],
+      "posted_utc": "2026-11-24T23:33:03Z"
+    },
+    {
+      "title_norm": "disney twisted-wonderland the animation season 2: episode of savanaclaw reveals new pv and theme songs",
+      "words": [
+        "2:",
+        "and",
+        "animation",
+        "disney",
+        "episode",
+        "new",
+        "of",
+        "pv",
+        "reveals",
+        "savanaclaw",
+        "season",
+        "songs",
+        "the",
+        "theme",
+        "twisted-wonderland"
+      ],
+      "posted_utc": "2026-11-24T23:48:04Z"
     }
   ],
   "seen_at": {
@@ -1381,7 +1421,9 @@
     "2031295bbc22635f956d4dc62539ab3d47b1755c19a2b0332760ccbc60a43e87": "2026-11-24T14:00:53Z",
     "e8d8891d035e12f08a03a9f25b882b9baf2dfbbfc6b9c5ff961783cf257a6dc2": "2026-11-24T16:26:54Z",
     "4be5a6bcb8694c8deca29b4926fc44fef5cc117e4c83dc3f1c903b271c290df6": "2026-11-24T16:26:54Z",
-    "211eae7acdc4d7a5b5c6e3fd7064a86f48ce106ac074a288d1be7896b902f562": "2026-11-24T18:00:57Z"
+    "211eae7acdc4d7a5b5c6e3fd7064a86f48ce106ac074a288d1be7896b902f562": "2026-11-24T18:00:57Z",
+    "c4be96f526c73f97da978d14c1d31524d80c12a4f83185b967cd9e1e8107efcf": "2026-11-24T23:33:01Z",
+    "6c0e521e4acb3891946b2c286e335e8af36acd022b1921de57780fdbcc4e106e": "2026-11-24T23:33:01Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -1458,6 +1500,7 @@
     "681f06194321104f1efdba59d73ce54344e226107feea4c0c511ab8ec62f3cf4",
     "68e1c6dc5827ae5e3302f6b1d77feda7a14e64422085af3c32f41a391d28b9da",
     "6b7a81660ff430840aeafe164ba1a86eba6effb0a6f6cfc8d3d3caa2741e8bfd",
+    "6c0e521e4acb3891946b2c286e335e8af36acd022b1921de57780fdbcc4e106e",
     "6e1ab1df6b2f6f47e8181799c6e52012e387a284303ac09ee1f322fa1c0ddf29",
     "6eafe05bd996ad08145854db156f386aa5c4d607fb89a40aa8e1205a66dfa734",
     "7750e7a1930cd6063397a1c87921284679ab04dc816ea567c52b04b7250b6e69",
@@ -1506,6 +1549,7 @@
     "bf2c6b21ad39f60264e4379044a81876161b23d02d6aa58e1629864d8ce0f570",
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af",
     "c3996e9c2f6e78c16bbe33779e9eb6dd1db26774b2f3bf28f6f8f93d4c867fd6",
+    "c4be96f526c73f97da978d14c1d31524d80c12a4f83185b967cd9e1e8107efcf",
     "c659337c14358c946f860553c3a0fa35692980d4cf7c509e2d6db71390eaad7c",
     "c787674791e3243040eacf353aa505fe1a7e4d3b55275c37fa6d1d68f69fd057",
     "cb36ae53f87989b0a51432aafaf02b971914f5c97b7e5c2041c804f0a236f20e",
@@ -1659,7 +1703,9 @@
       "2026-11-24T09:22:54Z",
       "2026-11-24T09:37:55Z",
       "2026-11-24T10:25:56Z",
-      "2026-11-24T16:26:57Z"
+      "2026-11-24T16:26:57Z",
+      "2026-11-24T23:33:03Z",
+      "2026-11-24T23:48:04Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -1722,7 +1768,9 @@
       "2026-11-24T09:22:54Z",
       "2026-11-24T09:37:55Z",
       "2026-11-24T10:25:56Z",
-      "2026-11-24T16:26:57Z"
+      "2026-11-24T16:26:57Z",
+      "2026-11-24T23:33:03Z",
+      "2026-11-24T23:48:04Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -1785,7 +1833,9 @@
       "2026-11-24T09:22:54Z",
       "2026-11-24T09:37:55Z",
       "2026-11-24T10:25:56Z",
-      "2026-11-24T16:26:57Z"
+      "2026-11-24T16:26:57Z",
+      "2026-11-24T23:33:03Z",
+      "2026-11-24T23:48:04Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -1848,7 +1898,9 @@
       "2026-11-24T09:22:54Z",
       "2026-11-24T09:37:55Z",
       "2026-11-24T10:25:56Z",
-      "2026-11-24T16:26:57Z"
+      "2026-11-24T16:26:57Z",
+      "2026-11-24T23:33:03Z",
+      "2026-11-24T23:48:04Z"
     ]
   },
   "version": 2
