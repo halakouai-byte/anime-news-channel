@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 3324,
+    "duplicates_total": 3366,
     "hold_total": 26,
-    "posts_today": 14,
+    "posts_today": 15,
     "posts_today_date": "2026-11-24",
-    "posts_total": 59,
-    "rejected_total": 549
+    "posts_total": 60,
+    "rejected_total": 560
   },
-  "last_fetch_utc": "2026-11-24T09:22:53Z",
-  "last_publish_utc": "2026-11-24T09:37:55Z",
+  "last_fetch_utc": "2026-11-24T10:25:55Z",
+  "last_publish_utc": "2026-11-24T10:25:56Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -74,7 +74,8 @@
     "0bc30a47b713e30fb41716367218d03dcf671214797ecf5f9bb66276b6f7a344": 63,
     "ce1c890641c95f6dac534cb17e95236e8a8e08a630da793f96c4e5fea4b5e9b9": 64,
     "7fd88509d070aab6bbfc92d6eadefa91ed8914be803ae5a73c4f0c53deb097ff": 66,
-    "3c1437beaeb3e29f68da14c92e306dd179c360943470f5e03d08f8c7af169af1": 67
+    "3c1437beaeb3e29f68da14c92e306dd179c360943470f5e03d08f8c7af169af1": 67,
+    "c787674791e3243040eacf353aa505fe1a7e4d3b55275c37fa6d1d68f69fd057": 68
   },
   "posted_message_ids": [
     6,
@@ -135,7 +136,8 @@
     63,
     64,
     66,
-    67
+    67,
+    68
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1196,6 +1198,21 @@
         "year-end"
       ],
       "posted_utc": "2026-11-24T09:37:55Z"
+    },
+    {
+      "title_norm": "witch on the holy night anime film's sequel confrmed",
+      "words": [
+        "anime",
+        "confrmed",
+        "film's",
+        "holy",
+        "night",
+        "on",
+        "sequel",
+        "the",
+        "witch"
+      ],
+      "posted_utc": "2026-11-24T10:25:56Z"
     }
   ],
   "seen_at": {
@@ -1347,7 +1364,8 @@
     "6148b7e319973aae07941a14765045e6b6c2a8cc09c2167f5d76f18701e725d7": "2026-11-24T04:22:53Z",
     "0bc30a47b713e30fb41716367218d03dcf671214797ecf5f9bb66276b6f7a344": "2026-11-24T06:54:56Z",
     "ce1c890641c95f6dac534cb17e95236e8a8e08a630da793f96c4e5fea4b5e9b9": "2026-11-24T07:24:53Z",
-    "7fd88509d070aab6bbfc92d6eadefa91ed8914be803ae5a73c4f0c53deb097ff": "2026-11-24T09:22:52Z"
+    "7fd88509d070aab6bbfc92d6eadefa91ed8914be803ae5a73c4f0c53deb097ff": "2026-11-24T09:22:52Z",
+    "c787674791e3243040eacf353aa505fe1a7e4d3b55275c37fa6d1d68f69fd057": "2026-11-24T10:25:54Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -1470,6 +1488,7 @@
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af",
     "c3996e9c2f6e78c16bbe33779e9eb6dd1db26774b2f3bf28f6f8f93d4c867fd6",
     "c659337c14358c946f860553c3a0fa35692980d4cf7c509e2d6db71390eaad7c",
+    "c787674791e3243040eacf353aa505fe1a7e4d3b55275c37fa6d1d68f69fd057",
     "cb36ae53f87989b0a51432aafaf02b971914f5c97b7e5c2041c804f0a236f20e",
     "cc1c3e500795e12e078bebf091ce33bc1de3faf4a9a77094642d172928fe44e8",
     "cc72b106851a485772057e8fce87604eca0dc521aadd6e5df8c3698a5a02fe26",
@@ -1614,7 +1633,8 @@
       "2026-11-24T06:54:58Z",
       "2026-11-24T07:24:56Z",
       "2026-11-24T09:22:54Z",
-      "2026-11-24T09:37:55Z"
+      "2026-11-24T09:37:55Z",
+      "2026-11-24T10:25:56Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -1675,7 +1695,8 @@
       "2026-11-24T06:54:58Z",
       "2026-11-24T07:24:56Z",
       "2026-11-24T09:22:54Z",
-      "2026-11-24T09:37:55Z"
+      "2026-11-24T09:37:55Z",
+      "2026-11-24T10:25:56Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -1736,7 +1757,8 @@
       "2026-11-24T06:54:58Z",
       "2026-11-24T07:24:56Z",
       "2026-11-24T09:22:54Z",
-      "2026-11-24T09:37:55Z"
+      "2026-11-24T09:37:55Z",
+      "2026-11-24T10:25:56Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -1797,7 +1819,8 @@
       "2026-11-24T06:54:58Z",
       "2026-11-24T07:24:56Z",
       "2026-11-24T09:22:54Z",
-      "2026-11-24T09:37:55Z"
+      "2026-11-24T09:37:55Z",
+      "2026-11-24T10:25:56Z"
     ]
   },
   "version": 2
