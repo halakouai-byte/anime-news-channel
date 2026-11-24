@@ -2566,7 +2566,7 @@
       "franchise_en": "Sakamoto Days",
       "priority_score": 60,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "STALE",
       "hold_reason": "gates_failed:event_consistency",
       "created_utc": "2026-11-22T15:12:51Z"
     },
