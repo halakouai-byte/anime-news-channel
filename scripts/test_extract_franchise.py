@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from rewrite import extract_franchise, load_banks  # noqa: E402
+from rewrite import detect_event, extract_franchise, load_banks  # noqa: E402
 
 BANKS = load_banks()
 
@@ -134,6 +134,44 @@ def main() -> int:
             "is performed by the artist (Bleach: Sennen Kessen-hen).",
             BANKS),
         (None, None, True)))
+
+    # ۱۱) پیام ۶۶ (۲۴ نوامبر ۲۰۲۶): مقاله فهرستی اسکار — تیتر و جمله اول
+    # خلاصه هر دو فهرست‌اند («X, Y, Z, More Anime ...»)؛ موضوع واحد
+    # ندارد و نباید یک نام (Gundam) از فهرست برداشته شود.
+    results.append(check(
+        "msg66-roundup-no-franchise",
+        extract_franchise(
+            "All You Need Is Kill, Kaguya!, Grotesqqque, More Anime "
+            "Confirmed Eligible for Oscars",
+            "Jinsei , Last Blossom , 2nd Gundam Hathaway film, Ribbon "
+            "Hero, Super Mario Galaxy Movie, Avatar Aang also eligible",
+            BANKS),
+        (None, None, True)))
+
+    # ۱۲) همان مقاله: رویداد «award» است، نه «announcement» — وگرنه کپشن
+    # «انیمه تازه Gundam» می‌ساخت (وارونه‌سازی رویداد، مثل پیام ۶).
+    results.append(check(
+        "msg66-oscars-event-award",
+        detect_event(
+            "All You Need Is Kill, Kaguya!, Grotesqqque, More Anime "
+            "Confirmed Eligible for Oscars",
+            "Jinsei , Last Blossom , 2nd Gundam Hathaway film, Ribbon "
+            "Hero, Super Mario Galaxy Movie, Avatar Aang also eligible"),
+        "award"))
+
+    # ۱۳) مقاله تک‌اثرِ اسکار فهرست نیست — نگهبان فهرست نباید آن را
+    # بگیرد: Gundam برگردد و رویداد «award» باشد.
+    results.append(check(
+        "msg66-single-franchise-oscars",
+        (extract_franchise(
+            "Mobile Suit Gundam Hathaway Confirmed Eligible for Oscars",
+            "The second Gundam Hathaway film has been confirmed eligible "
+            "for Best Animated Feature at the Academy Awards.", BANKS)[0],
+         detect_event(
+            "Mobile Suit Gundam Hathaway Confirmed Eligible for Oscars",
+            "The second Gundam Hathaway film has been confirmed eligible "
+            "for Best Animated Feature at the Academy Awards.")),
+        ("Mobile Suit Gundam", "award")))
 
     print(f"{sum(results)}/{len(results)} passed")
     return 0 if all(results) else 1

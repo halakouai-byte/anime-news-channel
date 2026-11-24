@@ -136,7 +136,22 @@ def extract_franchise(title: str, summary: str, banks: dict):
     title_low = (title or "").lower()
     summary_low = (summary or "").lower()
     summary_lead = _summary_lead(summary).lower()
-    best = _longest_in(title_low, anime) or _longest_in(summary_lead, anime)
+    best = _longest_in(title_low, anime)
+    if best:
+        return best, anime[best], False
+    # پیام ۶۶ (۲۴ نوامبر ۲۰۲۶): تیتر نام انیمه‌ای ندارد و مقاله فهرستی
+    # است («X, Y, Z, More Anime ...») — موضوع واحد ندارد و نباید یک نام
+    # از جمله اول خلاصه برداشته شود (Gundam فقط یک قلم از فهرست واجدین
+    # اسکار بود). این چک بعد از مرحله تیتر است: اگر نام اثر در تیتر
+    # باشد (مثل مجوز Yen Press برای [Oshi No Ko] که «, More Manga» هم
+    # دارد)، مرحله قبل آن را گرفته و فهرست‌بودن تیتر مهم نیست — اثرِ
+    # اولِ تیتر، موضوع خبر است. فقط وقتی تیتر نام ندارد، فهرستی‌بودن
+    # («, More » یا ۳+ ویرگول در تیتر و جمله اول) یعنی roundup و نام
+    # برنمی‌گردد تا آیتم new_name شود (HOLD امن).
+    if (", more " in title_low) or (title_low.count(",") >= 3
+                                     and summary_lead.count(",") >= 3):
+        return None, None, True
+    best = _longest_in(summary_lead, anime)
     if best:
         return best, anime[best], False
     best = _longest_in(f"{title_low}\n{summary_low}", other)
@@ -240,6 +255,12 @@ def detect_event(title: str, summary: str) -> str:
         return "license"
     if "gets tv anime" in tl or "anime adaptation" in tl or "anime announced" in tl:
         return "adaptation"
+    # پیام ۶۶ (۲۴ نوامبر ۲۰۲۶): مقاله ANN «واجد شرایط اسکار» — «Oscars» و
+    # «Eligible» در تیتر/خلاصه‌اند ولی «award»/«wins» نیستند؛ بدون این
+    # شاخه، رویداد به «announcement» می‌افتاد و کپشن «انیمه تازه Gundam»
+    # می‌ساخت (وارونه‌سازی رویداد، مثل پیام ۶). «oscar»/«eligib» خاص‌اند.
+    if any(k in tl for k in ("oscar", "eligib")):
+        return "award"
     if "film" in tl or "movie" in tl:
         return "announcement"
     if "season" in tl and ("premier" in tl or "announce" in tl):
@@ -274,7 +295,7 @@ def detect_event(title: str, summary: str) -> str:
         return "box_office"
     if any(k in text for k in ("trailer", "teaser", "promo video", "character pv")):
         return "trailer"
-    if any(k in text for k in ("award", "wins")):
+    if any(k in text for k in ("award", "wins", "oscar", "eligib")):
         return "award"
     if any(k in text for k in ("event", "festival", "expo")):
         return "event"
@@ -806,6 +827,11 @@ def check_gates(caption: str, title: str, fx: dict, why: str,
     _adapt_src = any(k in _src for k in (
         "gets tv anime", "anime adaptation announced", "new anime adaptation"))
     _license_src = "licens" in _src
+    # پیام ۶۶ (۲۴ نوامبر ۲۰۲۶): منبعِ جایزه/واجد شرایط (اسکار) + ادعای
+    # «انیمه تازه» = وارونه‌سازی (مقاله فهرستِ واجدین اسکار → «انیمه تازه
+    # Gundam اعلام شد»). فقط «oscar»/«eligib» خاص شمرده می‌شوند، نه
+    # «award» عام (که «award-winning» گذرا در اعلامیه تازه را هم می‌گرفت).
+    _award_src = any(k in _src for k in ("oscar", "eligib"))
     _claims_adapt = any(k in caption for k in (
         "اقتباس انیمه‌ای تازه", "انیمه تازه"))
     _claims_end = any(k in caption for k in (
@@ -816,7 +842,10 @@ def check_gates(caption: str, title: str, fx: dict, why: str,
         # Critic fix 2026-11-21 (review #1, run 44936475145): منبع لایسنس +
         # ادعای انیمه تازه = وارونگی (Yen Press Licenses → «انیمه تازه اعلام
         # شد»)؛ و برعکس، منبع اقتباس تازه + ادعای لایسنس هم ناسازگار است.
-        or (_license_src and _claims_adapt) or (_adapt_src and _claims_license))
+        or (_license_src and _claims_adapt) or (_adapt_src and _claims_license)
+        # پیام ۶۶ (۲۴ نوامبر ۲۰۲۶): منبع جایزه/واجد شرایط + ادعای انیمه
+        # تازه هم وارونه‌سازی است و باید HOLD شود.
+        or (_award_src and _claims_adapt))
     gates["no_placeholder"] = not _has_placeholder(caption)
     # انگلیسی محدود: فقط نام اثر/استودیو/منبع + لینک + هشتگ مجاز است
     allowed = set()

@@ -14,15 +14,32 @@ state/queue/archive تداخل خورد، push ناممکن شد و state محل
   2. راستی‌آزمایی: همه posted_message_ids راه‌دور باید در فایل ادغام‌شده
      باشند — اگر نباشند، کامیت نمی‌شود (جلوگیری از اینکه merge بعدی
      رکورد راه‌دور را بی‌صدا بیندازد).
-  3. `git add` + `git commit` (اگر چیزی برای کامیت نیست، خروج ۰).
+  3. `git add` + `git commit` (اگر چیزی برای کامیت نیست، کامیت رد
+     می‌شود ولی merge + push ادامه دارد — حادثه پیام ۶۵، پایین را ببین).
   3.۵. برگرداندن فایل‌های غیر‌داده از راه‌دور (حادثه ۲۰۲۶-۱۱-۲۴،
-     پایین را ببین) — ورکر فقط data/ و logs/ را می‌نویسد، پس بقیه
-     فایل‌ها باید دقیقاً همان origin/main باشند.
+     پایین را ببین) — بعد از کامیت، و روی مسیرِ دوباره‌تلاش هم (amend
+     به HEAD): ورکر فقط data/ و logs/ را می‌نویسد، پس بقیه فایل‌ها
+     باید دقیقاً همان origin/main باشند. باید بعد از کامیت باشد، چون
+     تشخیصِ حذف (diff HEAD با ref) فقط وقتی کار می‌کند که HEAD فایلِ
+     حذف‌شده را داشته باشد.
   4. `git merge -s ours origin/main` — remote را به‌عنوان mergeشده
      ثبت می‌کند بدون اینکه درخت (که همین حالا union شده) را دست
      بزند؛ پس push دیگر non-fast-forward نمی‌خورد.
   5. `git push`؛ اگر خورد (ران دیگری هم‌زمان کامیت کرد)، از قدم ۱
      تکرار می‌شود (حداکثر ۳ تلاش).
+
+حادثه سوم (۲۴ نوامبر ۲۰۲۶، پیام ۶۵، ران ۴۵۳۵۶۰۰۰۲۶۳): ورکر انتشار
+پیام ۶۵ را فرستاد؛ قدم ۵ در تلاش اول push را خورد (remote در فاصله
+۱۵ دقیقه‌ایِ pacing جلو رفته بود — پنج کامیت بسته نقد ۴). تلاش دوم
+«nothing to commit» دید و با return 0 بیرون رفت — بدون اینکه push
+کند. state پیام ۶۵ هرگز به main نرسید و ران بعد (۴۵۳۶۴۵۹۶۱۲۷) همان
+خبر را دوباره فرستاد (پیام ۶۶، تکراری). «nothing to commit» یعنی
+درختِ کاری تمیز است، نه اینکه چیزی برای push نیست — پس قدم ۳ فقط
+وقتی چیزی برای کامیت هست کامیت می‌کند، و merge + push همیشه اجرا
+می‌شوند (حتی وقتی چیزی تازه نیست)، تا کامیتِ push‌نشده تلاش قبل از
+دست نرود. قدم ۳٫۵ هم روی مسیرِ دوباره‌تلاش (وقتی چیزی برای کامیت
+نیست) اجرا و به HEAD اضافه می‌شود تا merge در تلاشِ دوباره،
+تغییرهای کد/داکِ راه‌دور را برنگرداند.
 
 حادثه دوم (۲۴ نوامبر ۲۰۲۶، مرج 3c34da3): ورکر انتشار از کلون کهنه
 (55bc1b5، پیش از بسته نقد ۴) push کرد؛ `merge -s ours` درخت کهنه
@@ -182,37 +199,62 @@ def main(argv=None) -> int:
                 log_error(f"merge_state: merged {rel} is MISSING "
                           f"{len(missing_log)} remote line(s) — refusing to commit")
                 return 1
-        # ۳. stage + commit
+        # ۳٫۵. فایل‌های غیر‌داده را از راه‌دور برگردان (حادثه ۲۰۲۶-۱۱-۲۴،
+        # مرج 3c34da3): `merge -s ours` درخت محلی را کامل نگه می‌دارد، پس
+        # اگر کلون کهنه باشد، کد/داکِ راه‌دور برمی‌گردد. ورکر فقط data/ و
+        # logs/ را می‌نویسد — بقیه باید دقیقاً همان origin/main باشند.
+        # این قدم باید بعد از کامیت (و روی مسیرِ دوباره‌تلاش هم) اجرا
+        # شود: تشخیصِ حذف (diff HEAD با ref) فقط وقتی کار می‌کند که HEAD
+        # فایلِ حذف‌شده را داشته باشد — یعنی بعد از اینکه کامیتِ تازه آن
+        # را stage کرده باشد. اگر restore پیش از کامیت بیاید، فایلی که
+        # ورکر از origin/main قدیمی checkout کرده و هرگز کامیت نکرده
+        # (مثل scripts/todelete.py در تست T2) از index پاک نمی‌شود و با
+        # کامیتِ بعد برمی‌گردد.
+        def _restore_and_amend():
+            restored = _restore_non_data_files(root, args.ref)
+            if restored is None:
+                log_error("merge_state: could not restore non-data files "
+                          "— refusing to push a stale tree")
+                return False
+            if restored:
+                amend = _git(["commit", "--amend", "--no-edit"], root)
+                if amend.returncode != 0:
+                    log_error("merge_state: git commit --amend failed: "
+                              + amend.stderr.decode("utf-8", "replace")[:300])
+                    return False
+                log_info("merge_state: restored non-data files from "
+                         + args.ref + " (amended into the state commit)")
+            return True
+
+        # ۳. stage + commit — اگر چیزی برای کامیت نیست، فقط کامیت را رد
+        # کن و به merge + push ادامه بده (حادثه پیام ۶۵، ران ۴۵۳۵۶۰۰۰۲۶۳،
+        # ۲۴ نوامبر ۲۰۲۶): تلاش اول push را خورد ولی کامیت محلی (state
+        # پیام ۶۵) ساخته شده بود؛ تلاش دوم «nothing to commit» دید و با
+        # return 0 بیرون رفت — بدون اینکه push کند. state هرگز به main
+        # نرسید، پیام ۶۵ فانتوم شد و ران بعد همان خبر را دوباره فرستاد
+        # (پیام ۶۶، تکراری). «nothing to commit» یعنی درختِ کاری تمیز
+        # است، نه اینکه چیزی برای push نیست — کامیتِ push‌نشده تلاش قبل
+        # هنوز جلوتر از origin/main است و باید فرستاده شود. و restore
+        # باید روی این مسیر هم اجرا شود تا merge، تغییرهای کد/داکِ
+        # راه‌دور را برنگرداند.
         add = _git(["add", *[f for f in DATA_FILES if (root / f).exists()]], root)
         if add.returncode != 0:
             log_error("merge_state: git add failed: "
                       + add.stderr.decode("utf-8", "replace")[:300])
             return 1
-        if _git(["diff", "--cached", "--quiet"], root).returncode == 0:
-            log_info("merge_state: nothing to commit")
-            return 0
-        commit = _git(["commit", "-m", args.commit_message], root)
-        if commit.returncode != 0:
-            log_error("merge_state: git commit failed: "
-                      + commit.stderr.decode("utf-8", "replace")[:300])
-            return 1
-        # ۳٫۵. فایل‌های غیر‌داده را از راه‌دور برگردان (حادثه ۲۰۲۶-۱۱-۲۴):
-        # `merge -s ours` درخت محلی را کامل نگه می‌دارد، پس اگر کلون
-        # کهنه باشد، کد/داکِ راه‌دور برمی‌گردد. ورکر فقط data/ و logs/
-        # را می‌نویسد — بقیه باید دقیقاً همان origin/main باشند.
-        restored = _restore_non_data_files(root, args.ref)
-        if restored is None:
-            log_error("merge_state: could not restore non-data files "
-                      "— refusing to push a stale tree")
-            return 1
-        if restored:
-            amend = _git(["commit", "--amend", "--no-edit"], root)
-            if amend.returncode != 0:
-                log_error("merge_state: git commit --amend failed: "
-                          + amend.stderr.decode("utf-8", "replace")[:300])
+        if _git(["diff", "--cached", "--quiet"], root).returncode != 0:
+            commit = _git(["commit", "-m", args.commit_message], root)
+            if commit.returncode != 0:
+                log_error("merge_state: git commit failed: "
+                          + commit.stderr.decode("utf-8", "replace")[:300])
                 return 1
-            log_info("merge_state: restored non-data files from "
-                     + args.ref + " (amended into the state commit)")
+            if not _restore_and_amend():
+                return 1
+        else:
+            log_info("merge_state: nothing to commit "
+                     "(will still push if HEAD is ahead of origin/main)")
+            if not _restore_and_amend():
+                return 1
         # ۴. ثبت remote به‌عنوان mergeشده، بدون دست‌زدن به درخت
         merge = _git(["merge", "-s", "ours", args.ref], root)
         if merge.returncode != 0:

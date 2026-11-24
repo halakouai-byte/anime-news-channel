@@ -118,6 +118,60 @@ check("T4 summary background alone does NOT make adaptation",
       detect_event("Some Anime Announces New Season",
                    "An anime adaptation aired in 2024. The new season was announced.") != "adaptation")
 
+# --- Test 5: award/eligibility source + "new anime" claim (msg 66) -------
+# The Oscars-eligibility list article was posted as "new Gundam anime
+# announced" (msg 66, 2026-11-24). The event_consistency gate had no award
+# branch, so it passed; the event classifier fell through to "announcement".
+OSCARS = {
+    "title_en": "All You Need Is Kill, Kaguya!, Grotesqqque, More Anime "
+                "Confirmed Eligible for Oscars",
+    "summary_en": "Jinsei , Last Blossom , 2nd Gundam Hathaway film, Ribbon "
+                  "Hero, Super Mario Galaxy Movie, Avatar Aang also eligible",
+    "source_name": "Anime News Network",
+    "source_url": "https://animenewsnetwork.com/news/2026-11-24/"
+                  "all-you-need-is-kill-kaguya-grotesqqque-more-anime-"
+                  "confirmed-eligible-for-oscars/.244148",
+    "pubDate": "2026-11-24T07:55:40+00:00",
+}
+fx5 = extract_facts(OSCARS, BANKS)
+check("T5 oscars event is award", fx5["event"] == "award",
+      f"(got {fx5['event']})")
+check("T5 oscars event_fa", fx5["event_fa"] == "جایزه",
+      f"(got {fx5['event_fa']})")
+check("T5 oscars franchise is None (roundup)", fx5["fr_en"] is None,
+      f"(got {fx5['fr_en']})")
+post5 = rewrite_post(OSCARS)
+check("T5 oscars rewrite does NOT pass why_specific (HOLD)",
+      "why_specific" not in post5["gates_passed"],
+      f"(passed {post5['gates_passed']})")
+check("T5 oscars rewrite does not claim a new anime",
+      "انیمه تازه" not in post5["caption"])
+
+# The gate itself: an award source + a "new anime" claim must fail, even if
+# the classifier ever mislabels the event again (defence in depth).
+_fx_gate = {
+    "title_en": OSCARS["title_en"], "summary_en": OSCARS["summary_en"],
+    "pubDate": OSCARS["pubDate"], "fr_fa": "گاندام", "fr_en": "Gundam",
+    "event_fa": "انیمه تازه", "event": "announcement",
+    "date_fa": None, "studio_en": None,
+}
+_wrong_cap = (
+    "رسمی شد: انیمه تازه Gundam\n\nگاندام سکوت را شکست؛ انیمه تازه اثر "
+    "اعلام شد.\n\nگاندام از آن آثاری است که هر خبر تازه‌اش بازتاب دارد.\n\n"
+    "چرا مهم است؟ چون تایید انیمه تازه یعنی دنیای گاندام بزرگ‌تر می‌شود "
+    "و گاندام در مرکز توجه قرار گرفت.\n\nمنبع: Anime News Network\n"
+    "https://example.com/x\n\n#انیمه #Gundam #فیلم")
+_gates = check_gates(_wrong_cap, "رسمی شد: انیمه تازه Gundam", _fx_gate,
+                     "چون تایید انیمه تازه یعنی دنیای گاندام بزرگ‌تر می‌شود.")
+check("T5 gate: award source + new-anime claim fails event_consistency",
+      _gates["event_consistency"] is False)
+_fx_ctrl = dict(_fx_gate, title_en="Studio X Announces New Anime Film",
+                summary_en="Studio X announced a brand-new anime film for 2027.")
+_gates_ctrl = check_gates(_wrong_cap, "رسمی شد: انیمه تازه Gundam", _fx_ctrl,
+                          "چون تایید انیمه تازه یعنی دنیای گاندام بزرگ‌تر می‌شود.")
+check("T5 gate control: no award source passes event_consistency",
+      _gates_ctrl["event_consistency"] is True)
+
 print()
 if FAILURES:
     print(f"FAILED: {len(FAILURES)} — {FAILURES}")
