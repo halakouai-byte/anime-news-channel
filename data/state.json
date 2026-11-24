@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 3440,
+    "duplicates_total": 3474,
     "hold_total": 27,
-    "posts_today": 15,
+    "posts_today": 16,
     "posts_today_date": "2026-11-24",
-    "posts_total": 60,
-    "rejected_total": 584
+    "posts_total": 61,
+    "rejected_total": 597
   },
-  "last_fetch_utc": "2026-11-24T16:02:57Z",
-  "last_publish_utc": "2026-11-24T10:25:56Z",
+  "last_fetch_utc": "2026-11-24T16:26:55Z",
+  "last_publish_utc": "2026-11-24T16:26:57Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -75,7 +75,8 @@
     "ce1c890641c95f6dac534cb17e95236e8a8e08a630da793f96c4e5fea4b5e9b9": 64,
     "7fd88509d070aab6bbfc92d6eadefa91ed8914be803ae5a73c4f0c53deb097ff": 66,
     "3c1437beaeb3e29f68da14c92e306dd179c360943470f5e03d08f8c7af169af1": 67,
-    "c787674791e3243040eacf353aa505fe1a7e4d3b55275c37fa6d1d68f69fd057": 68
+    "c787674791e3243040eacf353aa505fe1a7e4d3b55275c37fa6d1d68f69fd057": 68,
+    "4be5a6bcb8694c8deca29b4926fc44fef5cc117e4c83dc3f1c903b271c290df6": 69
   },
   "posted_message_ids": [
     6,
@@ -137,7 +138,8 @@
     64,
     66,
     67,
-    68
+    68,
+    69
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1213,6 +1215,16 @@
         "witch"
       ],
       "posted_utc": "2026-11-24T10:25:56Z"
+    },
+    {
+      "title_norm": "sakamoto days manga ends",
+      "words": [
+        "days",
+        "ends",
+        "manga",
+        "sakamoto"
+      ],
+      "posted_utc": "2026-11-24T16:26:57Z"
     }
   ],
   "seen_at": {
@@ -1366,7 +1378,9 @@
     "ce1c890641c95f6dac534cb17e95236e8a8e08a630da793f96c4e5fea4b5e9b9": "2026-11-24T07:24:53Z",
     "7fd88509d070aab6bbfc92d6eadefa91ed8914be803ae5a73c4f0c53deb097ff": "2026-11-24T09:22:52Z",
     "c787674791e3243040eacf353aa505fe1a7e4d3b55275c37fa6d1d68f69fd057": "2026-11-24T10:25:54Z",
-    "2031295bbc22635f956d4dc62539ab3d47b1755c19a2b0332760ccbc60a43e87": "2026-11-24T14:00:53Z"
+    "2031295bbc22635f956d4dc62539ab3d47b1755c19a2b0332760ccbc60a43e87": "2026-11-24T14:00:53Z",
+    "e8d8891d035e12f08a03a9f25b882b9baf2dfbbfc6b9c5ff961783cf257a6dc2": "2026-11-24T16:26:54Z",
+    "4be5a6bcb8694c8deca29b4926fc44fef5cc117e4c83dc3f1c903b271c290df6": "2026-11-24T16:26:54Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -1417,6 +1431,7 @@
     "48f0aa63839d806e658110e628273d52c5ccb174eddcba0f22004d20d06944fb",
     "4994f21b86f912a7460522007bf6b17b172116df6dab1a03be3e97f6009de9c7",
     "4af97ee3cb380b1e90ea0d6dd72cb3aaefe4d25a76d9a3fbc4a393e458be7cf9",
+    "4be5a6bcb8694c8deca29b4926fc44fef5cc117e4c83dc3f1c903b271c290df6",
     "4c160152e3afd3af03f633476f37f84936ab29a5bc8e76b5574fb6bd6f734fb8",
     "4dc2b8a24b9562d3db57a40438e09f16d007dd20f5820288f5c52c277b1a511f",
     "50d2724a8f6b223c372b761461aadc75f7b8c6fa4d99162e64636cffcacc32a2",
@@ -1507,6 +1522,7 @@
     "e4716188e1605c52b387257f46a51de59d61991e17787db32799bedf68f66737",
     "e7c20573002cdd88ce1c59150a47e469eeb7f3861def66c580163b4c7cfdea9c",
     "e7f35a482a83fbaa5888aef4245b5d282fee88503d90c4d51a4fa8f6a045ad42",
+    "e8d8891d035e12f08a03a9f25b882b9baf2dfbbfc6b9c5ff961783cf257a6dc2",
     "e954ac69bf10a7bdcae072d0856b1265f043ceb85b3a293bf5919140c8356990",
     "ea17ea35b8459b92ec49c8d19979ca586653617635513cf4805cf54d14b3dfd8",
     "eef3ca68c798d0bc0eba6c7ce1f0c43dc9a26fb37f509dbe1cc95e26749edf13",
@@ -1573,6 +1589,10 @@
     "naruto|casting|10390": {
       "message_id": 61,
       "posted_utc": "2026-11-24T02:23:58Z"
+    },
+    "days sakamoto|other|10390": {
+      "message_id": 69,
+      "posted_utc": "2026-11-24T16:26:57Z"
     }
   },
   "template_usage_7d": {
@@ -1636,7 +1656,8 @@
       "2026-11-24T07:24:56Z",
       "2026-11-24T09:22:54Z",
       "2026-11-24T09:37:55Z",
-      "2026-11-24T10:25:56Z"
+      "2026-11-24T10:25:56Z",
+      "2026-11-24T16:26:57Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -1698,7 +1719,8 @@
       "2026-11-24T07:24:56Z",
       "2026-11-24T09:22:54Z",
       "2026-11-24T09:37:55Z",
-      "2026-11-24T10:25:56Z"
+      "2026-11-24T10:25:56Z",
+      "2026-11-24T16:26:57Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -1760,7 +1782,8 @@
       "2026-11-24T07:24:56Z",
       "2026-11-24T09:22:54Z",
       "2026-11-24T09:37:55Z",
-      "2026-11-24T10:25:56Z"
+      "2026-11-24T10:25:56Z",
+      "2026-11-24T16:26:57Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -1822,7 +1845,8 @@
       "2026-11-24T07:24:56Z",
       "2026-11-24T09:22:54Z",
       "2026-11-24T09:37:55Z",
-      "2026-11-24T10:25:56Z"
+      "2026-11-24T10:25:56Z",
+      "2026-11-24T16:26:57Z"
     ]
   },
   "version": 2
