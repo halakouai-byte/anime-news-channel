@@ -1588,7 +1588,7 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "STALE",
       "hold_reason": "gates_failed:why_specific",
       "created_utc": "2026-11-21T17:55:22Z"
     },
@@ -1766,7 +1766,7 @@
       "franchise_en": null,
       "priority_score": 35,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "STALE",
       "hold_reason": "gates_failed:why_specific",
       "created_utc": "2026-11-21T17:55:22Z"
     },
@@ -1788,7 +1788,7 @@
       "franchise_en": null,
       "priority_score": 35,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "STALE",
       "hold_reason": "gates_failed:length",
       "created_utc": "2026-11-21T17:55:22Z"
     },
@@ -1810,7 +1810,7 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "STALE",
       "hold_reason": "gates_failed:length",
       "created_utc": "2026-11-21T17:55:22Z"
     },
@@ -1832,7 +1832,7 @@
       "franchise_en": null,
       "priority_score": 40,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "STALE",
       "hold_reason": "gates_failed:length,why_specific",
       "created_utc": "2026-11-21T17:55:22Z"
     },
@@ -2935,8 +2935,8 @@
       "franchise_en": null,
       "priority_score": 50,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:why_specific",
       "created_utc": "2026-11-23T02:44:17Z"
     },
     {
@@ -3002,8 +3002,8 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:why_specific",
       "created_utc": "2026-11-23T11:30:26Z"
     },
     {
@@ -3147,8 +3147,8 @@
       "franchise_en": null,
       "priority_score": 50,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:english_limited,why_specific",
       "created_utc": "2026-11-23T21:58:24Z"
     },
     {
@@ -3269,6 +3269,50 @@
       "status": "HOLD",
       "hold_reason": "low-confidence",
       "created_utc": "2026-11-24T02:23:55Z"
+    },
+    {
+      "guid": "https://www.animenewsnetwork.com/cms/.244049",
+      "hash": "50d2724a8f6b223c372b761461aadc75f7b8c6fa4d99162e64636cffcacc32a2",
+      "story_key": null,
+      "title": "Jimoto no Ijimekko-tachi ni Shikaeshi Shiyō to Shitara Anime's Video Unveils Cast",
+      "link": "https://animenewsnetwork.com/news/2026-11-23/jimoto-no-ijimekko-tachi-ni-shikaeshi-shiyo-to-shitara-anime-video-unveils-cast/.244049",
+      "summary": "Kaori Maeda, Yūko Natsuyoshi, more star in romcom debuting in 2027",
+      "source": "ANN",
+      "source_name": "Anime News Network",
+      "tier": 1,
+      "pubDate": "2026-11-24T03:11:47+00:00",
+      "category": "فصل جدید",
+      "category_score": 3,
+      "category_source": "keyword",
+      "event_type": "casting",
+      "franchise_en": null,
+      "priority_score": 50,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "gates_failed:why_specific",
+      "created_utc": "2026-11-24T03:27:54Z"
+    },
+    {
+      "guid": "https://www.animenewsnetwork.com/cms/.244142",
+      "hash": "1b12ce94c8707f499d16ad1d3a1c0fcf2159e4a39332ef7668056d5db995746a",
+      "story_key": null,
+      "title": "Psyren TV Anime Adds 6 Cast Members",
+      "link": "https://animenewsnetwork.com/news/2026-11-23/psyren-tv-anime-adds-6-cast-members/.244142",
+      "summary": "Takaya Kuroda, Wataru Komada, Mutsumi Tamura, Mitsuki Saiga, Ayana Taketatsu, Kana Ichinose join cast",
+      "source": "ANN",
+      "source_name": "Anime News Network",
+      "tier": 1,
+      "pubDate": "2026-11-24T03:04:07+00:00",
+      "category": "فصل جدید",
+      "category_score": 5,
+      "category_source": "keyword",
+      "event_type": "casting",
+      "franchise_en": null,
+      "priority_score": 50,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "gates_failed:why_specific",
+      "created_utc": "2026-11-24T03:27:54Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
