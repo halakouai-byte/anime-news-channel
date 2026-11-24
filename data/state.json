@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 3005,
-    "hold_total": 24,
-    "posts_today": 8,
+    "duplicates_total": 3054,
+    "hold_total": 25,
+    "posts_today": 10,
     "posts_today_date": "2026-11-24",
-    "posts_total": 53,
-    "rejected_total": 475
+    "posts_total": 55,
+    "rejected_total": 485
   },
-  "last_fetch_utc": "2026-11-23T23:13:31Z",
-  "last_publish_utc": "2026-11-23T22:58:05Z",
+  "last_fetch_utc": "2026-11-24T02:23:56Z",
+  "last_publish_utc": "2026-11-24T02:38:59Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -68,7 +68,9 @@
     "04e5afda8fe231c18cb205c304cf99972cf5e99a69d8bb8789fa1fdc01526797": 57,
     "bc06815f9f919967b99a18291ab6e714b864486f0a8d4386826ed7276957e4dd": 58,
     "3a7039401f1cef43fcbd5bd0733afbd307fd2f0ed2ba8c20dea1e606795a9f39": 59,
-    "60c4a38382f3d0e6eeac819c865cc1c7960cb0dc9544f0eefda9454a21e799a4": 60
+    "60c4a38382f3d0e6eeac819c865cc1c7960cb0dc9544f0eefda9454a21e799a4": 60,
+    "d7cffbd8f4db9006c0ce0f24accab434b25cad19114c7978a3959d1822ddd3ed": 61,
+    "9e86bf6966bfd41f8c46168f6f329ea393d67771d9de952f07fc21b8b6933c4b": 62
   },
   "posted_message_ids": [
     6,
@@ -123,7 +125,9 @@
     57,
     58,
     59,
-    60
+    60,
+    61,
+    62
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1082,6 +1086,35 @@
         "manga"
       ],
       "posted_utc": "2026-11-23T22:58:05Z"
+    },
+    {
+      "title_norm": "deadline: live-action naruto film in talks to cast hiroyuki sanada as sarutobi",
+      "words": [
+        "as",
+        "cast",
+        "deadline:",
+        "film",
+        "hiroyuki",
+        "in",
+        "live-action",
+        "naruto",
+        "sanada",
+        "sarutobi",
+        "talks",
+        "to"
+      ],
+      "posted_utc": "2026-11-24T02:23:58Z"
+    },
+    {
+      "title_norm": "manga creator tsukasa sei dies",
+      "words": [
+        "creator",
+        "dies",
+        "manga",
+        "sei",
+        "tsukasa"
+      ],
+      "posted_utc": "2026-11-24T02:38:59Z"
     }
   ],
   "seen_at": {
@@ -1224,7 +1257,10 @@
     "04e5afda8fe231c18cb205c304cf99972cf5e99a69d8bb8789fa1fdc01526797": "2026-11-23T21:58:24Z",
     "39de558cf024e0674926afafaa251f645114e886edcd33e9f089f83a1cf375b4": "2026-11-23T21:58:24Z",
     "2df34036c5d4472fe4f08aa72282ec8a45dc160f458fbbde5a9c3aa279ea4a6b": "2026-11-23T22:28:25Z",
-    "3a7039401f1cef43fcbd5bd0733afbd307fd2f0ed2ba8c20dea1e606795a9f39": "2026-11-23T22:28:25Z"
+    "3a7039401f1cef43fcbd5bd0733afbd307fd2f0ed2ba8c20dea1e606795a9f39": "2026-11-23T22:28:25Z",
+    "9e86bf6966bfd41f8c46168f6f329ea393d67771d9de952f07fc21b8b6933c4b": "2026-11-24T02:23:55Z",
+    "d7cffbd8f4db9006c0ce0f24accab434b25cad19114c7978a3959d1822ddd3ed": "2026-11-24T02:23:55Z",
+    "7a1940e6c7c64485c8a2a8d7f1aa7fea1fb0752e8c5f3f8bb2a520f45168ae13": "2026-11-24T02:23:55Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -1299,6 +1335,7 @@
     "7750e7a1930cd6063397a1c87921284679ab04dc816ea567c52b04b7250b6e69",
     "785c2cfb882ec84990f9cf152c02d2a0bf9bb7fdbd696002041ff17003708a23",
     "795c25e601abbfbaa0f5a47d18411c0242a0f7134af359a4a39e33988adcb8ec",
+    "7a1940e6c7c64485c8a2a8d7f1aa7fea1fb0752e8c5f3f8bb2a520f45168ae13",
     "7a2361b24db1fe34f532175d50e7e35739aa7f59d7ddba1b909bc815f090b208",
     "7bb5702f82cd19f7de3bcd36dd339520f9d917a460602b74e90bf82da44d944b",
     "7c24bca63d41ba9fc0ca79709a52f33970b7366ec86e2e1d2cf3b1114f1586a4",
@@ -1316,6 +1353,7 @@
     "9a215cb7cc6970adbf787da2166b8d5164ef7ad471b593fe0da50306ece6a8a0",
     "9dc5b6296405b249fa7aa05812b7a22c475d57082136b075cc77325aa9d723bc",
     "9e32bd6d31b6af7cf44e0cf6e24c2ab3ec49419750b4d16f47baf2afd780c1bc",
+    "9e86bf6966bfd41f8c46168f6f329ea393d67771d9de952f07fc21b8b6933c4b",
     "9f36ae04a0b3a86791fc6ed231096795765e709c401b9fdda8a1a41477569ad3",
     "9fee23ad5f009e1becfcb09973d2da94eaab44efde898d07a882efa524a9be7c",
     "a2a43b4d6c104dff96af192215549bbf008dea99d6cf88b8d36e5470029526f5",
@@ -1347,6 +1385,7 @@
     "cec56704dbf9033b4ebbc882a2cf6c6dfa7d697e7eae20f95a3b653fdc1811db",
     "d232aeb252ea89472166c208f66d6be358f331d8ee8c54154da138f889e93d8a",
     "d38622bb4143e2ad1fc8c6e1b1ce32dff234fca343e04f7b53095e07ecfb2606",
+    "d7cffbd8f4db9006c0ce0f24accab434b25cad19114c7978a3959d1822ddd3ed",
     "d8f2a753661e6c1d82b8db93d83333716391a4f9002c0d540d6b1de1ff6877ec",
     "dac2cb5c9c78bcb8e8134c31dfef13884e8ece52333ffa833b0aaaa607ab1a2e",
     "db8e11fbfb4083a909039c5701812ee4114907be896a962155a3954f9f6d15bd",
@@ -1416,6 +1455,10 @@
     "man one punch|casting|10390": {
       "message_id": 39,
       "posted_utc": "2026-11-23T16:30:58Z"
+    },
+    "naruto|casting|10390": {
+      "message_id": 61,
+      "posted_utc": "2026-11-24T02:23:58Z"
     }
   },
   "template_usage_7d": {
@@ -1472,7 +1515,9 @@
       "2026-11-23T22:13:01Z",
       "2026-11-23T22:28:02Z",
       "2026-11-23T22:43:03Z",
-      "2026-11-23T22:58:05Z"
+      "2026-11-23T22:58:05Z",
+      "2026-11-24T02:23:58Z",
+      "2026-11-24T02:38:59Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -1527,7 +1572,9 @@
       "2026-11-23T22:13:01Z",
       "2026-11-23T22:28:02Z",
       "2026-11-23T22:43:03Z",
-      "2026-11-23T22:58:05Z"
+      "2026-11-23T22:58:05Z",
+      "2026-11-24T02:23:58Z",
+      "2026-11-24T02:38:59Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -1582,7 +1629,9 @@
       "2026-11-23T22:13:01Z",
       "2026-11-23T22:28:02Z",
       "2026-11-23T22:43:03Z",
-      "2026-11-23T22:58:05Z"
+      "2026-11-23T22:58:05Z",
+      "2026-11-24T02:23:58Z",
+      "2026-11-24T02:38:59Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -1637,7 +1686,9 @@
       "2026-11-23T22:13:01Z",
       "2026-11-23T22:28:02Z",
       "2026-11-23T22:43:03Z",
-      "2026-11-23T22:58:05Z"
+      "2026-11-23T22:58:05Z",
+      "2026-11-24T02:23:58Z",
+      "2026-11-24T02:38:59Z"
     ]
   },
   "version": 2
