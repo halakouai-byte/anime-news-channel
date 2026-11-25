@@ -60,3 +60,4 @@
 - 2026-11-25T02:25:54Z UTC (4 آذر 1405، تهران): posted message_id=73 guid=https://www.animenewsnetwork.com/cms/.244165 category=مانگا و اقتباس score=90 breaking=True latency_min=35.4
 - 2026-11-25T02:40:56Z UTC (4 آذر 1405، تهران): posted message_id=74 guid=https://www.animenewsnetwork.com/cms/.244167 category=مانگا و اقتباس score=45 breaking=False latency_min=105.9
 - 2026-11-25T04:26:01Z UTC (4 آذر 1405، تهران): posted message_id=75 guid=https://www.animenewsnetwork.com/cms/.244149 category=تریلر score=50 breaking=False latency_min=73.1
+- 2026-11-25T04:44:59Z UTC (4 آذر 1405، تهران): posted message_id=76 guid=https://www.animenewsnetwork.com/cms/.244173 category=فصل جدید score=50 breaking=False latency_min=36.1
