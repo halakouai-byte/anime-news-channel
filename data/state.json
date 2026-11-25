@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 4124,
+    "duplicates_total": 4162,
     "hold_total": 28,
-    "posts_today": 10,
+    "posts_today": 11,
     "posts_today_date": "2026-11-25",
-    "posts_total": 71,
-    "rejected_total": 872
+    "posts_total": 72,
+    "rejected_total": 886
   },
-  "last_fetch_utc": "2026-11-25T09:24:52Z",
-  "last_publish_utc": "2026-11-25T09:24:54Z",
+  "last_fetch_utc": "2026-11-25T10:09:05Z",
+  "last_publish_utc": "2026-11-25T10:09:07Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -86,7 +86,8 @@
     "8e6bbf57e6f4d98f78f2e32fcf0bdc8772fa9472540b42966f1819968d6eb362": 76,
     "cf62bd184c7f1dde07959a2341254e8751711e4b00ae94ab5e293dbd57350b35": 77,
     "fb0a31e76fe9ae902153b92d07f0c50fcae98896bb063cae97bfc8211fc9ec70": 78,
-    "bec3fcbb78efdeef4be5fba6b08a936a8cbdaed506a85aa8b9b07913c9f7cb85": 79
+    "bec3fcbb78efdeef4be5fba6b08a936a8cbdaed506a85aa8b9b07913c9f7cb85": 79,
+    "f20c62180b79fb4cfbaee7ad69c07df21f485a8bc1f1987241f9d14f36cc2a22": 80
   },
   "posted_message_ids": [
     6,
@@ -159,7 +160,8 @@
     76,
     77,
     78,
-    79
+    79,
+    80
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1405,6 +1407,24 @@
         "wars'"
       ],
       "posted_utc": "2026-11-25T09:24:54Z"
+    },
+    {
+      "title_norm": "kindergarten wars anime's video reveals more staff, ado's opening song, april debut",
+      "words": [
+        "ado's",
+        "anime's",
+        "april",
+        "debut",
+        "kindergarten",
+        "more",
+        "opening",
+        "reveals",
+        "song,",
+        "staff,",
+        "video",
+        "wars"
+      ],
+      "posted_utc": "2026-11-25T10:09:07Z"
     }
   ],
   "seen_at": {
@@ -1576,7 +1596,9 @@
     "cf62bd184c7f1dde07959a2341254e8751711e4b00ae94ab5e293dbd57350b35": "2026-11-25T06:04:53Z",
     "a0124da77253aeb4ba4868a8959365b9a387ef4c5320e849339af6567467aee8": "2026-11-25T08:29:54Z",
     "fb0a31e76fe9ae902153b92d07f0c50fcae98896bb063cae97bfc8211fc9ec70": "2026-11-25T08:55:14Z",
-    "bec3fcbb78efdeef4be5fba6b08a936a8cbdaed506a85aa8b9b07913c9f7cb85": "2026-11-25T09:24:51Z"
+    "bec3fcbb78efdeef4be5fba6b08a936a8cbdaed506a85aa8b9b07913c9f7cb85": "2026-11-25T09:24:51Z",
+    "fa6d6519eba4f39732cd5a5a63a84f3594765457d2ca3308fb03cdc8bbc18aea": "2026-11-25T10:09:05Z",
+    "f20c62180b79fb4cfbaee7ad69c07df21f485a8bc1f1987241f9d14f36cc2a22": "2026-11-25T10:09:05Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -1736,6 +1758,7 @@
     "e954ac69bf10a7bdcae072d0856b1265f043ceb85b3a293bf5919140c8356990",
     "ea17ea35b8459b92ec49c8d19979ca586653617635513cf4805cf54d14b3dfd8",
     "eef3ca68c798d0bc0eba6c7ce1f0c43dc9a26fb37f509dbe1cc95e26749edf13",
+    "f20c62180b79fb4cfbaee7ad69c07df21f485a8bc1f1987241f9d14f36cc2a22",
     "f2365776a20e9ed35f26185ad2ceda6780271ee51bed41638a6e38627501546d",
     "f2f2bb34e0cc1b11d83a9100fd749199963af6f6d9324485e4ca61efc23fa374",
     "f3f3ab6ee331eac6a22bd5be691546365b06a0aa094f3f500b4d93cc7ecc79ee",
@@ -1743,6 +1766,7 @@
     "f6eec5dd2f40ad52e51ac09b8b8e45d29935ed47b6d2724f79cef2802b1c445b",
     "f827b5e3d5930c6713bc3cd7a520b4cfefdf50567c8e2bdc9de0b2e4d72ec7d6",
     "f8f7504394df745cd913d4f0445869570a2767ad93cfdab7f632ce44699ddc0e",
+    "fa6d6519eba4f39732cd5a5a63a84f3594765457d2ca3308fb03cdc8bbc18aea",
     "fb0a31e76fe9ae902153b92d07f0c50fcae98896bb063cae97bfc8211fc9ec70",
     "fb35b4917d2203143fb1c2a72e768db900d5f31bd9e319ca7b278fb5977cb6dc",
     "fc603049f06795e18f39862edfbcda751e05d9f3adaaafd41c1894c71a45753b",
@@ -1883,7 +1907,8 @@
       "2026-11-25T04:44:59Z",
       "2026-11-25T06:04:56Z",
       "2026-11-25T08:55:16Z",
-      "2026-11-25T09:24:54Z"
+      "2026-11-25T09:24:54Z",
+      "2026-11-25T10:09:07Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -1956,7 +1981,8 @@
       "2026-11-25T04:44:59Z",
       "2026-11-25T06:04:56Z",
       "2026-11-25T08:55:16Z",
-      "2026-11-25T09:24:54Z"
+      "2026-11-25T09:24:54Z",
+      "2026-11-25T10:09:07Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -2029,7 +2055,8 @@
       "2026-11-25T04:44:59Z",
       "2026-11-25T06:04:56Z",
       "2026-11-25T08:55:16Z",
-      "2026-11-25T09:24:54Z"
+      "2026-11-25T09:24:54Z",
+      "2026-11-25T10:09:07Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -2102,7 +2129,8 @@
       "2026-11-25T04:44:59Z",
       "2026-11-25T06:04:56Z",
       "2026-11-25T08:55:16Z",
-      "2026-11-25T09:24:54Z"
+      "2026-11-25T09:24:54Z",
+      "2026-11-25T10:09:07Z"
     ]
   },
   "version": 2
