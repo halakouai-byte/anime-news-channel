@@ -1,10 +1,14 @@
 """تست استخراج فرنچایز دو مرحله‌ای — نقد ۳ (پیام ۸ زنده).
 
 قاعده: ۱) نام انیمه/مانگا در تیتر؛ ۲) همان‌ها در خلاصه؛
-۳) استودیو/پلتفرم/شخص فقط وقتی هیچ نام انیمه‌ای نیست (new_name=True).
+۳) استودیو/پلتفرم/شخص فقط وقتی در تیتر است (new_name=True).
 پیام ۸: تیتر «New Oishinbo TV Anime...» بود ولی کد قدیم
 «Shin-Ei Animation» (۱۷ حرف، در خلاصه) را بر «Oishinbo» (۸ حرف، در
 تیتر) ترجیح می‌داد — چون «Oishinbo» در بانک هم بود و باز باخت.
+پیام‌های ۵۳/۶۲/۷۱/۷۲ (۲۳–۲۵ نوامبر ۲۰۲۶): مرحله ۳ پیش‌تر خلاصه کامل
+را می‌گشت و پلتفرم/ناشر/مجله را به‌جای موضوع خبر برمی‌داشت
+(Crunchyroll از «streams the anime»، Disney+ از «exclusively on»،
+Shueisha از خلاصه درگذشت) — حالا فقط تیتر.
 """
 
 import sys
@@ -73,14 +77,26 @@ def main() -> int:
             BANKS),
         ("Frieren: Beyond Journey's End", "فریرن؛ آن‌سوی پایان سفر", False)))
 
-    # ۵) فقط استودیو (نام انیمه در بانک نیست): fallback با new_name=True
+    # ۵) فقط استودیو (نام انیمه در بانک نیست): fallback با new_name=True —
+    # استودیو باید در تیتر باشد (پیام‌های ۵۳/۶۲/۷۱/۷۲: استودیو/پلتفرم در
+    # خلاصه، گذراست و موضوع خبر نیست).
     results.append(check(
         "studio-only-fallback-is-new-name",
+        extract_franchise(
+            "ufotable Announces New Original Anime for 2027",
+            "The original anime, produced by ufotable, will premiere in "
+            "2027. More details will be revealed soon.", BANKS),
+        ("ufotable", "یوفوتیبل", True)))
+
+    # ۵ب) استودیو فقط در خلاصه: گذراست — new_name می‌شود (HOLD امن)، نه
+    # اینکه استودیو به‌جای اثر پست شود (پیام‌های ۵۳/۶۲/۷۱/۷۲).
+    results.append(check(
+        "studio-only-in-summary-is-not-franchise",
         extract_franchise(
             "New Original Anime Announced for 2027",
             "The original anime, produced by ufotable, will premiere in "
             "2027. More details will be revealed soon.", BANKS),
-        ("ufotable", "یوفوتیبل", True)))
+        (None, None, True)))
 
     # ۶) رگرسیون Hidan (پیام ۲۷): طولانی‌ترین نام انیمه در تیتر
     results.append(check(
@@ -172,6 +188,72 @@ def main() -> int:
             "The second Gundam Hathaway film has been confirmed eligible "
             "for Best Animated Feature at the Academy Awards.")),
         ("Mobile Suit Gundam", "award")))
+
+    # ۱۴) پیام ۷۲ (۲۵ نوامبر ۲۰۲۶): Psyren در بانک نیست؛ «Crunchyroll
+    # streams the anime» در خلاصه گذراست — پلتفرم موضوع خبر نیست و نباید
+    # به‌جای اثر برگردد (new_name → HOLD امن). رویداد «casting» درست است.
+    results.append(check(
+        "msg72-psyren-no-crunchyroll",
+        extract_franchise(
+            "PSYREN TV Anime Reveals Six Additional Voice Cast Members",
+            "The TV anime PSYREN has revealed six additional voice cast "
+            "members. The series is currently airing in Japan, where it "
+            "premiered on October 5, 2026. Crunchyroll streams the anime.",
+            BANKS),
+        (None, None, True)))
+    results.append(check(
+        "msg72-psyren-event-casting",
+        detect_event(
+            "PSYREN TV Anime Reveals Six Additional Voice Cast Members",
+            "The TV anime PSYREN has revealed six additional voice cast "
+            "members. Crunchyroll streams the anime."),
+        "casting"))
+
+    # ۱۵) پیام ۵۳ (۲۳ نوامبر ۲۰۲۶): بانک «Tamon's B-Side» را با آپاستروفِ
+    # صاف دارد ولی RSS آپاستروفِ خمیده (’) می‌آورد — تطابق باید یکسان‌سازی
+    # شود و نامِ تیتر برگردد، نه «Crunchyroll» از خلاصه.
+    results.append(check(
+        "msg53-tamon-curly-apostrophe",
+        extract_franchise(
+            "Tamon\u2019s B-Side TV Anime Season 2 Officially Announced",
+            "The TV anime Tamon\u2019s B-Side has officially announced a "
+            "second season. All 13 episodes are now available to stream on "
+            "regional platforms, including Crunchyroll, Ani-One Asia, and "
+            "BiliBili.", BANKS),
+        ("Tamon's B-Side", "بی‌ساید تامون", False)))
+
+    # ۱۶) پیام ۷۱ (۲۴ نوامبر ۲۰۲۶): «exclusively on Disney+» در خلاصه
+    # گذراست — پلتفرم موضوع خبر نیست (اثر Disney Twisted-Wonderland در
+    # بانک نیست) و نباید به‌جای اثر برگردد.
+    results.append(check(
+        "msg71-disney-plus-not-franchise",
+        extract_franchise(
+            "Disney Twisted-Wonderland The Animation Season 2: Episode of "
+            "Savanaclaw Reveals New PV and Theme Songs",
+            "A new promotional video has been released for Disney "
+            "Twisted-Wonderland The Animation Season 2: Episode of "
+            "Savanaclaw. The anime will be available exclusively on Disney+ "
+            "starting December 23.", BANKS),
+        (None, None, True)))
+
+    # ۱۷) پیام ۶۲ (۲۴ نوامبر ۲۰۲۶): درگذشت خالق مانگا — رویداد «death»
+    # است، نه «announcement»؛ و ناشر/مجله در خلاصه (Shueisha / Shonen
+    # Jump) موضوع خبر نیست و نباید به‌جای فرد برگردد.
+    results.append(check(
+        "msg62-death-event",
+        detect_event(
+            "Manga Creator Tsukasa Sei Dies",
+            "Manga creator Tsukasa Sei died on November 21 due to illness."),
+        "death"))
+    results.append(check(
+        "msg62-death-no-publisher-franchise",
+        extract_franchise(
+            "Manga Creator Tsukasa Sei Dies",
+            "Manga creator Tsukasa Sei died on November 21 due to illness. "
+            "Sei was the creator of the Tsumi to Batsu no Spica manga, which "
+            "was serialized in Shueisha's Weekly Shonen Jump magazine.",
+            BANKS),
+        (None, None, True)))
 
     print(f"{sum(results)}/{len(results)} passed")
     return 0 if all(results) else 1

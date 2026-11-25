@@ -93,12 +93,28 @@ def _section_names(banks: dict, *sections: str) -> dict:
     return names
 
 
+# پیام ۵۳ (۲۳ نوامبر ۲۰۲۶): بانک «Tamon's B-Side» را با آپاستروفِ صاف
+# (') دارد ولی تیتر/خلاصه RSS اغلب آپاستروفِ خمیده (’) می‌آورد — تطابقِ
+# دقیقِ زیررشته‌ای شکست می‌خورد و مرحله ۳ «Crunchyroll» را از خلاصه
+# برمی‌داشت. برای تطابق، گیومه‌ها/آپاستروف‌های یونیکد یکسان‌سازی می‌شوند
+# (کلیدِ اصلیِ بانک برگردانده می‌شود، پس جست‌وجوی نامِ فارسی درست می‌ماند).
+_MATCH_NORM = str.maketrans({
+    "’": "'", "‘": "'", "“": '"', "”": '"', "«": '"', "»": '"',
+    "–": "-", "—": "-", "…": "...",
+})
+
+
+def _norm_for_match(s: str) -> str:
+    return s.translate(_MATCH_NORM)
+
+
 def _longest_in(text_low: str, names: dict) -> str | None:
     """طولانی‌ترین نام بانک که در متن آمده (case-insensitive)."""
+    norm_text = _norm_for_match(text_low)
     for en in sorted(names, key=len, reverse=True):
         if len(en) < 3:
             continue
-        if en.lower() in text_low:
+        if _norm_for_match(en.lower()) in norm_text:
             return en
     return None
 
@@ -127,14 +143,22 @@ def extract_franchise(title: str, summary: str, banks: dict):
     جای متن، نام پس‌زمینه خلاصه را بر نام تیتر ترجیح می‌داد):
     ۱) نام‌های انیمه/مانگا در تیتر؛ ۲) همان‌ها در جمله اول خلاصه
     (بدون محتوای داخل پرانتز — نقد ۴، پیام ۳۱: «Bleach» در اعتبارات
-    بازیگران خلاصه بود)؛ ۳) استودیو/پلتفرم/شخص فقط وقتی هیچ نام
-    انیمه‌ای نیست — و آن‌وقت new_name=True است (نام واقعی اثر در بانک
-    نیست و باید اضافه شود). وگرنه عبارت گیومه‌دار در تیتر؛ وگرنه None.
+    بازیگران خلاصه بود)؛ ۳) استودیو/پلتفرم/شخص فقط وقتی در تیتر است —
+    و آن‌وقت new_name=True است (نام واقعی اثر در بانک نیست و باید اضافه
+    شود). وگرنه عبارت گیومه‌دار در تیتر؛ وگرنه None.
+    مرحله ۳ پیش‌تر تیتر + خلاصه کامل را می‌گشت و نامِ گذرا را به‌جای
+    موضوع خبر برمی‌داشت (پیام‌های ۵۳/۶۲/۷۱/۷۲، ۲۳–۲۵ نوامبر ۲۰۲۶):
+    «Crunchyroll streams the anime» در خلاصه Psyren، «exclusively on
+    Disney+» در خلاصه Twisted-Wonderland، «Shueisha / Weekly Shonen
+    Jump» در خلاصه درگذشت Tsukasa Sei — هیچ‌کدام موضوع خبر نیستند،
+    فقط پلتفرم/ناشر/مجله‌اند. نامِ گذرا در خلاصه (پخش‌کننده، ناشر،
+    فهرست بازیگران) موضوع نیست؛ فقط نامِ تیتر موضوع است. پس مرحله ۳
+    فقط تیتر را می‌گردد و اگر نام در تیتر نباشد، آیتم new_name می‌شود
+    (HOLD امن) تا نامِ واقعی به بانک اضافه شود.
     """
     anime = _section_names(banks, "anime", "manga_lightnovel")
     other = _section_names(banks, "studios", "platforms", "people")
     title_low = (title or "").lower()
-    summary_low = (summary or "").lower()
     summary_lead = _summary_lead(summary).lower()
     best = _longest_in(title_low, anime)
     if best:
@@ -154,7 +178,10 @@ def extract_franchise(title: str, summary: str, banks: dict):
     best = _longest_in(summary_lead, anime)
     if best:
         return best, anime[best], False
-    best = _longest_in(f"{title_low}\n{summary_low}", other)
+    # پیام‌های ۵۳/۶۲/۷۱/۷۲ (۲۳–۲۵ نوامبر ۲۰۲۶): مرحله ۳ فقط تیتر را
+    # می‌گردد (بالا را ببین) — نامِ استودیو/پلتفرم/شخص در خلاصه، گذراست
+    # (پخش‌کننده/ناشر/مجله) و موضوع خبر نیست.
+    best = _longest_in(title_low, other)
     if best:
         return best, other[best], True
     quoted = re.search(r"[\"'‘’“”]([^\"'‘’“”]{3,80})[\"'‘’“”]", title)
@@ -247,6 +274,12 @@ def detect_event(title: str, summary: str) -> str:
                              "manga to end", "manga will end",
                              "final chapter", "final volume")):
         return "manga_ending"
+    # پیام ۶۲ (۲۴ نوامبر ۲۰۲۶): درگذشت خالق مانگا («Manga Creator Tsukasa
+    # Sei Dies») هیچ شاخه‌ای نداشت و به «announcement» می‌افتاد — کپشن
+    # «Shonen Jump برمی‌گردد؛ انیمه تازه» ساخت (وارونه‌سازی رویداد، مثل
+    # پیام ۶). «dead» با مرزِ کلمه چک می‌شود تا «deadline» نگیرَد.
+    if re.search(r"\b(dies|died|dead|passes away|passed away|obituary)\b", tl):
+        return "death"
     # Critic fix 2026-11-21 (review #1, run 44936475145): لایسنس (مثلاً
     # «Yen Press Licenses ...») خودش یک رویداد است، نه اعلام انیمه تازه.
     # بدون این شاخه، خبر لایسنس به «announcement» → «انیمه تازه» می‌افتاد و
@@ -277,6 +310,9 @@ def detect_event(title: str, summary: str) -> str:
     if any(k in text for k in ("manga will end", "will end in the",
                                "ends serialization")):
         return "manga_ending"
+    # پیام ۶۲: درگذشت در خلاصه هم «death» است (اگر تیتر نگفته باشد).
+    if re.search(r"\b(dies|died|dead|passes away|passed away|obituary)\b", text):
+        return "death"
     if "licens" in text:
         return "license"
     if "cast" in text:
@@ -375,6 +411,10 @@ def extract_facts(facts: dict, banks: dict) -> dict:
         # سریال‌سازی مانگا. بدون این شاخه، event_fa پیش‌فرض «خبر تازه» بود
         # و تیتر هیچ نشانی از پایان نداشت.
         event_fa = "پایان سریال‌سازی"
+    elif event == "death":
+        # پیام ۶۲ (۲۴ نوامبر ۲۰۲۶): درگذشت خالق مانگا — بدون این شاخه،
+        # event_fa «انیمه تازه» می‌شد و کپشن ادعای انیمه تازه می‌کرد.
+        event_fa = "درگذشت"
     elif event == "license":
         # Critic fix 2026-11-21 (review #1, run 44936475145): رویداد تازه —
         # لایسنس (انتشار رسمی اثر برای بازار تازه، مثلاً Yen Press).
@@ -832,6 +872,11 @@ def check_gates(caption: str, title: str, fx: dict, why: str,
     # Gundam اعلام شد»). فقط «oscar»/«eligib» خاص شمرده می‌شوند، نه
     # «award» عام (که «award-winning» گذرا در اعلامیه تازه را هم می‌گرفت).
     _award_src = any(k in _src for k in ("oscar", "eligib"))
+    # پیام ۶۲ (۲۴ نوامبر ۲۰۲۶): منبعِ درگذشت + ادعای «انیمه تازه» =
+    # وارونه‌سازی (درگذشت خالق مانگا → «Shonen Jump برمی‌گردد؛ انیمه
+    # تازه»). «dead» با مرزِ کلمه چک می‌شود تا «deadline» نگیرَد.
+    _death_src = bool(re.search(
+        r"\b(dies|died|dead|passes away|passed away|obituary)\b", _src))
     _claims_adapt = any(k in caption for k in (
         "اقتباس انیمه‌ای تازه", "انیمه تازه"))
     _claims_end = any(k in caption for k in (
@@ -845,7 +890,10 @@ def check_gates(caption: str, title: str, fx: dict, why: str,
         or (_license_src and _claims_adapt) or (_adapt_src and _claims_license)
         # پیام ۶۶ (۲۴ نوامبر ۲۰۲۶): منبع جایزه/واجد شرایط + ادعای انیمه
         # تازه هم وارونه‌سازی است و باید HOLD شود.
-        or (_award_src and _claims_adapt))
+        or (_award_src and _claims_adapt)
+        # پیام ۶۲ (۲۴ نوامبر ۲۰۲۶): منبع درگذشت + ادعای انیمه تازه هم
+        # وارونه‌سازی است و باید HOLD شود.
+        or (_death_src and _claims_adapt))
     gates["no_placeholder"] = not _has_placeholder(caption)
     # انگلیسی محدود: فقط نام اثر/استودیو/منبع + لینک + هشتگ مجاز است
     allowed = set()

@@ -172,6 +172,67 @@ _gates_ctrl = check_gates(_wrong_cap, "رسمی شد: انیمه تازه Gundam
 check("T5 gate control: no award source passes event_consistency",
       _gates_ctrl["event_consistency"] is True)
 
+# --- Test 6: death/obituary source + "new anime" claim (msg 62) -----------
+# The death of manga creator Tsukasa Sei was posted as "Shonen Jump is back;
+# new anime announced" (msg 62, 2026-11-24). The event classifier had no death
+# branch, so it fell through to "announcement"; the event_consistency gate had
+# no death branch, so it passed.
+DEATH = {
+    "title_en": "Manga Creator Tsukasa Sei Dies",
+    "summary_en": "Manga creator Tsukasa Sei died on November 21 due to illness. "
+                  "Sei was the creator of the Tsumi to Batsu no Spica manga, "
+                  "which was serialized in Shueisha's Weekly Shonen Jump magazine.",
+    "source_name": "Anime News Network",
+    "source_url": "https://animenewsnetwork.com/news/2026-11-23/"
+                  "manga-creator-tsukasa-sei-dies/.244102",
+    "pubDate": "2026-11-23T20:34:00+00:00",
+}
+fx6 = extract_facts(DEATH, BANKS)
+check("T6 death event is death", fx6["event"] == "death",
+      f"(got {fx6['event']})")
+check("T6 death event_fa", fx6["event_fa"] == "درگذشت",
+      f"(got {fx6['event_fa']})")
+check("T6 death franchise is None (no publisher/magazine)",
+      fx6["fr_en"] is None, f"(got {fx6['fr_en']})")
+post6 = rewrite_post(DEATH)
+check("T6 death rewrite does NOT pass why_specific (HOLD)",
+      "why_specific" not in post6["gates_passed"],
+      f"(passed {post6['gates_passed']})")
+check("T6 death rewrite does not claim a new anime",
+      "انیمه تازه" not in post6["caption"])
+# "deadline" must not trigger the death branch (word boundary).
+check("T6 deadline is not death",
+      detect_event("Anime Expo 2027 Submission Deadline Announced", "")
+      != "death")
+check("T6 passes-away is death",
+      detect_event("Voice Actor John Smith Passes Away", "") == "death")
+
+# The gate itself: a death source + a "new anime" claim must fail, even if
+# the classifier ever mislabels the event again (defence in depth).
+_fx_gate6 = {
+    "title_en": DEATH["title_en"], "summary_en": DEATH["summary_en"],
+    "pubDate": DEATH["pubDate"], "fr_fa": "شونن جامپ", "fr_en": "Shonen Jump",
+    "event_fa": "انیمه تازه", "event": "announcement",
+    "date_fa": None, "studio_en": None,
+}
+_wrong_cap6 = (
+    "Shonen Jump برمی‌گردد؛ انیمه تازه\n\nتقویم طرفداران شونن جامپ از امروز "
+    "شلوغ‌تر شد؛ انیمه تازه اثر اعلام شد.\n\nچرا مهم است؟ چون تایید انیمه "
+    "تازه یعنی دنیای شونن جامپ بزرگ‌تر می‌شود.\n\nمنبع: Anime News Network\n"
+    "https://example.com/x\n\n#انیمه #ShonenJump #مانگا")
+_gates6 = check_gates(_wrong_cap6, "Shonen Jump برمی‌گردد؛ انیمه تازه",
+                      _fx_gate6,
+                      "چون تایید انیمه تازه یعنی دنیای شونن جامپ بزرگ‌تر می‌شود.")
+check("T6 gate: death source + new-anime claim fails event_consistency",
+      _gates6["event_consistency"] is False)
+_fx_ctrl6 = dict(_fx_gate6, title_en="Shonen Jump New Anime Announced",
+                 summary_en="A new anime was announced.")
+_gates_ctrl6 = check_gates(_wrong_cap6, "Shonen Jump برمی‌گردد؛ انیمه تازه",
+                           _fx_ctrl6,
+                           "چون تایید انیمه تازه یعنی دنیای شونن جامپ بزرگ‌تر می‌شود.")
+check("T6 gate control: no death source passes event_consistency",
+      _gates_ctrl6["event_consistency"] is True)
+
 print()
 if FAILURES:
     print(f"FAILED: {len(FAILURES)} — {FAILURES}")
