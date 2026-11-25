@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 3831,
+    "duplicates_total": 3889,
     "hold_total": 28,
-    "posts_today": 3,
+    "posts_today": 5,
     "posts_today_date": "2026-11-25",
-    "posts_total": 64,
-    "rejected_total": 746
+    "posts_total": 66,
+    "rejected_total": 774
   },
-  "last_fetch_utc": "2026-11-25T01:23:58Z",
-  "last_publish_utc": "2026-11-25T00:03:05Z",
+  "last_fetch_utc": "2026-11-25T02:41:23Z",
+  "last_publish_utc": "2026-11-25T02:40:56Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -79,7 +79,9 @@
     "4be5a6bcb8694c8deca29b4926fc44fef5cc117e4c83dc3f1c903b271c290df6": 69,
     "6c0e521e4acb3891946b2c286e335e8af36acd022b1921de57780fdbcc4e106e": 70,
     "c4be96f526c73f97da978d14c1d31524d80c12a4f83185b967cd9e1e8107efcf": 71,
-    "448e306c1afefb15cf7b12cd00b95a381aceb7876aa4e65fd4be1a93f9424838": 72
+    "448e306c1afefb15cf7b12cd00b95a381aceb7876aa4e65fd4be1a93f9424838": 72,
+    "ff11c0dabdaff6e7607dbecbe93c8b03c34937379144a5ae0a0609c8b29d86d9": 73,
+    "ac9c21b712754814ce73aa220de675dddc1201526202394a296cbadb244c5c83": 74
   },
   "posted_message_ids": [
     6,
@@ -145,7 +147,9 @@
     69,
     70,
     71,
-    72
+    72,
+    73,
+    74
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1282,6 +1286,37 @@
         "voice"
       ],
       "posted_utc": "2026-11-25T00:03:05Z"
+    },
+    {
+      "title_norm": "frieren: beyond journey's end manga gets spinoff manga mini-series",
+      "words": [
+        "beyond",
+        "end",
+        "frieren:",
+        "gets",
+        "journey's",
+        "manga",
+        "mini-series",
+        "spinoff"
+      ],
+      "posted_utc": "2026-11-25T02:25:54Z"
+    },
+    {
+      "title_norm": "mitei hattori's smile! manga gets live-action series with global release plans",
+      "words": [
+        "gets",
+        "global",
+        "hattori's",
+        "live-action",
+        "manga",
+        "mitei",
+        "plans",
+        "release",
+        "series",
+        "smile!",
+        "with"
+      ],
+      "posted_utc": "2026-11-25T02:40:56Z"
     }
   ],
   "seen_at": {
@@ -1442,7 +1477,11 @@
     "c4be96f526c73f97da978d14c1d31524d80c12a4f83185b967cd9e1e8107efcf": "2026-11-24T23:33:01Z",
     "6c0e521e4acb3891946b2c286e335e8af36acd022b1921de57780fdbcc4e106e": "2026-11-24T23:33:01Z",
     "448e306c1afefb15cf7b12cd00b95a381aceb7876aa4e65fd4be1a93f9424838": "2026-11-24T23:48:30Z",
-    "178608b2a2e86acc22ec65497825bf570a1d219cfa9e211d57bac1fd87a01b2b": "2026-11-25T01:23:57Z"
+    "178608b2a2e86acc22ec65497825bf570a1d219cfa9e211d57bac1fd87a01b2b": "2026-11-25T01:23:57Z",
+    "963c46d0bc78eb8b9a54c089151728cb53cb9d06dbfd9396d1e015b4fa5fd4dd": "2026-11-25T02:25:52Z",
+    "ff11c0dabdaff6e7607dbecbe93c8b03c34937379144a5ae0a0609c8b29d86d9": "2026-11-25T02:25:52Z",
+    "c21418c0bb760c578166f8d35cfc0bb37025fdeab6fa4af86786d465bcecb181": "2026-11-25T02:25:52Z",
+    "ac9c21b712754814ce73aa220de675dddc1201526202394a296cbadb244c5c83": "2026-11-25T02:25:52Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -1542,6 +1581,7 @@
     "9132de952c176c6ad2160a4c2011740eb9f6f083445abdc0564445055fdb41b2",
     "934ed12bca57628f7c47883bc2e82a0aa4b9805a41c5895d3bf7c6fdd57dc2d4",
     "95dc0fb2edc494cb439733e9718000623bcaa829e7c8dbfe4d7cc3d53fe205eb",
+    "963c46d0bc78eb8b9a54c089151728cb53cb9d06dbfd9396d1e015b4fa5fd4dd",
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914",
     "9a215cb7cc6970adbf787da2166b8d5164ef7ad471b593fe0da50306ece6a8a0",
     "9dc5b6296405b249fa7aa05812b7a22c475d57082136b075cc77325aa9d723bc",
@@ -1559,6 +1599,7 @@
     "abb14cd36720dd51154f51664fe3ee92c4c1e2e22b5ebbc3011964b102b89d64",
     "ac3205e102a81b9eba9a68f8227ae6a4a09287b069d911e602b9b2ee1494745d",
     "ac91dc2e7802d178bfd9cf7d399e57d88435769741150089615aa712bc646c1f",
+    "ac9c21b712754814ce73aa220de675dddc1201526202394a296cbadb244c5c83",
     "b013b4b1cbdf85c879af6e514aec401e5f93a5293d36fc99df5f53f4e43b52b9",
     "b2cbced28e68d26986e2009ccc20b21179fa9ef91e353076625159aeca112b05",
     "b5ccfc16623d9bdb35badfc7e6c3e3f24cf91d691bd0180f56eaeca5fdfa41a6",
@@ -1568,6 +1609,7 @@
     "bc06815f9f919967b99a18291ab6e714b864486f0a8d4386826ed7276957e4dd",
     "bd64dcc6b838835ab7f1747a19d045f544de541e960b9bb333c41bb138228393",
     "bf2c6b21ad39f60264e4379044a81876161b23d02d6aa58e1629864d8ce0f570",
+    "c21418c0bb760c578166f8d35cfc0bb37025fdeab6fa4af86786d465bcecb181",
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af",
     "c3996e9c2f6e78c16bbe33779e9eb6dd1db26774b2f3bf28f6f8f93d4c867fd6",
     "c4be96f526c73f97da978d14c1d31524d80c12a4f83185b967cd9e1e8107efcf",
@@ -1602,6 +1644,7 @@
     "f8f7504394df745cd913d4f0445869570a2767ad93cfdab7f632ce44699ddc0e",
     "fb35b4917d2203143fb1c2a72e768db900d5f31bd9e319ca7b278fb5977cb6dc",
     "fc603049f06795e18f39862edfbcda751e05d9f3adaaafd41c1894c71a45753b",
+    "ff11c0dabdaff6e7607dbecbe93c8b03c34937379144a5ae0a0609c8b29d86d9",
     "ffe1e37546026883c90487492592078b2fbb58b714d111dea8c3dc986a87b396"
   ],
   "story_keys": {
@@ -1660,6 +1703,10 @@
     "days sakamoto|other|10390": {
       "message_id": 69,
       "posted_utc": "2026-11-24T16:26:57Z"
+    },
+    "beyond end frieren journey|announcement|10391": {
+      "message_id": 73,
+      "posted_utc": "2026-11-25T02:25:54Z"
     }
   },
   "template_usage_7d": {
@@ -1727,7 +1774,9 @@
       "2026-11-24T16:26:57Z",
       "2026-11-24T23:33:03Z",
       "2026-11-24T23:48:04Z",
-      "2026-11-25T00:03:05Z"
+      "2026-11-25T00:03:05Z",
+      "2026-11-25T02:25:54Z",
+      "2026-11-25T02:40:56Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -1793,7 +1842,9 @@
       "2026-11-24T16:26:57Z",
       "2026-11-24T23:33:03Z",
       "2026-11-24T23:48:04Z",
-      "2026-11-25T00:03:05Z"
+      "2026-11-25T00:03:05Z",
+      "2026-11-25T02:25:54Z",
+      "2026-11-25T02:40:56Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -1859,7 +1910,9 @@
       "2026-11-24T16:26:57Z",
       "2026-11-24T23:33:03Z",
       "2026-11-24T23:48:04Z",
-      "2026-11-25T00:03:05Z"
+      "2026-11-25T00:03:05Z",
+      "2026-11-25T02:25:54Z",
+      "2026-11-25T02:40:56Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -1925,7 +1978,9 @@
       "2026-11-24T16:26:57Z",
       "2026-11-24T23:33:03Z",
       "2026-11-24T23:48:04Z",
-      "2026-11-25T00:03:05Z"
+      "2026-11-25T00:03:05Z",
+      "2026-11-25T02:25:54Z",
+      "2026-11-25T02:40:56Z"
     ]
   },
   "version": 2
