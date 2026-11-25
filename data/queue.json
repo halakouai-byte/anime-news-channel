@@ -3813,8 +3813,8 @@
       "franchise_en": null,
       "priority_score": 50,
       "is_breaking": false,
-      "status": "QUEUED",
-      "hold_reason": "",
+      "status": "HOLD",
+      "hold_reason": "gates_failed:english_limited,why_specific",
       "created_utc": "2026-11-25T04:44:56Z"
     },
     {
@@ -3841,6 +3841,28 @@
       "message_id": 77,
       "posted_utc": "2026-11-25T06:04:56Z",
       "caption": "Cheat Fuyo | معرفی صداپیشه‌های تازه اعلام شد\n\nCheat Fuyo سکوت را شکست؛ معرفی صداپیشه‌های تازه اثر اعلام شد.\n\nبرای طرفدارانی که Cheat Fuyo را دنبال می‌کنند، همین اعلام یعنی تصویر آینده اثر روشن‌تر شد؛ حالا نوبت جزئیات بیشتر است که در روزهای آینده از راه برسد و تکلیف بقیه بخش‌ها هم مشخص شود. در این اعلام، نام صداپیشه‌های تازه هم آمده است؛ انتخاب این صداها نشان می‌دهد عوامل ساخت برای این بخش از اثر برنامه جدی دارند و هر صدا برای شخصیتی انتخاب شده که طرفداران مدت‌هاست منتظر شنیدنش هستند.\n\nچرا مهم است؟ چون معرفی صداپیشه‌های تازه، صدای شخصیت‌های Cheat Fuyo را مشخص می‌کند و همان صداهایی است که در فصل تازه خواهید شنید.\n\nمنبع: MyAnimeList News\nhttps://myanimelist.net/news/74979057\n\n#انیمه #CheatFuyo #فصل_جدید"
+    },
+    {
+      "guid": "https://www.animenewsnetwork.com/cms/.244177",
+      "hash": "a0124da77253aeb4ba4868a8959365b9a387ef4c5320e849339af6567467aee8",
+      "story_key": null,
+      "title": "The Kept Man of the Princess Knight Anime's New Video Reveals More Cast, Ending Song, January 3 Debut",
+      "link": "https://animenewsnetwork.com/news/2026-11-25/the-kept-man-of-the-princess-knight-anime-new-video-reveals-more-cast-ending-song-january-3-debut/.244177",
+      "summary": "Yūya Hirose, Manaka Iwami, Shion Wakayama, Saori Ōnishi join anime's cast",
+      "source": "ANN",
+      "source_name": "Anime News Network",
+      "tier": 1,
+      "pubDate": "2026-11-25T08:00:00+00:00",
+      "category": "فصل جدید",
+      "category_score": 3,
+      "category_source": "keyword",
+      "event_type": "casting",
+      "franchise_en": null,
+      "priority_score": 50,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "gates_failed:why_specific",
+      "created_utc": "2026-11-25T08:29:54Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
