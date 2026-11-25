@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 4162,
+    "duplicates_total": 4240,
     "hold_total": 28,
-    "posts_today": 11,
+    "posts_today": 13,
     "posts_today_date": "2026-11-25",
-    "posts_total": 72,
-    "rejected_total": 886
+    "posts_total": 74,
+    "rejected_total": 914
   },
-  "last_fetch_utc": "2026-11-25T10:09:05Z",
-  "last_publish_utc": "2026-11-25T10:09:07Z",
+  "last_fetch_utc": "2026-11-25T11:10:37Z",
+  "last_publish_utc": "2026-11-25T11:10:39Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -87,7 +87,9 @@
     "cf62bd184c7f1dde07959a2341254e8751711e4b00ae94ab5e293dbd57350b35": 77,
     "fb0a31e76fe9ae902153b92d07f0c50fcae98896bb063cae97bfc8211fc9ec70": 78,
     "bec3fcbb78efdeef4be5fba6b08a936a8cbdaed506a85aa8b9b07913c9f7cb85": 79,
-    "f20c62180b79fb4cfbaee7ad69c07df21f485a8bc1f1987241f9d14f36cc2a22": 80
+    "f20c62180b79fb4cfbaee7ad69c07df21f485a8bc1f1987241f9d14f36cc2a22": 80,
+    "f64562fc5b18a47eaf93f840cc91f5017fb91c9fabd9e7f6180179caef7d176a": 81,
+    "90f581868af7d0aeb0ba6fe5992290a99574865abdbeb2937238f9971055c5f4": 82
   },
   "posted_message_ids": [
     6,
@@ -161,7 +163,9 @@
     77,
     78,
     79,
-    80
+    80,
+    81,
+    82
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1425,6 +1429,43 @@
         "wars"
       ],
       "posted_utc": "2026-11-25T10:09:07Z"
+    },
+    {
+      "title_norm": "manga '25-ji, akasaka de' gets tv anime in 2027",
+      "words": [
+        "'25-ji,",
+        "2027",
+        "akasaka",
+        "anime",
+        "de'",
+        "gets",
+        "in",
+        "manga",
+        "tv"
+      ],
+      "posted_utc": "2026-11-25T10:54:58Z"
+    },
+    {
+      "title_norm": "'now that we draw' anime's new video unveils more cast, ending song artist, january 8 debut",
+      "words": [
+        "'now",
+        "8",
+        "anime's",
+        "artist,",
+        "cast,",
+        "debut",
+        "draw'",
+        "ending",
+        "january",
+        "more",
+        "new",
+        "song",
+        "that",
+        "unveils",
+        "video",
+        "we"
+      ],
+      "posted_utc": "2026-11-25T11:10:39Z"
     }
   ],
   "seen_at": {
@@ -1598,7 +1639,9 @@
     "fb0a31e76fe9ae902153b92d07f0c50fcae98896bb063cae97bfc8211fc9ec70": "2026-11-25T08:55:14Z",
     "bec3fcbb78efdeef4be5fba6b08a936a8cbdaed506a85aa8b9b07913c9f7cb85": "2026-11-25T09:24:51Z",
     "fa6d6519eba4f39732cd5a5a63a84f3594765457d2ca3308fb03cdc8bbc18aea": "2026-11-25T10:09:05Z",
-    "f20c62180b79fb4cfbaee7ad69c07df21f485a8bc1f1987241f9d14f36cc2a22": "2026-11-25T10:09:05Z"
+    "f20c62180b79fb4cfbaee7ad69c07df21f485a8bc1f1987241f9d14f36cc2a22": "2026-11-25T10:09:05Z",
+    "f64562fc5b18a47eaf93f840cc91f5017fb91c9fabd9e7f6180179caef7d176a": "2026-11-25T10:54:55Z",
+    "90f581868af7d0aeb0ba6fe5992290a99574865abdbeb2937238f9971055c5f4": "2026-11-25T11:10:37Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -1697,6 +1740,7 @@
     "8b1bfac28b4551abcbb23f723228c7cf5d3307f18866080e8705d1ea012b724d",
     "8e6bbf57e6f4d98f78f2e32fcf0bdc8772fa9472540b42966f1819968d6eb362",
     "90353bb3221fb3211db4ad3f6acb4f89f4aa381eb663f142d5597758e33c9604",
+    "90f581868af7d0aeb0ba6fe5992290a99574865abdbeb2937238f9971055c5f4",
     "9132de952c176c6ad2160a4c2011740eb9f6f083445abdc0564445055fdb41b2",
     "934ed12bca57628f7c47883bc2e82a0aa4b9805a41c5895d3bf7c6fdd57dc2d4",
     "95dc0fb2edc494cb439733e9718000623bcaa829e7c8dbfe4d7cc3d53fe205eb",
@@ -1762,6 +1806,7 @@
     "f2365776a20e9ed35f26185ad2ceda6780271ee51bed41638a6e38627501546d",
     "f2f2bb34e0cc1b11d83a9100fd749199963af6f6d9324485e4ca61efc23fa374",
     "f3f3ab6ee331eac6a22bd5be691546365b06a0aa094f3f500b4d93cc7ecc79ee",
+    "f64562fc5b18a47eaf93f840cc91f5017fb91c9fabd9e7f6180179caef7d176a",
     "f6c537d4cba544ecb761b136c7a21e14f5f8444f8a254ed8f02e759a2aae2a87",
     "f6eec5dd2f40ad52e51ac09b8b8e45d29935ed47b6d2724f79cef2802b1c445b",
     "f827b5e3d5930c6713bc3cd7a520b4cfefdf50567c8e2bdc9de0b2e4d72ec7d6",
@@ -1908,7 +1953,9 @@
       "2026-11-25T06:04:56Z",
       "2026-11-25T08:55:16Z",
       "2026-11-25T09:24:54Z",
-      "2026-11-25T10:09:07Z"
+      "2026-11-25T10:09:07Z",
+      "2026-11-25T10:54:58Z",
+      "2026-11-25T11:10:39Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -1982,7 +2029,9 @@
       "2026-11-25T06:04:56Z",
       "2026-11-25T08:55:16Z",
       "2026-11-25T09:24:54Z",
-      "2026-11-25T10:09:07Z"
+      "2026-11-25T10:09:07Z",
+      "2026-11-25T10:54:58Z",
+      "2026-11-25T11:10:39Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -2056,7 +2105,9 @@
       "2026-11-25T06:04:56Z",
       "2026-11-25T08:55:16Z",
       "2026-11-25T09:24:54Z",
-      "2026-11-25T10:09:07Z"
+      "2026-11-25T10:09:07Z",
+      "2026-11-25T10:54:58Z",
+      "2026-11-25T11:10:39Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -2130,7 +2181,9 @@
       "2026-11-25T06:04:56Z",
       "2026-11-25T08:55:16Z",
       "2026-11-25T09:24:54Z",
-      "2026-11-25T10:09:07Z"
+      "2026-11-25T10:09:07Z",
+      "2026-11-25T10:54:58Z",
+      "2026-11-25T11:10:39Z"
     ]
   },
   "version": 2
