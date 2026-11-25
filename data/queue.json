@@ -2521,7 +2521,7 @@
       "franchise_en": null,
       "priority_score": 40,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "REJECTED",
       "hold_reason": "low-confidence",
       "created_utc": "2026-11-22T14:00:59Z"
     },
@@ -4060,6 +4060,28 @@
       "message_id": 84,
       "posted_utc": "2026-11-25T13:00:01Z",
       "caption": "Kakunaru Ue wa در راه است؛ معرفی صداپیشه‌های تازه\n\nطرفداران Kakunaru Ue wa این خبر را از دست ندهند؛ معرفی صداپیشه‌های تازه اثر رسما اعلام شد.\n\nاین اثر از روی مانگایی به همین نام ساخته می‌شود؛ مانگایی که خواننده‌هایش مدت‌هاست چشم‌به‌راه نسخه انیمه آن بوده‌اند. گزارش کامل این خبر در MyAnimeList News آمده است؛ جایی که زمان‌بندی و عوامل اصلی اثر هم در آن آمده و لینک آن در انتهای همین پست است تا خودتان هم بخوانید.\n\nچرا مهم است؟ چون معرفی صداپیشه‌های تازه، صدای شخصیت‌های Kakunaru Ue wa را مشخص می‌کند و همان صداهایی است که در فصل تازه خواهید شنید؛ صداهایی که انتخابشان نشان می‌دهد عوامل ساخت برای این بخش برنامه جدی دارند.\n\nمنبع: MyAnimeList News\nhttps://myanimelist.net/news/74979929\n\n#انیمه #KakunaruUeWa #فصل_جدید"
+    },
+    {
+      "guid": "https://animecorner.me/at-2500-in-akasaka-gets-anime/",
+      "hash": "e3eca932d891803920de35f7792480e085ecd94a9f51d99a169c393c7ec7f932",
+      "story_key": null,
+      "title": "At 25:00, in Akasaka Gets Anime",
+      "link": "https://animecorner.me/at-2500-in-akasaka-gets-anime",
+      "summary": "At 25:00, in Akasaka boys' love manga by Hiroko Natsuno is getting an anime…",
+      "source": "AnimeCorner",
+      "source_name": "Anime Corner",
+      "tier": 1,
+      "pubDate": "2026-11-25T14:40:04+00:00",
+      "category": "مانگا و اقتباس",
+      "category_score": 2,
+      "category_source": "keyword",
+      "event_type": "announcement",
+      "franchise_en": null,
+      "priority_score": 55,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "low-confidence",
+      "created_utc": "2026-11-25T14:41:02Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
