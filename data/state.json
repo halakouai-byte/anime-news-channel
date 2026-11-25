@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 4052,
+    "duplicates_total": 4087,
     "hold_total": 28,
-    "posts_today": 8,
+    "posts_today": 9,
     "posts_today_date": "2026-11-25",
-    "posts_total": 69,
-    "rejected_total": 844
+    "posts_total": 70,
+    "rejected_total": 858
   },
-  "last_fetch_utc": "2026-11-25T08:29:54Z",
-  "last_publish_utc": "2026-11-25T06:04:56Z",
+  "last_fetch_utc": "2026-11-25T08:55:14Z",
+  "last_publish_utc": "2026-11-25T08:55:16Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -84,7 +84,8 @@
     "ac9c21b712754814ce73aa220de675dddc1201526202394a296cbadb244c5c83": 74,
     "2df7d9024fb16032e3937e4c160a4fca4009310415d2b48e1047b2afaf6704c0": 75,
     "8e6bbf57e6f4d98f78f2e32fcf0bdc8772fa9472540b42966f1819968d6eb362": 76,
-    "cf62bd184c7f1dde07959a2341254e8751711e4b00ae94ab5e293dbd57350b35": 77
+    "cf62bd184c7f1dde07959a2341254e8751711e4b00ae94ab5e293dbd57350b35": 77,
+    "fb0a31e76fe9ae902153b92d07f0c50fcae98896bb063cae97bfc8211fc9ec70": 78
   },
   "posted_message_ids": [
     6,
@@ -155,7 +156,8 @@
     74,
     75,
     76,
-    77
+    77,
+    78
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1373,6 +1375,20 @@
         "supporting"
       ],
       "posted_utc": "2026-11-25T06:04:56Z"
+    },
+    {
+      "title_norm": "'himekishi-sama no himo' reveals supporting cast, second promo",
+      "words": [
+        "'himekishi-sama",
+        "cast,",
+        "himo'",
+        "no",
+        "promo",
+        "reveals",
+        "second",
+        "supporting"
+      ],
+      "posted_utc": "2026-11-25T08:55:16Z"
     }
   ],
   "seen_at": {
@@ -1542,7 +1558,8 @@
     "8e6bbf57e6f4d98f78f2e32fcf0bdc8772fa9472540b42966f1819968d6eb362": "2026-11-25T04:44:56Z",
     "cf14563117ebe2af48206988149ae2f29c818f495e4352b32f31ec74524472a9": "2026-11-25T04:44:56Z",
     "cf62bd184c7f1dde07959a2341254e8751711e4b00ae94ab5e293dbd57350b35": "2026-11-25T06:04:53Z",
-    "a0124da77253aeb4ba4868a8959365b9a387ef4c5320e849339af6567467aee8": "2026-11-25T08:29:54Z"
+    "a0124da77253aeb4ba4868a8959365b9a387ef4c5320e849339af6567467aee8": "2026-11-25T08:29:54Z",
+    "fb0a31e76fe9ae902153b92d07f0c50fcae98896bb063cae97bfc8211fc9ec70": "2026-11-25T08:55:14Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -1708,6 +1725,7 @@
     "f6eec5dd2f40ad52e51ac09b8b8e45d29935ed47b6d2724f79cef2802b1c445b",
     "f827b5e3d5930c6713bc3cd7a520b4cfefdf50567c8e2bdc9de0b2e4d72ec7d6",
     "f8f7504394df745cd913d4f0445869570a2767ad93cfdab7f632ce44699ddc0e",
+    "fb0a31e76fe9ae902153b92d07f0c50fcae98896bb063cae97bfc8211fc9ec70",
     "fb35b4917d2203143fb1c2a72e768db900d5f31bd9e319ca7b278fb5977cb6dc",
     "fc603049f06795e18f39862edfbcda751e05d9f3adaaafd41c1894c71a45753b",
     "ff11c0dabdaff6e7607dbecbe93c8b03c34937379144a5ae0a0609c8b29d86d9",
@@ -1845,7 +1863,8 @@
       "2026-11-25T02:40:56Z",
       "2026-11-25T04:26:01Z",
       "2026-11-25T04:44:59Z",
-      "2026-11-25T06:04:56Z"
+      "2026-11-25T06:04:56Z",
+      "2026-11-25T08:55:16Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -1916,7 +1935,8 @@
       "2026-11-25T02:40:56Z",
       "2026-11-25T04:26:01Z",
       "2026-11-25T04:44:59Z",
-      "2026-11-25T06:04:56Z"
+      "2026-11-25T06:04:56Z",
+      "2026-11-25T08:55:16Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -1987,7 +2007,8 @@
       "2026-11-25T02:40:56Z",
       "2026-11-25T04:26:01Z",
       "2026-11-25T04:44:59Z",
-      "2026-11-25T06:04:56Z"
+      "2026-11-25T06:04:56Z",
+      "2026-11-25T08:55:16Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -2058,7 +2079,8 @@
       "2026-11-25T02:40:56Z",
       "2026-11-25T04:26:01Z",
       "2026-11-25T04:44:59Z",
-      "2026-11-25T06:04:56Z"
+      "2026-11-25T06:04:56Z",
+      "2026-11-25T08:55:16Z"
     ]
   },
   "version": 2
