@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 3920,
+    "duplicates_total": 3951,
     "hold_total": 28,
-    "posts_today": 5,
+    "posts_today": 6,
     "posts_today_date": "2026-11-25",
-    "posts_total": 66,
-    "rejected_total": 788
+    "posts_total": 67,
+    "rejected_total": 802
   },
-  "last_fetch_utc": "2026-11-25T03:24:53Z",
-  "last_publish_utc": "2026-11-25T02:40:56Z",
+  "last_fetch_utc": "2026-11-25T04:26:00Z",
+  "last_publish_utc": "2026-11-25T04:26:01Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -81,7 +81,8 @@
     "c4be96f526c73f97da978d14c1d31524d80c12a4f83185b967cd9e1e8107efcf": 71,
     "448e306c1afefb15cf7b12cd00b95a381aceb7876aa4e65fd4be1a93f9424838": 72,
     "ff11c0dabdaff6e7607dbecbe93c8b03c34937379144a5ae0a0609c8b29d86d9": 73,
-    "ac9c21b712754814ce73aa220de675dddc1201526202394a296cbadb244c5c83": 74
+    "ac9c21b712754814ce73aa220de675dddc1201526202394a296cbadb244c5c83": 74,
+    "2df7d9024fb16032e3937e4c160a4fca4009310415d2b48e1047b2afaf6704c0": 75
   },
   "posted_message_ids": [
     6,
@@ -149,7 +150,8 @@
     71,
     72,
     73,
-    74
+    74,
+    75
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1317,6 +1319,25 @@
         "with"
       ],
       "posted_utc": "2026-11-25T02:40:56Z"
+    },
+    {
+      "title_norm": "'haru to gen ~70-sai, hajimete kosodate~' anime's teaser reveals more cast, ending song",
+      "words": [
+        "'haru",
+        "anime's",
+        "cast,",
+        "ending",
+        "gen",
+        "hajimete",
+        "kosodate~'",
+        "more",
+        "reveals",
+        "song",
+        "teaser",
+        "to",
+        "~70-sai,"
+      ],
+      "posted_utc": "2026-11-25T04:26:01Z"
     }
   ],
   "seen_at": {
@@ -1481,7 +1502,8 @@
     "963c46d0bc78eb8b9a54c089151728cb53cb9d06dbfd9396d1e015b4fa5fd4dd": "2026-11-25T02:25:52Z",
     "ff11c0dabdaff6e7607dbecbe93c8b03c34937379144a5ae0a0609c8b29d86d9": "2026-11-25T02:25:52Z",
     "c21418c0bb760c578166f8d35cfc0bb37025fdeab6fa4af86786d465bcecb181": "2026-11-25T02:25:52Z",
-    "ac9c21b712754814ce73aa220de675dddc1201526202394a296cbadb244c5c83": "2026-11-25T02:25:52Z"
+    "ac9c21b712754814ce73aa220de675dddc1201526202394a296cbadb244c5c83": "2026-11-25T02:25:52Z",
+    "2df7d9024fb16032e3937e4c160a4fca4009310415d2b48e1047b2afaf6704c0": "2026-11-25T04:26:00Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -1516,6 +1538,7 @@
     "2b2b9cfe3757a922b488e684317bd024a5dfc5edb2e9134c7b16e2796fd07780",
     "2cefe640231d450efb026bf70cbc6467780dea74dee6c15cbee92bde85fbac6c",
     "2df34036c5d4472fe4f08aa72282ec8a45dc160f458fbbde5a9c3aa279ea4a6b",
+    "2df7d9024fb16032e3937e4c160a4fca4009310415d2b48e1047b2afaf6704c0",
     "2e46c6e43f2f0a38a5249d0305b016ccd83d43f25f32611ed82d491236bb50f5",
     "33f35bb813ad8de3b0b252e9678f6b3a634f18bde20da2d99cea9efa956d4084",
     "356a0d9f5b6564c258202890b0143484d47b4db522398012c7b84f5a9078adcf",
@@ -1776,7 +1799,8 @@
       "2026-11-24T23:48:04Z",
       "2026-11-25T00:03:05Z",
       "2026-11-25T02:25:54Z",
-      "2026-11-25T02:40:56Z"
+      "2026-11-25T02:40:56Z",
+      "2026-11-25T04:26:01Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -1844,7 +1868,8 @@
       "2026-11-24T23:48:04Z",
       "2026-11-25T00:03:05Z",
       "2026-11-25T02:25:54Z",
-      "2026-11-25T02:40:56Z"
+      "2026-11-25T02:40:56Z",
+      "2026-11-25T04:26:01Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -1912,7 +1937,8 @@
       "2026-11-24T23:48:04Z",
       "2026-11-25T00:03:05Z",
       "2026-11-25T02:25:54Z",
-      "2026-11-25T02:40:56Z"
+      "2026-11-25T02:40:56Z",
+      "2026-11-25T04:26:01Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -1980,7 +2006,8 @@
       "2026-11-24T23:48:04Z",
       "2026-11-25T00:03:05Z",
       "2026-11-25T02:25:54Z",
-      "2026-11-25T02:40:56Z"
+      "2026-11-25T02:40:56Z",
+      "2026-11-25T04:26:01Z"
     ]
   },
   "version": 2
