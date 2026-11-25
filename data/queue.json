@@ -2611,7 +2611,7 @@
       "franchise_en": "Chainsaw Man",
       "priority_score": 65,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "REJECTED",
       "hold_reason": "low-confidence",
       "created_utc": "2026-11-22T17:15:50Z"
     },
