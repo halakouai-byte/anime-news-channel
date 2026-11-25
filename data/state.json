@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 4162,
+    "duplicates_total": 4201,
     "hold_total": 28,
-    "posts_today": 11,
+    "posts_today": 12,
     "posts_today_date": "2026-11-25",
-    "posts_total": 72,
-    "rejected_total": 886
+    "posts_total": 73,
+    "rejected_total": 900
   },
-  "last_fetch_utc": "2026-11-25T10:09:05Z",
-  "last_publish_utc": "2026-11-25T10:09:07Z",
+  "last_fetch_utc": "2026-11-25T10:54:55Z",
+  "last_publish_utc": "2026-11-25T10:54:58Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -87,7 +87,8 @@
     "cf62bd184c7f1dde07959a2341254e8751711e4b00ae94ab5e293dbd57350b35": 77,
     "fb0a31e76fe9ae902153b92d07f0c50fcae98896bb063cae97bfc8211fc9ec70": 78,
     "bec3fcbb78efdeef4be5fba6b08a936a8cbdaed506a85aa8b9b07913c9f7cb85": 79,
-    "f20c62180b79fb4cfbaee7ad69c07df21f485a8bc1f1987241f9d14f36cc2a22": 80
+    "f20c62180b79fb4cfbaee7ad69c07df21f485a8bc1f1987241f9d14f36cc2a22": 80,
+    "f64562fc5b18a47eaf93f840cc91f5017fb91c9fabd9e7f6180179caef7d176a": 81
   },
   "posted_message_ids": [
     6,
@@ -161,7 +162,8 @@
     77,
     78,
     79,
-    80
+    80,
+    81
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1425,6 +1427,21 @@
         "wars"
       ],
       "posted_utc": "2026-11-25T10:09:07Z"
+    },
+    {
+      "title_norm": "manga '25-ji, akasaka de' gets tv anime in 2027",
+      "words": [
+        "'25-ji,",
+        "2027",
+        "akasaka",
+        "anime",
+        "de'",
+        "gets",
+        "in",
+        "manga",
+        "tv"
+      ],
+      "posted_utc": "2026-11-25T10:54:58Z"
     }
   ],
   "seen_at": {
@@ -1598,7 +1615,8 @@
     "fb0a31e76fe9ae902153b92d07f0c50fcae98896bb063cae97bfc8211fc9ec70": "2026-11-25T08:55:14Z",
     "bec3fcbb78efdeef4be5fba6b08a936a8cbdaed506a85aa8b9b07913c9f7cb85": "2026-11-25T09:24:51Z",
     "fa6d6519eba4f39732cd5a5a63a84f3594765457d2ca3308fb03cdc8bbc18aea": "2026-11-25T10:09:05Z",
-    "f20c62180b79fb4cfbaee7ad69c07df21f485a8bc1f1987241f9d14f36cc2a22": "2026-11-25T10:09:05Z"
+    "f20c62180b79fb4cfbaee7ad69c07df21f485a8bc1f1987241f9d14f36cc2a22": "2026-11-25T10:09:05Z",
+    "f64562fc5b18a47eaf93f840cc91f5017fb91c9fabd9e7f6180179caef7d176a": "2026-11-25T10:54:55Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -1762,6 +1780,7 @@
     "f2365776a20e9ed35f26185ad2ceda6780271ee51bed41638a6e38627501546d",
     "f2f2bb34e0cc1b11d83a9100fd749199963af6f6d9324485e4ca61efc23fa374",
     "f3f3ab6ee331eac6a22bd5be691546365b06a0aa094f3f500b4d93cc7ecc79ee",
+    "f64562fc5b18a47eaf93f840cc91f5017fb91c9fabd9e7f6180179caef7d176a",
     "f6c537d4cba544ecb761b136c7a21e14f5f8444f8a254ed8f02e759a2aae2a87",
     "f6eec5dd2f40ad52e51ac09b8b8e45d29935ed47b6d2724f79cef2802b1c445b",
     "f827b5e3d5930c6713bc3cd7a520b4cfefdf50567c8e2bdc9de0b2e4d72ec7d6",
@@ -1908,7 +1927,8 @@
       "2026-11-25T06:04:56Z",
       "2026-11-25T08:55:16Z",
       "2026-11-25T09:24:54Z",
-      "2026-11-25T10:09:07Z"
+      "2026-11-25T10:09:07Z",
+      "2026-11-25T10:54:58Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -1982,7 +2002,8 @@
       "2026-11-25T06:04:56Z",
       "2026-11-25T08:55:16Z",
       "2026-11-25T09:24:54Z",
-      "2026-11-25T10:09:07Z"
+      "2026-11-25T10:09:07Z",
+      "2026-11-25T10:54:58Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -2056,7 +2077,8 @@
       "2026-11-25T06:04:56Z",
       "2026-11-25T08:55:16Z",
       "2026-11-25T09:24:54Z",
-      "2026-11-25T10:09:07Z"
+      "2026-11-25T10:09:07Z",
+      "2026-11-25T10:54:58Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -2130,7 +2152,8 @@
       "2026-11-25T06:04:56Z",
       "2026-11-25T08:55:16Z",
       "2026-11-25T09:24:54Z",
-      "2026-11-25T10:09:07Z"
+      "2026-11-25T10:09:07Z",
+      "2026-11-25T10:54:58Z"
     ]
   },
   "version": 2
