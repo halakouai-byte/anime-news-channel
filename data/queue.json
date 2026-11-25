@@ -2890,7 +2890,7 @@
       "franchise_en": null,
       "priority_score": 50,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "STALE",
       "hold_reason": "gates_failed:english_limited,length,why_specific",
       "created_utc": "2026-11-23T00:50:53Z"
     },
@@ -3628,6 +3628,28 @@
       "message_id": 72,
       "posted_utc": "2026-11-25T00:03:05Z",
       "caption": "Crunchyroll خبرساز شد: معرفی صداپیشه‌های تازه\n\nطرفداران کرانچی‌رول این خبر را از دست ندهند؛ معرفی صداپیشه‌های تازه اثر رسما اعلام شد.\n\nهم‌زمان با این خبر، کی‌ویژوال تازه اثر هم منتشر شد؛ تصویری که حال‌وهوای بخش تازه را بهتر از هر توضیحی نشان می‌دهد. گزارش کامل این خبر در AnimeTV آمده است؛ جایی که زمان‌بندی و عوامل اصلی اثر هم در آن آمده و لینک آن در انتهای همین پست است تا خودتان هم بخوانید.\n\nچرا مهم است؟ چون کی‌ویژوال تازه کرانچی‌رول اولین تصویر رسمی از این اثر است و حال‌وهوای آن را بهتر از هر توضیحی نشان می‌دهد.\n\nمنبع: AnimeTV\nhttps://animetv-jp.net/psyren-tv-anime-reveals-six-additional-voice-cast-members\n\n#انیمه #Crunchyroll #فصل_جدید"
+    },
+    {
+      "guid": "https://honeysanime.com/?p=363659/",
+      "hash": "178608b2a2e86acc22ec65497825bf570a1d219cfa9e211d57bac1fd87a01b2b",
+      "story_key": null,
+      "title": "Astro Fighter Sunred coming to Blu-ray December 23!",
+      "link": "https://honeysanime.com/astro-fighter-sunred-coming-to-blu-ray-december-23",
+      "summary": "[sourceLink asin=\"\" asin_jp=\"\" cdj_product_id=\"\" text=\"\" url=\"\" ] [en]What You Need to Know: [/en][es]Lo que necesitas saber: [/es] The TV anime Astro Fighter Sunred aired from 2008 to 2010. Sixteen years after the series ended, an unexpected live-action adaptation hit the stage in 2026. This unprecedented development brought back the original anime cast in their original roles, garnering attention and concluding to raving reviews on November 8th. In the aftermath of excitement, it was announced",
+      "source": "HoneysAnime",
+      "source_name": "Honey's Anime",
+      "tier": 2,
+      "pubDate": "2026-11-25T00:54:49+00:00",
+      "category": "فصل جدید",
+      "category_score": 5,
+      "category_source": "keyword",
+      "event_type": "casting",
+      "franchise_en": null,
+      "priority_score": 40,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "gates_failed:why_specific",
+      "created_utc": "2026-11-25T01:23:57Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
