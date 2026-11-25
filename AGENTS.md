@@ -708,6 +708,53 @@ history — never silently delete the file and move on.
   the owner's decision — nothing deleted. Known follow-up: no
   award-specific why template yet (a single-franchise award article
   may pick an unpreferred why).
+- 2026-11-25 ~01:40 UTC — FALLBACK MIS-IDENTIFICATION 53/62/71/72
+  (manager sweep): msg 72 (Psyren cast, 00:03:05Z) posted as «Crunchyroll
+  خبرساز شد: معرفی صداپیشه‌های تازه» — Psyren is not in the bank, and
+  extract_franchise stage 3 searched the FULL summary for
+  studio/platform/person names, so «Crunchyroll streams the anime» (a
+  passing distributor mention) became the franchise. Same family: msg 71
+  (Disney Twisted-Wonderland S2) → «Disney+» from «exclusively on
+  Disney+»; msg 53 (Tamon's B-Side S2) → «Crunchyroll» from the summary
+  (the bank HAS «Tamon's B-Side» with a straight apostrophe, but the RSS
+  title/summary use a curly ’, so the exact-substring match failed);
+  msg 62 (death of mangaka Tsukasa Sei, ANN .244102) → «Shonen Jump
+  برمی‌گردد؛ انیمه تازه» (detect_event had NO death branch, so it fell
+  through to «announcement», and a publisher/magazine from the summary
+  became the franchise). The manager's «msg 64 = Jimoto trailer → Akira»
+  note is a number mix-up: the «Akira | تریلر تازه» caption is msg 63
+  (06:54:58Z, AnimeTV ?p=51511), and msg 64 (07:24:56Z, MAL 74975780) is
+  WITCH ON THE HOLY NIGHT — and msg 63's «Akira» class is ALREADY fixed
+  by the review-#4 _summary_lead change (stage 2 now reads only the
+  first sentence, so the cast-list «Akira Mikazuki» is no longer picked;
+  verified: the Jimoto item now returns (None, None, True) → HOLD).
+  FIX (this bundle, rewrite.py only): (1) extract_franchise stage 3 now
+  searches ONLY the title — a studio/platform/person in the summary is
+  a passing mention (distributor/publisher/magazine/credit), not the
+  subject; if the name is not in the title, the item is new_name (HOLD
+  امن) until the real name joins the bank. (2) _longest_in normalises
+  curly apostrophes/quotes (’ ‘ “ ” « ») and dashes for matching, so
+  bank keys with a straight apostrophe match RSS text with a curly one
+  (msg 53 now returns «Tamon's B-Side» correctly). (3) detect_event has
+  a «death» branch (title + text, word-boundary regex so «deadline»
+  does not match) — event_fa «درگذشت» (extract_facts override, like
+  manga_ending/license); event_consistency fails a death source +
+  «انیمه تازه» claim. Proof: test_extract_franchise.py 20/20 (7 new:
+  msg72 Psyren + casting, msg53 Tamon curly, msg71 Disney+, msg62 death
+  event + no-publisher franchise, studio-in-title still a fallback,
+  studio-only-in-summary → None) + test_rewrite_msg6.py Test 6 (death
+  event/event_fa, franchise None, rewrite HOLDs, gate + control,
+  deadline control); full suite 14/15 (only the pre-existing
+  test_dedupe_bangdream T3, proven on pristine main). Deletion of msgs
+  53/62/71/72 is the owner's decision — nothing deleted. Known
+  follow-ups: (a) no why_death template yet (a death item with a known
+  franchise may pick an unpreferred why and HOLD — safe, but the
+  template is needed for death news to post); same gap as the award why.
+  (b) Bank maintenance: Psyren, Jimoto no Ijimekko, Disney
+  Twisted-Wonderland are not in names-fa.json (add them); «Shonen
+  Jump»/«Weekly Shonen Jump» (magazines) and «Shueisha»/«Kodansha»
+  (publishers) + «Crunchyroll» sit in manga_lightnovel/studios as if
+  they were works/studios — they are credits, not franchise subjects.
 
 ## 9. Rules (hard)
 
