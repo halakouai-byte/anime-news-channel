@@ -54,3 +54,6 @@
 - 2026-11-24T09:37:55Z UTC (3 آذر 1405، تهران): posted message_id=67 guid=https://www.animenewsnetwork.com/cms/.244087 category=فصل جدید score=50 breaking=False latency_min=1889.1
 - 2026-11-24T10:25:56Z UTC (3 آذر 1405، تهران): posted message_id=68 guid=https://www.animenewsnetwork.com/cms/.244151 category=فیلم score=55 breaking=False latency_min=114.1
 - 2026-11-24T16:26:57Z UTC (3 آذر 1405، تهران): posted message_id=69 guid=https://www.animenewsnetwork.com/cms/.244098 category=مانگا و اقتباس score=50 breaking=False latency_min=2405.7
+- 2026-11-24T23:33:03Z UTC (4 آذر 1405، تهران): posted message_id=70 guid=https://animetv-jp.net/?p=51515 category=فیلم score=55 breaking=False latency_min=10.8
+- 2026-11-24T23:48:04Z UTC (4 آذر 1405، تهران): posted message_id=71 guid=https://animetv-jp.net/?p=51518 category=فصل جدید score=50 breaking=False latency_min=16.6
+- 2026-11-25T00:03:05Z UTC (4 آذر 1405، تهران): posted message_id=72 guid=https://animetv-jp.net/?p=51521 category=فصل جدید score=50 breaking=False latency_min=22.1
