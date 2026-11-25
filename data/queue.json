@@ -4214,6 +4214,28 @@
       "status": "HOLD",
       "hold_reason": "gates_failed:why_specific",
       "created_utc": "2026-11-25T16:40:54Z"
+    },
+    {
+      "guid": "https://animetv-jp.net/?p=51525",
+      "hash": "1f42d873ac9b3881a70f91f5d3964f3cff63971a2f6e9316a47a4e8b5f945ecf",
+      "story_key": null,
+      "title": "Historie Anime Reveals January 8 Premiere Date, New Trailer and Theme Songs",
+      "link": "https://animetv-jp.net/historie-anime-reveals-january-8-premiere-date-new-trailer-and-theme-songs",
+      "summary": "The upcoming Historie TV anime will premiere on January 8, 2027, with its first two episodes airing back-to-back. A new trailer and key visual have also been released, along with details about the theme songs. Yorushika will perform the opening theme song “Masshiro,” while RETRORIRON will perform the ending theme song “Anphilia.” New Trailer: Key […] L’article Historie Anime Reveals January 8 Premiere Date, New Trailer and Theme Songs est apparu en premier sur AnimeTV チェーン .",
+      "source": "AnimeTV",
+      "source_name": "AnimeTV",
+      "tier": 1,
+      "pubDate": "2026-11-25T22:15:46+00:00",
+      "category": "فصل جدید",
+      "category_score": 6,
+      "category_source": "keyword",
+      "event_type": "trailer",
+      "franchise_en": null,
+      "priority_score": 50,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "gates_failed:english_limited,why_specific",
+      "created_utc": "2026-11-25T22:16:56Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
