@@ -4192,6 +4192,28 @@
       "status": "HOLD",
       "hold_reason": "gates_failed:why_specific",
       "created_utc": "2026-11-25T16:26:22Z"
+    },
+    {
+      "guid": "https://animecorner.me/historie-anime-reveals-new-visual-trailer-additional-cast/",
+      "hash": "1a4e32ba3f02cd2406378cf27f7f4f6184a64b990c7282282fed42fdcf2250ef",
+      "story_key": null,
+      "title": "Historie Anime Reveals New Visual, Trailer Additional Cast",
+      "link": "https://animecorner.me/historie-anime-reveals-new-visual-trailer-additional-cast",
+      "summary": "The previously announced Historie anime revealed a new visual and trailer on Wednesday along…",
+      "source": "AnimeCorner",
+      "source_name": "Anime Corner",
+      "tier": 1,
+      "pubDate": "2026-11-25T16:36:46+00:00",
+      "category": "تریلر",
+      "category_score": 5,
+      "category_source": "keyword",
+      "event_type": "trailer",
+      "franchise_en": null,
+      "priority_score": 50,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "gates_failed:why_specific",
+      "created_utc": "2026-11-25T16:40:54Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
