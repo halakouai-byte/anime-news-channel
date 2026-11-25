@@ -4346,6 +4346,28 @@
       "status": "HOLD",
       "hold_reason": "low-confidence",
       "created_utc": "2026-11-25T22:42:59Z"
+    },
+    {
+      "guid": "https://animetv-jp.net/?p=51547",
+      "hash": "4369df0051cbddbf3beffabe62a5ded45308db8571d7f7ee5e7285ebfdb2737e",
+      "story_key": null,
+      "title": "Precure Reveals Title of Its 24th Anime Series: FUNtasic Precure!",
+      "link": "https://animetv-jp.net/precure-reveals-title-of-its-24th-anime-series-funtasic-precure",
+      "summary": "The title of the 24th entry in the Precure anime franchise has been revealed as FUNtasic Precure!. The new series features the catchphrase: “Shine! Everyone’s smile! Welcome to the fan gathering!” Its logo includes party-themed decorations such as crackers and garlands, reflecting the festive concept behind the new installment. The title also uses the word […] L’article Precure Reveals Title of Its 24th Anime Series: FUNtasic Precure! est apparu en premier sur AnimeTV チェーン .",
+      "source": "AnimeTV",
+      "source_name": "AnimeTV",
+      "tier": 1,
+      "pubDate": "2026-11-25T22:47:39+00:00",
+      "category": "فصل جدید",
+      "category_score": 3,
+      "category_source": "keyword",
+      "event_type": "announcement",
+      "franchise_en": null,
+      "priority_score": 55,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "gates_failed:english_limited,why_specific",
+      "created_utc": "2026-11-25T22:49:08Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
