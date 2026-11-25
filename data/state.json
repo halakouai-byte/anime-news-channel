@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 4087,
+    "duplicates_total": 4124,
     "hold_total": 28,
-    "posts_today": 9,
+    "posts_today": 10,
     "posts_today_date": "2026-11-25",
-    "posts_total": 70,
-    "rejected_total": 858
+    "posts_total": 71,
+    "rejected_total": 872
   },
-  "last_fetch_utc": "2026-11-25T08:55:14Z",
-  "last_publish_utc": "2026-11-25T08:55:16Z",
+  "last_fetch_utc": "2026-11-25T09:24:52Z",
+  "last_publish_utc": "2026-11-25T09:24:54Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -85,7 +85,8 @@
     "2df7d9024fb16032e3937e4c160a4fca4009310415d2b48e1047b2afaf6704c0": 75,
     "8e6bbf57e6f4d98f78f2e32fcf0bdc8772fa9472540b42966f1819968d6eb362": 76,
     "cf62bd184c7f1dde07959a2341254e8751711e4b00ae94ab5e293dbd57350b35": 77,
-    "fb0a31e76fe9ae902153b92d07f0c50fcae98896bb063cae97bfc8211fc9ec70": 78
+    "fb0a31e76fe9ae902153b92d07f0c50fcae98896bb063cae97bfc8211fc9ec70": 78,
+    "bec3fcbb78efdeef4be5fba6b08a936a8cbdaed506a85aa8b9b07913c9f7cb85": 79
   },
   "posted_message_ids": [
     6,
@@ -157,7 +158,8 @@
     75,
     76,
     77,
-    78
+    78,
+    79
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1389,6 +1391,20 @@
         "supporting"
       ],
       "posted_utc": "2026-11-25T08:55:16Z"
+    },
+    {
+      "title_norm": "'youchien wars' unveils staff, main promo, opening theme",
+      "words": [
+        "'youchien",
+        "main",
+        "opening",
+        "promo,",
+        "staff,",
+        "theme",
+        "unveils",
+        "wars'"
+      ],
+      "posted_utc": "2026-11-25T09:24:54Z"
     }
   ],
   "seen_at": {
@@ -1559,7 +1575,8 @@
     "cf14563117ebe2af48206988149ae2f29c818f495e4352b32f31ec74524472a9": "2026-11-25T04:44:56Z",
     "cf62bd184c7f1dde07959a2341254e8751711e4b00ae94ab5e293dbd57350b35": "2026-11-25T06:04:53Z",
     "a0124da77253aeb4ba4868a8959365b9a387ef4c5320e849339af6567467aee8": "2026-11-25T08:29:54Z",
-    "fb0a31e76fe9ae902153b92d07f0c50fcae98896bb063cae97bfc8211fc9ec70": "2026-11-25T08:55:14Z"
+    "fb0a31e76fe9ae902153b92d07f0c50fcae98896bb063cae97bfc8211fc9ec70": "2026-11-25T08:55:14Z",
+    "bec3fcbb78efdeef4be5fba6b08a936a8cbdaed506a85aa8b9b07913c9f7cb85": "2026-11-25T09:24:51Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -1689,6 +1706,7 @@
     "ba72c94009913e0276e4b2de75e979ba8a8d6c014b986b152a717579fc6f9cf4",
     "bc06815f9f919967b99a18291ab6e714b864486f0a8d4386826ed7276957e4dd",
     "bd64dcc6b838835ab7f1747a19d045f544de541e960b9bb333c41bb138228393",
+    "bec3fcbb78efdeef4be5fba6b08a936a8cbdaed506a85aa8b9b07913c9f7cb85",
     "bf2c6b21ad39f60264e4379044a81876161b23d02d6aa58e1629864d8ce0f570",
     "c21418c0bb760c578166f8d35cfc0bb37025fdeab6fa4af86786d465bcecb181",
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af",
@@ -1864,7 +1882,8 @@
       "2026-11-25T04:26:01Z",
       "2026-11-25T04:44:59Z",
       "2026-11-25T06:04:56Z",
-      "2026-11-25T08:55:16Z"
+      "2026-11-25T08:55:16Z",
+      "2026-11-25T09:24:54Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -1936,7 +1955,8 @@
       "2026-11-25T04:26:01Z",
       "2026-11-25T04:44:59Z",
       "2026-11-25T06:04:56Z",
-      "2026-11-25T08:55:16Z"
+      "2026-11-25T08:55:16Z",
+      "2026-11-25T09:24:54Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -2008,7 +2028,8 @@
       "2026-11-25T04:26:01Z",
       "2026-11-25T04:44:59Z",
       "2026-11-25T06:04:56Z",
-      "2026-11-25T08:55:16Z"
+      "2026-11-25T08:55:16Z",
+      "2026-11-25T09:24:54Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -2080,7 +2101,8 @@
       "2026-11-25T04:26:01Z",
       "2026-11-25T04:44:59Z",
       "2026-11-25T06:04:56Z",
-      "2026-11-25T08:55:16Z"
+      "2026-11-25T08:55:16Z",
+      "2026-11-25T09:24:54Z"
     ]
   },
   "version": 2
