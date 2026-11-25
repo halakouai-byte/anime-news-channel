@@ -4368,6 +4368,28 @@
       "status": "HOLD",
       "hold_reason": "gates_failed:english_limited,why_specific",
       "created_utc": "2026-11-25T22:49:08Z"
+    },
+    {
+      "guid": "https://animetv-jp.net/?p=51550",
+      "hash": "8a4cbd956021a0573e8f6176a36d1c302ecf6bcf56e03bf990be7ac6fa1e9a1c",
+      "story_key": null,
+      "title": "At 25:00, in Akasaka BL Manga Gets TV Anime Adaptation",
+      "link": "https://animetv-jp.net/at-2500-in-akasaka-bl-manga-gets-tv-anime-adaptation",
+      "summary": "The BL manga At 25:00, in Akasaka by Hiroko Natsuno is officially getting a TV anime adaptation on TBS. A teaser visual and promotional video have been released to celebrate the announcement. Teaser Announcement: Teaser Visual: CAST:Yuki Shirasaki as Soma SaitoAsami Hayama as Takuya Sato The original manga is serialized in Shodensha’s on BLUE magazine […] L’article At 25:00, in Akasaka BL Manga Gets TV Anime Adaptation est apparu en premier sur AnimeTV チェーン .",
+      "source": "AnimeTV",
+      "source_name": "AnimeTV",
+      "tier": 1,
+      "pubDate": "2026-11-25T22:58:29+00:00",
+      "category": "فصل جدید",
+      "category_score": 6,
+      "category_source": "keyword",
+      "event_type": "trailer",
+      "franchise_en": null,
+      "priority_score": 50,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "gates_failed:english_limited,why_specific",
+      "created_utc": "2026-11-25T22:58:56Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
