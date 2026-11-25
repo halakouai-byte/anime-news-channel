@@ -2655,7 +2655,7 @@
       "franchise_en": null,
       "priority_score": 40,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "REJECTED",
       "hold_reason": "low-confidence",
       "created_utc": "2026-11-22T21:17:59Z"
     },
@@ -3150,7 +3150,7 @@
       "franchise_en": null,
       "priority_score": 50,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "STALE",
       "hold_reason": "gates_failed:english_limited,why_specific",
       "created_utc": "2026-11-23T21:58:24Z"
     },
