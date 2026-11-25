@@ -4104,6 +4104,28 @@
       "status": "HOLD",
       "hold_reason": "gates_failed:why_specific",
       "created_utc": "2026-11-25T14:55:58Z"
+    },
+    {
+      "guid": "https://www.animenewsnetwork.com/cms/.244183",
+      "hash": "77a8b8f2e796231cf152b3b247bfcda22783916dbd1e3c5ccf2c72e5f871a9bb",
+      "story_key": null,
+      "title": "K-ON's Naoko Yamada Helms Official Hige Dandism's Pokémon Music Video With Madhouse",
+      "link": "https://animenewsnetwork.com/news/2026-11-25/k-on-naoko-yamada-helms-official-hige-dandism-pokemon-music-video-with-madhouse/.244183",
+      "summary": "\"Evergreen\" video to debut on Monday",
+      "source": "ANN",
+      "source_name": "Anime News Network",
+      "tier": 1,
+      "pubDate": "2026-11-25T15:15:40+00:00",
+      "category": "رویداد",
+      "category_score": 0,
+      "category_source": "keyword",
+      "event_type": "other",
+      "franchise_en": null,
+      "priority_score": 45,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "low-confidence",
+      "created_utc": "2026-11-25T16:02:55Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
