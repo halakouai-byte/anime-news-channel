@@ -4082,6 +4082,28 @@
       "status": "HOLD",
       "hold_reason": "low-confidence",
       "created_utc": "2026-11-25T14:41:02Z"
+    },
+    {
+      "guid": "https://animecorner.me/now-that-we-draw-anime-reveals-new-trailer-main-visual-additional-cast-ending-theme-song-artist/",
+      "hash": "74659478413536660f2e962241ec16cdb058710f3fd8e0b32cd28190e2ba0c9d",
+      "story_key": null,
+      "title": "Now That We Draw Anime Reveals New Trailer, Main Visual, Additional Cast, Ending Theme Song Artist",
+      "link": "https://animecorner.me/now-that-we-draw-anime-reveals-new-trailer-main-visual-additional-cast-ending-theme-song-artist",
+      "summary": "Now That We Draw anime revealed a new trailer and a main visual. Additionally,…",
+      "source": "AnimeCorner",
+      "source_name": "Anime Corner",
+      "tier": 1,
+      "pubDate": "2026-11-25T14:54:26+00:00",
+      "category": "تریلر",
+      "category_score": 5,
+      "category_source": "keyword",
+      "event_type": "trailer",
+      "franchise_en": null,
+      "priority_score": 50,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "gates_failed:why_specific",
+      "created_utc": "2026-11-25T14:55:58Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
