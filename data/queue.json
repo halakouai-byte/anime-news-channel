@@ -4170,6 +4170,28 @@
       "status": "HOLD",
       "hold_reason": "gates_failed:why_specific",
       "created_utc": "2026-11-25T16:10:57Z"
+    },
+    {
+      "guid": "https://animecorner.me/the-kept-man-of-the-princess-knight-anime-reveals-new-trailer-additional-cast-january-3-premiere/",
+      "hash": "7f920cf9d4b7083c7228a9e11b53cd315da8b705b390ea06897beca885e0edc9",
+      "story_key": null,
+      "title": "The Kept Man of the Princess Knight Anime Reveals New Trailer, Additional Cast, January 3 Premiere",
+      "link": "https://animecorner.me/the-kept-man-of-the-princess-knight-anime-reveals-new-trailer-additional-cast-january-3-premiere",
+      "summary": "The Kept Man of the Princess Knight anime revealed a new trailer, additional cast and…",
+      "source": "AnimeCorner",
+      "source_name": "Anime Corner",
+      "tier": 1,
+      "pubDate": "2026-11-25T16:24:19+00:00",
+      "category": "تریلر",
+      "category_score": 3,
+      "category_source": "keyword",
+      "event_type": "trailer",
+      "franchise_en": null,
+      "priority_score": 50,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "gates_failed:why_specific",
+      "created_utc": "2026-11-25T16:26:22Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
