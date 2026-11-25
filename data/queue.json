@@ -4324,6 +4324,28 @@
       "status": "HOLD",
       "hold_reason": "gates_failed:english_limited,why_specific",
       "created_utc": "2026-11-25T22:39:03Z"
+    },
+    {
+      "guid": "https://animetv-jp.net/?p=51544",
+      "hash": "efe543922641f43d8a76a5f8047a3370feb3f81ac08098b7d1cac866a5948c48",
+      "story_key": null,
+      "title": "Fool Night Anime Reveals Creditless Opening Theme Video",
+      "link": "https://animetv-jp.net/fool-night-anime-reveals-creditless-opening-theme-video",
+      "summary": "The opening theme video for the Fool Night anime has been revealed ahead of its release. Titled “Shake! spit out,” the song is performed by the Japanese band Tempalay. All episodes will be available to stream worldwide exclusively on Netflix starting November 26. Opening Theme – “Shake! spit out,” by Tempalay: Key Visual: CAST:Koki Uchiyama as […] L’article Fool Night Anime Reveals Creditless Opening Theme Video est apparu en premier sur AnimeTV チェーン .",
+      "source": "AnimeTV",
+      "source_name": "AnimeTV",
+      "tier": 1,
+      "pubDate": "2026-11-25T22:41:35+00:00",
+      "category": "تریلر",
+      "category_score": 2,
+      "category_source": "keyword",
+      "event_type": "trailer",
+      "franchise_en": null,
+      "priority_score": 50,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "low-confidence",
+      "created_utc": "2026-11-25T22:42:59Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
