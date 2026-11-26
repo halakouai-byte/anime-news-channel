@@ -4852,6 +4852,28 @@
       "status": "HOLD",
       "hold_reason": "gates_failed:why_specific",
       "created_utc": "2026-11-26T11:36:53Z"
+    },
+    {
+      "guid": "https://www.animenewsnetwork.com/cms/.244230",
+      "hash": "7095fda634cebd163c32a577b88bd88a3ea783eed168c67b394584c93ed25470",
+      "story_key": null,
+      "title": "Fool Night Anime Reveals 3 More Cast Members",
+      "link": "https://animenewsnetwork.com/news/2026-11-26/fool-night-anime-reveals-3-more-cast-members/.244230",
+      "summary": "Entire series debuted on Netflix worldwide on Thursday",
+      "source": "ANN",
+      "source_name": "Anime News Network",
+      "tier": 1,
+      "pubDate": "2026-11-26T12:15:00+00:00",
+      "category": "فصل جدید",
+      "category_score": 3,
+      "category_source": "keyword",
+      "event_type": "casting",
+      "franchise_en": null,
+      "priority_score": 45,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "gates_failed:why_specific",
+      "created_utc": "2026-11-26T15:03:57Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",

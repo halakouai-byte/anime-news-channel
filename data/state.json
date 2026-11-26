@@ -6,14 +6,14 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 6040,
+    "duplicates_total": 6098,
     "hold_total": 38,
     "posts_today": 8,
     "posts_today_date": "2026-11-26",
     "posts_total": 84,
-    "rejected_total": 1486
+    "rejected_total": 1501
   },
-  "last_fetch_utc": "2026-11-26T12:38:56Z",
+  "last_fetch_utc": "2026-11-26T15:03:58Z",
   "last_publish_utc": "2026-11-26T11:36:56Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
@@ -1872,7 +1872,8 @@
     "d1f97386545b57ce3d07a18c58297b0f9d9d5fcd2a3f731efe11661763fb03df": "2026-11-26T09:52:21Z",
     "d3242b4c403b4f91251add7094f35bf9c503abd80e60b2ebfe18b3de2ea981e6": "2026-11-26T10:37:53Z",
     "ce06741fa8eb7decadb84054e943955afbbedf80f2ae1bb34daf6fa1f34e5acc": "2026-11-26T11:36:53Z",
-    "38a772593ddcd6bd8bce301251a99d9c5cd9948a0ed42cd006122ef15f6947d7": "2026-11-26T11:36:53Z"
+    "38a772593ddcd6bd8bce301251a99d9c5cd9948a0ed42cd006122ef15f6947d7": "2026-11-26T11:36:53Z",
+    "7095fda634cebd163c32a577b88bd88a3ea783eed168c67b394584c93ed25470": "2026-11-26T15:03:57Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -1972,6 +1973,7 @@
     "6d025d38fa30731a26eba4a71c2f1fbbfc9b446d54a81bcaba26ebe461ec10bd",
     "6e1ab1df6b2f6f47e8181799c6e52012e387a284303ac09ee1f322fa1c0ddf29",
     "6eafe05bd996ad08145854db156f386aa5c4d607fb89a40aa8e1205a66dfa734",
+    "7095fda634cebd163c32a577b88bd88a3ea783eed168c67b394584c93ed25470",
     "74659478413536660f2e962241ec16cdb058710f3fd8e0b32cd28190e2ba0c9d",
     "7750e7a1930cd6063397a1c87921284679ab04dc816ea567c52b04b7250b6e69",
     "77a8b8f2e796231cf152b3b247bfcda22783916dbd1e3c5ccf2c72e5f871a9bb",
