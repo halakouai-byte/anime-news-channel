@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 6580,
+    "duplicates_total": 6644,
     "hold_total": 39,
-    "posts_today": 0,
+    "posts_today": 1,
     "posts_today_date": "2026-11-27",
-    "posts_total": 86,
-    "rejected_total": 1619
+    "posts_total": 87,
+    "rejected_total": 1633
   },
-  "last_fetch_utc": "2026-11-26T21:49:11Z",
-  "last_publish_utc": "2026-11-26T17:26:55Z",
+  "last_fetch_utc": "2026-11-26T22:06:54Z",
+  "last_publish_utc": "2026-11-26T22:06:56Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -101,7 +101,8 @@
     "3d0d6ae626e8142665d3b311a6a7fac6c576caf7cdf133757c126f15220f8a0a": 91,
     "ce06741fa8eb7decadb84054e943955afbbedf80f2ae1bb34daf6fa1f34e5acc": 92,
     "f45d83a1ba0c5c6379c649c10a0217a49b1627cd37e8419b6cbd2a219f43abe3": 93,
-    "73402b95b5bff20c61a9b482b5db40ff0956fe157f557d6c2f313df63d4f1eca": 94
+    "73402b95b5bff20c61a9b482b5db40ff0956fe157f557d6c2f313df63d4f1eca": 94,
+    "0c17143dbeb1ae8f735e3689c6b3e0b16bddfc2e1ef589ee863835dbb72486bf": 95
   },
   "posted_message_ids": [
     6,
@@ -189,7 +190,8 @@
     91,
     92,
     93,
-    94
+    94,
+    95
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1692,6 +1694,20 @@
         "reveals"
       ],
       "posted_utc": "2026-11-26T17:26:55Z"
+    },
+    {
+      "title_norm": "live-action darwin's game film's trailer reveals more cast",
+      "words": [
+        "cast",
+        "darwin's",
+        "film's",
+        "game",
+        "live-action",
+        "more",
+        "reveals",
+        "trailer"
+      ],
+      "posted_utc": "2026-11-26T22:06:56Z"
     }
   ],
   "seen_at": {
@@ -1912,7 +1928,8 @@
     "c46f0970fc33dcbf75a1b6fe4817799a08a386bdddbb47c6c799398d2d893577": "2026-11-26T16:20:17Z",
     "4be13a386ffd24dc0491524e2366e934fedd47f7529f267b74c534184272d442": "2026-11-26T17:18:56Z",
     "73402b95b5bff20c61a9b482b5db40ff0956fe157f557d6c2f313df63d4f1eca": "2026-11-26T17:26:52Z",
-    "18ff92dd408de59beb7aec4c6dcbc3726c6cf558d74c52a1e075fe6df4e6273a": "2026-11-26T21:49:11Z"
+    "18ff92dd408de59beb7aec4c6dcbc3726c6cf558d74c52a1e075fe6df4e6273a": "2026-11-26T21:49:11Z",
+    "0c17143dbeb1ae8f735e3689c6b3e0b16bddfc2e1ef589ee863835dbb72486bf": "2026-11-26T22:06:53Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -1924,6 +1941,7 @@
     "0a7c98d8d45a4b88366aa8e431287c5bb23941e936afec6bdd2dd55262a69520",
     "0b91bb1c46256e8ff3115ce44f09960b59d401da4066dbfd4512ae0ec825c53e",
     "0bc30a47b713e30fb41716367218d03dcf671214797ecf5f9bb66276b6f7a344",
+    "0c17143dbeb1ae8f735e3689c6b3e0b16bddfc2e1ef589ee863835dbb72486bf",
     "0e50b7047253f8901a7629c1d742ee9d4aff9cce5f4eb4ed2fc580a6ee038a0b",
     "177e451d9b0c7f0ff06f17a2cdf31a0d802278301d5dcd1dbcb6ee0989d5246e",
     "178608b2a2e86acc22ec65497825bf570a1d219cfa9e211d57bac1fd87a01b2b",
@@ -2299,7 +2317,8 @@
       "2026-11-26T09:36:56Z",
       "2026-11-26T11:36:56Z",
       "2026-11-26T15:47:00Z",
-      "2026-11-26T17:26:55Z"
+      "2026-11-26T17:26:55Z",
+      "2026-11-26T22:06:56Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -2387,7 +2406,8 @@
       "2026-11-26T09:36:56Z",
       "2026-11-26T11:36:56Z",
       "2026-11-26T15:47:00Z",
-      "2026-11-26T17:26:55Z"
+      "2026-11-26T17:26:55Z",
+      "2026-11-26T22:06:56Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -2475,7 +2495,8 @@
       "2026-11-26T09:36:56Z",
       "2026-11-26T11:36:56Z",
       "2026-11-26T15:47:00Z",
-      "2026-11-26T17:26:55Z"
+      "2026-11-26T17:26:55Z",
+      "2026-11-26T22:06:56Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -2563,7 +2584,8 @@
       "2026-11-26T09:36:56Z",
       "2026-11-26T11:36:56Z",
       "2026-11-26T15:47:00Z",
-      "2026-11-26T17:26:55Z"
+      "2026-11-26T17:26:55Z",
+      "2026-11-26T22:06:56Z"
     ]
   },
   "version": 2
