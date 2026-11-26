@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 5420,
+    "duplicates_total": 5511,
     "hold_total": 33,
-    "posts_today": 1,
+    "posts_today": 2,
     "posts_today_date": "2026-11-26",
-    "posts_total": 77,
-    "rejected_total": 1306
+    "posts_total": 78,
+    "rejected_total": 1336
   },
-  "last_fetch_utc": "2026-11-26T01:36:55Z",
-  "last_publish_utc": "2026-11-26T01:36:57Z",
+  "last_fetch_utc": "2026-11-26T03:12:31Z",
+  "last_publish_utc": "2026-11-26T02:56:55Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -92,7 +92,8 @@
     "90f581868af7d0aeb0ba6fe5992290a99574865abdbeb2937238f9971055c5f4": 82,
     "a56ab8dd96bccd0208213aa1b1d4f628e8efa076d296635b82e544f0e21b4940": 83,
     "6b0c5343b43f9aeba4fc0b75661b689bebc8e18d4f18cd984851ad532bd5b765": 84,
-    "8a26053904b5b222246ea0a7982bcc497c30f34a584da8502040e7026a4b99c8": 85
+    "8a26053904b5b222246ea0a7982bcc497c30f34a584da8502040e7026a4b99c8": 85,
+    "3763b9ef5b9a638e3256ffd95f043464f351535224cb446db9dcda3228903d3a": 86
   },
   "posted_message_ids": [
     6,
@@ -171,7 +172,8 @@
     82,
     83,
     84,
-    85
+    85,
+    86
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1527,6 +1529,20 @@
         "unveils"
       ],
       "posted_utc": "2026-11-26T01:36:57Z"
+    },
+    {
+      "title_norm": "'sasaki to pii-chan season 2' unveils additional cast",
+      "words": [
+        "'sasaki",
+        "2'",
+        "additional",
+        "cast",
+        "pii-chan",
+        "season",
+        "to",
+        "unveils"
+      ],
+      "posted_utc": "2026-11-26T02:56:55Z"
     }
   ],
   "seen_at": {
@@ -1721,7 +1737,8 @@
     "4369df0051cbddbf3beffabe62a5ded45308db8571d7f7ee5e7285ebfdb2737e": "2026-11-25T22:49:08Z",
     "8a4cbd956021a0573e8f6176a36d1c302ecf6bcf56e03bf990be7ac6fa1e9a1c": "2026-11-25T22:58:56Z",
     "d0f7ef66a57b80c358ba89e2a933111b187d04cd88ccf16b12ddcbfafa222900": "2026-11-26T01:09:55Z",
-    "8a26053904b5b222246ea0a7982bcc497c30f34a584da8502040e7026a4b99c8": "2026-11-26T01:36:55Z"
+    "8a26053904b5b222246ea0a7982bcc497c30f34a584da8502040e7026a4b99c8": "2026-11-26T01:36:55Z",
+    "3763b9ef5b9a638e3256ffd95f043464f351535224cb446db9dcda3228903d3a": "2026-11-26T02:56:53Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -1765,6 +1782,7 @@
     "32d4e7117c68898cdd37430110bfc37d9caf4c58187f1bce3ede821bac0a8316",
     "33f35bb813ad8de3b0b252e9678f6b3a634f18bde20da2d99cea9efa956d4084",
     "356a0d9f5b6564c258202890b0143484d47b4db522398012c7b84f5a9078adcf",
+    "3763b9ef5b9a638e3256ffd95f043464f351535224cb446db9dcda3228903d3a",
     "387601de815769e621da98b8be095068e42788bc2ca64537ca33db62015f2cc3",
     "39de3ecce1b19697ee58f4c4fe0ec56e4df8bbc93c17f0c5e7d6ccf001c19da7",
     "39de558cf024e0674926afafaa251f645114e886edcd33e9f089f83a1cf375b4",
@@ -2057,7 +2075,8 @@
       "2026-11-25T11:10:39Z",
       "2026-11-25T12:45:00Z",
       "2026-11-25T13:00:01Z",
-      "2026-11-26T01:36:57Z"
+      "2026-11-26T01:36:57Z",
+      "2026-11-26T02:56:55Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -2136,7 +2155,8 @@
       "2026-11-25T11:10:39Z",
       "2026-11-25T12:45:00Z",
       "2026-11-25T13:00:01Z",
-      "2026-11-26T01:36:57Z"
+      "2026-11-26T01:36:57Z",
+      "2026-11-26T02:56:55Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -2215,7 +2235,8 @@
       "2026-11-25T11:10:39Z",
       "2026-11-25T12:45:00Z",
       "2026-11-25T13:00:01Z",
-      "2026-11-26T01:36:57Z"
+      "2026-11-26T01:36:57Z",
+      "2026-11-26T02:56:55Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -2294,7 +2315,8 @@
       "2026-11-25T11:10:39Z",
       "2026-11-25T12:45:00Z",
       "2026-11-25T13:00:01Z",
-      "2026-11-26T01:36:57Z"
+      "2026-11-26T01:36:57Z",
+      "2026-11-26T02:56:55Z"
     ]
   },
   "version": 2
