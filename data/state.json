@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 5654,
+    "duplicates_total": 5705,
     "hold_total": 37,
-    "posts_today": 4,
+    "posts_today": 6,
     "posts_today_date": "2026-11-26",
-    "posts_total": 80,
-    "rejected_total": 1381
+    "posts_total": 82,
+    "rejected_total": 1396
   },
-  "last_fetch_utc": "2026-11-26T07:41:53Z",
-  "last_publish_utc": "2026-11-26T07:56:57Z",
+  "last_fetch_utc": "2026-11-26T09:06:51Z",
+  "last_publish_utc": "2026-11-26T09:21:53Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -95,7 +95,9 @@
     "8a26053904b5b222246ea0a7982bcc497c30f34a584da8502040e7026a4b99c8": 85,
     "3763b9ef5b9a638e3256ffd95f043464f351535224cb446db9dcda3228903d3a": 86,
     "5f4a7f60fd8d4431d720ec69cf7d750401dbf15570dc256cbf3a5e5a842aa05e": 87,
-    "9d6c79dec859769a93ae560aa84b36b4ea938cf8956879c2d68113f197c3354c": 88
+    "9d6c79dec859769a93ae560aa84b36b4ea938cf8956879c2d68113f197c3354c": 88,
+    "47c863df43d65b4aba9be630c4294e8cbbdbf7c98ccd0f76d32afc68ea73d769": 89,
+    "1cecc9e016300fe9189ec6fccc5a3adba460a78ceb22b3ba5fd0a79c01b5f7a5": 90
   },
   "posted_message_ids": [
     6,
@@ -177,7 +179,9 @@
     85,
     86,
     87,
-    88
+    88,
+    89,
+    90
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1586,6 +1590,45 @@
         "theme"
       ],
       "posted_utc": "2026-11-26T07:56:57Z"
+    },
+    {
+      "title_norm": "black clover season 2 episode 9 preview images show yuno vs zenon",
+      "words": [
+        "2",
+        "9",
+        "black",
+        "clover",
+        "episode",
+        "images",
+        "preview",
+        "season",
+        "show",
+        "vs",
+        "yuno",
+        "zenon"
+      ],
+      "posted_utc": "2026-11-26T09:06:52Z"
+    },
+    {
+      "title_norm": "main cast for 'monster strike: mera×death - shinigami to boku no ijou na koi' announced",
+      "words": [
+        "'monster",
+        "-",
+        "announced",
+        "boku",
+        "cast",
+        "for",
+        "ijou",
+        "koi'",
+        "main",
+        "mera×death",
+        "na",
+        "no",
+        "shinigami",
+        "strike:",
+        "to"
+      ],
+      "posted_utc": "2026-11-26T09:21:53Z"
     }
   ],
   "seen_at": {
@@ -1791,7 +1834,9 @@
     "5f4a7f60fd8d4431d720ec69cf7d750401dbf15570dc256cbf3a5e5a842aa05e": "2026-11-26T07:41:52Z",
     "9d6c79dec859769a93ae560aa84b36b4ea938cf8956879c2d68113f197c3354c": "2026-11-26T07:41:52Z",
     "e9a67c8e81c829691653f58aece6a74cf1a4e8bd0ec7cd630b05746a5f36d99e": "2026-11-26T07:41:52Z",
-    "2ef481609e2bf60370f9e51960537c0f3168f5b94126c3ef0249fe08d9dbd290": "2026-11-26T07:41:52Z"
+    "2ef481609e2bf60370f9e51960537c0f3168f5b94126c3ef0249fe08d9dbd290": "2026-11-26T07:41:52Z",
+    "1cecc9e016300fe9189ec6fccc5a3adba460a78ceb22b3ba5fd0a79c01b5f7a5": "2026-11-26T09:06:50Z",
+    "47c863df43d65b4aba9be630c4294e8cbbdbf7c98ccd0f76d32afc68ea73d769": "2026-11-26T09:06:50Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -1812,6 +1857,7 @@
     "1b12ce94c8707f499d16ad1d3a1c0fcf2159e4a39332ef7668056d5db995746a",
     "1c9c9c29844940b02b9a8a67b999641b13ca469bd8fed4a7178879d90d555e01",
     "1ce189dd91ada3eb4cd8c3987ee682d1043f6a71082165d83b5dfe988045d56c",
+    "1cecc9e016300fe9189ec6fccc5a3adba460a78ceb22b3ba5fd0a79c01b5f7a5",
     "1d5c4fa39ba05b8a85b6c45ac310a3d473907d7f127ab2e9683ec0777249e7ef",
     "1f42d873ac9b3881a70f91f5d3964f3cff63971a2f6e9316a47a4e8b5f945ecf",
     "2031295bbc22635f956d4dc62539ab3d47b1755c19a2b0332760ccbc60a43e87",
@@ -1852,6 +1898,7 @@
     "4369df0051cbddbf3beffabe62a5ded45308db8571d7f7ee5e7285ebfdb2737e",
     "448e306c1afefb15cf7b12cd00b95a381aceb7876aa4e65fd4be1a93f9424838",
     "46f769bdf15d19fd3ee135c418685daf281f0f105fc639d4aaf1bcce6e92950c",
+    "47c863df43d65b4aba9be630c4294e8cbbdbf7c98ccd0f76d32afc68ea73d769",
     "48f0aa63839d806e658110e628273d52c5ccb174eddcba0f22004d20d06944fb",
     "4994f21b86f912a7460522007bf6b17b172116df6dab1a03be3e97f6009de9c7",
     "4af97ee3cb380b1e90ea0d6dd72cb3aaefe4d25a76d9a3fbc4a393e458be7cf9",
@@ -2058,6 +2105,14 @@
     "beyond end frieren journey|announcement|10391": {
       "message_id": 73,
       "posted_utc": "2026-11-25T02:25:54Z"
+    },
+    "black clover|announcement|10391": {
+      "message_id": 89,
+      "posted_utc": "2026-11-26T09:06:52Z"
+    },
+    "dandadan|casting|10391": {
+      "message_id": 90,
+      "posted_utc": "2026-11-26T09:21:53Z"
     }
   },
   "template_usage_7d": {
@@ -2141,7 +2196,9 @@
       "2026-11-26T01:36:57Z",
       "2026-11-26T02:56:55Z",
       "2026-11-26T07:41:56Z",
-      "2026-11-26T07:56:57Z"
+      "2026-11-26T07:56:57Z",
+      "2026-11-26T09:06:52Z",
+      "2026-11-26T09:21:53Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -2223,7 +2280,9 @@
       "2026-11-26T01:36:57Z",
       "2026-11-26T02:56:55Z",
       "2026-11-26T07:41:56Z",
-      "2026-11-26T07:56:57Z"
+      "2026-11-26T07:56:57Z",
+      "2026-11-26T09:06:52Z",
+      "2026-11-26T09:21:53Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -2305,7 +2364,9 @@
       "2026-11-26T01:36:57Z",
       "2026-11-26T02:56:55Z",
       "2026-11-26T07:41:56Z",
-      "2026-11-26T07:56:57Z"
+      "2026-11-26T07:56:57Z",
+      "2026-11-26T09:06:52Z",
+      "2026-11-26T09:21:53Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -2387,7 +2448,9 @@
       "2026-11-26T01:36:57Z",
       "2026-11-26T02:56:55Z",
       "2026-11-26T07:41:56Z",
-      "2026-11-26T07:56:57Z"
+      "2026-11-26T07:56:57Z",
+      "2026-11-26T09:06:52Z",
+      "2026-11-26T09:21:53Z"
     ]
   },
   "version": 2
