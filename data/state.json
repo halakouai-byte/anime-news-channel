@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 6157,
+    "duplicates_total": 6218,
     "hold_total": 38,
-    "posts_today": 8,
+    "posts_today": 9,
     "posts_today_date": "2026-11-26",
-    "posts_total": 84,
-    "rejected_total": 1516
+    "posts_total": 85,
+    "rejected_total": 1531
   },
-  "last_fetch_utc": "2026-11-26T15:35:54Z",
-  "last_publish_utc": "2026-11-26T11:36:56Z",
+  "last_fetch_utc": "2026-11-26T15:46:58Z",
+  "last_publish_utc": "2026-11-26T15:47:00Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -99,7 +99,8 @@
     "47c863df43d65b4aba9be630c4294e8cbbdbf7c98ccd0f76d32afc68ea73d769": 89,
     "1cecc9e016300fe9189ec6fccc5a3adba460a78ceb22b3ba5fd0a79c01b5f7a5": 90,
     "3d0d6ae626e8142665d3b311a6a7fac6c576caf7cdf133757c126f15220f8a0a": 91,
-    "ce06741fa8eb7decadb84054e943955afbbedf80f2ae1bb34daf6fa1f34e5acc": 92
+    "ce06741fa8eb7decadb84054e943955afbbedf80f2ae1bb34daf6fa1f34e5acc": 92,
+    "f45d83a1ba0c5c6379c649c10a0217a49b1627cd37e8419b6cbd2a219f43abe3": 93
   },
   "posted_message_ids": [
     6,
@@ -185,7 +186,8 @@
     89,
     90,
     91,
-    92
+    92,
+    93
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1660,6 +1662,21 @@
         "video"
       ],
       "posted_utc": "2026-11-26T11:36:56Z"
+    },
+    {
+      "title_norm": "manga 'isekai kuimetsu no same' receives tv anime adaptation",
+      "words": [
+        "'isekai",
+        "adaptation",
+        "anime",
+        "kuimetsu",
+        "manga",
+        "no",
+        "receives",
+        "same'",
+        "tv"
+      ],
+      "posted_utc": "2026-11-26T15:47:00Z"
     }
   ],
   "seen_at": {
@@ -1875,7 +1892,8 @@
     "38a772593ddcd6bd8bce301251a99d9c5cd9948a0ed42cd006122ef15f6947d7": "2026-11-26T11:36:53Z",
     "7095fda634cebd163c32a577b88bd88a3ea783eed168c67b394584c93ed25470": "2026-11-26T15:03:57Z",
     "db2239f3c1edf7f65839462bb6fc37b9ddf4360ee53e641d6e67b1bb4f525ceb": "2026-11-26T15:35:53Z",
-    "3c78522c371c3c0bdd6e486568896698ed1873f429f2b8ef66cc419260acc9c2": "2026-11-26T15:35:53Z"
+    "3c78522c371c3c0bdd6e486568896698ed1873f429f2b8ef66cc419260acc9c2": "2026-11-26T15:35:53Z",
+    "f45d83a1ba0c5c6379c649c10a0217a49b1627cd37e8419b6cbd2a219f43abe3": "2026-11-26T15:46:57Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -2080,6 +2098,7 @@
     "f2365776a20e9ed35f26185ad2ceda6780271ee51bed41638a6e38627501546d",
     "f2f2bb34e0cc1b11d83a9100fd749199963af6f6d9324485e4ca61efc23fa374",
     "f3f3ab6ee331eac6a22bd5be691546365b06a0aa094f3f500b4d93cc7ecc79ee",
+    "f45d83a1ba0c5c6379c649c10a0217a49b1627cd37e8419b6cbd2a219f43abe3",
     "f64562fc5b18a47eaf93f840cc91f5017fb91c9fabd9e7f6180179caef7d176a",
     "f6c537d4cba544ecb761b136c7a21e14f5f8444f8a254ed8f02e759a2aae2a87",
     "f6eec5dd2f40ad52e51ac09b8b8e45d29935ed47b6d2724f79cef2802b1c445b",
@@ -2164,6 +2183,10 @@
     "oishinbo|date|10391": {
       "message_id": 92,
       "posted_utc": "2026-11-26T11:36:56Z"
+    },
+    "saga vinland|trailer|10391": {
+      "message_id": 93,
+      "posted_utc": "2026-11-26T15:47:00Z"
     }
   },
   "template_usage_7d": {
@@ -2251,7 +2274,8 @@
       "2026-11-26T09:06:52Z",
       "2026-11-26T09:21:53Z",
       "2026-11-26T09:36:56Z",
-      "2026-11-26T11:36:56Z"
+      "2026-11-26T11:36:56Z",
+      "2026-11-26T15:47:00Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -2337,7 +2361,8 @@
       "2026-11-26T09:06:52Z",
       "2026-11-26T09:21:53Z",
       "2026-11-26T09:36:56Z",
-      "2026-11-26T11:36:56Z"
+      "2026-11-26T11:36:56Z",
+      "2026-11-26T15:47:00Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -2423,7 +2448,8 @@
       "2026-11-26T09:06:52Z",
       "2026-11-26T09:21:53Z",
       "2026-11-26T09:36:56Z",
-      "2026-11-26T11:36:56Z"
+      "2026-11-26T11:36:56Z",
+      "2026-11-26T15:47:00Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -2509,7 +2535,8 @@
       "2026-11-26T09:06:52Z",
       "2026-11-26T09:21:53Z",
       "2026-11-26T09:36:56Z",
-      "2026-11-26T11:36:56Z"
+      "2026-11-26T11:36:56Z",
+      "2026-11-26T15:47:00Z"
     ]
   },
   "version": 2
