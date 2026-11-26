@@ -4965,6 +4965,28 @@
       "status": "HOLD",
       "hold_reason": "low-confidence",
       "created_utc": "2026-11-26T16:20:17Z"
+    },
+    {
+      "guid": "https://www.animenewsnetwork.com/cms/.244106",
+      "hash": "4be13a386ffd24dc0491524e2366e934fedd47f7529f267b74c534184272d442",
+      "story_key": null,
+      "title": "The Dragon Prince's Ill-Mated Betrothal Manga Ends, Gets 3-Chapter Epilogue",
+      "link": "https://animenewsnetwork.com/news/2026-11-26/the-dragon-prince-ill-mated-betrothal-manga-ends-gets-3-chapter-epilogue/.244106",
+      "summary": "Manga's main story ended on September 17",
+      "source": "ANN",
+      "source_name": "Anime News Network",
+      "tier": 1,
+      "pubDate": "2026-11-26T17:15:00+00:00",
+      "category": "مانگا و اقتباس",
+      "category_score": 4,
+      "category_source": "keyword",
+      "event_type": "other",
+      "franchise_en": null,
+      "priority_score": 45,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "gates_failed:why_specific",
+      "created_utc": "2026-11-26T17:18:56Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
