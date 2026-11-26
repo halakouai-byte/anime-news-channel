@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 5705,
+    "duplicates_total": 5758,
     "hold_total": 37,
-    "posts_today": 6,
+    "posts_today": 7,
     "posts_today_date": "2026-11-26",
-    "posts_total": 82,
-    "rejected_total": 1396
+    "posts_total": 83,
+    "rejected_total": 1411
   },
-  "last_fetch_utc": "2026-11-26T09:06:51Z",
-  "last_publish_utc": "2026-11-26T09:21:53Z",
+  "last_fetch_utc": "2026-11-26T09:26:54Z",
+  "last_publish_utc": "2026-11-26T09:36:56Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -97,7 +97,8 @@
     "5f4a7f60fd8d4431d720ec69cf7d750401dbf15570dc256cbf3a5e5a842aa05e": 87,
     "9d6c79dec859769a93ae560aa84b36b4ea938cf8956879c2d68113f197c3354c": 88,
     "47c863df43d65b4aba9be630c4294e8cbbdbf7c98ccd0f76d32afc68ea73d769": 89,
-    "1cecc9e016300fe9189ec6fccc5a3adba460a78ceb22b3ba5fd0a79c01b5f7a5": 90
+    "1cecc9e016300fe9189ec6fccc5a3adba460a78ceb22b3ba5fd0a79c01b5f7a5": 90,
+    "3d0d6ae626e8142665d3b311a6a7fac6c576caf7cdf133757c126f15220f8a0a": 91
   },
   "posted_message_ids": [
     6,
@@ -181,7 +182,8 @@
     87,
     88,
     89,
-    90
+    90,
+    91
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1629,6 +1631,19 @@
         "to"
       ],
       "posted_utc": "2026-11-26T09:21:53Z"
+    },
+    {
+      "title_norm": "supporting cast pair for 'fool night' announced",
+      "words": [
+        "'fool",
+        "announced",
+        "cast",
+        "for",
+        "night'",
+        "pair",
+        "supporting"
+      ],
+      "posted_utc": "2026-11-26T09:36:56Z"
     }
   ],
   "seen_at": {
@@ -1836,7 +1851,8 @@
     "e9a67c8e81c829691653f58aece6a74cf1a4e8bd0ec7cd630b05746a5f36d99e": "2026-11-26T07:41:52Z",
     "2ef481609e2bf60370f9e51960537c0f3168f5b94126c3ef0249fe08d9dbd290": "2026-11-26T07:41:52Z",
     "1cecc9e016300fe9189ec6fccc5a3adba460a78ceb22b3ba5fd0a79c01b5f7a5": "2026-11-26T09:06:50Z",
-    "47c863df43d65b4aba9be630c4294e8cbbdbf7c98ccd0f76d32afc68ea73d769": "2026-11-26T09:06:50Z"
+    "47c863df43d65b4aba9be630c4294e8cbbdbf7c98ccd0f76d32afc68ea73d769": "2026-11-26T09:06:50Z",
+    "3d0d6ae626e8142665d3b311a6a7fac6c576caf7cdf133757c126f15220f8a0a": "2026-11-26T09:26:53Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -1891,6 +1907,7 @@
     "3a38ea041e01c2a6be3770a71a7931882956664c46c86ccf9a01f126952287ee",
     "3a7039401f1cef43fcbd5bd0733afbd307fd2f0ed2ba8c20dea1e606795a9f39",
     "3c1437beaeb3e29f68da14c92e306dd179c360943470f5e03d08f8c7af169af1",
+    "3d0d6ae626e8142665d3b311a6a7fac6c576caf7cdf133757c126f15220f8a0a",
     "3e40813191148123e86cf44921296223d224e51720768cd6887e0a0ade59dfd7",
     "3f822a1a83a69e1005b5db86b5b6ae1939f4bd7ae00923b83e0e92e10d218e14",
     "427146068bbf53366e581621c2fa908a51a61be7dc0ff969a285a189f8d7b122",
@@ -2198,7 +2215,8 @@
       "2026-11-26T07:41:56Z",
       "2026-11-26T07:56:57Z",
       "2026-11-26T09:06:52Z",
-      "2026-11-26T09:21:53Z"
+      "2026-11-26T09:21:53Z",
+      "2026-11-26T09:36:56Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -2282,7 +2300,8 @@
       "2026-11-26T07:41:56Z",
       "2026-11-26T07:56:57Z",
       "2026-11-26T09:06:52Z",
-      "2026-11-26T09:21:53Z"
+      "2026-11-26T09:21:53Z",
+      "2026-11-26T09:36:56Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -2366,7 +2385,8 @@
       "2026-11-26T07:41:56Z",
       "2026-11-26T07:56:57Z",
       "2026-11-26T09:06:52Z",
-      "2026-11-26T09:21:53Z"
+      "2026-11-26T09:21:53Z",
+      "2026-11-26T09:36:56Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -2450,7 +2470,8 @@
       "2026-11-26T07:41:56Z",
       "2026-11-26T07:56:57Z",
       "2026-11-26T09:06:52Z",
-      "2026-11-26T09:21:53Z"
+      "2026-11-26T09:21:53Z",
+      "2026-11-26T09:36:56Z"
     ]
   },
   "version": 2
