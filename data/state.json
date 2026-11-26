@@ -6,14 +6,14 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 6392,
+    "duplicates_total": 6454,
     "hold_total": 39,
     "posts_today": 10,
     "posts_today_date": "2026-11-26",
     "posts_total": 86,
-    "rejected_total": 1576
+    "rejected_total": 1591
   },
-  "last_fetch_utc": "2026-11-26T17:26:52Z",
+  "last_fetch_utc": "2026-11-26T20:01:22Z",
   "last_publish_utc": "2026-11-26T17:26:55Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
