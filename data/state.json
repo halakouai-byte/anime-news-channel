@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 5375,
+    "duplicates_total": 5420,
     "hold_total": 33,
-    "posts_today": 0,
+    "posts_today": 1,
     "posts_today_date": "2026-11-26",
-    "posts_total": 76,
-    "rejected_total": 1291
+    "posts_total": 77,
+    "rejected_total": 1306
   },
-  "last_fetch_utc": "2026-11-26T01:09:55Z",
-  "last_publish_utc": "2026-11-25T13:00:01Z",
+  "last_fetch_utc": "2026-11-26T01:36:55Z",
+  "last_publish_utc": "2026-11-26T01:36:57Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -91,7 +91,8 @@
     "f64562fc5b18a47eaf93f840cc91f5017fb91c9fabd9e7f6180179caef7d176a": 81,
     "90f581868af7d0aeb0ba6fe5992290a99574865abdbeb2937238f9971055c5f4": 82,
     "a56ab8dd96bccd0208213aa1b1d4f628e8efa076d296635b82e544f0e21b4940": 83,
-    "6b0c5343b43f9aeba4fc0b75661b689bebc8e18d4f18cd984851ad532bd5b765": 84
+    "6b0c5343b43f9aeba4fc0b75661b689bebc8e18d4f18cd984851ad532bd5b765": 84,
+    "8a26053904b5b222246ea0a7982bcc497c30f34a584da8502040e7026a4b99c8": 85
   },
   "posted_message_ids": [
     6,
@@ -169,7 +170,8 @@
     81,
     82,
     83,
-    84
+    84,
+    85
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1502,6 +1504,29 @@
         "wa'"
       ],
       "posted_utc": "2026-11-25T13:00:01Z"
+    },
+    {
+      "title_norm": "live-action 'the long summer of august 31' series trailer unveils cast, staff, disney+ streaming, january 8 debut",
+      "words": [
+        "'the",
+        "31'",
+        "8",
+        "august",
+        "cast,",
+        "debut",
+        "disney+",
+        "january",
+        "live-action",
+        "long",
+        "of",
+        "series",
+        "staff,",
+        "streaming,",
+        "summer",
+        "trailer",
+        "unveils"
+      ],
+      "posted_utc": "2026-11-26T01:36:57Z"
     }
   ],
   "seen_at": {
@@ -1695,7 +1720,8 @@
     "efe543922641f43d8a76a5f8047a3370feb3f81ac08098b7d1cac866a5948c48": "2026-11-25T22:42:59Z",
     "4369df0051cbddbf3beffabe62a5ded45308db8571d7f7ee5e7285ebfdb2737e": "2026-11-25T22:49:08Z",
     "8a4cbd956021a0573e8f6176a36d1c302ecf6bcf56e03bf990be7ac6fa1e9a1c": "2026-11-25T22:58:56Z",
-    "d0f7ef66a57b80c358ba89e2a933111b187d04cd88ccf16b12ddcbfafa222900": "2026-11-26T01:09:55Z"
+    "d0f7ef66a57b80c358ba89e2a933111b187d04cd88ccf16b12ddcbfafa222900": "2026-11-26T01:09:55Z",
+    "8a26053904b5b222246ea0a7982bcc497c30f34a584da8502040e7026a4b99c8": "2026-11-26T01:36:55Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -1803,6 +1829,7 @@
     "83c98bfed4d560a0c1582b5f5552c42503186f7bb51553f81447e2d247ee83f1",
     "87ea51c86096fb79b30b2645a8a5c42348352949d06e4ef8028551c44f345ac9",
     "89f5bcdfb4952f0f287ea178270f2c27a1efe70e1621e366ef89305d3e92b92e",
+    "8a26053904b5b222246ea0a7982bcc497c30f34a584da8502040e7026a4b99c8",
     "8a4cbd956021a0573e8f6176a36d1c302ecf6bcf56e03bf990be7ac6fa1e9a1c",
     "8b1bfac28b4551abcbb23f723228c7cf5d3307f18866080e8705d1ea012b724d",
     "8e6bbf57e6f4d98f78f2e32fcf0bdc8772fa9472540b42966f1819968d6eb362",
@@ -2029,7 +2056,8 @@
       "2026-11-25T10:54:58Z",
       "2026-11-25T11:10:39Z",
       "2026-11-25T12:45:00Z",
-      "2026-11-25T13:00:01Z"
+      "2026-11-25T13:00:01Z",
+      "2026-11-26T01:36:57Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -2107,7 +2135,8 @@
       "2026-11-25T10:54:58Z",
       "2026-11-25T11:10:39Z",
       "2026-11-25T12:45:00Z",
-      "2026-11-25T13:00:01Z"
+      "2026-11-25T13:00:01Z",
+      "2026-11-26T01:36:57Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -2185,7 +2214,8 @@
       "2026-11-25T10:54:58Z",
       "2026-11-25T11:10:39Z",
       "2026-11-25T12:45:00Z",
-      "2026-11-25T13:00:01Z"
+      "2026-11-25T13:00:01Z",
+      "2026-11-26T01:36:57Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -2263,7 +2293,8 @@
       "2026-11-25T10:54:58Z",
       "2026-11-25T11:10:39Z",
       "2026-11-25T12:45:00Z",
-      "2026-11-25T13:00:01Z"
+      "2026-11-25T13:00:01Z",
+      "2026-11-26T01:36:57Z"
     ]
   },
   "version": 2
