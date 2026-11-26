@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 6330,
+    "duplicates_total": 6392,
     "hold_total": 39,
-    "posts_today": 9,
+    "posts_today": 10,
     "posts_today_date": "2026-11-26",
-    "posts_total": 85,
-    "rejected_total": 1561
+    "posts_total": 86,
+    "rejected_total": 1576
   },
-  "last_fetch_utc": "2026-11-26T17:18:57Z",
-  "last_publish_utc": "2026-11-26T15:47:00Z",
+  "last_fetch_utc": "2026-11-26T17:26:52Z",
+  "last_publish_utc": "2026-11-26T17:26:55Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -100,7 +100,8 @@
     "1cecc9e016300fe9189ec6fccc5a3adba460a78ceb22b3ba5fd0a79c01b5f7a5": 90,
     "3d0d6ae626e8142665d3b311a6a7fac6c576caf7cdf133757c126f15220f8a0a": 91,
     "ce06741fa8eb7decadb84054e943955afbbedf80f2ae1bb34daf6fa1f34e5acc": 92,
-    "f45d83a1ba0c5c6379c649c10a0217a49b1627cd37e8419b6cbd2a219f43abe3": 93
+    "f45d83a1ba0c5c6379c649c10a0217a49b1627cd37e8419b6cbd2a219f43abe3": 93,
+    "73402b95b5bff20c61a9b482b5db40ff0956fe157f557d6c2f313df63d4f1eca": 94
   },
   "posted_message_ids": [
     6,
@@ -187,7 +188,8 @@
     90,
     91,
     92,
-    93
+    93,
+    94
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1677,6 +1679,19 @@
         "tv"
       ],
       "posted_utc": "2026-11-26T15:47:00Z"
+    },
+    {
+      "title_norm": "'giant ojousama' reveals additional cast, character promo",
+      "words": [
+        "'giant",
+        "additional",
+        "cast,",
+        "character",
+        "ojousama'",
+        "promo",
+        "reveals"
+      ],
+      "posted_utc": "2026-11-26T17:26:55Z"
     }
   ],
   "seen_at": {
@@ -1895,7 +1910,8 @@
     "3c78522c371c3c0bdd6e486568896698ed1873f429f2b8ef66cc419260acc9c2": "2026-11-26T15:35:53Z",
     "f45d83a1ba0c5c6379c649c10a0217a49b1627cd37e8419b6cbd2a219f43abe3": "2026-11-26T15:46:57Z",
     "c46f0970fc33dcbf75a1b6fe4817799a08a386bdddbb47c6c799398d2d893577": "2026-11-26T16:20:17Z",
-    "4be13a386ffd24dc0491524e2366e934fedd47f7529f267b74c534184272d442": "2026-11-26T17:18:56Z"
+    "4be13a386ffd24dc0491524e2366e934fedd47f7529f267b74c534184272d442": "2026-11-26T17:18:56Z",
+    "73402b95b5bff20c61a9b482b5db40ff0956fe157f557d6c2f313df63d4f1eca": "2026-11-26T17:26:52Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -1998,6 +2014,7 @@
     "6e1ab1df6b2f6f47e8181799c6e52012e387a284303ac09ee1f322fa1c0ddf29",
     "6eafe05bd996ad08145854db156f386aa5c4d607fb89a40aa8e1205a66dfa734",
     "7095fda634cebd163c32a577b88bd88a3ea783eed168c67b394584c93ed25470",
+    "73402b95b5bff20c61a9b482b5db40ff0956fe157f557d6c2f313df63d4f1eca",
     "74659478413536660f2e962241ec16cdb058710f3fd8e0b32cd28190e2ba0c9d",
     "7750e7a1930cd6063397a1c87921284679ab04dc816ea567c52b04b7250b6e69",
     "77a8b8f2e796231cf152b3b247bfcda22783916dbd1e3c5ccf2c72e5f871a9bb",
@@ -2279,7 +2296,8 @@
       "2026-11-26T09:21:53Z",
       "2026-11-26T09:36:56Z",
       "2026-11-26T11:36:56Z",
-      "2026-11-26T15:47:00Z"
+      "2026-11-26T15:47:00Z",
+      "2026-11-26T17:26:55Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -2366,7 +2384,8 @@
       "2026-11-26T09:21:53Z",
       "2026-11-26T09:36:56Z",
       "2026-11-26T11:36:56Z",
-      "2026-11-26T15:47:00Z"
+      "2026-11-26T15:47:00Z",
+      "2026-11-26T17:26:55Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -2453,7 +2472,8 @@
       "2026-11-26T09:21:53Z",
       "2026-11-26T09:36:56Z",
       "2026-11-26T11:36:56Z",
-      "2026-11-26T15:47:00Z"
+      "2026-11-26T15:47:00Z",
+      "2026-11-26T17:26:55Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -2540,7 +2560,8 @@
       "2026-11-26T09:21:53Z",
       "2026-11-26T09:36:56Z",
       "2026-11-26T11:36:56Z",
-      "2026-11-26T15:47:00Z"
+      "2026-11-26T15:47:00Z",
+      "2026-11-26T17:26:55Z"
     ]
   },
   "version": 2
