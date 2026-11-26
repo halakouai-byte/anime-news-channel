@@ -4390,6 +4390,28 @@
       "status": "HOLD",
       "hold_reason": "gates_failed:english_limited,why_specific",
       "created_utc": "2026-11-25T22:58:56Z"
+    },
+    {
+      "guid": "https://www.animenewsnetwork.com/cms/.244204",
+      "hash": "d0f7ef66a57b80c358ba89e2a933111b187d04cd88ccf16b12ddcbfafa222900",
+      "story_key": null,
+      "title": "Precure Franchise Announces FUNtastic Precure! Anime",
+      "link": "https://animenewsnetwork.com/news/2026-11-25/precure-franchise-announces-funtastic-precure-anime/.244204",
+      "summary": "New anime marks 24th main entry in magical girl franchise",
+      "source": "ANN",
+      "source_name": "Anime News Network",
+      "tier": 1,
+      "pubDate": "2026-11-26T00:28:33+00:00",
+      "category": "فصل جدید",
+      "category_score": 2,
+      "category_source": "keyword",
+      "event_type": "announcement",
+      "franchise_en": null,
+      "priority_score": 60,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "low-confidence",
+      "created_utc": "2026-11-26T01:09:55Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
