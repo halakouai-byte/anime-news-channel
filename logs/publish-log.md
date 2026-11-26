@@ -76,3 +76,4 @@
 - 2026-11-26T09:06:52Z UTC (5 آذر 1405، تهران): posted message_id=89 guid=https://animecorner.me/black-clover-season-2-episode-9-preview-images-show-yuno-vs-zenon/ category=فصل جدید score=75 breaking=False latency_min=33.8
 - 2026-11-26T09:21:53Z UTC (5 آذر 1405، تهران): posted message_id=90 guid=https://myanimelist.net/news/74983668?_location=rss category=فصل جدید score=65 breaking=False latency_min=18.3
 - 2026-11-26T09:36:56Z UTC (5 آذر 1405، تهران): posted message_id=91 guid=https://myanimelist.net/news/74983696?_location=rss category=فصل جدید score=45 breaking=False latency_min=20.3
+- 2026-11-26T11:36:56Z UTC (5 آذر 1405، تهران): posted message_id=92 guid=https://www.animenewsnetwork.com/cms/.244229 category=تریلر score=80 breaking=False latency_min=27.8
