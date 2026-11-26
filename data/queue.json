@@ -3479,7 +3479,7 @@
       "franchise_en": null,
       "priority_score": 45,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "STALE",
       "hold_reason": "gates_failed:why_specific",
       "created_utc": "2026-11-24T16:26:54Z"
     },
@@ -4943,6 +4943,28 @@
       "message_id": 93,
       "posted_utc": "2026-11-26T15:47:00Z",
       "caption": "Isekai Kuimetsu no Same خبرساز شد: اقتباس انیمه‌ای تازه\n\nدنیای انیمه یک خبر تازه دارد؛ Isekai Kuimetsu no Same با اقتباس انیمه‌ای تازه برگشته است.\n\nبرای طرفدارانی که Isekai Kuimetsu no Same را دنبال می‌کنند، همین اعلام یعنی تصویر آینده اثر روشن‌تر شد؛ حالا نوبت جزئیات بیشتر است که در روزهای آینده از راه برسد و تکلیف بقیه بخش‌ها هم مشخص شود. این فصل تازه، ادامه همان قصه‌ای است که طرفداران Isekai Kuimetsu no Same از پیش دنبال می‌کردند؛ قصه‌ای که با این اعلام، یک فصل دیگر به راه خود ادامه می‌دهد و شخصیت‌های آشنا دوباره برمی‌گردند.\n\nچرا مهم است؟ چون اعلام اقتباس انیمه‌ای Isekai Kuimetsu no Same یعنی این اثر از این پس در دنیای انیمه هم حضور دارد و نسخه متحرک آن در راه است.\n\nمنبع: MyAnimeList News\nhttps://myanimelist.net/news/74984559\n\n#انیمه #IsekaiKuimetsuNoSame #فصل_جدید"
+    },
+    {
+      "guid": "https://www.animenewsnetwork.com/cms/.244200",
+      "hash": "c46f0970fc33dcbf75a1b6fe4817799a08a386bdddbb47c6c799398d2d893577",
+      "story_key": "mushoku tensei|other|10391",
+      "title": "MangaPlaza Add Seven Seas Titles to Catalogue",
+      "link": "https://animenewsnetwork.com/news/2026-11-26/mangaplaza-add-seven-seas-titles-to-catalogue/.244200",
+      "summary": "Titles include Mushoku Tensei , The Saint's Magic Power is Omnipotent , The Strange House , more",
+      "source": "ANN",
+      "source_name": "Anime News Network",
+      "tier": 1,
+      "pubDate": "2026-11-26T16:15:00+00:00",
+      "category": "مانگا و اقتباس",
+      "category_score": 2,
+      "category_source": "keyword",
+      "event_type": "other",
+      "franchise_en": "Mushoku Tensei",
+      "priority_score": 65,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "low-confidence",
+      "created_utc": "2026-11-26T16:20:17Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
