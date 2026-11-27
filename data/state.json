@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 6945,
+    "duplicates_total": 7002,
     "hold_total": 39,
-    "posts_today": 4,
+    "posts_today": 5,
     "posts_today_date": "2026-11-27",
-    "posts_total": 90,
-    "rejected_total": 1698
+    "posts_total": 91,
+    "rejected_total": 1711
   },
-  "last_fetch_utc": "2026-11-27T05:57:35Z",
-  "last_publish_utc": "2026-11-27T05:57:38Z",
+  "last_fetch_utc": "2026-11-27T09:37:13Z",
+  "last_publish_utc": "2026-11-27T09:37:17Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -105,7 +105,8 @@
     "0c17143dbeb1ae8f735e3689c6b3e0b16bddfc2e1ef589ee863835dbb72486bf": 95,
     "ea63d84e962072c152c6c61a28d853f1f088acdb6d46673429f0f847a93cc96a": 96,
     "a87c83d28568ee02bcf1d330cd9baf235eeecfa102720c279393ed79b7d269c6": 97,
-    "8fbd41f6a6d5122fc4657a111535aa6004c5e67e0ae6954c76272435e584d7b9": 98
+    "8fbd41f6a6d5122fc4657a111535aa6004c5e67e0ae6954c76272435e584d7b9": 98,
+    "48c16648b051eebd934fc78b5288339c39e881be949ce67b5941bb0f82e9d482": 99
   },
   "posted_message_ids": [
     6,
@@ -197,7 +198,8 @@
     95,
     96,
     97,
-    98
+    98,
+    99
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1757,6 +1759,27 @@
         "no"
       ],
       "posted_utc": "2026-11-27T05:57:38Z"
+    },
+    {
+      "title_norm": "'neko to ryuu 2nd season' reveals additional cast, opening theme, first promo, winter 2027 premiere",
+      "words": [
+        "'neko",
+        "2027",
+        "2nd",
+        "additional",
+        "cast,",
+        "first",
+        "opening",
+        "premiere",
+        "promo,",
+        "reveals",
+        "ryuu",
+        "season'",
+        "theme,",
+        "to",
+        "winter"
+      ],
+      "posted_utc": "2026-11-27T09:37:17Z"
     }
   ],
   "seen_at": {
@@ -1984,7 +2007,8 @@
     "ba8477e1fdbe847f63234171e496d6aa4fcfcec3fab96988504649e895f78985": "2026-11-27T03:05:56Z",
     "ea63d84e962072c152c6c61a28d853f1f088acdb6d46673429f0f847a93cc96a": "2026-11-27T03:05:56Z",
     "a87c83d28568ee02bcf1d330cd9baf235eeecfa102720c279393ed79b7d269c6": "2026-11-27T04:47:13Z",
-    "8fbd41f6a6d5122fc4657a111535aa6004c5e67e0ae6954c76272435e584d7b9": "2026-11-27T05:57:34Z"
+    "8fbd41f6a6d5122fc4657a111535aa6004c5e67e0ae6954c76272435e584d7b9": "2026-11-27T05:57:34Z",
+    "48c16648b051eebd934fc78b5288339c39e881be949ce67b5941bb0f82e9d482": "2026-11-27T09:37:13Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -2053,6 +2077,7 @@
     "448e306c1afefb15cf7b12cd00b95a381aceb7876aa4e65fd4be1a93f9424838",
     "46f769bdf15d19fd3ee135c418685daf281f0f105fc639d4aaf1bcce6e92950c",
     "47c863df43d65b4aba9be630c4294e8cbbdbf7c98ccd0f76d32afc68ea73d769",
+    "48c16648b051eebd934fc78b5288339c39e881be949ce67b5941bb0f82e9d482",
     "48f0aa63839d806e658110e628273d52c5ccb174eddcba0f22004d20d06944fb",
     "4994f21b86f912a7460522007bf6b17b172116df6dab1a03be3e97f6009de9c7",
     "4af97ee3cb380b1e90ea0d6dd72cb3aaefe4d25a76d9a3fbc4a393e458be7cf9",
@@ -2382,7 +2407,8 @@
       "2026-11-26T22:06:56Z",
       "2026-11-27T03:06:01Z",
       "2026-11-27T04:47:16Z",
-      "2026-11-27T05:57:38Z"
+      "2026-11-27T05:57:38Z",
+      "2026-11-27T09:37:17Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -2474,7 +2500,8 @@
       "2026-11-26T22:06:56Z",
       "2026-11-27T03:06:01Z",
       "2026-11-27T04:47:16Z",
-      "2026-11-27T05:57:38Z"
+      "2026-11-27T05:57:38Z",
+      "2026-11-27T09:37:17Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -2566,7 +2593,8 @@
       "2026-11-26T22:06:56Z",
       "2026-11-27T03:06:01Z",
       "2026-11-27T04:47:16Z",
-      "2026-11-27T05:57:38Z"
+      "2026-11-27T05:57:38Z",
+      "2026-11-27T09:37:17Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -2658,7 +2686,8 @@
       "2026-11-26T22:06:56Z",
       "2026-11-27T03:06:01Z",
       "2026-11-27T04:47:16Z",
-      "2026-11-27T05:57:38Z"
+      "2026-11-27T05:57:38Z",
+      "2026-11-27T09:37:17Z"
     ]
   },
   "version": 2
