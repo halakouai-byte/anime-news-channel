@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 6884,
+    "duplicates_total": 6945,
     "hold_total": 39,
-    "posts_today": 3,
+    "posts_today": 4,
     "posts_today_date": "2026-11-27",
-    "posts_total": 89,
-    "rejected_total": 1685
+    "posts_total": 90,
+    "rejected_total": 1698
   },
-  "last_fetch_utc": "2026-11-27T04:47:14Z",
-  "last_publish_utc": "2026-11-27T04:47:16Z",
+  "last_fetch_utc": "2026-11-27T05:57:35Z",
+  "last_publish_utc": "2026-11-27T05:57:38Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -104,7 +104,8 @@
     "73402b95b5bff20c61a9b482b5db40ff0956fe157f557d6c2f313df63d4f1eca": 94,
     "0c17143dbeb1ae8f735e3689c6b3e0b16bddfc2e1ef589ee863835dbb72486bf": 95,
     "ea63d84e962072c152c6c61a28d853f1f088acdb6d46673429f0f847a93cc96a": 96,
-    "a87c83d28568ee02bcf1d330cd9baf235eeecfa102720c279393ed79b7d269c6": 97
+    "a87c83d28568ee02bcf1d330cd9baf235eeecfa102720c279393ed79b7d269c6": 97,
+    "8fbd41f6a6d5122fc4657a111535aa6004c5e67e0ae6954c76272435e584d7b9": 98
   },
   "posted_message_ids": [
     6,
@@ -195,7 +196,8 @@
     94,
     95,
     96,
-    97
+    97,
+    98
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1742,6 +1744,19 @@
         "staff,"
       ],
       "posted_utc": "2026-11-27T04:47:16Z"
+    },
+    {
+      "title_norm": "additional cast for 'shuiro no kamen' announced",
+      "words": [
+        "'shuiro",
+        "additional",
+        "announced",
+        "cast",
+        "for",
+        "kamen'",
+        "no"
+      ],
+      "posted_utc": "2026-11-27T05:57:38Z"
     }
   ],
   "seen_at": {
@@ -1968,7 +1983,8 @@
     "862747635d9950414bfc2245186005c010d51fef2af7ce5e38ff36a6204cb749": "2026-11-27T03:05:56Z",
     "ba8477e1fdbe847f63234171e496d6aa4fcfcec3fab96988504649e895f78985": "2026-11-27T03:05:56Z",
     "ea63d84e962072c152c6c61a28d853f1f088acdb6d46673429f0f847a93cc96a": "2026-11-27T03:05:56Z",
-    "a87c83d28568ee02bcf1d330cd9baf235eeecfa102720c279393ed79b7d269c6": "2026-11-27T04:47:13Z"
+    "a87c83d28568ee02bcf1d330cd9baf235eeecfa102720c279393ed79b7d269c6": "2026-11-27T04:47:13Z",
+    "8fbd41f6a6d5122fc4657a111535aa6004c5e67e0ae6954c76272435e584d7b9": "2026-11-27T05:57:34Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -2098,6 +2114,7 @@
     "8a4cbd956021a0573e8f6176a36d1c302ecf6bcf56e03bf990be7ac6fa1e9a1c",
     "8b1bfac28b4551abcbb23f723228c7cf5d3307f18866080e8705d1ea012b724d",
     "8e6bbf57e6f4d98f78f2e32fcf0bdc8772fa9472540b42966f1819968d6eb362",
+    "8fbd41f6a6d5122fc4657a111535aa6004c5e67e0ae6954c76272435e584d7b9",
     "90353bb3221fb3211db4ad3f6acb4f89f4aa381eb663f142d5597758e33c9604",
     "90f581868af7d0aeb0ba6fe5992290a99574865abdbeb2937238f9971055c5f4",
     "9132de952c176c6ad2160a4c2011740eb9f6f083445abdc0564445055fdb41b2",
@@ -2364,7 +2381,8 @@
       "2026-11-26T17:26:55Z",
       "2026-11-26T22:06:56Z",
       "2026-11-27T03:06:01Z",
-      "2026-11-27T04:47:16Z"
+      "2026-11-27T04:47:16Z",
+      "2026-11-27T05:57:38Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -2455,7 +2473,8 @@
       "2026-11-26T17:26:55Z",
       "2026-11-26T22:06:56Z",
       "2026-11-27T03:06:01Z",
-      "2026-11-27T04:47:16Z"
+      "2026-11-27T04:47:16Z",
+      "2026-11-27T05:57:38Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -2546,7 +2565,8 @@
       "2026-11-26T17:26:55Z",
       "2026-11-26T22:06:56Z",
       "2026-11-27T03:06:01Z",
-      "2026-11-27T04:47:16Z"
+      "2026-11-27T04:47:16Z",
+      "2026-11-27T05:57:38Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -2637,7 +2657,8 @@
       "2026-11-26T17:26:55Z",
       "2026-11-26T22:06:56Z",
       "2026-11-27T03:06:01Z",
-      "2026-11-27T04:47:16Z"
+      "2026-11-27T04:47:16Z",
+      "2026-11-27T05:57:38Z"
     ]
   },
   "version": 2
