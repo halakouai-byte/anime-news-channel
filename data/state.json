@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 7087,
+    "duplicates_total": 7165,
     "hold_total": 39,
-    "posts_today": 5,
+    "posts_today": 6,
     "posts_today_date": "2026-11-27",
-    "posts_total": 91,
-    "rejected_total": 1739
+    "posts_total": 92,
+    "rejected_total": 1768
   },
-  "last_fetch_utc": "2026-11-27T10:33:44Z",
-  "last_publish_utc": "2026-11-27T09:37:17Z",
+  "last_fetch_utc": "2026-11-27T10:57:11Z",
+  "last_publish_utc": "2026-11-27T10:41:26Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -106,7 +106,8 @@
     "ea63d84e962072c152c6c61a28d853f1f088acdb6d46673429f0f847a93cc96a": 96,
     "a87c83d28568ee02bcf1d330cd9baf235eeecfa102720c279393ed79b7d269c6": 97,
     "8fbd41f6a6d5122fc4657a111535aa6004c5e67e0ae6954c76272435e584d7b9": 98,
-    "48c16648b051eebd934fc78b5288339c39e881be949ce67b5941bb0f82e9d482": 99
+    "48c16648b051eebd934fc78b5288339c39e881be949ce67b5941bb0f82e9d482": 99,
+    "08041d964efa144ed9aca6fca3bf9732c19cfd15af0b1324e83cf07c858e14af": 100
   },
   "posted_message_ids": [
     6,
@@ -199,7 +200,8 @@
     96,
     97,
     98,
-    99
+    99,
+    100
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1780,6 +1782,24 @@
         "winter"
       ],
       "posted_utc": "2026-11-27T09:37:17Z"
+    },
+    {
+      "title_norm": "creepy nuts announce new album and sakamoto days season 2 opening theme",
+      "words": [
+        "2",
+        "album",
+        "and",
+        "announce",
+        "creepy",
+        "days",
+        "new",
+        "nuts",
+        "opening",
+        "sakamoto",
+        "season",
+        "theme"
+      ],
+      "posted_utc": "2026-11-27T10:41:26Z"
     }
   ],
   "seen_at": {
@@ -2008,13 +2028,19 @@
     "ea63d84e962072c152c6c61a28d853f1f088acdb6d46673429f0f847a93cc96a": "2026-11-27T03:05:56Z",
     "a87c83d28568ee02bcf1d330cd9baf235eeecfa102720c279393ed79b7d269c6": "2026-11-27T04:47:13Z",
     "8fbd41f6a6d5122fc4657a111535aa6004c5e67e0ae6954c76272435e584d7b9": "2026-11-27T05:57:34Z",
-    "48c16648b051eebd934fc78b5288339c39e881be949ce67b5941bb0f82e9d482": "2026-11-27T09:37:13Z"
+    "48c16648b051eebd934fc78b5288339c39e881be949ce67b5941bb0f82e9d482": "2026-11-27T09:37:13Z",
+    "08041d964efa144ed9aca6fca3bf9732c19cfd15af0b1324e83cf07c858e14af": "2026-11-27T10:41:24Z",
+    "51d52b2725860f6c35b269f31c97ccc4ef9a8ee75bb20c0531333f93ae3dddc0": "2026-11-27T10:57:11Z",
+    "3e9ad8ffb25a0018addf543995987130fbcc2fbb688bcc12effd9d7e0d192036": "2026-11-27T10:57:11Z",
+    "cb9e0b6df25f607b3c549e4b7be427cdb78e334422e10d71dcb2d9db3945416c": "2026-11-27T10:57:11Z",
+    "3a8ad8c732eca981fe267b26e1d7d754016875a198ee30ac709fb2754b3bdb97": "2026-11-27T10:57:11Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
     "04e5afda8fe231c18cb205c304cf99972cf5e99a69d8bb8789fa1fdc01526797",
     "058356c70aee8be3699903eabd5f3dc6d53c768f6b9f71ed3b879bf18cb31e9f",
     "062c52480e7c70a6243db17bbc2e693c7fa331228f57937554e368b9441e5af8",
+    "08041d964efa144ed9aca6fca3bf9732c19cfd15af0b1324e83cf07c858e14af",
     "08feaa449c8e58d80893e793628574892c1a825bdfdb9e940bf979040639633e",
     "0a270000483bab68a04815dd2e2efa62225dd1e5ac87cf4622a0dde97fefdb8b",
     "0a7c98d8d45a4b88366aa8e431287c5bb23941e936afec6bdd2dd55262a69520",
@@ -2066,10 +2092,12 @@
     "39f07d5ddb52d3a3c3f5c18eaa42ef34ad7e17a02661faf4049d85b39156a55f",
     "3a38ea041e01c2a6be3770a71a7931882956664c46c86ccf9a01f126952287ee",
     "3a7039401f1cef43fcbd5bd0733afbd307fd2f0ed2ba8c20dea1e606795a9f39",
+    "3a8ad8c732eca981fe267b26e1d7d754016875a198ee30ac709fb2754b3bdb97",
     "3c1437beaeb3e29f68da14c92e306dd179c360943470f5e03d08f8c7af169af1",
     "3c78522c371c3c0bdd6e486568896698ed1873f429f2b8ef66cc419260acc9c2",
     "3d0d6ae626e8142665d3b311a6a7fac6c576caf7cdf133757c126f15220f8a0a",
     "3e40813191148123e86cf44921296223d224e51720768cd6887e0a0ade59dfd7",
+    "3e9ad8ffb25a0018addf543995987130fbcc2fbb688bcc12effd9d7e0d192036",
     "3f822a1a83a69e1005b5db86b5b6ae1939f4bd7ae00923b83e0e92e10d218e14",
     "427146068bbf53366e581621c2fa908a51a61be7dc0ff969a285a189f8d7b122",
     "434fc5a541586fc125746d1d11286b47c7c7ff542aa3a481097c5f9613cd73e1",
@@ -2086,6 +2114,7 @@
     "4c160152e3afd3af03f633476f37f84936ab29a5bc8e76b5574fb6bd6f734fb8",
     "4dc2b8a24b9562d3db57a40438e09f16d007dd20f5820288f5c52c277b1a511f",
     "50d2724a8f6b223c372b761461aadc75f7b8c6fa4d99162e64636cffcacc32a2",
+    "51d52b2725860f6c35b269f31c97ccc4ef9a8ee75bb20c0531333f93ae3dddc0",
     "52ce1c83096320e36a9c7b8704378e993cac98cc4b8516486ad4e27e54803da7",
     "546398fe64bcfa08e9a83c34827a47003e2095f658160f401584ce0a37d46bc9",
     "55fbd9316f83ab9ddd419030f6b4f6f7d5496376b1f7430231ea3daa5342520a",
@@ -2189,6 +2218,7 @@
     "c659337c14358c946f860553c3a0fa35692980d4cf7c509e2d6db71390eaad7c",
     "c787674791e3243040eacf353aa505fe1a7e4d3b55275c37fa6d1d68f69fd057",
     "cb36ae53f87989b0a51432aafaf02b971914f5c97b7e5c2041c804f0a236f20e",
+    "cb9e0b6df25f607b3c549e4b7be427cdb78e334422e10d71dcb2d9db3945416c",
     "cc1c3e500795e12e078bebf091ce33bc1de3faf4a9a77094642d172928fe44e8",
     "cc72b106851a485772057e8fce87604eca0dc521aadd6e5df8c3698a5a02fe26",
     "cd7bd357f69b875122f0a42218c5e9633a911b56912afded310f153af55fcbc9",
@@ -2314,6 +2344,10 @@
     "saga vinland|trailer|10391": {
       "message_id": 93,
       "posted_utc": "2026-11-26T15:47:00Z"
+    },
+    "days sakamoto|event|10392": {
+      "message_id": 100,
+      "posted_utc": "2026-11-27T10:41:26Z"
     }
   },
   "template_usage_7d": {
@@ -2408,7 +2442,8 @@
       "2026-11-27T03:06:01Z",
       "2026-11-27T04:47:16Z",
       "2026-11-27T05:57:38Z",
-      "2026-11-27T09:37:17Z"
+      "2026-11-27T09:37:17Z",
+      "2026-11-27T10:41:26Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -2501,7 +2536,8 @@
       "2026-11-27T03:06:01Z",
       "2026-11-27T04:47:16Z",
       "2026-11-27T05:57:38Z",
-      "2026-11-27T09:37:17Z"
+      "2026-11-27T09:37:17Z",
+      "2026-11-27T10:41:26Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -2594,7 +2630,8 @@
       "2026-11-27T03:06:01Z",
       "2026-11-27T04:47:16Z",
       "2026-11-27T05:57:38Z",
-      "2026-11-27T09:37:17Z"
+      "2026-11-27T09:37:17Z",
+      "2026-11-27T10:41:26Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -2687,7 +2724,8 @@
       "2026-11-27T03:06:01Z",
       "2026-11-27T04:47:16Z",
       "2026-11-27T05:57:38Z",
-      "2026-11-27T09:37:17Z"
+      "2026-11-27T09:37:17Z",
+      "2026-11-27T10:41:26Z"
     ]
   },
   "version": 2
