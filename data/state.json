@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 6703,
+    "duplicates_total": 6762,
     "hold_total": 39,
-    "posts_today": 1,
+    "posts_today": 2,
     "posts_today_date": "2026-11-27",
-    "posts_total": 87,
-    "rejected_total": 1646
+    "posts_total": 88,
+    "rejected_total": 1659
   },
-  "last_fetch_utc": "2026-11-27T02:04:53Z",
-  "last_publish_utc": "2026-11-26T22:06:56Z",
+  "last_fetch_utc": "2026-11-27T03:05:57Z",
+  "last_publish_utc": "2026-11-27T03:06:01Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -102,7 +102,8 @@
     "ce06741fa8eb7decadb84054e943955afbbedf80f2ae1bb34daf6fa1f34e5acc": 92,
     "f45d83a1ba0c5c6379c649c10a0217a49b1627cd37e8419b6cbd2a219f43abe3": 93,
     "73402b95b5bff20c61a9b482b5db40ff0956fe157f557d6c2f313df63d4f1eca": 94,
-    "0c17143dbeb1ae8f735e3689c6b3e0b16bddfc2e1ef589ee863835dbb72486bf": 95
+    "0c17143dbeb1ae8f735e3689c6b3e0b16bddfc2e1ef589ee863835dbb72486bf": 95,
+    "ea63d84e962072c152c6c61a28d853f1f088acdb6d46673429f0f847a93cc96a": 96
   },
   "posted_message_ids": [
     6,
@@ -191,7 +192,8 @@
     92,
     93,
     94,
-    95
+    95,
+    96
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1708,6 +1710,22 @@
         "trailer"
       ],
       "posted_utc": "2026-11-26T22:06:56Z"
+    },
+    {
+      "title_norm": "'ask and you will receive' boys-love manga gets live-action series",
+      "words": [
+        "'ask",
+        "and",
+        "boys-love",
+        "gets",
+        "live-action",
+        "manga",
+        "receive'",
+        "series",
+        "will",
+        "you"
+      ],
+      "posted_utc": "2026-11-27T03:06:01Z"
     }
   ],
   "seen_at": {
@@ -1929,7 +1947,11 @@
     "4be13a386ffd24dc0491524e2366e934fedd47f7529f267b74c534184272d442": "2026-11-26T17:18:56Z",
     "73402b95b5bff20c61a9b482b5db40ff0956fe157f557d6c2f313df63d4f1eca": "2026-11-26T17:26:52Z",
     "18ff92dd408de59beb7aec4c6dcbc3726c6cf558d74c52a1e075fe6df4e6273a": "2026-11-26T21:49:11Z",
-    "0c17143dbeb1ae8f735e3689c6b3e0b16bddfc2e1ef589ee863835dbb72486bf": "2026-11-26T22:06:53Z"
+    "0c17143dbeb1ae8f735e3689c6b3e0b16bddfc2e1ef589ee863835dbb72486bf": "2026-11-26T22:06:53Z",
+    "16043adcefa9b61a19cf2c77876104afaa74f95e1ebb327db72b90961d86d2ef": "2026-11-27T03:05:56Z",
+    "862747635d9950414bfc2245186005c010d51fef2af7ce5e38ff36a6204cb749": "2026-11-27T03:05:56Z",
+    "ba8477e1fdbe847f63234171e496d6aa4fcfcec3fab96988504649e895f78985": "2026-11-27T03:05:56Z",
+    "ea63d84e962072c152c6c61a28d853f1f088acdb6d46673429f0f847a93cc96a": "2026-11-27T03:05:56Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -1943,6 +1965,7 @@
     "0bc30a47b713e30fb41716367218d03dcf671214797ecf5f9bb66276b6f7a344",
     "0c17143dbeb1ae8f735e3689c6b3e0b16bddfc2e1ef589ee863835dbb72486bf",
     "0e50b7047253f8901a7629c1d742ee9d4aff9cce5f4eb4ed2fc580a6ee038a0b",
+    "16043adcefa9b61a19cf2c77876104afaa74f95e1ebb327db72b90961d86d2ef",
     "177e451d9b0c7f0ff06f17a2cdf31a0d802278301d5dcd1dbcb6ee0989d5246e",
     "178608b2a2e86acc22ec65497825bf570a1d219cfa9e211d57bac1fd87a01b2b",
     "17f3a9cff726a2162ecc481c2327c637e95aaea4394743a68687fb6d603fb843",
@@ -2050,6 +2073,7 @@
     "81cff89317dcd38b991d7016007b178ab150fdda1c50111671d5cb27076794ef",
     "83bef13656dc4b7b017452cc0331f34c52a396ae71499b1d7b3e810e59f5a745",
     "83c98bfed4d560a0c1582b5f5552c42503186f7bb51553f81447e2d247ee83f1",
+    "862747635d9950414bfc2245186005c010d51fef2af7ce5e38ff36a6204cb749",
     "87ea51c86096fb79b30b2645a8a5c42348352949d06e4ef8028551c44f345ac9",
     "8895d524dc6c339b1d0c562b46ccb59f81423f0f6101af625e8ed7d2845fede6",
     "89f5bcdfb4952f0f287ea178270f2c27a1efe70e1621e366ef89305d3e92b92e",
@@ -2091,6 +2115,7 @@
     "b823dd97e4251230ee2f39ed6e7afb363b5ae6dd4221e3afcbb32a7310257c3f",
     "b96a0d8bc96c49c6d641ca0059ab2ff1360f52e574e70b46cdc72635ce714eb7",
     "ba72c94009913e0276e4b2de75e979ba8a8d6c014b986b152a717579fc6f9cf4",
+    "ba8477e1fdbe847f63234171e496d6aa4fcfcec3fab96988504649e895f78985",
     "bc06815f9f919967b99a18291ab6e714b864486f0a8d4386826ed7276957e4dd",
     "bd64dcc6b838835ab7f1747a19d045f544de541e960b9bb333c41bb138228393",
     "bec3fcbb78efdeef4be5fba6b08a936a8cbdaed506a85aa8b9b07913c9f7cb85",
@@ -2133,6 +2158,7 @@
     "e954ac69bf10a7bdcae072d0856b1265f043ceb85b3a293bf5919140c8356990",
     "e9a67c8e81c829691653f58aece6a74cf1a4e8bd0ec7cd630b05746a5f36d99e",
     "ea17ea35b8459b92ec49c8d19979ca586653617635513cf4805cf54d14b3dfd8",
+    "ea63d84e962072c152c6c61a28d853f1f088acdb6d46673429f0f847a93cc96a",
     "eef3ca68c798d0bc0eba6c7ce1f0c43dc9a26fb37f509dbe1cc95e26749edf13",
     "efe543922641f43d8a76a5f8047a3370feb3f81ac08098b7d1cac866a5948c48",
     "f20c62180b79fb4cfbaee7ad69c07df21f485a8bc1f1987241f9d14f36cc2a22",
@@ -2318,7 +2344,8 @@
       "2026-11-26T11:36:56Z",
       "2026-11-26T15:47:00Z",
       "2026-11-26T17:26:55Z",
-      "2026-11-26T22:06:56Z"
+      "2026-11-26T22:06:56Z",
+      "2026-11-27T03:06:01Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -2407,7 +2434,8 @@
       "2026-11-26T11:36:56Z",
       "2026-11-26T15:47:00Z",
       "2026-11-26T17:26:55Z",
-      "2026-11-26T22:06:56Z"
+      "2026-11-26T22:06:56Z",
+      "2026-11-27T03:06:01Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -2496,7 +2524,8 @@
       "2026-11-26T11:36:56Z",
       "2026-11-26T15:47:00Z",
       "2026-11-26T17:26:55Z",
-      "2026-11-26T22:06:56Z"
+      "2026-11-26T22:06:56Z",
+      "2026-11-27T03:06:01Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -2585,7 +2614,8 @@
       "2026-11-26T11:36:56Z",
       "2026-11-26T15:47:00Z",
       "2026-11-26T17:26:55Z",
-      "2026-11-26T22:06:56Z"
+      "2026-11-26T22:06:56Z",
+      "2026-11-27T03:06:01Z"
     ]
   },
   "version": 2
