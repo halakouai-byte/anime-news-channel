@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 7275,
+    "duplicates_total": 7329,
     "hold_total": 39,
-    "posts_today": 6,
+    "posts_today": 7,
     "posts_today_date": "2026-11-27",
-    "posts_total": 92,
-    "rejected_total": 1798
+    "posts_total": 93,
+    "rejected_total": 1813
   },
-  "last_fetch_utc": "2026-11-27T10:59:23Z",
-  "last_publish_utc": "2026-11-27T10:41:26Z",
+  "last_fetch_utc": "2026-11-27T11:27:02Z",
+  "last_publish_utc": "2026-11-27T11:27:04Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -107,7 +107,8 @@
     "a87c83d28568ee02bcf1d330cd9baf235eeecfa102720c279393ed79b7d269c6": 97,
     "8fbd41f6a6d5122fc4657a111535aa6004c5e67e0ae6954c76272435e584d7b9": 98,
     "48c16648b051eebd934fc78b5288339c39e881be949ce67b5941bb0f82e9d482": 99,
-    "08041d964efa144ed9aca6fca3bf9732c19cfd15af0b1324e83cf07c858e14af": 100
+    "08041d964efa144ed9aca6fca3bf9732c19cfd15af0b1324e83cf07c858e14af": 100,
+    "ecdf12bcf1bbb6a2cda331c9378d1ef18b808510f97662a811cf86992f3dc170": 101
   },
   "posted_message_ids": [
     6,
@@ -201,7 +202,8 @@
     97,
     98,
     99,
-    100
+    100,
+    101
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1800,6 +1802,20 @@
         "theme"
       ],
       "posted_utc": "2026-11-27T10:41:26Z"
+    },
+    {
+      "title_norm": "'kaze wo tsugumono' reveals additional staff, second promo",
+      "words": [
+        "'kaze",
+        "additional",
+        "promo",
+        "reveals",
+        "second",
+        "staff,",
+        "tsugumono'",
+        "wo"
+      ],
+      "posted_utc": "2026-11-27T11:27:04Z"
     }
   ],
   "seen_at": {
@@ -2033,7 +2049,8 @@
     "51d52b2725860f6c35b269f31c97ccc4ef9a8ee75bb20c0531333f93ae3dddc0": "2026-11-27T10:57:11Z",
     "3e9ad8ffb25a0018addf543995987130fbcc2fbb688bcc12effd9d7e0d192036": "2026-11-27T10:57:11Z",
     "cb9e0b6df25f607b3c549e4b7be427cdb78e334422e10d71dcb2d9db3945416c": "2026-11-27T10:57:11Z",
-    "3a8ad8c732eca981fe267b26e1d7d754016875a198ee30ac709fb2754b3bdb97": "2026-11-27T10:57:11Z"
+    "3a8ad8c732eca981fe267b26e1d7d754016875a198ee30ac709fb2754b3bdb97": "2026-11-27T10:57:11Z",
+    "ecdf12bcf1bbb6a2cda331c9378d1ef18b808510f97662a811cf86992f3dc170": "2026-11-27T11:27:02Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -2249,6 +2266,7 @@
     "e9a67c8e81c829691653f58aece6a74cf1a4e8bd0ec7cd630b05746a5f36d99e",
     "ea17ea35b8459b92ec49c8d19979ca586653617635513cf4805cf54d14b3dfd8",
     "ea63d84e962072c152c6c61a28d853f1f088acdb6d46673429f0f847a93cc96a",
+    "ecdf12bcf1bbb6a2cda331c9378d1ef18b808510f97662a811cf86992f3dc170",
     "eef3ca68c798d0bc0eba6c7ce1f0c43dc9a26fb37f509dbe1cc95e26749edf13",
     "efe543922641f43d8a76a5f8047a3370feb3f81ac08098b7d1cac866a5948c48",
     "f20c62180b79fb4cfbaee7ad69c07df21f485a8bc1f1987241f9d14f36cc2a22",
@@ -2443,7 +2461,8 @@
       "2026-11-27T04:47:16Z",
       "2026-11-27T05:57:38Z",
       "2026-11-27T09:37:17Z",
-      "2026-11-27T10:41:26Z"
+      "2026-11-27T10:41:26Z",
+      "2026-11-27T11:27:04Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -2537,7 +2556,8 @@
       "2026-11-27T04:47:16Z",
       "2026-11-27T05:57:38Z",
       "2026-11-27T09:37:17Z",
-      "2026-11-27T10:41:26Z"
+      "2026-11-27T10:41:26Z",
+      "2026-11-27T11:27:04Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -2631,7 +2651,8 @@
       "2026-11-27T04:47:16Z",
       "2026-11-27T05:57:38Z",
       "2026-11-27T09:37:17Z",
-      "2026-11-27T10:41:26Z"
+      "2026-11-27T10:41:26Z",
+      "2026-11-27T11:27:04Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -2725,7 +2746,8 @@
       "2026-11-27T04:47:16Z",
       "2026-11-27T05:57:38Z",
       "2026-11-27T09:37:17Z",
-      "2026-11-27T10:41:26Z"
+      "2026-11-27T10:41:26Z",
+      "2026-11-27T11:27:04Z"
     ]
   },
   "version": 2
