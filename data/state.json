@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 6824,
+    "duplicates_total": 6884,
     "hold_total": 39,
-    "posts_today": 2,
+    "posts_today": 3,
     "posts_today_date": "2026-11-27",
-    "posts_total": 88,
-    "rejected_total": 1672
+    "posts_total": 89,
+    "rejected_total": 1685
   },
-  "last_fetch_utc": "2026-11-27T03:54:28Z",
-  "last_publish_utc": "2026-11-27T03:06:01Z",
+  "last_fetch_utc": "2026-11-27T04:47:14Z",
+  "last_publish_utc": "2026-11-27T04:47:16Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -103,7 +103,8 @@
     "f45d83a1ba0c5c6379c649c10a0217a49b1627cd37e8419b6cbd2a219f43abe3": 93,
     "73402b95b5bff20c61a9b482b5db40ff0956fe157f557d6c2f313df63d4f1eca": 94,
     "0c17143dbeb1ae8f735e3689c6b3e0b16bddfc2e1ef589ee863835dbb72486bf": 95,
-    "ea63d84e962072c152c6c61a28d853f1f088acdb6d46673429f0f847a93cc96a": 96
+    "ea63d84e962072c152c6c61a28d853f1f088acdb6d46673429f0f847a93cc96a": 96,
+    "a87c83d28568ee02bcf1d330cd9baf235eeecfa102720c279393ed79b7d269c6": 97
   },
   "posted_message_ids": [
     6,
@@ -193,7 +194,8 @@
     93,
     94,
     95,
-    96
+    96,
+    97
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1726,6 +1728,20 @@
         "you"
       ],
       "posted_utc": "2026-11-27T03:06:01Z"
+    },
+    {
+      "title_norm": "'hinagiku no jinsei' announces additional staff, 2027 delays",
+      "words": [
+        "'hinagiku",
+        "2027",
+        "additional",
+        "announces",
+        "delays",
+        "jinsei'",
+        "no",
+        "staff,"
+      ],
+      "posted_utc": "2026-11-27T04:47:16Z"
     }
   ],
   "seen_at": {
@@ -1951,7 +1967,8 @@
     "16043adcefa9b61a19cf2c77876104afaa74f95e1ebb327db72b90961d86d2ef": "2026-11-27T03:05:56Z",
     "862747635d9950414bfc2245186005c010d51fef2af7ce5e38ff36a6204cb749": "2026-11-27T03:05:56Z",
     "ba8477e1fdbe847f63234171e496d6aa4fcfcec3fab96988504649e895f78985": "2026-11-27T03:05:56Z",
-    "ea63d84e962072c152c6c61a28d853f1f088acdb6d46673429f0f847a93cc96a": "2026-11-27T03:05:56Z"
+    "ea63d84e962072c152c6c61a28d853f1f088acdb6d46673429f0f847a93cc96a": "2026-11-27T03:05:56Z",
+    "a87c83d28568ee02bcf1d330cd9baf235eeecfa102720c279393ed79b7d269c6": "2026-11-27T04:47:13Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -2103,6 +2120,7 @@
     "a56ab8dd96bccd0208213aa1b1d4f628e8efa076d296635b82e544f0e21b4940",
     "a6b2f0f8a070ee79587074f72dc265c6c17721234d00313a340f519c88ad0125",
     "a837eae7bf900bdae752c17c6fd8d9cd56381a830470c266381f701a70e228a9",
+    "a87c83d28568ee02bcf1d330cd9baf235eeecfa102720c279393ed79b7d269c6",
     "a8beb4da25bf82638105ba08ff26cbe8631964ffdc2851b7526c6bcba121611d",
     "a947f1c8ad38f4e6e0d97c667cebf07d54f19f78d7d50dd4595ddca33770db32",
     "abb14cd36720dd51154f51664fe3ee92c4c1e2e22b5ebbc3011964b102b89d64",
@@ -2345,7 +2363,8 @@
       "2026-11-26T15:47:00Z",
       "2026-11-26T17:26:55Z",
       "2026-11-26T22:06:56Z",
-      "2026-11-27T03:06:01Z"
+      "2026-11-27T03:06:01Z",
+      "2026-11-27T04:47:16Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -2435,7 +2454,8 @@
       "2026-11-26T15:47:00Z",
       "2026-11-26T17:26:55Z",
       "2026-11-26T22:06:56Z",
-      "2026-11-27T03:06:01Z"
+      "2026-11-27T03:06:01Z",
+      "2026-11-27T04:47:16Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -2525,7 +2545,8 @@
       "2026-11-26T15:47:00Z",
       "2026-11-26T17:26:55Z",
       "2026-11-26T22:06:56Z",
-      "2026-11-27T03:06:01Z"
+      "2026-11-27T03:06:01Z",
+      "2026-11-27T04:47:16Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -2615,7 +2636,8 @@
       "2026-11-26T15:47:00Z",
       "2026-11-26T17:26:55Z",
       "2026-11-26T22:06:56Z",
-      "2026-11-27T03:06:01Z"
+      "2026-11-27T03:06:01Z",
+      "2026-11-27T04:47:16Z"
     ]
   },
   "version": 2
