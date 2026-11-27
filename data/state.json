@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 7087,
+    "duplicates_total": 7114,
     "hold_total": 39,
-    "posts_today": 5,
+    "posts_today": 6,
     "posts_today_date": "2026-11-27",
-    "posts_total": 91,
-    "rejected_total": 1739
+    "posts_total": 92,
+    "rejected_total": 1753
   },
-  "last_fetch_utc": "2026-11-27T10:33:44Z",
-  "last_publish_utc": "2026-11-27T09:37:17Z",
+  "last_fetch_utc": "2026-11-27T10:41:24Z",
+  "last_publish_utc": "2026-11-27T10:41:26Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -106,7 +106,8 @@
     "ea63d84e962072c152c6c61a28d853f1f088acdb6d46673429f0f847a93cc96a": 96,
     "a87c83d28568ee02bcf1d330cd9baf235eeecfa102720c279393ed79b7d269c6": 97,
     "8fbd41f6a6d5122fc4657a111535aa6004c5e67e0ae6954c76272435e584d7b9": 98,
-    "48c16648b051eebd934fc78b5288339c39e881be949ce67b5941bb0f82e9d482": 99
+    "48c16648b051eebd934fc78b5288339c39e881be949ce67b5941bb0f82e9d482": 99,
+    "08041d964efa144ed9aca6fca3bf9732c19cfd15af0b1324e83cf07c858e14af": 100
   },
   "posted_message_ids": [
     6,
@@ -199,7 +200,8 @@
     96,
     97,
     98,
-    99
+    99,
+    100
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1780,6 +1782,24 @@
         "winter"
       ],
       "posted_utc": "2026-11-27T09:37:17Z"
+    },
+    {
+      "title_norm": "creepy nuts announce new album and sakamoto days season 2 opening theme",
+      "words": [
+        "2",
+        "album",
+        "and",
+        "announce",
+        "creepy",
+        "days",
+        "new",
+        "nuts",
+        "opening",
+        "sakamoto",
+        "season",
+        "theme"
+      ],
+      "posted_utc": "2026-11-27T10:41:26Z"
     }
   ],
   "seen_at": {
@@ -2008,13 +2028,15 @@
     "ea63d84e962072c152c6c61a28d853f1f088acdb6d46673429f0f847a93cc96a": "2026-11-27T03:05:56Z",
     "a87c83d28568ee02bcf1d330cd9baf235eeecfa102720c279393ed79b7d269c6": "2026-11-27T04:47:13Z",
     "8fbd41f6a6d5122fc4657a111535aa6004c5e67e0ae6954c76272435e584d7b9": "2026-11-27T05:57:34Z",
-    "48c16648b051eebd934fc78b5288339c39e881be949ce67b5941bb0f82e9d482": "2026-11-27T09:37:13Z"
+    "48c16648b051eebd934fc78b5288339c39e881be949ce67b5941bb0f82e9d482": "2026-11-27T09:37:13Z",
+    "08041d964efa144ed9aca6fca3bf9732c19cfd15af0b1324e83cf07c858e14af": "2026-11-27T10:41:24Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
     "04e5afda8fe231c18cb205c304cf99972cf5e99a69d8bb8789fa1fdc01526797",
     "058356c70aee8be3699903eabd5f3dc6d53c768f6b9f71ed3b879bf18cb31e9f",
     "062c52480e7c70a6243db17bbc2e693c7fa331228f57937554e368b9441e5af8",
+    "08041d964efa144ed9aca6fca3bf9732c19cfd15af0b1324e83cf07c858e14af",
     "08feaa449c8e58d80893e793628574892c1a825bdfdb9e940bf979040639633e",
     "0a270000483bab68a04815dd2e2efa62225dd1e5ac87cf4622a0dde97fefdb8b",
     "0a7c98d8d45a4b88366aa8e431287c5bb23941e936afec6bdd2dd55262a69520",
@@ -2314,6 +2336,10 @@
     "saga vinland|trailer|10391": {
       "message_id": 93,
       "posted_utc": "2026-11-26T15:47:00Z"
+    },
+    "days sakamoto|event|10392": {
+      "message_id": 100,
+      "posted_utc": "2026-11-27T10:41:26Z"
     }
   },
   "template_usage_7d": {
@@ -2408,7 +2434,8 @@
       "2026-11-27T03:06:01Z",
       "2026-11-27T04:47:16Z",
       "2026-11-27T05:57:38Z",
-      "2026-11-27T09:37:17Z"
+      "2026-11-27T09:37:17Z",
+      "2026-11-27T10:41:26Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -2501,7 +2528,8 @@
       "2026-11-27T03:06:01Z",
       "2026-11-27T04:47:16Z",
       "2026-11-27T05:57:38Z",
-      "2026-11-27T09:37:17Z"
+      "2026-11-27T09:37:17Z",
+      "2026-11-27T10:41:26Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -2594,7 +2622,8 @@
       "2026-11-27T03:06:01Z",
       "2026-11-27T04:47:16Z",
       "2026-11-27T05:57:38Z",
-      "2026-11-27T09:37:17Z"
+      "2026-11-27T09:37:17Z",
+      "2026-11-27T10:41:26Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -2687,7 +2716,8 @@
       "2026-11-27T03:06:01Z",
       "2026-11-27T04:47:16Z",
       "2026-11-27T05:57:38Z",
-      "2026-11-27T09:37:17Z"
+      "2026-11-27T09:37:17Z",
+      "2026-11-27T10:41:26Z"
     ]
   },
   "version": 2
