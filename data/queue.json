@@ -4167,7 +4167,7 @@
       "franchise_en": null,
       "priority_score": 50,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "STALE",
       "hold_reason": "gates_failed:why_specific",
       "created_utc": "2026-11-25T16:10:57Z"
     },
@@ -4189,7 +4189,7 @@
       "franchise_en": null,
       "priority_score": 50,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "STALE",
       "hold_reason": "gates_failed:why_specific",
       "created_utc": "2026-11-25T16:26:22Z"
     },
@@ -4211,7 +4211,7 @@
       "franchise_en": null,
       "priority_score": 50,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "STALE",
       "hold_reason": "gates_failed:why_specific",
       "created_utc": "2026-11-25T16:40:54Z"
     },
