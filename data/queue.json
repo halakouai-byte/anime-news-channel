@@ -6032,6 +6032,28 @@
       "status": "HOLD",
       "hold_reason": "gates_failed:why_specific",
       "created_utc": "2026-11-28T12:00:52Z"
+    },
+    {
+      "guid": "https://www.animenewsnetwork.com/cms/.244240",
+      "hash": "28f1fb579e929b7bfe5511b691338256a530c7fdd95c2ecda31e7ace5f626c23",
+      "story_key": null,
+      "title": "Temppal: Overgeared PC, Mobile Game Debuts in Korea, Taiwan, Hong Kong, Macau",
+      "link": "https://animenewsnetwork.com/news/2026-11-27/temppal-overgeared-pc-mobile-game-debuts-in-korea-taiwan-hong-kong-macau/.244240",
+      "summary": "Game is based on Overgeared web novel, webtoon that have 1.3+ billion combined views on Kakao Page in South Korea",
+      "source": "ANN",
+      "source_name": "Anime News Network",
+      "tier": 1,
+      "pubDate": "2026-11-28T12:30:00+00:00",
+      "category": "رویداد",
+      "category_score": 0,
+      "category_source": "keyword",
+      "event_type": "other",
+      "franchise_en": null,
+      "priority_score": 45,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "low-confidence",
+      "created_utc": "2026-11-28T12:39:03Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
