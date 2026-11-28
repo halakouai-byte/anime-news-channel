@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 7859,
+    "duplicates_total": 7912,
     "hold_total": 42,
-    "posts_today": 0,
+    "posts_today": 1,
     "posts_today_date": "2026-11-28",
-    "posts_total": 95,
-    "rejected_total": 1940
+    "posts_total": 96,
+    "rejected_total": 1951
   },
-  "last_fetch_utc": "2026-11-27T22:12:55Z",
-  "last_publish_utc": "2026-11-27T15:15:59Z",
+  "last_fetch_utc": "2026-11-28T00:30:53Z",
+  "last_publish_utc": "2026-11-28T00:30:55Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -110,7 +110,8 @@
     "08041d964efa144ed9aca6fca3bf9732c19cfd15af0b1324e83cf07c858e14af": 100,
     "ecdf12bcf1bbb6a2cda331c9378d1ef18b808510f97662a811cf86992f3dc170": 101,
     "e05099ec7b2ae0e05cf398bb3fb8a7f35faf353f9587ec1e0ef989205f0aa2f2": 102,
-    "54cc3d770354f6d03b986b15edbc5512d64763859ec6f8c7893be7c79fe2bc72": 103
+    "54cc3d770354f6d03b986b15edbc5512d64763859ec6f8c7893be7c79fe2bc72": 103,
+    "5fc86a4782b348d71ecf4fb8fb59d1087dc5e719c61db1d957803abe0d860e91": 104
   },
   "posted_message_ids": [
     6,
@@ -207,7 +208,8 @@
     100,
     101,
     102,
-    103
+    103,
+    104
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1850,6 +1852,20 @@
         "yuasa's"
       ],
       "posted_utc": "2026-11-27T15:15:59Z"
+    },
+    {
+      "title_norm": "new live-action hana-kimi series unveils more cast, new trailer",
+      "words": [
+        "cast,",
+        "hana-kimi",
+        "live-action",
+        "more",
+        "new",
+        "series",
+        "trailer",
+        "unveils"
+      ],
+      "posted_utc": "2026-11-28T00:30:55Z"
     }
   ],
   "seen_at": {
@@ -2095,7 +2111,8 @@
     "598188ba49328e87f4b5be36af32a7316fc29cb47e497d4dfd41fa6755d17f94": "2026-11-27T15:00:54Z",
     "54cc3d770354f6d03b986b15edbc5512d64763859ec6f8c7893be7c79fe2bc72": "2026-11-27T15:00:54Z",
     "e05099ec7b2ae0e05cf398bb3fb8a7f35faf353f9587ec1e0ef989205f0aa2f2": "2026-11-27T15:00:54Z",
-    "8f30905ba34ae6c35c50a5893a526d7425bdb3234c21a97d9f9d03a6dedae085": "2026-11-27T20:00:56Z"
+    "8f30905ba34ae6c35c50a5893a526d7425bdb3234c21a97d9f9d03a6dedae085": "2026-11-27T20:00:56Z",
+    "5fc86a4782b348d71ecf4fb8fb59d1087dc5e719c61db1d957803abe0d860e91": "2026-11-28T00:30:53Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -2192,6 +2209,7 @@
     "5d49ff92f644e290774c24819fb2202c5fbe92c4c1fb91ed575d0c2c49a42bb5",
     "5ee8c06f1bbc2c9ee2d1965becd22e5fb1e93c123c707201cfcf72c2fcd700dc",
     "5f4a7f60fd8d4431d720ec69cf7d750401dbf15570dc256cbf3a5e5a842aa05e",
+    "5fc86a4782b348d71ecf4fb8fb59d1087dc5e719c61db1d957803abe0d860e91",
     "60c4a38382f3d0e6eeac819c865cc1c7960cb0dc9544f0eefda9454a21e799a4",
     "612aad7fa463ef2c15647c548aa504bc86d10dec992249705ebaebc4dcf5186d",
     "6148b7e319973aae07941a14765045e6b6c2a8cc09c2167f5d76f18701e725d7",
@@ -2520,7 +2538,8 @@
       "2026-11-27T10:41:26Z",
       "2026-11-27T11:27:04Z",
       "2026-11-27T15:00:57Z",
-      "2026-11-27T15:15:59Z"
+      "2026-11-27T15:15:59Z",
+      "2026-11-28T00:30:55Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -2617,7 +2636,8 @@
       "2026-11-27T10:41:26Z",
       "2026-11-27T11:27:04Z",
       "2026-11-27T15:00:57Z",
-      "2026-11-27T15:15:59Z"
+      "2026-11-27T15:15:59Z",
+      "2026-11-28T00:30:55Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -2714,7 +2734,8 @@
       "2026-11-27T10:41:26Z",
       "2026-11-27T11:27:04Z",
       "2026-11-27T15:00:57Z",
-      "2026-11-27T15:15:59Z"
+      "2026-11-27T15:15:59Z",
+      "2026-11-28T00:30:55Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -2811,7 +2832,8 @@
       "2026-11-27T10:41:26Z",
       "2026-11-27T11:27:04Z",
       "2026-11-27T15:00:57Z",
-      "2026-11-27T15:15:59Z"
+      "2026-11-27T15:15:59Z",
+      "2026-11-28T00:30:55Z"
     ]
   },
   "version": 2
