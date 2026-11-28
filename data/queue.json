@@ -4079,7 +4079,7 @@
       "franchise_en": null,
       "priority_score": 55,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "REJECTED",
       "hold_reason": "low-confidence",
       "created_utc": "2026-11-25T14:41:02Z"
     },
@@ -4893,7 +4893,7 @@
       "franchise_en": null,
       "priority_score": 60,
       "is_breaking": false,
-      "status": "HOLD",
+      "status": "STALE",
       "hold_reason": "gates_failed:why_specific",
       "created_utc": "2026-11-26T15:35:53Z"
     },
@@ -6079,6 +6079,28 @@
       "message_id": 113,
       "posted_utc": "2026-11-28T14:00:55Z",
       "caption": "s Cuts Make App Wins Google Play خبرساز شد: لایسنس تازه\n\nاگر s Cuts Make App Wins Google Play را دنبال می‌کنید، این خبر مال شماست: لایسنس تازه اثر رسما تایید شد.\n\nاین خبر را Anime News Network منتشر کرده است؛ اثر برای ۲۰۲۶ اعلام شده است و جزئیات بیشتر در گزارش Anime News Network آمده است. s Cuts Make App Wins Google Play از آن آثاری است که هر خبر تازه‌اش در دنیای انیمه بازتاب دارد؛ این اعلام هم از همان جنس خبرهاست و نشان می‌دهد عوامل ساخت هنوز برای این اثر برنامه دارند.\n\nچرا مهم است؟ چون لایسنس s Cuts Make App Wins Google Play یعنی این اثر رسماً به دست خواننده‌های تازه می‌رسد و راهش به بازار جهانی باز می‌شود.\n\nمنبع: Anime News Network\nhttps://animenewsnetwork.com/news/2026-11-28/naver-webtoon-cuts-make-app-wins-google-play-best-app-of-the-year-award-for-2026-in-s-korea/.244076\n\n#انیمه #SCutsMakeAppWinsGooglePlay #رویداد"
+    },
+    {
+      "guid": "https://www.animenewsnetwork.com/cms/.244258",
+      "hash": "f13e33b372530afbe23a93e64d9a4d96db259ba64b7751f8437dbb86b94d4740",
+      "story_key": null,
+      "title": "Texas' Anime Frontier to Screen World Premiere of Maiden Blood Anime",
+      "link": "https://animenewsnetwork.com/news/2026-11-27/texas-anime-frontier-to-screen-world-premiere-of-maiden-blood-anime/.244258",
+      "summary": "Director Seiji Kishi, producer Toshiya Kitabayashi attend screening as guests on December 5 in Fort Worth, Texas",
+      "source": "ANN",
+      "source_name": "Anime News Network",
+      "tier": 1,
+      "pubDate": "2026-11-28T14:30:00+00:00",
+      "category": "فیلم",
+      "category_score": 1,
+      "category_source": "keyword",
+      "event_type": "other",
+      "franchise_en": null,
+      "priority_score": 45,
+      "is_breaking": false,
+      "status": "HOLD",
+      "hold_reason": "low-confidence",
+      "created_utc": "2026-11-28T15:02:52Z"
     }
   ],
   "note": "صف انتشار. وضعیت‌ها: QUEUED (آماده انتشار)، HOLD (حساس/اطمینان پایین/شایعه فرنچایز بزرگ — فقط انسان APPROVED یا REJECTED می‌کند)، APPROVED (تایید انسانی، آماده انتشار)، POSTED (منتشر شد)، REJECTED (رد انسانی یا انقضای ۷۲ ساعته HOLD)، EXPIRED (منقضی در صف پس از ۴۸ ساعت).",
