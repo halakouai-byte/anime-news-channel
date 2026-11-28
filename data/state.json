@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 7998,
+    "duplicates_total": 8040,
     "hold_total": 43,
-    "posts_today": 1,
+    "posts_today": 3,
     "posts_today_date": "2026-11-28",
-    "posts_total": 96,
-    "rejected_total": 1973
+    "posts_total": 98,
+    "rejected_total": 1984
   },
-  "last_fetch_utc": "2026-11-28T07:31:53Z",
-  "last_publish_utc": "2026-11-28T00:30:55Z",
+  "last_fetch_utc": "2026-11-28T09:00:50Z",
+  "last_publish_utc": "2026-11-28T09:15:54Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -111,7 +111,9 @@
     "ecdf12bcf1bbb6a2cda331c9378d1ef18b808510f97662a811cf86992f3dc170": 101,
     "e05099ec7b2ae0e05cf398bb3fb8a7f35faf353f9587ec1e0ef989205f0aa2f2": 102,
     "54cc3d770354f6d03b986b15edbc5512d64763859ec6f8c7893be7c79fe2bc72": 103,
-    "5fc86a4782b348d71ecf4fb8fb59d1087dc5e719c61db1d957803abe0d860e91": 104
+    "5fc86a4782b348d71ecf4fb8fb59d1087dc5e719c61db1d957803abe0d860e91": 104,
+    "2b9db5ec6359c6fb50543bf06f2be3ef4900360dd2f2b7383e877a002b66cf0e": 105,
+    "3bb638aaa3c3080d8be38741db1c41a4f9c2c3a79a5653c4a2963656fee2a324": 106
   },
   "posted_message_ids": [
     6,
@@ -209,7 +211,9 @@
     101,
     102,
     103,
-    104
+    104,
+    105,
+    106
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1866,6 +1870,47 @@
         "unveils"
       ],
       "posted_utc": "2026-11-28T00:30:55Z"
+    },
+    {
+      "title_norm": "the eminence in shadow: lost echoes reveals main visual and trailer, hidive confirms 2027 release and ongoing production",
+      "words": [
+        "2027",
+        "and",
+        "confirms",
+        "echoes",
+        "eminence",
+        "hidive",
+        "in",
+        "lost",
+        "main",
+        "ongoing",
+        "production",
+        "release",
+        "reveals",
+        "shadow:",
+        "the",
+        "trailer,",
+        "visual"
+      ],
+      "posted_utc": "2026-11-28T09:00:52Z"
+    },
+    {
+      "title_norm": "webtoon-based live-action series portraits of delusion sets january 6 premiere on disney+",
+      "words": [
+        "6",
+        "delusion",
+        "disney+",
+        "january",
+        "live-action",
+        "of",
+        "on",
+        "portraits",
+        "premiere",
+        "series",
+        "sets",
+        "webtoon-based"
+      ],
+      "posted_utc": "2026-11-28T09:15:54Z"
     }
   ],
   "seen_at": {
@@ -2113,7 +2158,9 @@
     "e05099ec7b2ae0e05cf398bb3fb8a7f35faf353f9587ec1e0ef989205f0aa2f2": "2026-11-27T15:00:54Z",
     "8f30905ba34ae6c35c50a5893a526d7425bdb3234c21a97d9f9d03a6dedae085": "2026-11-27T20:00:56Z",
     "5fc86a4782b348d71ecf4fb8fb59d1087dc5e719c61db1d957803abe0d860e91": "2026-11-28T00:30:53Z",
-    "64f929ec3eefbe64146b4af8fff1acc824194ead7c239de748fdc22f7226d077": "2026-11-28T07:31:53Z"
+    "64f929ec3eefbe64146b4af8fff1acc824194ead7c239de748fdc22f7226d077": "2026-11-28T07:31:53Z",
+    "3bb638aaa3c3080d8be38741db1c41a4f9c2c3a79a5653c4a2963656fee2a324": "2026-11-28T09:00:49Z",
+    "2b9db5ec6359c6fb50543bf06f2be3ef4900360dd2f2b7383e877a002b66cf0e": "2026-11-28T09:00:49Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -2155,6 +2202,7 @@
     "2b1fbd28a6121ae94f5c2433668f3dac5cf776dd14c074b69c645344a930ac84",
     "2b29b15ac73486e51672d08f9e1dafc81040ef83b756d0b16ebde24b46d59bbc",
     "2b2b9cfe3757a922b488e684317bd024a5dfc5edb2e9134c7b16e2796fd07780",
+    "2b9db5ec6359c6fb50543bf06f2be3ef4900360dd2f2b7383e877a002b66cf0e",
     "2cefe640231d450efb026bf70cbc6467780dea74dee6c15cbee92bde85fbac6c",
     "2df34036c5d4472fe4f08aa72282ec8a45dc160f458fbbde5a9c3aa279ea4a6b",
     "2df7d9024fb16032e3937e4c160a4fca4009310415d2b48e1047b2afaf6704c0",
@@ -2174,6 +2222,7 @@
     "3a38ea041e01c2a6be3770a71a7931882956664c46c86ccf9a01f126952287ee",
     "3a7039401f1cef43fcbd5bd0733afbd307fd2f0ed2ba8c20dea1e606795a9f39",
     "3a8ad8c732eca981fe267b26e1d7d754016875a198ee30ac709fb2754b3bdb97",
+    "3bb638aaa3c3080d8be38741db1c41a4f9c2c3a79a5653c4a2963656fee2a324",
     "3c1437beaeb3e29f68da14c92e306dd179c360943470f5e03d08f8c7af169af1",
     "3c78522c371c3c0bdd6e486568896698ed1873f429f2b8ef66cc419260acc9c2",
     "3d0d6ae626e8142665d3b311a6a7fac6c576caf7cdf133757c126f15220f8a0a",
@@ -2541,7 +2590,9 @@
       "2026-11-27T11:27:04Z",
       "2026-11-27T15:00:57Z",
       "2026-11-27T15:15:59Z",
-      "2026-11-28T00:30:55Z"
+      "2026-11-28T00:30:55Z",
+      "2026-11-28T09:00:52Z",
+      "2026-11-28T09:15:54Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -2639,7 +2690,9 @@
       "2026-11-27T11:27:04Z",
       "2026-11-27T15:00:57Z",
       "2026-11-27T15:15:59Z",
-      "2026-11-28T00:30:55Z"
+      "2026-11-28T00:30:55Z",
+      "2026-11-28T09:00:52Z",
+      "2026-11-28T09:15:54Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -2737,7 +2790,9 @@
       "2026-11-27T11:27:04Z",
       "2026-11-27T15:00:57Z",
       "2026-11-27T15:15:59Z",
-      "2026-11-28T00:30:55Z"
+      "2026-11-28T00:30:55Z",
+      "2026-11-28T09:00:52Z",
+      "2026-11-28T09:15:54Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -2835,7 +2890,9 @@
       "2026-11-27T11:27:04Z",
       "2026-11-27T15:00:57Z",
       "2026-11-27T15:15:59Z",
-      "2026-11-28T00:30:55Z"
+      "2026-11-28T00:30:55Z",
+      "2026-11-28T09:00:52Z",
+      "2026-11-28T09:15:54Z"
     ]
   },
   "version": 2

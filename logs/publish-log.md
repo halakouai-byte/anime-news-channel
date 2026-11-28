@@ -89,3 +89,5 @@
 - 2026-11-27T15:00:57Z UTC (6 آذر 1405، تهران): posted message_id=102 guid=https://www.siliconera.com/?p=1127738 category=فصل جدید score=55 breaking=False latency_min=1.0
 - 2026-11-27T15:15:59Z UTC (6 آذر 1405، تهران): posted message_id=103 guid=https://www.animenewsnetwork.com/cms/.244239 category=فیلم score=50 breaking=False latency_min=557.1
 - 2026-11-28T00:30:55Z UTC (7 آذر 1405، تهران): posted message_id=104 guid=https://www.animenewsnetwork.com/cms/.244263 category=تریلر score=55 breaking=False latency_min=12.2
+- 2026-11-28T09:00:52Z UTC (7 آذر 1405، تهران): posted message_id=105 guid=https://animecorner.me/the-eminence-in-shadow-lost-echoes-reveals-main-visual-and-trailer-hidive-confirms-2027-release-and-ongoing-production/ category=تریلر score=50 breaking=False latency_min=0.9
+- 2026-11-28T09:15:54Z UTC (7 آذر 1405، تهران): posted message_id=106 guid=https://www.animenewsnetwork.com/cms/.244246 category=مانگا و اقتباس score=45 breaking=False latency_min=105.9
