@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 8167,
+    "duplicates_total": 8211,
     "hold_total": 43,
-    "posts_today": 5,
+    "posts_today": 7,
     "posts_today_date": "2026-11-28",
-    "posts_total": 100,
-    "rejected_total": 2017
+    "posts_total": 102,
+    "rejected_total": 2028
   },
-  "last_fetch_utc": "2026-11-28T10:06:55Z",
-  "last_publish_utc": "2026-11-28T10:21:57Z",
+  "last_fetch_utc": "2026-11-28T10:36:02Z",
+  "last_publish_utc": "2026-11-28T10:51:59Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -115,7 +115,9 @@
     "2b9db5ec6359c6fb50543bf06f2be3ef4900360dd2f2b7383e877a002b66cf0e": 105,
     "3bb638aaa3c3080d8be38741db1c41a4f9c2c3a79a5653c4a2963656fee2a324": 106,
     "cdcba4330038d599a4e729ed47d6eeeb270e55965d89ec0b1fad66d3310a98f5": 107,
-    "5ff942783e2f472acd9302d9e005dcd7018c4676dece5e7fe44c57e7b9fcd7bf": 108
+    "5ff942783e2f472acd9302d9e005dcd7018c4676dece5e7fe44c57e7b9fcd7bf": 108,
+    "9fcd0bd00e0591ee2ff3fdbf012d7249e819172429dcc34ea1ca14fbb7a0cc14": 109,
+    "e11893dc6d6b756c62edf33aef01594889157db6cf14f052d22e4e0f098478d6": 110
   },
   "posted_message_ids": [
     6,
@@ -217,7 +219,9 @@
     105,
     106,
     107,
-    108
+    108,
+    109,
+    110
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1949,6 +1953,45 @@
         "zero'"
       ],
       "posted_utc": "2026-11-28T10:21:57Z"
+    },
+    {
+      "title_norm": "the eminence in shadow: lost echoes film reveals trailer, visual, may 2027 debut, new cast member",
+      "words": [
+        "2027",
+        "cast",
+        "debut,",
+        "echoes",
+        "eminence",
+        "film",
+        "in",
+        "lost",
+        "may",
+        "member",
+        "new",
+        "reveals",
+        "shadow:",
+        "the",
+        "trailer,",
+        "visual,"
+      ],
+      "posted_utc": "2026-11-28T10:36:58Z"
+    },
+    {
+      "title_norm": "'noa is my senior, and my friend' tv anime reveals teaser video",
+      "words": [
+        "'noa",
+        "and",
+        "anime",
+        "friend'",
+        "is",
+        "my",
+        "reveals",
+        "senior,",
+        "teaser",
+        "tv",
+        "video"
+      ],
+      "posted_utc": "2026-11-28T10:51:59Z"
     }
   ],
   "seen_at": {
@@ -2642,7 +2685,9 @@
       "2026-11-28T09:00:52Z",
       "2026-11-28T09:15:54Z",
       "2026-11-28T10:06:56Z",
-      "2026-11-28T10:21:57Z"
+      "2026-11-28T10:21:57Z",
+      "2026-11-28T10:36:58Z",
+      "2026-11-28T10:51:59Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -2744,7 +2789,9 @@
       "2026-11-28T09:00:52Z",
       "2026-11-28T09:15:54Z",
       "2026-11-28T10:06:56Z",
-      "2026-11-28T10:21:57Z"
+      "2026-11-28T10:21:57Z",
+      "2026-11-28T10:36:58Z",
+      "2026-11-28T10:51:59Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -2846,7 +2893,9 @@
       "2026-11-28T09:00:52Z",
       "2026-11-28T09:15:54Z",
       "2026-11-28T10:06:56Z",
-      "2026-11-28T10:21:57Z"
+      "2026-11-28T10:21:57Z",
+      "2026-11-28T10:36:58Z",
+      "2026-11-28T10:51:59Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -2948,7 +2997,9 @@
       "2026-11-28T09:00:52Z",
       "2026-11-28T09:15:54Z",
       "2026-11-28T10:06:56Z",
-      "2026-11-28T10:21:57Z"
+      "2026-11-28T10:21:57Z",
+      "2026-11-28T10:36:58Z",
+      "2026-11-28T10:51:59Z"
     ]
   },
   "version": 2

@@ -93,3 +93,5 @@
 - 2026-11-28T09:15:54Z UTC (7 آذر 1405، تهران): posted message_id=106 guid=https://www.animenewsnetwork.com/cms/.244246 category=مانگا و اقتباس score=45 breaking=False latency_min=105.9
 - 2026-11-28T10:06:56Z UTC (7 آذر 1405، تهران): posted message_id=107 guid=https://www.animenewsnetwork.com/cms/.244270 category=تریلر score=55 breaking=False latency_min=38.0
 - 2026-11-28T10:21:57Z UTC (7 آذر 1405، تهران): posted message_id=108 guid=https://myanimelist.net/news/74991767?_location=rss category=تریلر score=50 breaking=False latency_min=19.6
+- 2026-11-28T10:36:58Z UTC (7 آذر 1405، تهران): posted message_id=109 guid=https://www.animenewsnetwork.com/cms/.244265 category=تریلر score=50 breaking=False latency_min=97.0
+- 2026-11-28T10:51:59Z UTC (7 آذر 1405، تهران): posted message_id=110 guid=https://www.animenewsnetwork.com/cms/.244268 category=تریلر score=50 breaking=False latency_min=112.0
