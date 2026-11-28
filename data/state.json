@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 8126,
+    "duplicates_total": 8167,
     "hold_total": 43,
-    "posts_today": 3,
+    "posts_today": 5,
     "posts_today_date": "2026-11-28",
-    "posts_total": 98,
-    "rejected_total": 2006
+    "posts_total": 100,
+    "rejected_total": 2017
   },
-  "last_fetch_utc": "2026-11-28T09:31:52Z",
-  "last_publish_utc": "2026-11-28T09:15:54Z",
+  "last_fetch_utc": "2026-11-28T10:06:55Z",
+  "last_publish_utc": "2026-11-28T10:21:57Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -113,7 +113,9 @@
     "54cc3d770354f6d03b986b15edbc5512d64763859ec6f8c7893be7c79fe2bc72": 103,
     "5fc86a4782b348d71ecf4fb8fb59d1087dc5e719c61db1d957803abe0d860e91": 104,
     "2b9db5ec6359c6fb50543bf06f2be3ef4900360dd2f2b7383e877a002b66cf0e": 105,
-    "3bb638aaa3c3080d8be38741db1c41a4f9c2c3a79a5653c4a2963656fee2a324": 106
+    "3bb638aaa3c3080d8be38741db1c41a4f9c2c3a79a5653c4a2963656fee2a324": 106,
+    "cdcba4330038d599a4e729ed47d6eeeb270e55965d89ec0b1fad66d3310a98f5": 107,
+    "5ff942783e2f472acd9302d9e005dcd7018c4676dece5e7fe44c57e7b9fcd7bf": 108
   },
   "posted_message_ids": [
     6,
@@ -213,7 +215,9 @@
     103,
     104,
     105,
-    106
+    106,
+    107,
+    108
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1911,6 +1915,40 @@
         "webtoon-based"
       ],
       "posted_utc": "2026-11-28T09:15:54Z"
+    },
+    {
+      "title_norm": "gundam seed freedom zero anime's trailer unveils theme songs",
+      "words": [
+        "anime's",
+        "freedom",
+        "gundam",
+        "seed",
+        "songs",
+        "theme",
+        "trailer",
+        "unveils",
+        "zero"
+      ],
+      "posted_utc": "2026-11-28T10:06:56Z"
+    },
+    {
+      "title_norm": "'kidou senshi gundam seed freedom zero' reveals production staff, theme song, main trailer",
+      "words": [
+        "'kidou",
+        "freedom",
+        "gundam",
+        "main",
+        "production",
+        "reveals",
+        "seed",
+        "senshi",
+        "song,",
+        "staff,",
+        "theme",
+        "trailer",
+        "zero'"
+      ],
+      "posted_utc": "2026-11-28T10:21:57Z"
     }
   ],
   "seen_at": {
@@ -2161,7 +2199,11 @@
     "64f929ec3eefbe64146b4af8fff1acc824194ead7c239de748fdc22f7226d077": "2026-11-28T07:31:53Z",
     "3bb638aaa3c3080d8be38741db1c41a4f9c2c3a79a5653c4a2963656fee2a324": "2026-11-28T09:00:49Z",
     "2b9db5ec6359c6fb50543bf06f2be3ef4900360dd2f2b7383e877a002b66cf0e": "2026-11-28T09:00:49Z",
-    "09328e96bc3bd05e4772826b0503542425ee0810171664c5a5ab78f15f03f6e6": "2026-11-28T09:16:15Z"
+    "09328e96bc3bd05e4772826b0503542425ee0810171664c5a5ab78f15f03f6e6": "2026-11-28T09:16:15Z",
+    "cdcba4330038d599a4e729ed47d6eeeb270e55965d89ec0b1fad66d3310a98f5": "2026-11-28T10:06:54Z",
+    "9fcd0bd00e0591ee2ff3fdbf012d7249e819172429dcc34ea1ca14fbb7a0cc14": "2026-11-28T10:06:54Z",
+    "e11893dc6d6b756c62edf33aef01594889157db6cf14f052d22e4e0f098478d6": "2026-11-28T10:06:54Z",
+    "5ff942783e2f472acd9302d9e005dcd7018c4676dece5e7fe44c57e7b9fcd7bf": "2026-11-28T10:06:54Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -2262,6 +2304,7 @@
     "5ee8c06f1bbc2c9ee2d1965becd22e5fb1e93c123c707201cfcf72c2fcd700dc",
     "5f4a7f60fd8d4431d720ec69cf7d750401dbf15570dc256cbf3a5e5a842aa05e",
     "5fc86a4782b348d71ecf4fb8fb59d1087dc5e719c61db1d957803abe0d860e91",
+    "5ff942783e2f472acd9302d9e005dcd7018c4676dece5e7fe44c57e7b9fcd7bf",
     "60c4a38382f3d0e6eeac819c865cc1c7960cb0dc9544f0eefda9454a21e799a4",
     "612aad7fa463ef2c15647c548aa504bc86d10dec992249705ebaebc4dcf5186d",
     "6148b7e319973aae07941a14765045e6b6c2a8cc09c2167f5d76f18701e725d7",
@@ -2323,6 +2366,7 @@
     "9e32bd6d31b6af7cf44e0cf6e24c2ab3ec49419750b4d16f47baf2afd780c1bc",
     "9e86bf6966bfd41f8c46168f6f329ea393d67771d9de952f07fc21b8b6933c4b",
     "9f36ae04a0b3a86791fc6ed231096795765e709c401b9fdda8a1a41477569ad3",
+    "9fcd0bd00e0591ee2ff3fdbf012d7249e819172429dcc34ea1ca14fbb7a0cc14",
     "9fee23ad5f009e1becfcb09973d2da94eaab44efde898d07a882efa524a9be7c",
     "a0124da77253aeb4ba4868a8959365b9a387ef4c5320e849339af6567467aee8",
     "a2a43b4d6c104dff96af192215549bbf008dea99d6cf88b8d36e5470029526f5",
@@ -2364,6 +2408,7 @@
     "cc72b106851a485772057e8fce87604eca0dc521aadd6e5df8c3698a5a02fe26",
     "cd7bd357f69b875122f0a42218c5e9633a911b56912afded310f153af55fcbc9",
     "cdb7246d188653bccc9e224daac0754b6db856d3fb9b8d69eefbf935b1981046",
+    "cdcba4330038d599a4e729ed47d6eeeb270e55965d89ec0b1fad66d3310a98f5",
     "ce06741fa8eb7decadb84054e943955afbbedf80f2ae1bb34daf6fa1f34e5acc",
     "ce1c890641c95f6dac534cb17e95236e8a8e08a630da793f96c4e5fea4b5e9b9",
     "cec56704dbf9033b4ebbc882a2cf6c6dfa7d697e7eae20f95a3b653fdc1811db",
@@ -2382,6 +2427,7 @@
     "db8e11fbfb4083a909039c5701812ee4114907be896a962155a3954f9f6d15bd",
     "dd6353239c004194c06179c1068ac33f486b3787f58937bcdcf15cd72be050ed",
     "e05099ec7b2ae0e05cf398bb3fb8a7f35faf353f9587ec1e0ef989205f0aa2f2",
+    "e11893dc6d6b756c62edf33aef01594889157db6cf14f052d22e4e0f098478d6",
     "e3eca932d891803920de35f7792480e085ecd94a9f51d99a169c393c7ec7f932",
     "e4716188e1605c52b387257f46a51de59d61991e17787db32799bedf68f66737",
     "e7c20573002cdd88ce1c59150a47e469eeb7f3861def66c580163b4c7cfdea9c",
@@ -2594,7 +2640,9 @@
       "2026-11-27T15:15:59Z",
       "2026-11-28T00:30:55Z",
       "2026-11-28T09:00:52Z",
-      "2026-11-28T09:15:54Z"
+      "2026-11-28T09:15:54Z",
+      "2026-11-28T10:06:56Z",
+      "2026-11-28T10:21:57Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -2694,7 +2742,9 @@
       "2026-11-27T15:15:59Z",
       "2026-11-28T00:30:55Z",
       "2026-11-28T09:00:52Z",
-      "2026-11-28T09:15:54Z"
+      "2026-11-28T09:15:54Z",
+      "2026-11-28T10:06:56Z",
+      "2026-11-28T10:21:57Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -2794,7 +2844,9 @@
       "2026-11-27T15:15:59Z",
       "2026-11-28T00:30:55Z",
       "2026-11-28T09:00:52Z",
-      "2026-11-28T09:15:54Z"
+      "2026-11-28T09:15:54Z",
+      "2026-11-28T10:06:56Z",
+      "2026-11-28T10:21:57Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -2894,7 +2946,9 @@
       "2026-11-27T15:15:59Z",
       "2026-11-28T00:30:55Z",
       "2026-11-28T09:00:52Z",
-      "2026-11-28T09:15:54Z"
+      "2026-11-28T09:15:54Z",
+      "2026-11-28T10:06:56Z",
+      "2026-11-28T10:21:57Z"
     ]
   },
   "version": 2

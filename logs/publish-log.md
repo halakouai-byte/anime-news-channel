@@ -91,3 +91,5 @@
 - 2026-11-28T00:30:55Z UTC (7 آذر 1405، تهران): posted message_id=104 guid=https://www.animenewsnetwork.com/cms/.244263 category=تریلر score=55 breaking=False latency_min=12.2
 - 2026-11-28T09:00:52Z UTC (7 آذر 1405، تهران): posted message_id=105 guid=https://animecorner.me/the-eminence-in-shadow-lost-echoes-reveals-main-visual-and-trailer-hidive-confirms-2027-release-and-ongoing-production/ category=تریلر score=50 breaking=False latency_min=0.9
 - 2026-11-28T09:15:54Z UTC (7 آذر 1405، تهران): posted message_id=106 guid=https://www.animenewsnetwork.com/cms/.244246 category=مانگا و اقتباس score=45 breaking=False latency_min=105.9
+- 2026-11-28T10:06:56Z UTC (7 آذر 1405، تهران): posted message_id=107 guid=https://www.animenewsnetwork.com/cms/.244270 category=تریلر score=55 breaking=False latency_min=38.0
+- 2026-11-28T10:21:57Z UTC (7 آذر 1405، تهران): posted message_id=108 guid=https://myanimelist.net/news/74991767?_location=rss category=تریلر score=50 breaking=False latency_min=19.6
