@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 8167,
-    "hold_total": 43,
-    "posts_today": 5,
+    "duplicates_total": 8254,
+    "hold_total": 45,
+    "posts_today": 8,
     "posts_today_date": "2026-11-28",
-    "posts_total": 100,
-    "rejected_total": 2017
+    "posts_total": 103,
+    "rejected_total": 2039
   },
-  "last_fetch_utc": "2026-11-28T10:06:55Z",
-  "last_publish_utc": "2026-11-28T10:21:57Z",
+  "last_fetch_utc": "2026-11-28T10:52:22Z",
+  "last_publish_utc": "2026-11-28T11:07:01Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -115,7 +115,10 @@
     "2b9db5ec6359c6fb50543bf06f2be3ef4900360dd2f2b7383e877a002b66cf0e": 105,
     "3bb638aaa3c3080d8be38741db1c41a4f9c2c3a79a5653c4a2963656fee2a324": 106,
     "cdcba4330038d599a4e729ed47d6eeeb270e55965d89ec0b1fad66d3310a98f5": 107,
-    "5ff942783e2f472acd9302d9e005dcd7018c4676dece5e7fe44c57e7b9fcd7bf": 108
+    "5ff942783e2f472acd9302d9e005dcd7018c4676dece5e7fe44c57e7b9fcd7bf": 108,
+    "9fcd0bd00e0591ee2ff3fdbf012d7249e819172429dcc34ea1ca14fbb7a0cc14": 109,
+    "e11893dc6d6b756c62edf33aef01594889157db6cf14f052d22e4e0f098478d6": 110,
+    "8dd8b95d2d838dc0eadee4efda229d81d53d708f26d0a368a9a0be6267910b19": 111
   },
   "posted_message_ids": [
     6,
@@ -217,7 +220,10 @@
     105,
     106,
     107,
-    108
+    108,
+    109,
+    110,
+    111
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -1949,6 +1955,66 @@
         "zero'"
       ],
       "posted_utc": "2026-11-28T10:21:57Z"
+    },
+    {
+      "title_norm": "the eminence in shadow: lost echoes film reveals trailer, visual, may 2027 debut, new cast member",
+      "words": [
+        "2027",
+        "cast",
+        "debut,",
+        "echoes",
+        "eminence",
+        "film",
+        "in",
+        "lost",
+        "may",
+        "member",
+        "new",
+        "reveals",
+        "shadow:",
+        "the",
+        "trailer,",
+        "visual,"
+      ],
+      "posted_utc": "2026-11-28T10:36:58Z"
+    },
+    {
+      "title_norm": "'noa is my senior, and my friend' tv anime reveals teaser video",
+      "words": [
+        "'noa",
+        "and",
+        "anime",
+        "friend'",
+        "is",
+        "my",
+        "reveals",
+        "senior,",
+        "teaser",
+        "tv",
+        "video"
+      ],
+      "posted_utc": "2026-11-28T10:51:59Z"
+    },
+    {
+      "title_norm": "wit studio's original tv anime lona reveals 7 more cast members, confirms april 2027 debut",
+      "words": [
+        "2027",
+        "7",
+        "anime",
+        "april",
+        "cast",
+        "confirms",
+        "debut",
+        "lona",
+        "members,",
+        "more",
+        "original",
+        "reveals",
+        "studio's",
+        "tv",
+        "wit"
+      ],
+      "posted_utc": "2026-11-28T11:07:01Z"
     }
   ],
   "seen_at": {
@@ -2203,7 +2269,11 @@
     "cdcba4330038d599a4e729ed47d6eeeb270e55965d89ec0b1fad66d3310a98f5": "2026-11-28T10:06:54Z",
     "9fcd0bd00e0591ee2ff3fdbf012d7249e819172429dcc34ea1ca14fbb7a0cc14": "2026-11-28T10:06:54Z",
     "e11893dc6d6b756c62edf33aef01594889157db6cf14f052d22e4e0f098478d6": "2026-11-28T10:06:54Z",
-    "5ff942783e2f472acd9302d9e005dcd7018c4676dece5e7fe44c57e7b9fcd7bf": "2026-11-28T10:06:54Z"
+    "5ff942783e2f472acd9302d9e005dcd7018c4676dece5e7fe44c57e7b9fcd7bf": "2026-11-28T10:06:54Z",
+    "8dd8b95d2d838dc0eadee4efda229d81d53d708f26d0a368a9a0be6267910b19": "2026-11-28T10:52:21Z",
+    "c6fc9f91d2127dd072ddcc31ee9d89241630f91e27d89353637345b11de730eb": "2026-11-28T10:52:21Z",
+    "10f45aaeda9786487c7797e9279fae883e409c40add4f84be115dc3e5756dc21": "2026-11-28T10:52:22Z",
+    "c0f3c8fb69f1ae767bedc536b5a420bd94070f1d9059d5bd44ca17d542a0c18b": "2026-11-28T10:52:22Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -2219,6 +2289,7 @@
     "0bc30a47b713e30fb41716367218d03dcf671214797ecf5f9bb66276b6f7a344",
     "0c17143dbeb1ae8f735e3689c6b3e0b16bddfc2e1ef589ee863835dbb72486bf",
     "0e50b7047253f8901a7629c1d742ee9d4aff9cce5f4eb4ed2fc580a6ee038a0b",
+    "10f45aaeda9786487c7797e9279fae883e409c40add4f84be115dc3e5756dc21",
     "16043adcefa9b61a19cf2c77876104afaa74f95e1ebb327db72b90961d86d2ef",
     "177e451d9b0c7f0ff06f17a2cdf31a0d802278301d5dcd1dbcb6ee0989d5246e",
     "178608b2a2e86acc22ec65497825bf570a1d219cfa9e211d57bac1fd87a01b2b",
@@ -2349,6 +2420,7 @@
     "8a26053904b5b222246ea0a7982bcc497c30f34a584da8502040e7026a4b99c8",
     "8a4cbd956021a0573e8f6176a36d1c302ecf6bcf56e03bf990be7ac6fa1e9a1c",
     "8b1bfac28b4551abcbb23f723228c7cf5d3307f18866080e8705d1ea012b724d",
+    "8dd8b95d2d838dc0eadee4efda229d81d53d708f26d0a368a9a0be6267910b19",
     "8e6bbf57e6f4d98f78f2e32fcf0bdc8772fa9472540b42966f1819968d6eb362",
     "8f30905ba34ae6c35c50a5893a526d7425bdb3234c21a97d9f9d03a6dedae085",
     "8fbd41f6a6d5122fc4657a111535aa6004c5e67e0ae6954c76272435e584d7b9",
@@ -2395,12 +2467,14 @@
     "bec3fcbb78efdeef4be5fba6b08a936a8cbdaed506a85aa8b9b07913c9f7cb85",
     "bf2c6b21ad39f60264e4379044a81876161b23d02d6aa58e1629864d8ce0f570",
     "c0ad3704b46d73c4a38cc379de60d6b9f8907cae22d575a94b6aad09410d4eb0",
+    "c0f3c8fb69f1ae767bedc536b5a420bd94070f1d9059d5bd44ca17d542a0c18b",
     "c21418c0bb760c578166f8d35cfc0bb37025fdeab6fa4af86786d465bcecb181",
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af",
     "c3996e9c2f6e78c16bbe33779e9eb6dd1db26774b2f3bf28f6f8f93d4c867fd6",
     "c46f0970fc33dcbf75a1b6fe4817799a08a386bdddbb47c6c799398d2d893577",
     "c4be96f526c73f97da978d14c1d31524d80c12a4f83185b967cd9e1e8107efcf",
     "c659337c14358c946f860553c3a0fa35692980d4cf7c509e2d6db71390eaad7c",
+    "c6fc9f91d2127dd072ddcc31ee9d89241630f91e27d89353637345b11de730eb",
     "c787674791e3243040eacf353aa505fe1a7e4d3b55275c37fa6d1d68f69fd057",
     "cb36ae53f87989b0a51432aafaf02b971914f5c97b7e5c2041c804f0a236f20e",
     "cb9e0b6df25f607b3c549e4b7be427cdb78e334422e10d71dcb2d9db3945416c",
@@ -2642,7 +2716,10 @@
       "2026-11-28T09:00:52Z",
       "2026-11-28T09:15:54Z",
       "2026-11-28T10:06:56Z",
-      "2026-11-28T10:21:57Z"
+      "2026-11-28T10:21:57Z",
+      "2026-11-28T10:36:58Z",
+      "2026-11-28T10:51:59Z",
+      "2026-11-28T11:07:01Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -2744,7 +2821,10 @@
       "2026-11-28T09:00:52Z",
       "2026-11-28T09:15:54Z",
       "2026-11-28T10:06:56Z",
-      "2026-11-28T10:21:57Z"
+      "2026-11-28T10:21:57Z",
+      "2026-11-28T10:36:58Z",
+      "2026-11-28T10:51:59Z",
+      "2026-11-28T11:07:01Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -2846,7 +2926,10 @@
       "2026-11-28T09:00:52Z",
       "2026-11-28T09:15:54Z",
       "2026-11-28T10:06:56Z",
-      "2026-11-28T10:21:57Z"
+      "2026-11-28T10:21:57Z",
+      "2026-11-28T10:36:58Z",
+      "2026-11-28T10:51:59Z",
+      "2026-11-28T11:07:01Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -2948,7 +3031,10 @@
       "2026-11-28T09:00:52Z",
       "2026-11-28T09:15:54Z",
       "2026-11-28T10:06:56Z",
-      "2026-11-28T10:21:57Z"
+      "2026-11-28T10:21:57Z",
+      "2026-11-28T10:36:58Z",
+      "2026-11-28T10:51:59Z",
+      "2026-11-28T11:07:01Z"
     ]
   },
   "version": 2
