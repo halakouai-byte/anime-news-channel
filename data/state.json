@@ -6,15 +6,15 @@
     "queue_size": 51
   },
   "counters": {
-    "duplicates_total": 8254,
-    "hold_total": 45,
-    "posts_today": 8,
+    "duplicates_total": 8347,
+    "hold_total": 46,
+    "posts_today": 9,
     "posts_today_date": "2026-11-28",
-    "posts_total": 103,
-    "rejected_total": 2039
+    "posts_total": 104,
+    "rejected_total": 2061
   },
-  "last_fetch_utc": "2026-11-28T10:52:22Z",
-  "last_publish_utc": "2026-11-28T11:07:01Z",
+  "last_fetch_utc": "2026-11-28T11:38:07Z",
+  "last_publish_utc": "2026-11-28T11:22:41Z",
   "posted_hashes": {
     "c2c982d858b807abb5d2cae1247468f33cb58f8abdb3afe4e831fe878ecd26af": 6,
     "97943ca6e83b186889c9feced6015204505428319760f5e90bc990bffa77b914": 7,
@@ -118,7 +118,8 @@
     "5ff942783e2f472acd9302d9e005dcd7018c4676dece5e7fe44c57e7b9fcd7bf": 108,
     "9fcd0bd00e0591ee2ff3fdbf012d7249e819172429dcc34ea1ca14fbb7a0cc14": 109,
     "e11893dc6d6b756c62edf33aef01594889157db6cf14f052d22e4e0f098478d6": 110,
-    "8dd8b95d2d838dc0eadee4efda229d81d53d708f26d0a368a9a0be6267910b19": 111
+    "8dd8b95d2d838dc0eadee4efda229d81d53d708f26d0a368a9a0be6267910b19": 111,
+    "7bcb4a2f4b05266fa38555a4b899a0d364db6f54de4671cb9e3ddb9f14632d9b": 112
   },
   "posted_message_ids": [
     6,
@@ -223,7 +224,8 @@
     108,
     109,
     110,
-    111
+    111,
+    112
   ],
   "queue_version": 1,
   "recent_titles": [
@@ -2015,6 +2017,16 @@
         "wit"
       ],
       "posted_utc": "2026-11-28T11:07:01Z"
+    },
+    {
+      "title_norm": "'lona' announces additional cast",
+      "words": [
+        "'lona'",
+        "additional",
+        "announces",
+        "cast"
+      ],
+      "posted_utc": "2026-11-28T11:22:41Z"
     }
   ],
   "seen_at": {
@@ -2273,7 +2285,9 @@
     "8dd8b95d2d838dc0eadee4efda229d81d53d708f26d0a368a9a0be6267910b19": "2026-11-28T10:52:21Z",
     "c6fc9f91d2127dd072ddcc31ee9d89241630f91e27d89353637345b11de730eb": "2026-11-28T10:52:21Z",
     "10f45aaeda9786487c7797e9279fae883e409c40add4f84be115dc3e5756dc21": "2026-11-28T10:52:22Z",
-    "c0f3c8fb69f1ae767bedc536b5a420bd94070f1d9059d5bd44ca17d542a0c18b": "2026-11-28T10:52:22Z"
+    "c0f3c8fb69f1ae767bedc536b5a420bd94070f1d9059d5bd44ca17d542a0c18b": "2026-11-28T10:52:22Z",
+    "7bcb4a2f4b05266fa38555a4b899a0d364db6f54de4671cb9e3ddb9f14632d9b": "2026-11-28T11:22:38Z",
+    "2eb7d20cae7f87a144bd0f1c1f4dbda37bece73945349c9b17761cde716df9e2": "2026-11-28T11:38:06Z"
   },
   "seen_guids": [
     "027de7c40589e9ee9315f9b39043580ab2bd99e88e94e3415f26cd398254a8f1",
@@ -2322,6 +2336,7 @@
     "2df34036c5d4472fe4f08aa72282ec8a45dc160f458fbbde5a9c3aa279ea4a6b",
     "2df7d9024fb16032e3937e4c160a4fca4009310415d2b48e1047b2afaf6704c0",
     "2e46c6e43f2f0a38a5249d0305b016ccd83d43f25f32611ed82d491236bb50f5",
+    "2eb7d20cae7f87a144bd0f1c1f4dbda37bece73945349c9b17761cde716df9e2",
     "2ef481609e2bf60370f9e51960537c0f3168f5b94126c3ef0249fe08d9dbd290",
     "30eeff5fdb7e636c172ac6a005b19f098a0fe0c16833f90632bf5698fa49e88b",
     "319b7736de3a3db27afd354a734f108c355b6003e942f6621f0c4e242ecf522c",
@@ -2404,6 +2419,7 @@
     "7a1940e6c7c64485c8a2a8d7f1aa7fea1fb0752e8c5f3f8bb2a520f45168ae13",
     "7a2361b24db1fe34f532175d50e7e35739aa7f59d7ddba1b909bc815f090b208",
     "7bb5702f82cd19f7de3bcd36dd339520f9d917a460602b74e90bf82da44d944b",
+    "7bcb4a2f4b05266fa38555a4b899a0d364db6f54de4671cb9e3ddb9f14632d9b",
     "7c24bca63d41ba9fc0ca79709a52f33970b7366ec86e2e1d2cf3b1114f1586a4",
     "7f920cf9d4b7083c7228a9e11b53cd315da8b705b390ea06897beca885e0edc9",
     "7fd88509d070aab6bbfc92d6eadefa91ed8914be803ae5a73c4f0c53deb097ff",
@@ -2719,7 +2735,8 @@
       "2026-11-28T10:21:57Z",
       "2026-11-28T10:36:58Z",
       "2026-11-28T10:51:59Z",
-      "2026-11-28T11:07:01Z"
+      "2026-11-28T11:07:01Z",
+      "2026-11-28T11:22:41Z"
     ],
     "lead": [
       "2026-11-21T17:55:23Z",
@@ -2824,7 +2841,8 @@
       "2026-11-28T10:21:57Z",
       "2026-11-28T10:36:58Z",
       "2026-11-28T10:51:59Z",
-      "2026-11-28T11:07:01Z"
+      "2026-11-28T11:07:01Z",
+      "2026-11-28T11:22:41Z"
     ],
     "bodies": [
       "2026-11-21T17:55:23Z",
@@ -2929,7 +2947,8 @@
       "2026-11-28T10:21:57Z",
       "2026-11-28T10:36:58Z",
       "2026-11-28T10:51:59Z",
-      "2026-11-28T11:07:01Z"
+      "2026-11-28T11:07:01Z",
+      "2026-11-28T11:22:41Z"
     ],
     "why": [
       "2026-11-21T17:55:23Z",
@@ -3034,7 +3053,8 @@
       "2026-11-28T10:21:57Z",
       "2026-11-28T10:36:58Z",
       "2026-11-28T10:51:59Z",
-      "2026-11-28T11:07:01Z"
+      "2026-11-28T11:07:01Z",
+      "2026-11-28T11:22:41Z"
     ]
   },
   "version": 2
